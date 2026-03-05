@@ -1,100 +1,114 @@
-# Project Phases Guide
+# Project Workflow Guide (DEPI Final Project - Iterative)
 
 ## ETL for Customer Data from Multiple Sources
 
-This guide breaks the project into 5 simple phases, aligned with the 5 team roles.
+This project follows a practical iterative workflow for a 4-week DEPI final project.
+The team works in overlapping cycles so each cycle improves the pipeline quality and output.
 
 ---
 
-## Phase 1 — Data Collection / Extraction
-**Owner:** Team Member 1
+## Team Roles and Assignments (Working in Parallel)
 
-### Tasks
-- Collect CRM export data.
-- Collect Excel customer/sales files.
-- Check basic format (headers, encoding, date format).
-- Save all original files in `data/raw/`.
+- **Ali — Data Collection / Extraction**
+	- Collect CRM and Excel source files.
+	- Maintain incoming files in `data/raw/`.
 
-### Deliverable
-- Raw source files organized inside `data/raw/`.
+- **Josephine — Data Cleaning / Transformation (ETL)**
+	- Build and improve ADF flow assets in:
+		- `adf/linked_services/`
+		- `adf/datasets/`
+		- `adf/pipelines/`
+	- Apply cleaning and transformation rules.
 
----
+- **Mohamed — Data Modeling / Warehouse Design**
+	- Draft and refine SQL Server schema and load scripts in `sql/scripts/`.
+	- Work at the same time as extraction and ETL to avoid blockers.
 
-## Phase 2 — Data Cleaning / Transformation (ETL)
-**Owner:** Team Member 2
+- **Sara — Data Validation / Testing**
+	- Continuously validate row counts, nulls, duplicates, and data consistency.
+	- Test every cycle, not only at project end.
 
-### Tasks
-- Build ETL steps in Azure Data Factory.
-- Create/update:
-	- `adf/linked_services/`
-	- `adf/datasets/`
-	- `adf/pipelines/`
-- Apply transformations:
-	- remove duplicates
-	- handle nulls
-	- standardize names and data types
-
-### Deliverable
-- ADF assets saved in `adf/` folders.
-- Clean transformed output in `data/clean/`.
+- **Mohab — Documentation & Presentation**
+	- Keep `docs/README.md` and `docs/project_flow.md` updated.
+	- Prepare final report and presentation artifacts.
 
 ---
 
-## Phase 3 — Data Modeling / Warehouse Design
-**Owner:** Team Member 3
+## Iterative Delivery Cycles (4 Weeks)
 
-### Tasks
-- Define target warehouse table design.
-- Create SQL scripts for table creation and load logic.
-- Save scripts in `sql/scripts/`.
+## Cycle 1 (Week 1): Minimal Viable Pipeline
 
-### Deliverable
-- SQL scripts ready to build target model in SQL Server.
+### Goal
+Deliver the first working version using sample CRM + Excel data.
 
----
+### Parallel Work
+- Ali places sample source files in `data/raw/`.
+- Josephine builds first ADF pipeline path raw → clean.
+- Mohamed drafts initial table scripts in `sql/scripts/`.
+- Sara validates basic output quality.
+- Mohab documents setup and first results in `docs/`.
 
-## Phase 4 — Data Validation / Testing
-**Owner:** Team Member 4
-
-### Tasks
-- Validate row counts before/after ETL.
-- Verify no critical nulls in required fields.
-- Verify no unexpected duplicates.
-- Check sample records for correctness.
-
-### Deliverable
-- Validation checklist completed (can be added in this file as notes).
+### Expected Output
+- First successful run producing cleaned output in `data/clean/`.
 
 ---
 
-## Phase 5 — Documentation & Presentation
-**Owner:** Team Member 5
+## Cycle 2 (Week 2-3): Full Data Load + Automated Transformations
 
-### Tasks
-- Maintain `docs/README.md` and this phase guide.
-- Document final pipeline flow (source → transform → output).
-- Prepare final presentation (screenshots + summary results).
+### Goal
+Scale from sample data to full data and strengthen transformation rules.
 
-### Deliverable
-- Final project documentation and presentation deck.
+### Parallel Work
+- Ali updates `data/raw/` with fuller and newer files.
+- Josephine adds robust transformations (null handling, deduplication, standardization).
+- Mohamed updates SQL scripts for improved warehouse design.
+- Sara runs repeated checks after each update and logs issues.
+- Mohab keeps documentation current and records decisions.
 
----
-
-## Suggested Timeline (Simple)
-- Week 1: Phase 1 + start Phase 2
-- Week 2: Finish Phase 2 + Phase 3
-- Week 3: Phase 4
-- Week 4: Phase 5 and final presentation
+### Expected Output
+- Stable pipeline with automated transformations and cleaner, consistent outputs.
 
 ---
 
-## Progress Tracker
+## Cycle 3 (Week 4): Data Validation + Final Presentation
 
-| Phase | Owner | Status | Notes |
-|---|---|---|---|
-| 1. Collection / Extraction | Member 1 | Pending | |
-| 2. Cleaning / Transformation | Member 2 | Pending | |
-| 3. Modeling / Warehouse | Member 3 | Pending | |
-| 4. Validation / Testing | Member 4 | Pending | |
-| 5. Documentation / Presentation | Member 5 | Pending | |
+### Goal
+Finalize quality, freeze outputs, and prepare final DEPI presentation.
+
+### Parallel Work
+- Ali performs final source refresh in `data/raw/`.
+- Josephine finalizes ADF pipeline behavior and run order.
+- Mohamed finalizes SQL scripts in `sql/scripts/`.
+- Sara executes final validation checklist and confirms readiness.
+- Mohab prepares final report/storyline and presentation materials.
+
+### Expected Output
+- Final clean data in `data/clean/`.
+- Final ADF assets and SQL scripts.
+- Portfolio-ready final project documentation.
+
+---
+
+## Folder Usage Reference
+
+- `data/raw/` → source CRM and Excel files
+- `data/clean/` → transformed output ready for analytics
+- `adf/pipelines/` → orchestration pipelines
+- `adf/datasets/` → source/target datasets
+- `adf/linked_services/` → service connections
+- `sql/scripts/` → schema + transformation/load scripts
+- `docs/README.md` + `docs/project_flow.md` → documentation, status, and final narrative
+
+---
+
+## Iterative Progress Tracker
+
+Update this table at least once per week:
+
+| Cycle | Focus | Ali (Extraction) | Josephine (ETL) | Mohamed (Modeling) | Sara (Testing) | Mohab (Docs) | Cycle Status |
+|---|---|---|---|---|---|---|---|
+| Cycle 1 | MVP pipeline with sample data | Not Started / In Progress / Done | Not Started / In Progress / Done | Not Started / In Progress / Done | Not Started / In Progress / Done | Not Started / In Progress / Done | Planned / Active / Complete |
+| Cycle 2 | Full load + automated transformations | Not Started / In Progress / Done | Not Started / In Progress / Done | Not Started / In Progress / Done | Not Started / In Progress / Done | Not Started / In Progress / Done | Planned / Active / Complete |
+| Cycle 3 | Final validation + presentation | Not Started / In Progress / Done | Not Started / In Progress / Done | Not Started / In Progress / Done | Not Started / In Progress / Done | Not Started / In Progress / Done | Planned / Active / Complete |
+
 
