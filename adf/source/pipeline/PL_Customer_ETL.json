@@ -1,0 +1,52 @@
+{
+  "name": "PL_Customer_ETL",
+  "properties": {
+    "activities": [
+      {
+        "name": "Copy_CRM_Customers_To_Staging",
+        "type": "Copy",
+        "dependsOn": []
+      },
+      {
+        "name": "Copy_Excel_Customers_To_Staging",
+        "type": "Copy",
+        "dependsOn": []
+      },
+      {
+        "name": "Transform_Customer_DataFlow",
+        "type": "ExecuteDataFlow",
+        "dependsOn": [
+          {
+            "activity": "Copy_CRM_Customers_To_Staging",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "Copy_Excel_Customers_To_Staging",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Load_DimCustomer",
+        "type": "SqlServerStoredProcedure",
+        "dependsOn": [
+          {
+            "activity": "Transform_Customer_DataFlow",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ],
+    "annotations": [
+      "customer-etl",
+      "daily-load"
+    ]
+  }
+}
+

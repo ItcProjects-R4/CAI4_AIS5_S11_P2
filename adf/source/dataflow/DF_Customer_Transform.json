@@ -1,0 +1,12 @@
+{
+  "name": "DF_Customer_Transform",
+  "properties": {
+    "type": "MappingDataFlow",
+    "typeProperties": {
+      "sources": [],
+      "sinks": [],
+      "transformations": []
+    }
+  }
+}
+

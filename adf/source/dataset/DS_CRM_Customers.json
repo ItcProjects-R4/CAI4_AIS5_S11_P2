@@ -1,0 +1,21 @@
+{
+  "name": "DS_CRM_Customers",
+  "properties": {
+    "linkedServiceName": {
+      "referenceName": "LS_BlobLanding",
+      "type": "LinkedServiceReference"
+    },
+    "type": "DelimitedText",
+    "schema": [],
+    "typeProperties": {
+      "location": {
+        "type": "AzureBlobStorageLocation",
+        "folderPath": "crm",
+        "fileName": "customers.csv"
+      },
+      "firstRowAsHeader": true,
+      "columnDelimiter": ","
+    }
+  }
+}
+

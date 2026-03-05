@@ -52,11 +52,19 @@ htmlcov/
 .DS_Store
 
 # Data artifacts (keep .gitkeep placeholders)
-data/*
-!data/raw
+data/raw/**
+data/staging/**
+data/curated/**
+data/rejected/**
+data/archive/**
 !data/raw/.gitkeep
-!data/clean
-!data/clean/.gitkeep
+!data/raw/crm/.gitkeep
+!data/raw/excel/.gitkeep
+!data/staging/.gitkeep
+!data/curated/.gitkeep
+!data/rejected/.gitkeep
+!data/archive/.gitkeep
+!data/sample/**
 
 # Generated Docker artifacts
 .docker/
