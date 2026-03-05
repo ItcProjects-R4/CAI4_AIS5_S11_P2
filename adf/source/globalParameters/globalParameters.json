@@ -1,6 +1,0 @@
-{
-  "environment": "dev",
-  "sourceSystem": "CRM",
-  "loadType": "incremental"
-}
-
