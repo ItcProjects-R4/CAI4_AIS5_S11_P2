@@ -26,10 +26,10 @@ Each role is intentionally marked as unassigned first, so teammates can claim ow
 	- Move processed output to `data/clean/`.
 
 - **Role 3 — Data Modeling, SQL Architecture & Power BI
-Owner: Mennatullah
-Design target warehouse schema and maintain table/load scripts in sql/scripts/.
-Add SQL procedures for update/upsert behavior.
-Connect Power BI to the cleaned data/warehouse to build interactive dashboards and visualizations.
+  - Owner: Mennatullah
+  - Design target warehouse schema and maintain table/load scripts in sql/scripts/.
+  - Add SQL procedures for update/upsert behavior.
+  - Connect Power BI to the cleaned data/warehouse to build interactive dashboards and visualizations.
 
 - **Role 4 — Data Quality & Automated Testing**
 	- Owner: **[Unassigned - Claim this role]**
@@ -37,10 +37,10 @@ Connect Power BI to the cleaned data/warehouse to build interactive dashboards a
 	- Create validation SQL scripts and rejected/bad-row logging approach.
 	- Add basic pipeline error-handling checks.
 
-- **Role 5 — BI Analytics & Documentation**
+- **Role 5 — Documentation**
 	- Owner: **[Unassigned - Claim this role]**
 	- Document lineage and progress in `docs/README.md` and `docs/project_flow.md`.
-	- Prepare final reporting story and dashboard handoff notes.
+	  
 
 ---
 
