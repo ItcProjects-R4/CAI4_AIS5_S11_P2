@@ -25,11 +25,11 @@ Each role is intentionally marked as unassigned first, so teammates can claim ow
 	- Implement Data Flows to merge CRM + Excel, handle nulls, standardize types, and deduplicate.
 	- Move processed output to `data/clean/`.
 
-- **Role 3 — Data Modeling & SQL Architecture**
-	- Owner: **[Unassigned - Claim this role]**
-	- Design target warehouse schema.
-	- Maintain table/load scripts in `sql/scripts/`.
-	- Add SQL procedures for update/upsert behavior.
+- **Role 3 — Data Modeling, SQL Architecture & Power BI
+Owner: Mennatullah
+Design target warehouse schema and maintain table/load scripts in sql/scripts/.
+Add SQL procedures for update/upsert behavior.
+Connect Power BI to the cleaned data/warehouse to build interactive dashboards and visualizations.
 
 - **Role 4 — Data Quality & Automated Testing**
 	- Owner: **[Unassigned - Claim this role]**
