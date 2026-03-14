@@ -14,31 +14,31 @@ Team members: **Ali, Amin, Mennat Allah, Aseel, Habiba**
 Each role is intentionally marked as unassigned first, so teammates can claim ownership.
 
 - **Role 1 — Data Collection & Cloud Storage (Extraction)**
-	- Owner: **Amin**
+	- Owner: **Amin,Ali**
 	- Collect and profile CRM and Excel source files.
 	- Organize source files in `data/raw/`.
 	- Prepare storage structure for raw/bronze layer.
 
 - **Role 2 — Data Cleaning & Orchestration (ETL)**
-	- Owner: **[Unassigned - Claim this role]**
+	- Owner: **Ali**
 	- Build ADF linked services, datasets, and pipelines.
 	- Implement Data Flows to merge CRM + Excel, handle nulls, standardize types, and deduplicate.
 	- Move processed output to `data/clean/`.
 
 - **Role 3 — Data Modeling, SQL Architecture & Power BI
-  - Owner: Mennatullah
+  - Owner: **Mennatullah**
   - Design target warehouse schema and maintain table/load scripts in sql/scripts/.
   - Add SQL procedures for update/upsert behavior.
   - Connect Power BI to the cleaned data/warehouse to build interactive dashboards and visualizations.
 
 - **Role 4 — Data Quality & Automated Testing**
-	- Owner: **Habiba**
+	- Owner: **Aseel,Habiba**
 	- Define data quality checks (nulls, duplicates, row counts).
 	- Create validation SQL scripts and rejected/bad-row logging approach.
 	- Add basic pipeline error-handling checks.
 
 - **Role 5 — Documentation**
-	- Owner: **[Unassigned - Claim this role]**
+	- Owner: **Ali, Amin, Mennat Allah, Aseel, Habiba **
 	- Document lineage and progress in `docs/README.md` and `docs/project_flow.md`.
 	  
 
