@@ -14,7 +14,7 @@ Team members: **Ali, Amin, Mennat Allah, Aseel, Habiba**
 Each role is intentionally marked as unassigned first, so teammates can claim ownership.
 
 - **Role 1 — Data Collection & Cloud Storage (Extraction)**
-	- Owner: **[Unassigned - Claim this role]**
+	- Owner: **Amin**
 	- Collect and profile CRM and Excel source files.
 	- Organize source files in `data/raw/`.
 	- Prepare storage structure for raw/bronze layer.
@@ -32,7 +32,7 @@ Each role is intentionally marked as unassigned first, so teammates can claim ow
   - Connect Power BI to the cleaned data/warehouse to build interactive dashboards and visualizations.
 
 - **Role 4 — Data Quality & Automated Testing**
-	- Owner: **[Unassigned - Claim this role]**
+	- Owner: **Habiba**
 	- Define data quality checks (nulls, duplicates, row counts).
 	- Create validation SQL scripts and rejected/bad-row logging approach.
 	- Add basic pipeline error-handling checks.
