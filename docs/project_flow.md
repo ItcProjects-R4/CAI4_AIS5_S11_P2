@@ -26,7 +26,7 @@ Each role is intentionally marked as unassigned first, so teammates can claim ow
 	- Move processed output to `data/clean/`.
 
 - **Role 3 — Data Modeling, SQL Architecture & Power BI
-  - Owner: **Mennatullahm, Amin**
+  - Owner: **Mennatullah, Amin**
   - Design target warehouse schema and maintain table/load scripts in sql/scripts/.
   - Add SQL procedures for update/upsert behavior.
   - Connect Power BI to the cleaned data/warehouse to build interactive dashboards and visualizations.
