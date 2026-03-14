@@ -38,7 +38,7 @@ Each role is intentionally marked as unassigned first, so teammates can claim ow
 	- Add basic pipeline error-handling checks.
 
 - **Role 5 — Documentation**
-	- Owner: **Ali, Amin, Mennat Allah, Aseel, Habiba **
+	- Owner: **Ali, Amin, Mennat Allah, Aseel, Habiba**
 	- Document lineage and progress in `docs/README.md` and `docs/project_flow.md`.
 	  
 
