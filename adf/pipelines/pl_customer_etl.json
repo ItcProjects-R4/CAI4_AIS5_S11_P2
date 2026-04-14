@@ -40,7 +40,8 @@
           "storedProcedureName": "dbo.usp_LogETLRun",
           "storedProcedureParameters": {
             "PipelineName": { "value": "pl_customer_etl", "type": "String" },
-            "Action":       { "value": "START",           "type": "String" }
+            "Action":       { "value": "START",           "type": "String" },
+            "RunID":        { "value": null, "type": "Int32", "direction": "Output" }
           }
         },
         "linkedServiceName": {
@@ -49,11 +50,26 @@
         }
       },
       {
+        "name": "SetLogRunID",
+        "description": "Capture the RunID returned by LogPipelineStart into a pipeline variable for use by the success and failure log activities.",
+        "type": "SetVariable",
+        "dependsOn": [
+          { "activity": "LogPipelineStart", "dependencyConditions": ["Succeeded"] }
+        ],
+        "typeProperties": {
+          "variableName": "LogRunID",
+          "value": {
+            "value": "@activity('LogPipelineStart').output.firstRow.RunID",
+            "type": "Expression"
+          }
+        }
+      },
+      {
         "name": "ValidateCRMFileExists",
         "description": "Check that the CRM source file is present in data/raw/ before attempting to copy. Fails fast with a clear error if the file is missing.",
         "type": "GetMetadata",
         "dependsOn": [
-          { "activity": "LogPipelineStart", "dependencyConditions": ["Succeeded"] }
+          { "activity": "SetLogRunID", "dependencyConditions": ["Succeeded"] }
         ],
         "policy": {
           "timeout": "0.00:02:00",
@@ -73,7 +89,7 @@
         "description": "Check that the Excel source file is present in data/raw/ before attempting to copy. Fails fast with a clear error if the file is missing.",
         "type": "GetMetadata",
         "dependsOn": [
-          { "activity": "LogPipelineStart", "dependencyConditions": ["Succeeded"] }
+          { "activity": "SetLogRunID", "dependencyConditions": ["Succeeded"] }
         ],
         "policy": {
           "timeout": "0.00:02:00",
@@ -230,8 +246,8 @@
         "description": "Update ETLRunLog with Failed status. Triggered on failure of RunDataFlow or UpsertToCustomers.",
         "type": "SqlServerStoredProcedure",
         "dependsOn": [
-          { "activity": "RunDataFlow",       "dependencyConditions": ["Failed"] },
-          { "activity": "UpsertToCustomers", "dependencyConditions": ["Failed"] }
+          { "activity": "RunDataFlow",       "dependencyConditions": ["Failed", "Skipped"] },
+          { "activity": "UpsertToCustomers", "dependencyConditions": ["Failed", "Skipped"] }
         ],
         "policy": {
           "timeout": "0.00:05:00",
@@ -248,7 +264,7 @@
             "RowsRejected":  { "value": "0", "type": "Int32" },
             "Status":        { "value": "Failed", "type": "String" },
             "Notes": {
-              "value": "@concat('Pipeline failed. Error: ', activity('RunDataFlow').error.message)",
+              "value": "@concat('Pipeline failed. Error: ', coalesce(activity('RunDataFlow').error.message, activity('UpsertToCustomers').error.message, 'Unknown error'))",
               "type": "String"
             }
           }

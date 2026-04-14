@@ -463,8 +463,8 @@ dbo.RejectedRecords (PK: RejectionID)
 ### 5.2 Pipeline Activities
 
 ```
-LogPipelineStart
-    │
+LogPipelineStart ──> SetLogRunID
+                          │
     ├──> ValidateCRMFileExists ──> IfCRMFileMissing ──(fail)──> FailMissingCRM
     │                                     │
     └──> ValidateExcelFileExists ──> IfExcelFileMissing ──(fail)──> FailMissingExcel
@@ -473,7 +473,7 @@ LogPipelineStart
                                                      │
                                               UpsertToCustomers
                                              /                  \
-                                     (success)                (failed)
+                                     (success)                (failed/skipped)
                                          │                        │
                                  LogPipelineSuccess        LogPipelineFailure
 ```
@@ -493,7 +493,18 @@ LogPipelineStart
 
 ---
 
-#### Activity 2 — ValidateCRMFileExists
+#### Activity 2 — SetLogRunID
+
+| Property | Value |
+|---|---|
+| Type | `SetVariable` |
+| Variable | `LogRunID` |
+| Value | `@activity('LogPipelineStart').output.firstRow.RunID` |
+| Depends on | `LogPipelineStart (Succeeded)` |
+
+---
+
+#### Activity 3 — ValidateCRMFileExists
 
 | Property | Value |
 |---|---|
@@ -502,10 +513,11 @@ LogPipelineStart
 | Fields | `['exists']` |
 | Timeout | 2 minutes |
 | Retry | 0 |
+| Depends on | `SetLogRunID (Succeeded)` |
 
 ---
 
-#### Activity 3 — ValidateExcelFileExists
+#### Activity 4 — ValidateExcelFileExists
 
 | Property | Value |
 |---|---|
@@ -514,10 +526,11 @@ LogPipelineStart
 | Fields | `['exists']` |
 | Timeout | 2 minutes |
 | Retry | 0 |
+| Depends on | `SetLogRunID (Succeeded)` |
 
 ---
 
-#### Activity 4 — IfCRMFileMissing
+#### Activity 5 — IfCRMFileMissing
 
 | Property | Value |
 |---|---|
@@ -527,7 +540,7 @@ LogPipelineStart
 
 ---
 
-#### Activity 5 — IfExcelFileMissing
+#### Activity 6 — IfExcelFileMissing
 
 | Property | Value |
 |---|---|
@@ -537,7 +550,7 @@ LogPipelineStart
 
 ---
 
-#### Activity 6 — RunDataFlow
+#### Activity 7 — RunDataFlow
 
 | Property | Value |
 |---|---|
@@ -550,7 +563,7 @@ LogPipelineStart
 
 ---
 
-#### Activity 7 — UpsertToCustomers
+#### Activity 8 — UpsertToCustomers
 
 | Property | Value |
 |---|---|
@@ -562,25 +575,25 @@ LogPipelineStart
 
 ---
 
-#### Activity 8 — LogPipelineSuccess
+#### Activity 9 — LogPipelineSuccess
 
 | Property | Value |
 |---|---|
 | Type | `SqlServerStoredProcedure` |
 | Procedure | `dbo.usp_LogETLRun` |
-| Parameters | `Action = 'END'`, `Status = 'Success'`, `RowsLoaded` from Data Flow metrics |
+| Parameters | `Action = 'END'`, `Status = 'Success'`, `RunID = @variables('LogRunID')`, `RowsLoaded` from Data Flow metrics |
 | Depends on | `UpsertToCustomers (Succeeded)` |
 
 ---
 
-#### Activity 9 — LogPipelineFailure
+#### Activity 10 — LogPipelineFailure
 
 | Property | Value |
 |---|---|
 | Type | `SqlServerStoredProcedure` |
 | Procedure | `dbo.usp_LogETLRun` |
-| Parameters | `Action = 'END'`, `Status = 'Failed'`, `Notes` = error message |
-| Depends on | `RunDataFlow (Failed)` OR `UpsertToCustomers (Failed)` |
+| Parameters | `Action = 'END'`, `Status = 'Failed'`, `RunID = @variables('LogRunID')`, `Notes = coalesce(RunDataFlow.error.message, UpsertToCustomers.error.message, 'Unknown error')` |
+| Depends on | `RunDataFlow (Failed or Skipped)` AND `UpsertToCustomers (Failed or Skipped)` |
 
 ---
 
