@@ -1,0 +1,268 @@
+{
+  "name": "pl_customer_etl",
+  "type": "Microsoft.DataFactory/factories/pipelines",
+  "properties": {
+    "description": "Full customer ETL pipeline: copies CRM and Excel source files from raw storage, merges and cleans via Data Flow, writes clean CSV output and loads SQL Server staging table, then upserts into dbo.Customers.",
+    "parameters": {
+      "RunDate": {
+        "type": "string",
+        "defaultValue": "@formatDateTime(utcNow(), 'yyyy-MM-dd')",
+        "description": "Date used to construct source file names and output file names. Format: YYYY-MM-DD."
+      }
+    },
+    "variables": {
+      "LogRunID": {
+        "type": "Integer",
+        "defaultValue": 0
+      },
+      "RowsLoaded": {
+        "type": "Integer",
+        "defaultValue": 0
+      },
+      "RowsRejected": {
+        "type": "Integer",
+        "defaultValue": 0
+      }
+    },
+    "activities": [
+      {
+        "name": "LogPipelineStart",
+        "description": "Insert a 'Running' record into dbo.ETLRunLog and capture the RunID for later update.",
+        "type": "SqlServerStoredProcedure",
+        "dependsOn": [],
+        "policy": {
+          "timeout": "0.00:05:00",
+          "retry": 1,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false
+        },
+        "typeProperties": {
+          "storedProcedureName": "dbo.usp_LogETLRun",
+          "storedProcedureParameters": {
+            "PipelineName": { "value": "pl_customer_etl", "type": "String" },
+            "Action":       { "value": "START",           "type": "String" }
+          }
+        },
+        "linkedServiceName": {
+          "referenceName": "ls_sql_server",
+          "type": "LinkedServiceReference"
+        }
+      },
+      {
+        "name": "ValidateCRMFileExists",
+        "description": "Check that the CRM source file is present in data/raw/ before attempting to copy. Fails fast with a clear error if the file is missing.",
+        "type": "GetMetadata",
+        "dependsOn": [
+          { "activity": "LogPipelineStart", "dependencyConditions": ["Succeeded"] }
+        ],
+        "policy": {
+          "timeout": "0.00:02:00",
+          "retry": 0
+        },
+        "typeProperties": {
+          "dataset": {
+            "referenceName": "ds_crm_source",
+            "type": "DatasetReference"
+          },
+          "fieldList": ["exists"],
+          "storeSettings": { "type": "AzureBlobStorageReadSettings" }
+        }
+      },
+      {
+        "name": "ValidateExcelFileExists",
+        "description": "Check that the Excel source file is present in data/raw/ before attempting to copy. Fails fast with a clear error if the file is missing.",
+        "type": "GetMetadata",
+        "dependsOn": [
+          { "activity": "LogPipelineStart", "dependencyConditions": ["Succeeded"] }
+        ],
+        "policy": {
+          "timeout": "0.00:02:00",
+          "retry": 0
+        },
+        "typeProperties": {
+          "dataset": {
+            "referenceName": "ds_excel_source",
+            "type": "DatasetReference"
+          },
+          "fieldList": ["exists"],
+          "storeSettings": { "type": "AzureBlobStorageReadSettings" }
+        }
+      },
+      {
+        "name": "IfCRMFileMissing",
+        "description": "Fail the pipeline with a descriptive error if the CRM file does not exist.",
+        "type": "IfCondition",
+        "dependsOn": [
+          { "activity": "ValidateCRMFileExists", "dependencyConditions": ["Succeeded"] }
+        ],
+        "typeProperties": {
+          "expression": {
+            "value": "@equals(activity('ValidateCRMFileExists').output.exists, false)",
+            "type": "Expression"
+          },
+          "ifTrueActivities": [
+            {
+              "name": "FailMissingCRM",
+              "type": "Fail",
+              "typeProperties": {
+                "message": {
+                  "value": "@concat('CRM source file not found: crm_customers_', formatDateTime(pipeline().parameters.RunDate, 'yyyyMMdd'), '.csv')",
+                  "type": "Expression"
+                },
+                "errorCode": "MISSING_CRM_FILE"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "IfExcelFileMissing",
+        "description": "Fail the pipeline with a descriptive error if the Excel file does not exist.",
+        "type": "IfCondition",
+        "dependsOn": [
+          { "activity": "ValidateExcelFileExists", "dependencyConditions": ["Succeeded"] }
+        ],
+        "typeProperties": {
+          "expression": {
+            "value": "@equals(activity('ValidateExcelFileExists').output.exists, false)",
+            "type": "Expression"
+          },
+          "ifTrueActivities": [
+            {
+              "name": "FailMissingExcel",
+              "type": "Fail",
+              "typeProperties": {
+                "message": {
+                  "value": "@concat('Excel source file not found: excel_customers_', formatDateTime(pipeline().parameters.RunDate, 'yyyyMMdd'), '.xlsx')",
+                  "type": "Expression"
+                },
+                "errorCode": "MISSING_EXCEL_FILE"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "RunDataFlow",
+        "description": "Execute df_merge_transform: standardise, merge, deduplicate, and write clean output to CSV and SQL staging.",
+        "type": "ExecuteDataFlow",
+        "dependsOn": [
+          { "activity": "IfCRMFileMissing",    "dependencyConditions": ["Succeeded"] },
+          { "activity": "IfExcelFileMissing",  "dependencyConditions": ["Succeeded"] }
+        ],
+        "policy": {
+          "timeout": "0.01:00:00",
+          "retry": 1,
+          "retryIntervalInSeconds": 60,
+          "secureOutput": false
+        },
+        "typeProperties": {
+          "dataflow": {
+            "referenceName": "df_merge_transform",
+            "type": "DataFlowReference"
+          },
+          "compute": {
+            "coreCount": 8,
+            "computeType": "General"
+          },
+          "staging": {
+            "linkedService": {
+              "referenceName": "ls_blob_storage",
+              "type": "LinkedServiceReference"
+            },
+            "folderPath": "customer-data-etl/adf-staging"
+          }
+        }
+      },
+      {
+        "name": "UpsertToCustomers",
+        "description": "Merge rows from dbo.CustomerStaging into dbo.Customers using usp_UpsertCustomers, then truncate staging.",
+        "type": "SqlServerStoredProcedure",
+        "dependsOn": [
+          { "activity": "RunDataFlow", "dependencyConditions": ["Succeeded"] }
+        ],
+        "policy": {
+          "timeout": "0.00:30:00",
+          "retry": 1,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false
+        },
+        "typeProperties": {
+          "storedProcedureName": "dbo.usp_UpsertCustomers"
+        },
+        "linkedServiceName": {
+          "referenceName": "ls_sql_server",
+          "type": "LinkedServiceReference"
+        }
+      },
+      {
+        "name": "LogPipelineSuccess",
+        "description": "Update ETLRunLog with Success status and row counts.",
+        "type": "SqlServerStoredProcedure",
+        "dependsOn": [
+          { "activity": "UpsertToCustomers", "dependencyConditions": ["Succeeded"] }
+        ],
+        "policy": {
+          "timeout": "0.00:05:00",
+          "retry": 1,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false
+        },
+        "typeProperties": {
+          "storedProcedureName": "dbo.usp_LogETLRun",
+          "storedProcedureParameters": {
+            "PipelineName":  { "value": "pl_customer_etl", "type": "String" },
+            "Action":        { "value": "END",             "type": "String" },
+            "RunID":         { "value": "@variables('LogRunID')", "type": "Int32" },
+            "RowsLoaded":    { "value": "@activity('RunDataFlow').output.runStatus.metrics.SinkSQL.rowsWritten", "type": "Int32" },
+            "RowsRejected":  { "value": "@activity('RunDataFlow').output.runStatus.metrics.FilterCRM.rowsFiltered", "type": "Int32" },
+            "Status":        { "value": "Success", "type": "String" },
+            "Notes":         { "value": "@concat('Run completed at ', utcNow())", "type": "String" }
+          }
+        },
+        "linkedServiceName": {
+          "referenceName": "ls_sql_server",
+          "type": "LinkedServiceReference"
+        }
+      },
+      {
+        "name": "LogPipelineFailure",
+        "description": "Update ETLRunLog with Failed status. Triggered on failure of RunDataFlow or UpsertToCustomers.",
+        "type": "SqlServerStoredProcedure",
+        "dependsOn": [
+          { "activity": "RunDataFlow",       "dependencyConditions": ["Failed"] },
+          { "activity": "UpsertToCustomers", "dependencyConditions": ["Failed"] }
+        ],
+        "policy": {
+          "timeout": "0.00:05:00",
+          "retry": 0,
+          "secureOutput": false
+        },
+        "typeProperties": {
+          "storedProcedureName": "dbo.usp_LogETLRun",
+          "storedProcedureParameters": {
+            "PipelineName":  { "value": "pl_customer_etl", "type": "String" },
+            "Action":        { "value": "END",             "type": "String" },
+            "RunID":         { "value": "@variables('LogRunID')", "type": "Int32" },
+            "RowsLoaded":    { "value": "0", "type": "Int32" },
+            "RowsRejected":  { "value": "0", "type": "Int32" },
+            "Status":        { "value": "Failed", "type": "String" },
+            "Notes": {
+              "value": "@concat('Pipeline failed. Error: ', activity('RunDataFlow').error.message)",
+              "type": "String"
+            }
+          }
+        },
+        "linkedServiceName": {
+          "referenceName": "ls_sql_server",
+          "type": "LinkedServiceReference"
+        }
+      }
+    ],
+    "annotations": [
+      "customer-data-etl",
+      "weekly",
+      "customers"
+    ]
+  }
+}

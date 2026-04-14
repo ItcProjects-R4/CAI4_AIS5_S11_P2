@@ -1,0 +1,14 @@
+CustomerID,Name,EmailAddress,PhoneNumber,JoinDate,Country,CustomerSegment
+1001,John Doe,John@Example.COM,+20-101-2345678,10/05/2023,EGY,PREMIUM
+1004,Sara Ali,Sara.Ali@Webmail.com,+966-123-4567890,20/01/2023,SAU,BASIC
+1005,Mohamed Ibrahim,M.Ibrahim@Corp.com,+20-115-6789012,,EGY,STANDARD
+1010,Rania Fawzy,Rania.Fawzy@Sample.com,+20-145-4321098,22/11/2023,EGY,BASIC
+1016,Mona Hossam,mona.hossam@biz.com,+20-161-2345678,05/03/2022,EGY,STANDARD
+1017,Samer Adel,Samer.Adel@Domain.com,+20-170-9876543,18/07/2021,JOR,PREMIUM
+1018,Aya Ramadan,aya.ramadan@webmail.com,+20-182-3456789,30/09/2020,EGY,BASIC
+1019,Fady Girgis,fady.girgis@corp.net,+20-193-4567890,11/12/2022,EGY,STANDARD
+1020,Noha Zakaria,noha.zakaria@mail.eg,+20-101-1111222,01/06/2023,EGY,PREMIUM
+1021,Walid Sherif,walid.sherif@outlook.com,+971-501-234567,14/02/2019,ARE,STANDARD
+1003,Ahmed Hassan,Ahmed.Hassan@Domain.eg,+20-100-1112222,15/07/2021,EGY,PREMIUM
+1022,Rana Hamdy,rana.hamdy@yahoo.com,+20-111-2233445,28/08/2022,EGY,BASIC
+1023,Bassem Fouad,bassem.fouad@gmail.com,+20-123-4567891,17/04/2021,EGY,STANDARD

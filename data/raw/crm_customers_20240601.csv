@@ -1,0 +1,17 @@
+customer_id,full_name,email,phone,signup_date,country,segment
+1001,John Doe,john@example.com,01012345678,2023-05-10,Egypt,Premium
+1002,  Jane Smith  ,JANE.SMITH@EXAMPLE.COM,010-9876-5432,2022-11-03,Egypt,standard
+1003,Ahmed Hassan,ahmed.hassan@domain.eg,+20 100 111 2222,2021-07-15,Egypt,PREMIUM
+1004,Sara Ali,sara.ali@webmail.com,01234567890,2023-01-20,Saudi Arabia,Basic
+1005,Mohamed Ibrahim,m.ibrahim@corp.com,01156789012,,Egypt,Standard
+1006,Layla Mostafa,layla@example.com,01098765432,2020-03-08,UAE,premium
+1007,Omar Khaled,omar.khaled@mail.com,01187654321,2023-09-01,Egypt,STANDARD
+1008,Nour Essam,,01276543210,2022-06-14,Jordan,Basic
+1009,Youssef Tarek,youssef@example.com,01365432109,2019-12-30,Egypt,Premium
+1010,Rania Fawzy,rania.fawzy@sample.com,01454321098,2023-11-22,Egypt,BASIC
+1011,Khaled Nasser,khaled@example.com,01543210987,2021-04-17,Egypt,Standard
+1012,Dina Wael,dina.wael@mail.eg,01632109876,2022-08-09,Egypt,Premium
+1001,John Doe,john@example.com,01012345678,2023-05-10,Egypt,Premium
+1013,Amr Samy,amr.samy@outlook.com,01721098765,2020-10-25,Egypt,Basic
+1014,Heba Nabil,heba.nabil@gmail.com,01810987654,2023-02-14,Saudi Arabia,STANDARD
+1015,Tarek Magdy,tarek.magdy@yahoo.com,01909876543,,Egypt,Premium

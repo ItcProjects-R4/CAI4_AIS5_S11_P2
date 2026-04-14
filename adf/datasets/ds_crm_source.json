@@ -1,0 +1,44 @@
+{
+  "name": "ds_crm_source",
+  "type": "Microsoft.DataFactory/factories/datasets",
+  "properties": {
+    "type": "DelimitedText",
+    "description": "CRM weekly CSV export. UTF-8, comma-delimited, header row on row 1. Wildcard pattern matches any date suffix.",
+    "linkedServiceName": {
+      "referenceName": "ls_blob_storage",
+      "type": "LinkedServiceReference"
+    },
+    "typeProperties": {
+      "location": {
+        "type": "AzureBlobStorageLocation",
+        "container": "customer-data-etl",
+        "folderPath": "data/raw",
+        "fileName": {
+          "type": "Expression",
+          "value": "@concat('crm_customers_', formatDateTime(pipeline().parameters.RunDate, 'yyyyMMdd'), '.csv')"
+        }
+      },
+      "columnDelimiter": ",",
+      "rowDelimiter": "\n",
+      "encodingName": "UTF-8",
+      "escapeChar": "\\",
+      "quoteChar": "\"",
+      "firstRowAsHeader": true,
+      "nullValue": ""
+    },
+    "schema": [
+      { "name": "customer_id",   "type": "String" },
+      { "name": "full_name",     "type": "String" },
+      { "name": "email",         "type": "String" },
+      { "name": "phone",         "type": "String" },
+      { "name": "signup_date",   "type": "String" },
+      { "name": "country",       "type": "String" },
+      { "name": "segment",       "type": "String" }
+    ],
+    "annotations": [
+      "customer-data-etl",
+      "source",
+      "crm"
+    ]
+  }
+}

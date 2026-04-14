@@ -1,0 +1,228 @@
+{
+  "name": "df_merge_transform",
+  "type": "Microsoft.DataFactory/factories/dataflows",
+  "properties": {
+    "type": "MappingDataFlow",
+    "description": "Merges, cleans, and deduplicates CRM CSV and Excel customer records into a single unified output stream.",
+    "typeProperties": {
+      "sources": [
+        {
+          "name": "CRMSource",
+          "description": "CRM CSV weekly export — snake_case columns",
+          "dataset": {
+            "referenceName": "ds_crm_source",
+            "type": "DatasetReference"
+          }
+        },
+        {
+          "name": "ExcelSource",
+          "description": "Sales team Excel workbook — PascalCase columns",
+          "dataset": {
+            "referenceName": "ds_excel_source",
+            "type": "DatasetReference"
+          }
+        }
+      ],
+      "sinks": [
+        {
+          "name": "SinkCSV",
+          "description": "Write clean output to data/clean/ in Azure Blob Storage.",
+          "dataset": {
+            "referenceName": "ds_clean_output",
+            "type": "DatasetReference"
+          }
+        },
+        {
+          "name": "SinkSQL",
+          "description": "Load clean rows into dbo.CustomerStaging in SQL Server.",
+          "dataset": {
+            "referenceName": "ds_sql_customers",
+            "type": "DatasetReference"
+          },
+          "settings": {
+            "updateMethod": "upsert",
+            "upsertSettings": {
+              "useTempDB": true,
+              "keys": ["CustomerID"]
+            },
+            "preSQLs": ["TRUNCATE TABLE dbo.CustomerStaging"]
+          }
+        }
+      ],
+      "transformations": [
+        {
+          "name": "SelectCRM",
+          "description": "Rename CRM snake_case columns to unified PascalCase schema and add SourceSystem = 'CRM'.",
+          "type": "Select",
+          "inputs": [{ "name": "CRMSource" }],
+          "mappings": [
+            { "name": "customer_id",  "label": "CustomerID" },
+            { "name": "full_name",    "label": "CustomerName" },
+            { "name": "email",        "label": "Email" },
+            { "name": "phone",        "label": "Phone" },
+            { "name": "signup_date",  "label": "SignupDate" },
+            { "name": "country",      "label": "Country" },
+            { "name": "segment",      "label": "Segment" }
+          ]
+        },
+        {
+          "name": "SelectExcel",
+          "description": "Rename Excel PascalCase columns to unified schema and add SourceSystem = 'Excel'.",
+          "type": "Select",
+          "inputs": [{ "name": "ExcelSource" }],
+          "mappings": [
+            { "name": "CustomerID",       "label": "CustomerID" },
+            { "name": "Name",             "label": "CustomerName" },
+            { "name": "EmailAddress",     "label": "Email" },
+            { "name": "PhoneNumber",      "label": "Phone" },
+            { "name": "JoinDate",         "label": "SignupDate" },
+            { "name": "Country",          "label": "Country" },
+            { "name": "CustomerSegment",  "label": "Segment" }
+          ]
+        },
+        {
+          "name": "DerivedCRM",
+          "description": "Apply business rules to CRM stream: cast types, normalise formats, add SourceSystem.",
+          "type": "DerivedColumn",
+          "inputs": [{ "name": "SelectCRM" }],
+          "columns": [
+            {
+              "name": "CustomerID",
+              "expression": "toInteger(CustomerID)"
+            },
+            {
+              "name": "CustomerName",
+              "expression": "trim(initCap(CustomerName))"
+            },
+            {
+              "name": "Email",
+              "expression": "lower(trim(Email))"
+            },
+            {
+              "name": "Phone",
+              "expression": "regexReplace(regexReplace(trim(Phone), '[\\s\\-\\(\\)]', ''), '^(00|0)', '+20')"
+            },
+            {
+              "name": "SignupDate",
+              "expression": "case(!isNull(SignupDate) && length(trim(SignupDate)) > 0, toDate(SignupDate, 'yyyy-MM-dd'), null())"
+            },
+            {
+              "name": "Country",
+              "expression": "case(Country == 'Egypt', 'Egypt', Country == 'Saudi Arabia', 'Saudi Arabia', Country == 'UAE', 'United Arab Emirates', Country == 'Jordan', 'Jordan', Country == 'Kuwait', 'Kuwait', Country)"
+            },
+            {
+              "name": "Segment",
+              "expression": "upper(trim(Segment))"
+            },
+            {
+              "name": "SourceSystem",
+              "expression": "'CRM'"
+            }
+          ]
+        },
+        {
+          "name": "DerivedExcel",
+          "description": "Apply business rules to Excel stream: cast types, map ISO country codes, normalise phone with country code prefix, add SourceSystem.",
+          "type": "DerivedColumn",
+          "inputs": [{ "name": "SelectExcel" }],
+          "columns": [
+            {
+              "name": "CustomerID",
+              "expression": "toInteger(CustomerID)"
+            },
+            {
+              "name": "CustomerName",
+              "expression": "trim(initCap(CustomerName))"
+            },
+            {
+              "name": "Email",
+              "expression": "lower(trim(Email))"
+            },
+            {
+              "name": "Phone",
+              "expression": "regexReplace(trim(Phone), '[\\s]', '')"
+            },
+            {
+              "name": "SignupDate",
+              "expression": "case(!isNull(SignupDate) && length(trim(SignupDate)) > 0, case(toInteger(SignupDate) > 40000, toDate(addDays(toDate('1899-12-30', 'yyyy-MM-dd'), toInteger(SignupDate))), toDate(SignupDate, 'dd/MM/yyyy')), null())"
+            },
+            {
+              "name": "Country",
+              "expression": "case(Country == 'EGY', 'Egypt', Country == 'SAU', 'Saudi Arabia', Country == 'ARE', 'United Arab Emirates', Country == 'JOR', 'Jordan', Country == 'KWT', 'Kuwait', Country == 'USA', 'United States', Country == 'GBR', 'United Kingdom', Country)"
+            },
+            {
+              "name": "Segment",
+              "expression": "upper(trim(Segment))"
+            },
+            {
+              "name": "SourceSystem",
+              "expression": "'Excel'"
+            }
+          ]
+        },
+        {
+          "name": "FilterCRM",
+          "description": "Drop CRM rows where CustomerID is null/zero or CustomerName is null/blank.",
+          "type": "Filter",
+          "inputs": [{ "name": "DerivedCRM" }],
+          "condition": "!isNull(CustomerID) && CustomerID > 0 && !isNull(CustomerName) && length(trim(CustomerName)) > 0"
+        },
+        {
+          "name": "FilterExcel",
+          "description": "Drop Excel rows where CustomerID is null/zero or CustomerName is null/blank.",
+          "type": "Filter",
+          "inputs": [{ "name": "DerivedExcel" }],
+          "condition": "!isNull(CustomerID) && CustomerID > 0 && !isNull(CustomerName) && length(trim(CustomerName)) > 0"
+        },
+        {
+          "name": "UnionStreams",
+          "description": "Append both cleaned streams into one combined dataset.",
+          "type": "Union",
+          "inputs": [
+            { "name": "FilterCRM" },
+            { "name": "FilterExcel" }
+          ],
+          "unionAll": true
+        },
+        {
+          "name": "DeduplicateByCustomerID",
+          "description": "Keep exactly one record per CustomerID. CRM is preferred over Excel. When both sources have the same CustomerID the CRM values are used for all key fields.",
+          "type": "Aggregate",
+          "inputs": [{ "name": "UnionStreams" }],
+          "groupBy": ["CustomerID"],
+          "aggregations": [
+            {
+              "name": "CustomerName",
+              "expression": "first(CustomerName, SourceSystem == 'CRM')"
+            },
+            {
+              "name": "Email",
+              "expression": "first(Email, SourceSystem == 'CRM')"
+            },
+            {
+              "name": "Phone",
+              "expression": "first(Phone, SourceSystem == 'CRM')"
+            },
+            {
+              "name": "SignupDate",
+              "expression": "first(SignupDate, SourceSystem == 'CRM')"
+            },
+            {
+              "name": "Country",
+              "expression": "first(Country, SourceSystem == 'CRM')"
+            },
+            {
+              "name": "Segment",
+              "expression": "first(Segment, SourceSystem == 'CRM')"
+            },
+            {
+              "name": "SourceSystem",
+              "expression": "first(SourceSystem, SourceSystem == 'CRM')"
+            }
+          ]
+        }
+      ],
+      "script": "// Autogenerated by ADF Studio — edit in ADF Studio only.\n// Do not modify this file manually."
+    }
+  }
+}

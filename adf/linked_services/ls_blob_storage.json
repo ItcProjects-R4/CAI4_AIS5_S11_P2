@@ -1,0 +1,23 @@
+{
+  "name": "ls_blob_storage",
+  "type": "Microsoft.DataFactory/factories/linkedservices",
+  "properties": {
+    "type": "AzureBlobStorage",
+    "description": "Connection to Azure Blob Storage container hosting raw and clean customer data files.",
+    "typeProperties": {
+      "connectionString": {
+        "type": "AzureKeyVaultSecret",
+        "store": {
+          "referenceName": "ls_key_vault",
+          "type": "LinkedServiceReference"
+        },
+        "secretName": "blob-storage-connection-string"
+      }
+    },
+    "annotations": [
+      "customer-data-etl",
+      "raw-layer",
+      "clean-layer"
+    ]
+  }
+}

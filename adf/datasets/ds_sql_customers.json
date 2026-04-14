@@ -1,0 +1,32 @@
+{
+  "name": "ds_sql_customers",
+  "type": "Microsoft.DataFactory/factories/datasets",
+  "properties": {
+    "type": "SqlServerTable",
+    "description": "Target staging table in CustomerDW SQL Server database. ADF Data Flow writes here; usp_UpsertCustomers merges into dbo.Customers.",
+    "linkedServiceName": {
+      "referenceName": "ls_sql_server",
+      "type": "LinkedServiceReference"
+    },
+    "typeProperties": {
+      "schema": "dbo",
+      "table": "CustomerStaging"
+    },
+    "schema": [
+      { "name": "CustomerID",    "type": "int",           "precision": 10 },
+      { "name": "CustomerName",  "type": "nvarchar",      "precision": 200 },
+      { "name": "Email",         "type": "nvarchar",      "precision": 255 },
+      { "name": "Phone",         "type": "nvarchar",      "precision": 50 },
+      { "name": "SignupDate",    "type": "date" },
+      { "name": "Country",       "type": "nvarchar",      "precision": 100 },
+      { "name": "Segment",       "type": "nvarchar",      "precision": 50 },
+      { "name": "SourceSystem",  "type": "nvarchar",      "precision": 20 },
+      { "name": "LoadedAt",      "type": "datetime2",     "scale": 0 }
+    ],
+    "annotations": [
+      "customer-data-etl",
+      "sql-server",
+      "staging"
+    ]
+  }
+}

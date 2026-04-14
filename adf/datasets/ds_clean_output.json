@@ -1,0 +1,45 @@
+{
+  "name": "ds_clean_output",
+  "type": "Microsoft.DataFactory/factories/datasets",
+  "properties": {
+    "type": "DelimitedText",
+    "description": "Clean merged CSV output written after every successful pipeline run. One file per run date under data/clean/.",
+    "linkedServiceName": {
+      "referenceName": "ls_blob_storage",
+      "type": "LinkedServiceReference"
+    },
+    "typeProperties": {
+      "location": {
+        "type": "AzureBlobStorageLocation",
+        "container": "customer-data-etl",
+        "folderPath": "data/clean",
+        "fileName": {
+          "type": "Expression",
+          "value": "@concat('customers_clean_', formatDateTime(pipeline().parameters.RunDate, 'yyyyMMdd'), '.csv')"
+        }
+      },
+      "columnDelimiter": ",",
+      "rowDelimiter": "\n",
+      "encodingName": "UTF-8",
+      "escapeChar": "\\",
+      "quoteChar": "\"",
+      "firstRowAsHeader": true,
+      "nullValue": ""
+    },
+    "schema": [
+      { "name": "CustomerID",    "type": "String" },
+      { "name": "CustomerName",  "type": "String" },
+      { "name": "Email",         "type": "String" },
+      { "name": "Phone",         "type": "String" },
+      { "name": "SignupDate",    "type": "String" },
+      { "name": "Country",       "type": "String" },
+      { "name": "Segment",       "type": "String" },
+      { "name": "SourceSystem",  "type": "String" }
+    ],
+    "annotations": [
+      "customer-data-etl",
+      "output",
+      "clean"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "ls_sql_server",
+  "type": "Microsoft.DataFactory/factories/linkedservices",
+  "properties": {
+    "type": "SqlServer",
+    "description": "Connection to SQL Server CustomerDW database — target for clean customer records.",
+    "typeProperties": {
+      "connectionString": {
+        "type": "AzureKeyVaultSecret",
+        "store": {
+          "referenceName": "ls_key_vault",
+          "type": "LinkedServiceReference"
+        },
+        "secretName": "sql-server-connection-string"
+      }
+    },
+    "annotations": [
+      "customer-data-etl",
+      "sql-server",
+      "CustomerDW"
+    ]
+  }
+}

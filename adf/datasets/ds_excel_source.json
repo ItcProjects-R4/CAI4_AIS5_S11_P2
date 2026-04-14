@@ -1,0 +1,40 @@
+{
+  "name": "ds_excel_source",
+  "type": "Microsoft.DataFactory/factories/datasets",
+  "properties": {
+    "type": "Excel",
+    "description": "Sales team Excel workbook (.xlsx). Sheet name: Customers (always first sheet). Header on row 1. Dates may be stored as Excel serial numbers or DD/MM/YYYY strings.",
+    "linkedServiceName": {
+      "referenceName": "ls_blob_storage",
+      "type": "LinkedServiceReference"
+    },
+    "typeProperties": {
+      "location": {
+        "type": "AzureBlobStorageLocation",
+        "container": "customer-data-etl",
+        "folderPath": "data/raw",
+        "fileName": {
+          "type": "Expression",
+          "value": "@concat('excel_customers_', formatDateTime(pipeline().parameters.RunDate, 'yyyyMMdd'), '.xlsx')"
+        }
+      },
+      "sheetName": "Customers",
+      "firstRowAsHeader": true,
+      "nullValue": ""
+    },
+    "schema": [
+      { "name": "CustomerID",        "type": "String" },
+      { "name": "Name",              "type": "String" },
+      { "name": "EmailAddress",      "type": "String" },
+      { "name": "PhoneNumber",       "type": "String" },
+      { "name": "JoinDate",          "type": "String" },
+      { "name": "Country",           "type": "String" },
+      { "name": "CustomerSegment",   "type": "String" }
+    ],
+    "annotations": [
+      "customer-data-etl",
+      "source",
+      "excel"
+    ]
+  }
+}
