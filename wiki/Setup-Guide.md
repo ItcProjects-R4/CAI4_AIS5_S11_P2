@@ -39,12 +39,24 @@ You now have a local copy of the repository. The folder structure should look li
 
 ```
 customer-data-etl/
-+-- data/raw/
-+-- data/clean/
-+-- sql/scripts/
-+-- adf/
-+-- docs/
-+-- wiki/
+|-- data/
+|   |-- raw/
+|   |-- clean/
+|   |-- rejected/
+|   `-- quarantine/
+|-- sql/
+|   `-- scripts/
+|-- adf/
+|   |-- pipelines/
+|   |-- datasets/
+|   `-- linked_services/
+|-- docs/
+|   |-- README.md
+|   `-- project_flow.md
+|-- wiki/
+|-- presentation/
+`-- .github/
+    `-- workflows/
 ```
 
 ---

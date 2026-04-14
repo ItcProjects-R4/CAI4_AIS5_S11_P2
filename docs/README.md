@@ -1,90 +1,50 @@
-# ETL for Customer Data from Multiple Sources
+# Project Guide
 
+This folder contains the working docs for the student ETL project. The main documentation lives in the wiki; this folder keeps the team-facing structure and weekly progress notes in one place.
 
+## Canonical Docs
+- Full onboarding and navigation: [../wiki/Home.md](../wiki/Home.md)
+- Pipeline and phase tracking: [project_flow.md](project_flow.md)
 
-## Project Goal
-Merge customer data from CRM and Excel, clean/transform it, and load clean output that is ready for Data Warehouse analysis.
+## Working Structure
 
-## Tech Stack
-- Azure Data Factory
-- SQL Server
-- Data Flows
-
-## Project Folder Map
-
-Use only these folders:
-
-```
+```text
 customer-data-etl/
-├── data/
-│   ├── raw/      # Original source files (CRM export, Excel)
-│   └── clean/    # Final cleaned files ready for analysis
-├── sql/
-│   └── scripts/  # SQL scripts for tables/views/load steps
-├── adf/
-│   ├── pipelines/        # ADF pipelines
-│   ├── datasets/         # ADF datasets
-│   └── linked_services/  # ADF connections
-└── docs/
-		├── README.md         # This file
-		└── project_flow.md   # Team phases and workflow
+|-- data/
+|   |-- raw/
+|   |-- clean/
+|   |-- rejected/
+|   `-- quarantine/
+|-- sql/
+|   `-- scripts/
+|-- adf/
+|   |-- pipelines/
+|   |-- datasets/
+|   `-- linked_services/
+|-- docs/
+|   |-- README.md
+|   `-- project_flow.md
+|-- wiki/
+|-- presentation/
+`-- .github/
+    |-- ISSUE_TEMPLATE/
+    |-- PULL_REQUEST_TEMPLATE.md
+    `-- workflows/
 ```
 
-## Quick Working Rules (Student Version)
+## Quick Rules
 1. Put source input files in `data/raw/`.
-2. Keep transformed output in `data/clean/`.
-3. Save every SQL change as a new script in `sql/scripts/`.
-4. Save/export ADF JSON assets into `adf/` folders.
-5. Update `docs/project_flow.md` after each phase milestone.
+2. Keep rejected records in `data/rejected/` and temporary problem files in `data/quarantine/`.
+3. Keep transformed output in `data/clean/`.
+4. Save every SQL change as a new numbered script in `sql/scripts/`.
+5. Export ADF JSON assets into `adf/` folders.
+6. Update `docs/project_flow.md` after each milestone.
 
-## Team Responsibilities
+## Team Roles
 
-Team members: **Ali, Amin, Mennat Allah, Aseel, Habiba**
-
-Each role below is intentionally unassigned first so team members can claim ownership.
-
-### 1) Data Collection / Extraction
-- Owner: **[Unassigned - Claim this role]**
-- Collect CRM and Excel source files.
-- Validate file names and columns.
-- Place files in `data/raw/`.
-
-### 2) Data Cleaning / Transformation (ETL)
-- Owner: **[Unassigned - Claim this role]**
-- Build ADF pipelines and data flows.
-- Standardize columns, types, null handling, and duplicates.
-- Produce cleaned output in `data/clean/`.
-- Store ADF assets in:
-	- `adf/pipelines/`
-	- `adf/datasets/`
-	- `adf/linked_services/`
-
-### 3) Data Modeling / Warehouse Design
-- Owner: **[Unassigned - Claim this role]**
-- Design warehouse tables (dimension/fact or simple reporting tables).
-- Create SQL scripts in `sql/scripts/`.
-- Keep naming consistent and readable.
-
-### 4) Data Validation / Testing
-- Owner: **[Unassigned - Claim this role]**
-- Compare row counts: raw vs clean.
-- Check nulls, duplicates, and key consistency.
-- Confirm transformed values are correct.
-- Record quick validation notes in commit messages or phase notes.
-
-### 5) Documentation & Presentation
-- Owner: **[Unassigned - Claim this role]**
-- Keep project progress updated in `docs/project_flow.md`.
-- Prepare final report slides/screenshots.
-- Explain source → transform → output clearly.
-
-## Simple Weekly Workflow
-1. Add/update source files in `data/raw/`.
-2. Update ADF assets in `adf/`.
-3. Update SQL in `sql/scripts/`.
-4. Run ETL and generate output in `data/clean/`.
-5. Validate output and update `docs/project_flow.md`.
+The current role ownership and weekly checklist live in [../wiki/Team-Roles.md](../wiki/Team-Roles.md).
 
 ## Expected Output
-Clean customer dataset ready for analysis in Data Warehouse/BI reporting.
+
+Clean customer data ready for analysis, plus a documented project flow that the team can maintain.
 

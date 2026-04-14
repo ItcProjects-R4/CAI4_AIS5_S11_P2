@@ -103,19 +103,24 @@ This project integrates two customer data sources that use different formats and
 
 ```
 customer-data-etl/
-+-- data/
-|   +-- raw/              <- Drop source files here (never edit them)
-|   +-- clean/            <- Pipeline writes clean output here
-+-- sql/
-|   +-- scripts/          <- SQL scripts: tables, views, procedures
-+-- adf/
-|   +-- pipelines/        <- ADF pipeline JSON exports
-|   +-- datasets/         <- ADF dataset JSON exports
-|   +-- linked_services/  <- ADF connection JSON exports
-+-- docs/
-|   +-- README.md         <- Project guide and team rules
-|   +-- project_flow.md   <- Iterative delivery phases
-+-- wiki/                 <- This wiki (all pages live here)
+|-- data/
+|   |-- raw/              <- Drop source files here (never edit them)
+|   |-- clean/            <- Pipeline writes clean output here
+|   |-- rejected/         <- Rows that fail validation or filters
+|   `-- quarantine/       <- Problem files or records awaiting review
+|-- sql/
+|   `-- scripts/          <- SQL scripts: tables, views, procedures
+|-- adf/
+|   |-- pipelines/        <- ADF pipeline JSON exports
+|   |-- datasets/         <- ADF dataset JSON exports
+|   `-- linked_services/  <- ADF connection JSON exports
+|-- docs/
+|   |-- README.md         <- Project guide and team rules
+|   `-- project_flow.md   <- Iterative delivery phases
+|-- wiki/                 <- This wiki (all pages live here)
+|-- presentation/         <- Final slides, screenshots, and demo material
+`-- .github/
+    `-- workflows/        <- Optional automation and CI/CD assets
 ```
 
 ---
