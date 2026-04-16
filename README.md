@@ -1,6 +1,6 @@
 # ETL for Customer Data from Multiple Sources
 
-Beginner-friendly college group project to integrate CRM and Excel customer data, transform it, and prepare it for analysis.
+Beginner-friendly group project to integrate CRM and Excel customer data, transform it, and prepare it for analysis.
 
 ## Start Here
 - Working guide: [docs/README.md](docs/README.md)
