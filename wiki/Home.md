@@ -42,6 +42,28 @@ This project integrates two customer data sources that use different formats and
 
 ---
 
+## Project Workflow and Timeline
+
+The project follows a practical flow from source understanding to validated delivery:
+
+1. Understand source context and business goals
+2. Explore data characteristics and edge cases
+3. Define architecture and ETL approach
+4. Execute extraction, transformation, and load iterations
+5. Validate output quality and resolve issues
+6. Publish documentation and final reporting outputs
+
+### Delivery Timeline
+
+| Phase | Focus |
+|---|---|
+| Week 1 | Source exploration and architecture setup |
+| Week 2 | Pipeline implementation and initial runs |
+| Week 3 | Modeling refinements and validation hardening |
+| Week 4 | Final documentation, sign-off checks, and presentation prep |
+
+---
+
 ## High-Level Architecture
 
 ```
@@ -102,7 +124,7 @@ This project integrates two customer data sources that use different formats and
 ## Repository Structure
 
 ```
-customer-data-etl/
+CAI4_AIS5_S11_P2/
 |-- data/
 |   |-- raw/              <- Drop source files here (never edit them)
 |   |-- clean/            <- Pipeline writes clean output here
@@ -114,9 +136,7 @@ customer-data-etl/
 |   |-- pipelines/        <- ADF pipeline JSON exports
 |   |-- datasets/         <- ADF dataset JSON exports
 |   `-- linked_services/  <- ADF connection JSON exports
-|-- docs/
-|   |-- README.md         <- Project guide and team rules
-|   `-- project_flow.md   <- Iterative delivery phases
+|-- docs/                 <- Optional supporting notes/assets
 |-- wiki/                 <- This wiki (all pages live here)
 |-- presentation/         <- Final slides, screenshots, and demo material
 `-- .github/
@@ -129,16 +149,15 @@ customer-data-etl/
 
 | Page | What you will learn |
 |---|---|
-| [Home](Home) | Project overview, architecture, and this navigation guide |
-| [Project Architecture](Project-Architecture) | Deep dive into each layer of the pipeline |
-| [Setup Guide](Setup-Guide) | Clone the repo and configure your environment step by step |
-| [ETL Pipeline](ETL-Pipeline) | How the ADF pipeline works end to end |
-| [Data Sources](Data-Sources) | CRM and Excel source schemas, formats, and quality issues |
-| [SQL Schema](SQL-Schema) | Warehouse table design, views, and stored procedures |
-| [Data Validation](Data-Validation) | Quality checks and validation queries to run after each load |
-| [Team Roles](Team-Roles) | Who owns what -- role assignments and weekly responsibilities |
-| [Contributing](Contributing) | How to branch, commit, open pull requests, and use issue templates |
-| [Glossary](Glossary) | Plain-English definitions of every technical term used here |
+| [Home](./Home.md) | Project overview, architecture, and this navigation guide |
+| [Project Architecture](./Project-Architecture.md) | Deep dive into each layer of the pipeline |
+| [Setup Guide](./Setup-Guide.md) | Clone the repo and configure your environment step by step |
+| [ETL Pipeline](./ETL-Pipeline.md) | How the ADF pipeline works end to end |
+| [Data Sources](./Data-Sources.md) | CRM and Excel source schemas, formats, and quality issues |
+| [SQL Schema](./SQL-Schema.md) | Warehouse table design, views, and stored procedures |
+| [Data Validation](./Data-Validation.md) | Quality checks and validation queries to run after each load |
+| [Contributing](./Contributing.md) | How to branch, commit, open pull requests, and use issue templates |
+| [Glossary](./Glossary.md) | Plain-English definitions of every technical term used here |
 
 ---
 
@@ -154,4 +173,4 @@ customer-data-etl/
 
 ---
 
-> **New to ETL?** Start with the [Glossary](Glossary) to learn the key terms, then read [Project Architecture](Project-Architecture) to see the big picture before diving into technical details.
+> **New to ETL?** Start with the [Glossary](./Glossary.md) to learn the key terms, then read [Project Architecture](./Project-Architecture.md) to see the big picture before diving into technical details.

@@ -270,4 +270,4 @@ After each run, the validation queries in `sql/scripts/05_validation_queries.sql
 - No null key fields exist
 - No duplicates were introduced
 
-See the [Data Validation](Data-Validation) page for the full checklist.
+See the [Data Validation](./Data-Validation.md) page for the full checklist.

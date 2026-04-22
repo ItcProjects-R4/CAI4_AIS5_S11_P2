@@ -2,7 +2,7 @@
 
 This page explains how to contribute to the project -- from setting up your local environment, to branching, committing, and opening pull requests.
 
-> **Before you contribute:** Make sure you have completed the [Setup Guide](Setup-Guide) first.
+> **Before you contribute:** Make sure you have completed the [Setup Guide](./Setup-Guide.md) first.
 
 ---
 
@@ -32,6 +32,30 @@ This page explains how to contribute to the project -- from setting up your loca
        v
 8. Merge to main
 ```
+
+---
+
+## Team Roles and Responsibilities
+
+Use this as the role ownership baseline for delivery and reviews.
+
+| Name | Role Area | Core Responsibility |
+|---|---|---|
+| Ali | Project Lead / Architecture | Align architecture decisions, unblock cross-role issues |
+| Amin | ETL / ADF Pipeline | Maintain pipeline assets and execute ingestion/transform runs |
+| Mennat Allah | Data Modeling / SQL | Maintain schema, scripts, and SQL loading logic |
+| Aseel | Data Validation / Testing | Run validation checks and report quality issues |
+| Habiba | Documentation / BI | Maintain documentation quality and reporting artifacts |
+
+### Role Responsibilities by Area
+
+| Area | Responsibilities |
+|---|---|
+| Data Collection and Extraction | Acquire latest CRM/Excel source files, verify expected schema, place inputs in `data/raw/`, report source schema changes |
+| ETL and ADF Pipeline | Maintain linked services/datasets/pipelines, implement transformation changes, run Debug and Trigger Now checks, export updated ADF JSON |
+| Data Modeling and SQL | Maintain SQL tables/views/procedures, add new numbered scripts in `sql/scripts/`, keep scripts idempotent |
+| Data Validation and Testing | Run `sql/scripts/05_validation_queries.sql`, compare row counts, detect nulls/duplicates/invalid values, escalate failures |
+| Documentation and BI | Keep wiki pages current, maintain demo/reporting artifacts, ensure onboarding docs stay accurate |
 
 ---
 
@@ -89,7 +113,7 @@ Make focused, small changes. A pull request should do **one thing** -- not five 
 | Update to existing SQL script | New versioned script, not editing the old one |
 | New or updated raw source file | `data/raw/` |
 | Wiki update | `wiki/` |
-| Project guide update | `docs/README.md` or `docs/project_flow.md` |
+| Project guide update | `wiki/Home.md` or related `wiki/` page |
 
 ### Files You Should NOT Commit
 
@@ -210,7 +234,7 @@ Use labels on issues and pull requests to make them easy to filter:
 - Use `UPPER CASE` for SQL keywords: `SELECT`, `FROM`, `WHERE`, `JOIN`
 - Use `snake_case` for column aliases in queries
 - Prefix stored procedures with `usp_` (e.g. `dbo.usp_UpsertCustomers`)
-- Add a standard comment header to every script file (see [SQL Schema](SQL-Schema))
+- Add a standard comment header to every script file (see [SQL Schema](./SQL-Schema.md))
 - Scripts must be idempotent -- use `IF NOT EXISTS` or `CREATE OR ALTER`
 
 ### ADF JSON Files
@@ -223,24 +247,3 @@ Use labels on issues and pull requests to make them easy to filter:
 - Use `snake_case` for source data files: `crm_customers_20240601.csv`
 - Use `PascalCase` for SQL object names: `CustomerDW`, `dbo.Customers`
 - Use numbered prefixes for SQL scripts: `01_`, `02_`, etc.
-# Contributing to Customer Data ETL
-
-The full contribution guide lives in [wiki/Contributing.md](wiki/Contributing.md). This file stays short on purpose so the root of the repo has one simple entry point for contributors.
-
-## Quick Rules
-1. Always work on a branch.
-2. Keep pull requests focused on one change.
-3. Link every PR to an issue.
-4. Test before you push.
-5. Get review before merging.
-
-## Where Things Go
-- ADF pipeline JSON: `adf/pipelines/`
-- ADF dataset JSON: `adf/datasets/`
-- ADF linked service JSON: `adf/linked_services/`
-- SQL scripts: `sql/scripts/`
-- Raw source files: `data/raw/`
-- Project docs: `docs/`
-- Wiki pages: `wiki/`
-
-Do not commit files from `data/clean/`, credentials, or temporary files.

@@ -209,7 +209,7 @@ Group by `CustomerID` and use `last()` / `first()` aggregation to pick one recor
 
 ### Scheduled Run
 
-See the [Project Architecture](Project-Architecture) page for instructions on setting up a scheduled or event-based trigger.
+See the [Project Architecture](./Project-Architecture.md) page for instructions on setting up a scheduled or event-based trigger.
 
 ---
 
@@ -219,7 +219,7 @@ See the [Project Architecture](Project-Architecture) page for instructions on se
 2. Verify output in `data/clean/` -- a new CSV file should appear.
 3. In SSMS, run: `SELECT COUNT(*) FROM dbo.Customers;` to verify rows were loaded.
 4. Run the validation queries from `sql/scripts/05_validation_queries.sql`.
-5. Update the progress table in `docs/project_flow.md`.
+5. Record run results in the related GitHub issue or pull request notes.
 
 ---
 

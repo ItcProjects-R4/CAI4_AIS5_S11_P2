@@ -147,7 +147,7 @@ CAI4_AIS5_S11_P2/
 │   ├── pipelines/        ← pl_customer_etl.json, df_merge_transform.json
 │   ├── datasets/         ← ds_crm_source.json, ds_excel_source.json, etc.
 │   └── linked_services/  ← ls_blob_storage.json, ls_sql_server.json
-├── docs/                 ← Project guide, architecture notes, phase tracking
+├── docs/                 ← Optional supporting notes/assets (see docs/README.md)
 ├── wiki/                 ← Full documentation (see navigation below)
 ├── presentation/         ← Demo slides and screenshots
 └── .github/              ← Issue templates, PR template, CI/CD workflows
@@ -234,6 +234,7 @@ All pipeline, dataset, and linked service definitions are stored as JSON — **n
 | Page | What you will find |
 |---|---|
 | [Home](wiki/Home.md) | Project overview and wiki navigation |
+| [Project Flow](wiki/project_flow.md) | Team planning flow, roles, and timeline |
 | [Project Architecture](wiki/Project-Architecture.md) | Medallion layers, full architecture diagram, data flow |
 | [ETL Pipeline](wiki/ETL-Pipeline.md) | ADF pipeline end-to-end, Data Flow steps, running instructions |
 | [Data Sources](wiki/Data-Sources.md) | CRM and Excel schemas, known quality issues, file checklist |

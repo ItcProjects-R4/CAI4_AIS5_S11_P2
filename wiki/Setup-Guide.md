@@ -31,14 +31,14 @@ Install and configure the following before you begin:
 Open a terminal and run:
 
 ```bash
-git clone https://github.com/Ali-Hegazy-Ai/customer-data-etl.git
-cd customer-data-etl
+git clone https://github.com/Ali-Hegazy-Ai/CAI4_AIS5_S11_P2.git
+cd CAI4_AIS5_S11_P2
 ```
 
 You now have a local copy of the repository. The folder structure should look like:
 
 ```
-customer-data-etl/
+CAI4_AIS5_S11_P2/
 |-- data/
 |   |-- raw/
 |   |-- clean/
@@ -51,8 +51,6 @@ customer-data-etl/
 |   |-- datasets/
 |   `-- linked_services/
 |-- docs/
-|   |-- README.md
-|   `-- project_flow.md
 |-- wiki/
 |-- presentation/
 `-- .github/
@@ -166,7 +164,7 @@ az storage blob upload \
 
 ## Step 7 -- Set Up Your Git Workflow
 
-See the [Contributing](Contributing) page for the full branching and pull request guide. Quick summary:
+See the [Contributing](./Contributing.md) page for the full branching and pull request guide. Quick summary:
 
 ```bash
 # Always work on a new branch, not main

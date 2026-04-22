@@ -206,7 +206,7 @@ ORDER BY RunStart DESC;
 
 ## Row Count Tracking Table
 
-Update this table in `docs/project_flow.md` after each pipeline run:
+Use this table in your run notes after each pipeline execution:
 
 | Run Date | CRM Raw Rows | Excel Raw Rows | Clean Output Rows | SQL Table Rows | Rejected Rows | Issues Found |
 |---|---|---|---|---|---|---|

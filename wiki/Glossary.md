@@ -28,7 +28,7 @@ A data organisation pattern with three layers:
 - **Gold**: Ready-for-analytics data (`data/clean/` and SQL Server)
 
 ### Data Lineage
-The record of where each piece of data came from and what transformations it went through. Tracked here via the `SourceSystem` column and the `docs/project_flow.md` file.
+The record of where each piece of data came from and what transformations it went through. Tracked here via the `SourceSystem` column and the `wiki/project_flow.md` planning guide.
 
 ### Idempotent
 A script or process is idempotent if running it multiple times produces the same result as running it once. In SQL, this means using `IF NOT EXISTS` or `CREATE OR ALTER` so scripts do not fail if run twice.

@@ -50,7 +50,7 @@ The team should use this model to ask architectural questions and compare option
 
 ## Role 1 — Data Collection & Cloud Storage (Extraction)
 
-Owner: Amin,Ali
+Owner: Amin, Ali
 
 Topics this role should understand:
 
@@ -190,7 +190,7 @@ Questions this role should help answer:
 ### Deliverables
 
 - Updated README.md (simplified workflow)
-- Detailed documentation in `/docs`
+- Detailed documentation in `wiki/` (this folder) and the main `README.md`
 - Wiki pages for concepts and onboarding
 - Architecture diagrams
 - Weekly progress updates

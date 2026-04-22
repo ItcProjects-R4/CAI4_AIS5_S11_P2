@@ -3,13 +3,13 @@
 This folder contains the working docs for the student ETL project. The main documentation lives in the wiki; this folder keeps the team-facing structure and weekly progress notes in one place.
 
 ## Canonical Docs
-- Full onboarding and navigation: [../wiki/Home.md](../wiki/Home.md)
-- Pipeline and phase tracking: [project_flow.md](project_flow.md)
+- Full onboarding and navigation: [Home](Home.md)
+- Pipeline and phase tracking: [Project Flow](project_flow.md)
 
 ## Working Structure
 
 ```text
-customer-data-etl/
+CAI4_AIS5_S11_P2/
 |-- data/
 |   |-- raw/
 |   |-- clean/
@@ -21,9 +21,7 @@ customer-data-etl/
 |   |-- pipelines/
 |   |-- datasets/
 |   `-- linked_services/
-|-- docs/
-|   |-- README.md
-|   `-- project_flow.md
+|-- docs/                 <- Optional supporting notes/assets (not canonical)
 |-- wiki/
 |-- presentation/
 `-- .github/
@@ -38,11 +36,11 @@ customer-data-etl/
 3. Keep transformed output in `data/clean/`.
 4. Save every SQL change as a new numbered script in `sql/scripts/`.
 5. Export ADF JSON assets into `adf/` folders.
-6. Update `docs/project_flow.md` after each milestone.
+6. Update `wiki/project_flow.md` after each milestone (this is the canonical flow guide).
 
 ## Team Roles
 
-The current role ownership and weekly checklist live in [../wiki/Team-Roles.md](../wiki/Team-Roles.md).
+The current role ownership and weekly checklist live in [Team Roles](Team-Roles.md).
 
 ## Expected Output
 

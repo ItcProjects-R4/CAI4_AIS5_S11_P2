@@ -59,7 +59,7 @@ Closes #<!-- issue number -->
 
 ## Checklist
 
-- [ ] My changes follow the branching and commit conventions in the [Contributing guide](wiki/Contributing.md)
+- [ ] My changes follow the branching and commit conventions in the [Contributing guide](../wiki/Contributing.md)
 - [ ] I have tested my changes
 - [ ] I have updated relevant wiki or docs pages if needed
 - [ ] I have linked this PR to the relevant GitHub Issue
