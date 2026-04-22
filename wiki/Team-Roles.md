@@ -2,8 +2,12 @@
 
 This page is kept as a compatibility entry point.
 
-Canonical role ownership and responsibilities now live in the Contributing guide:
+Team roles were merged into these two canonical pages:
 
+- [Project Flow](./project_flow.md)
 - [Contributing](./Contributing.md#team-roles-and-responsibilities)
 
-Use that page for current role scope, expectations, and contribution workflow.
+Use both pages together:
+
+- `project_flow.md` for role knowledge, planning scope, and deliverables.
+- `Contributing.md` for workflow, branch rules, reviews, and team ownership baseline.

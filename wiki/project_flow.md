@@ -48,6 +48,16 @@ The team should use this model to ask architectural questions and compare option
 
 # Required Knowledge & Prerequisites
 
+Team roles are merged across this page and [Contributing](./Contributing.md):
+
+| Name | Primary Role Area | Primary Reference |
+|---|---|---|
+| Ali | Project Lead, Architecture, ETL Coordination | This page + [Contributing](./Contributing.md) |
+| Amin | Data Collection, Cloud Storage, ETL Support | This page + [Contributing](./Contributing.md) |
+| Mennat Allah | Data Modeling, SQL Architecture, BI Direction | This page + [Contributing](./Contributing.md) |
+| Aseel | Data Quality, Validation, Testing | This page + [Contributing](./Contributing.md) |
+| Habiba | Documentation, BI Reporting, Quality Support | This page + [Contributing](./Contributing.md) |
+
 ## Role 1 — Data Collection & Cloud Storage (Extraction)
 
 Owner: Amin, Ali
@@ -108,7 +118,7 @@ Questions this role should help answer:
 
 ## Role 3 — Data Modeling, SQL Architecture & Power BI
 
-Owner: Mennatullah, Amin
+Owner: Mennat Allah, Amin
 
 Topics this role should understand:
 
@@ -137,7 +147,7 @@ Questions this role should help answer:
 
 ## Role 4 — Data Quality & Automated Testing
 
-Owner: Aseel,Habiba
+Owner: Aseel, Habiba
 
 Topics this role should understand:
 
@@ -224,8 +234,8 @@ The repository should be used as a planning framework that keeps team discussion
 | `adf/datasets` | Represents dataset perspective and source-target understanding. |
 | `adf/linked_services` | Represents connection context and integration boundaries. |
 | `sql/scripts` | Represents database-side planning discussions and architecture notes. |
-| `docs` | Represents structured project guidance and shared planning decisions. |
-| `wiki` | Represents extended knowledge, glossary terms, and team onboarding context. |
+| `docs` | Represents optional supporting notes and assets. |
+| `wiki` | Represents canonical documentation, glossary terms, and team onboarding context. |
 
 The structure should help the team separate conceptual thinking areas while maintaining one coherent project story.
 

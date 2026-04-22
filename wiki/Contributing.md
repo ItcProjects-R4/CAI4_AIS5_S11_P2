@@ -38,6 +38,7 @@ This page explains how to contribute to the project -- from setting up your loca
 ## Team Roles and Responsibilities
 
 Use this as the role ownership baseline for delivery and reviews.
+Detailed role knowledge areas and deliverables are maintained in [Project Flow](./project_flow.md).
 
 | Name | Role Area | Core Responsibility |
 |---|---|---|
@@ -56,6 +57,8 @@ Use this as the role ownership baseline for delivery and reviews.
 | Data Modeling and SQL | Maintain SQL tables/views/procedures, add new numbered scripts in `sql/scripts/`, keep scripts idempotent |
 | Data Validation and Testing | Run `sql/scripts/05_validation_queries.sql`, compare row counts, detect nulls/duplicates/invalid values, escalate failures |
 | Documentation and BI | Keep wiki pages current, maintain demo/reporting artifacts, ensure onboarding docs stay accurate |
+
+Role ownership changes must be updated in both [Contributing](./Contributing.md) and [Project Flow](./project_flow.md).
 
 ---
 
