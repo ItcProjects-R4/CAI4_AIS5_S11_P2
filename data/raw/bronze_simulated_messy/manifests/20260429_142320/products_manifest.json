@@ -1,0 +1,24 @@
+{
+  "run_id": "3e26edf2-dd2e-454d-b400-a4491ca3fd8b",
+  "run_utc_date": "20260429_142320",
+  "source_system": "eg_crm",
+  "entity": "products",
+  "started_at_utc": "2026-04-29T14:23:20.323794+00:00",
+  "success": true,
+  "records_generated": 271,
+  "files": [
+    {
+      "path": "raw\\bronze_simulated_messy\\eg_crm\\products\\20260429_142320\\part-00000.json",
+      "bytes": 82106,
+      "sha256": "8b77d2739ffefe2d6d204c35e124bb8c0dd71e894c3922447e54397a87cc2726",
+      "record_count": 271
+    }
+  ],
+  "config_snapshot": {
+    "seed": 20260427,
+    "snapshot_date": "20260429",
+    "noise_pack_version": "v2.0-egyptian-crm"
+  },
+  "errors": [],
+  "ended_at_utc": "2026-04-29T14:23:20.325896+00:00"
+}

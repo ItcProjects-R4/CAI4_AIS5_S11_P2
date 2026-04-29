@@ -1,0 +1,3497 @@
+[
+  {
+    "source_product_id": "nw_prod_1",
+    "sku": "NW-1",
+    "product_name": "Chai",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 18.0,
+    "is_active": true
+  },
+  {
+    "source_product_id": "nw_prod_2",
+    "sku": "NW-2",
+    "product_name": "Chang",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 19.0,
+    "is_active": true
+  },
+  {
+    "source_product_id": "nw_prod_3",
+    "sku": "NW-3",
+    "product_name": "   Aniseed Syrup  ",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 10.0,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "nw_prod_4",
+    "sku": "NW-4",
+    "product_name": "Chef Anton's Cajun Seasoning",
+    "category": "NorthwindCategory",
+    "brand": "Northwidn",
+    "list_price": 22.0,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "nw_prod_5",
+    "sku": "NW-5",
+    "product_name": "Chef Anton's Gumbo iMx",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 21.35,
+    "is_active": false,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "nw_prod_6",
+    "sku": "NW-6",
+    "product_name": "Grandma's Boysenberry Spread",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 25.0,
+    "is_active": true
+  },
+  {
+    "source_product_id": "nw_prod_7",
+    "sku": "NW-7",
+    "product_name": "Uncle Bob's Organic Dried Pears",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 30.0,
+    "is_active": true
+  },
+  {
+    "source_product_id": "nw_prod_8",
+    "sku": "NW-8",
+    "product_name": "Northwoods Cranberry Sauce",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 40.0,
+    "is_active": true
+  },
+  {
+    "source_product_id": "nw_prod_9",
+    "sku": "NW-9",
+    "product_name": "Mish iKobe Niku",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 97.0,
+    "is_active": false,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "nw_prod_10",
+    "sku": "NW-10",
+    "product_name": "   Ikura  ",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 31.0,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "nw_prod_11",
+    "sku": "NW-11",
+    "product_name": "Queso Cabrales",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 21.0,
+    "is_active": true
+  },
+  {
+    "source_product_id": "nw_prod_12",
+    "sku": "NW-12",
+    "product_name": "Queso Manchego La Pastora",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 38.0,
+    "is_active": true
+  },
+  {
+    "source_product_id": "nw_prod_13",
+    "sku": "NW-31",
+    "product_name": "Konbu",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 6.0,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "nw_prod_14",
+    "sku": "NW-14",
+    "product_name": "Tofu",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 23.25,
+    "is_active": true
+  },
+  {
+    "source_product_id": "nw_prod_15",
+    "sku": "NW-15",
+    "product_name": "Genen Shouyu",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 15.5,
+    "is_active": true
+  },
+  {
+    "source_product_id": "nw_prod_16",
+    "sku": "NW-16",
+    "product_name": "Pavlova",
+    "category": "NorthwindCategory",
+    "brand": "   Northwind  ",
+    "list_price": 17.45,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "nw_prod_17",
+    "sku": "NW-17",
+    "product_name": "Alice Mutton",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": "39٫00",
+    "is_active": false,
+    "dq_issue_code": [
+      "ERR_FINANCIAL_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "EXCEL_IMPORT"
+    ],
+    "dq_issue_severity": "med"
+  },
+  {
+    "source_product_id": "nw_prod_18",
+    "sku": "NW-18",
+    "product_name": "Carnarvon Tigers",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 62.5,
+    "is_active": true
+  },
+  {
+    "source_product_id": "nw_prod_19",
+    "sku": "NW-19",
+    "product_name": "Teatime Chocolate Biscuits",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 9.2,
+    "is_active": true
+  },
+  {
+    "source_product_id": "nw_prod_20",
+    "sku": "NW-20",
+    "product_name": "Sir Rodney's Marmalade",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 81.0,
+    "is_active": true
+  },
+  {
+    "source_product_id": "nw_prod_21",
+    "sku": "NW-21",
+    "product_name": "Sir Rodney's Scones",
+    "category": "NorthwindCategory",
+    "brand": "   Northwind  ",
+    "list_price": 10.0,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "nw_prod_22",
+    "sku": "NW-22",
+    "product_name": "Gustaf's Knäckebröd",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 21.0,
+    "is_active": true
+  },
+  {
+    "source_product_id": "nw_prod_23",
+    "sku": "NW-23",
+    "product_name": "Tunnbröd",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 9.0,
+    "is_active": true
+  },
+  {
+    "source_product_id": "nw_prod_24",
+    "sku": "NW-24",
+    "product_name": "guaraná fantástica",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 4.5,
+    "is_active": false,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "nw_prod_25",
+    "sku": "NW-25",
+    "product_name": "NuNuCa Nuß-NougatC-reme",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 14.0,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "nw_prod_26",
+    "sku": "NW-26",
+    "product_name": "Gumbär Gummibärchen",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 31.23,
+    "is_active": true
+  },
+  {
+    "source_product_id": "nw_prod_27",
+    "sku": "NW-27",
+    "product_name": "Schoggi Schokolade",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 43.9,
+    "is_active": true
+  },
+  {
+    "source_product_id": "nw_prod_28",
+    "sku": "NW-28",
+    "product_name": "RÖSSLE SAUERKRAUT",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 45.6,
+    "is_active": false,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "nw_prod_29",
+    "sku": "NW-29",
+    "product_name": "Thüringer Rostbratwurst",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 123.79,
+    "is_active": false
+  },
+  {
+    "source_product_id": "nw_prod_30",
+    "sku": "NW-30",
+    "product_name": "Nord-Ost Matjeshering",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 25.89,
+    "is_active": true
+  },
+  {
+    "source_product_id": "nw_prod_31",
+    "sku": "NW-31",
+    "product_name": "Gorgonzola Telino",
+    "category": "northwindcategory",
+    "brand": "Northwind",
+    "list_price": 12.5,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "nw_prod_32",
+    "sku": "NW-32",
+    "product_name": "Mascarpone Fabioli",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 32.0,
+    "is_active": true
+  },
+  {
+    "source_product_id": "nw_prod_33",
+    "sku": "NW-33",
+    "product_name": "Geitost",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 2.5,
+    "is_active": true
+  },
+  {
+    "source_product_id": "nw_prod_34",
+    "sku": "NW-34",
+    "product_name": "Sasquatch Ale",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 14.0,
+    "is_active": true
+  },
+  {
+    "source_product_id": "nw_prod_35",
+    "sku": "NW-35",
+    "product_name": "Steeleye Stout",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 18.0,
+    "is_active": true
+  },
+  {
+    "source_product_id": "nw_prod_36",
+    "sku": "NW-36",
+    "product_name": "   Inlagd Sill  ",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 19.0,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "nw_prod_37",
+    "sku": "NW-37",
+    "product_name": "   Gravad lax  ",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 26.0,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "nw_prod_38",
+    "sku": "NW-38",
+    "product_name": "Côte de Blaye",
+    "category": "NorthwindCategory",
+    "brand": "northwind",
+    "list_price": 263.5,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "nw_prod_39",
+    "sku": "NW-39",
+    "product_name": "Chartreuse verte",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 18.0,
+    "is_active": true
+  },
+  {
+    "source_product_id": "nw_prod_40",
+    "sku": "NW-40",
+    "product_name": "Boston Crab Meat",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 18.4,
+    "is_active": true
+  },
+  {
+    "source_product_id": "nw_prod_41",
+    "sku": "NW-41",
+    "product_name": "Jack's New England Clam Chowder",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 9.65,
+    "is_active": true
+  },
+  {
+    "source_product_id": "nw_prod_42",
+    "sku": "NW-42",
+    "product_name": "Singaporean Hokkien Fried Mee",
+    "category": "Northwindcategory",
+    "brand": "Northwind",
+    "list_price": 14.0,
+    "is_active": false,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "nw_prod_43",
+    "sku": "NW-43",
+    "product_name": "Ipoh Coffee",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 46.0,
+    "is_active": true
+  },
+  {
+    "source_product_id": "nw_prod_44",
+    "sku": "NW4-4 ",
+    "product_name": "Gula Malacca",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 19.45,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_SKU_TRAILING_SPACE",
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "EXCEL_IMPORT",
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "nw_prod_45",
+    "sku": "Nw-45",
+    "product_name": "Rogede sild",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 9.5,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "nw_prod_46",
+    "sku": "NW-46",
+    "product_name": "Spegesild",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 12.0,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "nw_prod_47",
+    "sku": "NW-47",
+    "product_name": "Zaanse koeken",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": "9.50",
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_FINANCIAL_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "EXCEL_IMPORT"
+    ],
+    "dq_issue_severity": "med"
+  },
+  {
+    "source_product_id": "nw_prod_48",
+    "sku": "nw-48",
+    "product_name": "Chocolade",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 12.75,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "nw_prod_49",
+    "sku": "NW-49",
+    "product_name": "Maxilaku",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 20.0,
+    "is_active": true
+  },
+  {
+    "source_product_id": "nw_prod_50",
+    "sku": "nw-50",
+    "product_name": "Valkoinen suklaa",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": "EGP 16.25",
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_FINANCIAL_FORMAT",
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "EXCEL_IMPORT",
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "med"
+  },
+  {
+    "source_product_id": "nw_prod_51",
+    "sku": "   NW-51   ",
+    "product_name": "Manjimup Dried Apples",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 53.0,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_SKU_TRAILING_SPACE",
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "EXCEL_IMPORT",
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "nw_prod_52",
+    "sku": "NW-52",
+    "product_name": "Filo Mix",
+    "category": "northwindcategory",
+    "brand": "Northwind",
+    "list_price": 7.0,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "nw_prod_53",
+    "sku": "NW-53",
+    "product_name": "Perth Pasties",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 32.8,
+    "is_active": false
+  },
+  {
+    "source_product_id": "nw_prod_54",
+    "sku": "NW-54",
+    "product_name": "Tourtière",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 7.45,
+    "is_active": true
+  },
+  {
+    "source_product_id": "nw_prod_55",
+    "sku": "NW-55",
+    "product_name": "Pât échinois",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 24.0,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "nw_prod_56",
+    "sku": "Nw-56",
+    "product_name": "Gnocchi di nonna Alice",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 38.0,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "nw_prod_57",
+    "sku": "NW-57",
+    "product_name": "Ravioli Angelo",
+    "category": "NorthwindCategory",
+    "brand": "   Northwind  ",
+    "list_price": 19.5,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "nw_prod_58",
+    "sku": "NW-58",
+    "product_name": "Escargots de Bourgogne",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 13.25,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "nw_prod_59",
+    "sku": "NW-59",
+    "product_name": "Raclette Courdavault",
+    "category": "Northwindcategory",
+    "brand": "Northwind",
+    "list_price": 55.0,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "nw_prod_60",
+    "sku": "NW-60",
+    "product_name": "Camembert Pierrot",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 34.0,
+    "is_active": true
+  },
+  {
+    "source_product_id": "nw_prod_61",
+    "sku": "NW-61",
+    "product_name": "Sirop d'érable",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 28.5,
+    "is_active": true
+  },
+  {
+    "source_product_id": "nw_prod_62",
+    "sku": "NW-62 ",
+    "product_name": "Tarte au sucre",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": "49٫30",
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_FINANCIAL_FORMAT",
+      "ERR_SKU_TRAILING_SPACE",
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "EXCEL_IMPORT",
+      "EXCEL_IMPORT",
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "med"
+  },
+  {
+    "source_product_id": "nw_prod_63",
+    "sku": "NW-63",
+    "product_name": "Vegie-spread",
+    "category": "NORTHWINDCATEGORY",
+    "brand": "Northwind",
+    "list_price": 43.9,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "nw_prod_64",
+    "sku": "NW-64",
+    "product_name": "Wimmers gute Semmelknödel",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 33.25,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "nw_prod_65",
+    "sku": "NW-65",
+    "product_name": "Louisiana Fiery Hot Pepper Sauce",
+    "category": "NorthwindCategory",
+    "brand": "   Northwind  ",
+    "list_price": 21.05,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "nw_prod_66",
+    "sku": "NW-66",
+    "product_name": "Louisiana Hot Spiced Okra",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 17.0,
+    "is_active": true
+  },
+  {
+    "source_product_id": "nw_prod_67",
+    "sku": "NW-67",
+    "product_name": "Laughing Lumberjack Lager",
+    "category": "NORTHWINDCATEGORY",
+    "brand": "Northwind",
+    "list_price": 14.0,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "nw_prod_68",
+    "sku": "NW-68",
+    "product_name": "Scottish Longbreads",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 12.5,
+    "is_active": true
+  },
+  {
+    "source_product_id": "nw_prod_69",
+    "sku": "NW-69",
+    "product_name": "   Gudbrandsdalsost  ",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 36.0,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "nw_prod_70",
+    "sku": "NW-70",
+    "product_name": "Outback Lager",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 15.0,
+    "is_active": true
+  },
+  {
+    "source_product_id": "nw_prod_71",
+    "sku": "NW-71",
+    "product_name": "flotemysost",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": "EGP 21.50",
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_FINANCIAL_FORMAT",
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "EXCEL_IMPORT",
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "med"
+  },
+  {
+    "source_product_id": "nw_prod_72",
+    "sku": "NW-72",
+    "product_name": "Mozzarelal di Giovanni",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 34.8,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "nw_prod_73",
+    "sku": "NW-73",
+    "product_name": "Röd Kaviar",
+    "category": "northwindcategory",
+    "brand": "Northwind",
+    "list_price": 15.0,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "nw_prod_74",
+    "sku": "NW-74",
+    "product_name": "Longlife Tofu",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 10.0,
+    "is_active": true
+  },
+  {
+    "source_product_id": "nw_prod_75",
+    "sku": "NW-75",
+    "product_name": "Rhönbräu Klosterbier",
+    "category": "NORTHWINDCATEGORY",
+    "brand": "Northwind",
+    "list_price": 7.75,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "nw_prod_76",
+    "sku": "NW-76",
+    "product_name": "Lakkalikööri",
+    "category": "northwindcategory",
+    "brand": "Northwind",
+    "list_price": 18.0,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "nw_prod_77",
+    "sku": "NW-77",
+    "product_name": "Original Frankfurter grüne Soße",
+    "category": "NorthwindCategory",
+    "brand": "Northwind",
+    "list_price": 13.0,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_1",
+    "sku": "DJ-BEA-ESS-ESS-001",
+    "product_name": "Essence Mascara Lash Princess",
+    "category": "beauty",
+    "brand": "Essence",
+    "list_price": 9.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_2",
+    "sku": "DJ-BEA-GLA-EYE-002",
+    "product_name": "Eyeshadow Palette with Mirror",
+    "category": "beauty",
+    "brand": "Glamour Beauty",
+    "list_price": 19.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_3",
+    "sku": "DJ-BEA-VEL-POW-003",
+    "product_name": "Powder Canister",
+    "category": "beauty",
+    "brand": "Velvet Touch",
+    "list_price": 14.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_4",
+    "sku": "DJ-BEA-CHI-LIP-004",
+    "product_name": "Red Lipstick",
+    "category": "beauty",
+    "brand": "Chic Cosmetics",
+    "list_price": 12.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_5",
+    "sku": "DJ-BEA-NAI-NA-I005",
+    "product_name": "Red Nail Polish",
+    "category": "beauty",
+    "brand": "Nail Couture",
+    "list_price": 8.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_6",
+    "sku": "DJ-FRA-CAL-CAL-006",
+    "product_name": "Calvin Klein CK One",
+    "category": "fragrances",
+    "brand": "Calvin Klein",
+    "list_price": 49.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_7",
+    "sku": "DJ-FRA-CHA-CHA-007",
+    "product_name": "CHANEL COCO NOIR EAU DE",
+    "category": "fragrances",
+    "brand": "Chanel",
+    "list_price": 129.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_8",
+    "sku": "DJ-FRA-DIO-DIO-008",
+    "product_name": "Dior J'adore",
+    "category": "fargrances",
+    "brand": "Dior",
+    "list_price": 89.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_9",
+    "sku": "DJ-FRA-DOL-DOL-009",
+    "product_name": "Dolce Shine Eau de",
+    "category": "fragrances",
+    "brand": "Dolce & Gabbana",
+    "list_price": 69.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_10",
+    "sku": "DJ-FRA-GUC-GUC-010",
+    "product_name": "Gucci Bloom Eau de",
+    "category": "fragrances",
+    "brand": "Gucci",
+    "list_price": 79.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_11",
+    "sku": "DJ-FUR-ANN-ANN-011",
+    "product_name": "Annibale Colombo Bed",
+    "category": "furniture",
+    "brand": "annibale colombo",
+    "list_price": 1899.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_12",
+    "sku": "DJ-FUR-ANN-ANN-012",
+    "product_name": "Annibale Colombo Sofa",
+    "category": "furniture",
+    "brand": "Annibale Colombo",
+    "list_price": 2499.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_13",
+    "sku": "DJ-UFR-FUR-BED-013",
+    "product_name": "Bedside Table African Cherry",
+    "category": "furniture",
+    "brand": "Furniture Co.",
+    "list_price": 299.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_14",
+    "sku": "DJ-FUR-KNO-KNO-014",
+    "product_name": "Knoll Saarinen Exceutive Conference Chair",
+    "category": "furniture",
+    "brand": "Knoll",
+    "list_price": 499.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_15",
+    "sku": "DJ-FUR-BAT-WOO-015",
+    "product_name": "Wooden Bathroom Sink With Mirror",
+    "category": "furniture",
+    "brand": "Bath Trends",
+    "list_price": 799.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_16",
+    "sku": "DJ-GRO-BRD-APP-016",
+    "product_name": "Apple",
+    "category": "Groceries",
+    "brand": "",
+    "list_price": 1.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_17",
+    "sku": "DJ-GRO-BRD-BEE-017",
+    "product_name": "Beef Steak",
+    "category": "groceries",
+    "brand": "",
+    "list_price": 12.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_18",
+    "sku": "DJ-GRO-BRD-FOO-018",
+    "product_name": "Cat Food",
+    "category": "Groceries",
+    "brand": "",
+    "list_price": 8.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_19",
+    "sku": "DJ-GRO-BRD-CHI-019",
+    "product_name": "Chicken Meat",
+    "category": "groceries",
+    "brand": "",
+    "list_price": 9.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_20",
+    "sku": "DJ-GOR-BRD-COO-020",
+    "product_name": "Cooking Oil",
+    "category": "groceries",
+    "brand": "",
+    "list_price": 4.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_21",
+    "sku": "Dj-Gro-Brd-Cuc-021",
+    "product_name": "Cucumber",
+    "category": "groceries",
+    "brand": "",
+    "list_price": 1.49,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_22",
+    "sku": "DJ-GRO-BRD-FOO-022",
+    "product_name": "DOG FOOD",
+    "category": "groceries",
+    "brand": "",
+    "list_price": 10.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_23",
+    "sku": "DJ-GRO-BRD-EGG-023",
+    "product_name": "Eggs",
+    "category": "groceries",
+    "brand": "",
+    "list_price": 2.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_24",
+    "sku": "Dj-Gro-Brd-Fis-024",
+    "product_name": "Fish Steak",
+    "category": "groceries",
+    "brand": "",
+    "list_price": 14.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_25",
+    "sku": "DJ-GRO-BRD-GRE-025",
+    "product_name": "Green Bell Pepper",
+    "category": "groceries",
+    "brand": "",
+    "list_price": 1.29,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_26",
+    "sku": "DJ-GRO-BRD-GRE-026",
+    "product_name": "Green Chili Pepper",
+    "category": "groceries",
+    "brand": "",
+    "list_price": 0.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_27",
+    "sku": "DJ-GRO-BRD-HON-027",
+    "product_name": "   Honey Jar  ",
+    "category": "groceries",
+    "brand": "",
+    "list_price": 6.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_28",
+    "sku": "DJ-GRO-BRD-CRE-028",
+    "product_name": "Ice Cream",
+    "category": "groceries",
+    "brand": "",
+    "list_price": 5.49,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_29",
+    "sku": "DJ-GRO-BRD-JUI-029",
+    "product_name": "Juice",
+    "category": "groceries",
+    "brand": "",
+    "list_price": 3.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_30",
+    "sku": "Dj-Gro-Brd-Kiw-030",
+    "product_name": "Kiwi",
+    "category": "groceries",
+    "brand": "",
+    "list_price": 2.49,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_31",
+    "sku": "DJ-GRO-BRD-LEM-031",
+    "product_name": "Lemon",
+    "category": "groceries",
+    "brand": "",
+    "list_price": 0.79,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_32",
+    "sku": "   DJ-GRO-BRD-MIL-032  ",
+    "product_name": "Milk",
+    "category": "groceries",
+    "brand": "",
+    "list_price": 3.49,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_33",
+    "sku": "DJ-GRO-BRD-MUL-033",
+    "product_name": "Mulberry",
+    "category": "groceries",
+    "brand": "",
+    "list_price": 4.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_34",
+    "sku": "DJ-GRO-BRD-NES-034",
+    "product_name": "Nescafe Coffee",
+    "category": "groceries",
+    "brand": "",
+    "list_price": 7.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_35",
+    "sku": "DJ-GRO-BRD-POT-035",
+    "product_name": "Potatoes",
+    "category": "groceries",
+    "brand": "",
+    "list_price": 2.29,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_36",
+    "sku": "DJ-GRO-BRD-PRO-036",
+    "product_name": "Protein Powder",
+    "category": "groceries",
+    "brand": "",
+    "list_price": "EGP 19.99",
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_FINANCIAL_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "EXCEL_IMPORT"
+    ],
+    "dq_issue_severity": "med"
+  },
+  {
+    "source_product_id": "dj_prod_37",
+    "sku": "DJ-GRO-BRD-ONI-037",
+    "product_name": "Red Onions",
+    "category": "groceries",
+    "brand": "",
+    "list_price": 1.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_38",
+    "sku": "DJ-GRO-BRD-RIC-038",
+    "product_name": "Rice",
+    "category": "grcoeries",
+    "brand": "",
+    "list_price": 5.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_39",
+    "sku": "DJ-GRO-BRD-SOF-039",
+    "product_name": "Soft Drinks",
+    "category": "groceries",
+    "brand": "",
+    "list_price": 1.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_40",
+    "sku": "DJ-GRO-BRD-STR-040",
+    "product_name": "Strawberry",
+    "category": "groceries",
+    "brand": "",
+    "list_price": 3.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_41",
+    "sku": "DJ-GRO-BRD-TIS-041",
+    "product_name": "TISSUE PAPER BOX",
+    "category": "groceries",
+    "brand": "",
+    "list_price": 2.49,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_42",
+    "sku": "DJ-GRO-BRD-WAT-042",
+    "product_name": "Water",
+    "category": "groceries",
+    "brand": "",
+    "list_price": 0.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_43",
+    "sku": "   DJ-HOM-BRD-DEC-043  ",
+    "product_name": "Decoration Swing",
+    "category": "home-decoration",
+    "brand": "",
+    "list_price": 59.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_44",
+    "sku": "DJ-HOM-BRD-FAM-044",
+    "product_name": "family tree photo frame",
+    "category": "home-decoration",
+    "brand": "",
+    "list_price": 29.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_45",
+    "sku": "DJ-HOM-BRD-HOU-045",
+    "product_name": "House Showpiece Plant",
+    "category": "home-decoration",
+    "brand": "",
+    "list_price": 39.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_46",
+    "sku": "DJ-HOM-BRD-PLA-046",
+    "product_name": "Plant Pot",
+    "category": "home-decoration",
+    "brand": "",
+    "list_price": 14.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_47",
+    "sku": "DJ-HOM-BRD-TAB-047",
+    "product_name": "Table Lamp",
+    "category": "home-decoration",
+    "brand": "",
+    "list_price": 49.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_48",
+    "sku": "DJ-KIT-BRD-BAM-048",
+    "product_name": "Bamboo Spatula",
+    "category": "kitchen-accessories",
+    "brand": "",
+    "list_price": 7.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_49",
+    "sku": "DJ-KIT-BRD-BLA-049",
+    "product_name": "Black Aluminium Cup",
+    "category": "kitchen-accessories",
+    "brand": "",
+    "list_price": 5.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_50",
+    "sku": "DJ-KIT-BRD-BLA-050",
+    "product_name": "Black Whisk",
+    "category": "kitchen-accessories",
+    "brand": "",
+    "list_price": 9.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_51",
+    "sku": "DJ-KIT-BRD-BOX-051",
+    "product_name": "Boxed Blender",
+    "category": "kitchen-accessories",
+    "brand": "",
+    "list_price": 39.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_52",
+    "sku": "D-JKIT-BRD-CAR-052",
+    "product_name": "Carbon Steel Wok",
+    "category": "kitchen-accessories",
+    "brand": "",
+    "list_price": 29.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_53",
+    "sku": "DJ-KIT-BRD-CHO-053",
+    "product_name": "Chopping Board",
+    "category": "kitchen-accessories",
+    "brand": "",
+    "list_price": 12.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_54",
+    "sku": "DJ-KIT-BRD-CIT-054",
+    "product_name": "Citrus Squeezer Yellow",
+    "category": "kitchen-accessories",
+    "brand": "",
+    "list_price": 8.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_55",
+    "sku": "DJ-KIT-BRD-SLI-055",
+    "product_name": "Egg Slicer",
+    "category": "kitchen-accessories",
+    "brand": "",
+    "list_price": "6.99",
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_FINANCIAL_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "EXCEL_IMPORT"
+    ],
+    "dq_issue_severity": "med"
+  },
+  {
+    "source_product_id": "dj_prod_56",
+    "sku": "DJ-KIT-BRD-ELE-056",
+    "product_name": "Electric Stove",
+    "category": "kitchen-accessories",
+    "brand": "",
+    "list_price": 49.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_57",
+    "sku": "DJ-KIT-BRD-FIN-057",
+    "product_name": "   Fine Mesh Strainer  ",
+    "category": "kitchen-accessories",
+    "brand": "",
+    "list_price": 9.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_58",
+    "sku": "DJ-KIT-BRD-FOR-058",
+    "product_name": "Fork",
+    "category": "kitchen-accessories",
+    "brand": "",
+    "list_price": 3.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_59",
+    "sku": "DJ-KIT-BRD-GLA-059",
+    "product_name": "Glass",
+    "category": "Kitchen-Accessories",
+    "brand": "",
+    "list_price": 4.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_60",
+    "sku": "DJ-KIT-BRD-GRA-060",
+    "product_name": "Grater Black",
+    "category": "kitchen-accessories",
+    "brand": "",
+    "list_price": 10.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_61",
+    "sku": "DJ-KIT-BRD-HAN-061",
+    "product_name": "Hand Blender",
+    "category": "kitchen-accessories",
+    "brand": "",
+    "list_price": 34.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_62",
+    "sku": "DJ-KIT-BRD-CUB-062",
+    "product_name": "Ice Cube Tray",
+    "category": "kitchen-accessories",
+    "brand": "",
+    "list_price": 5.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_63",
+    "sku": "DJ-KIT-BRD-KIT-063",
+    "product_name": "Kitchen Sieve",
+    "category": "kitchen-accessories",
+    "brand": "",
+    "list_price": 7.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_64",
+    "sku": "DJ-KIT-BRD-KNI-064",
+    "product_name": "Knife",
+    "category": "kitchen-accessories",
+    "brand": "",
+    "list_price": 14.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_65",
+    "sku": "   DJ-KIT-BRD-LUN-065  ",
+    "product_name": "Lunch Box",
+    "category": "kitchen-accessories",
+    "brand": "",
+    "list_price": 12.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_66",
+    "sku": "DJ-KIT-BRD-MIC-066",
+    "product_name": "Microwave Oven",
+    "category": "kitchen-accessories",
+    "brand": "",
+    "list_price": 89.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_67",
+    "sku": "DJ-KIT-BRD-TRE-067",
+    "product_name": "Mug Tree Stand",
+    "category": "kitchen-accessories",
+    "brand": "",
+    "list_price": 15.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_68",
+    "sku": "DJ-KIT-BRD-PRD-068",
+    "product_name": "Pan",
+    "category": "kitchen-accessories",
+    "brand": "",
+    "list_price": 24.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_69",
+    "sku": "DJ-KIT-BRD-PLA-069",
+    "product_name": "Plate",
+    "category": "kitchen-accessories",
+    "brand": "",
+    "list_price": 3.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_70",
+    "sku": "   DJ-KIT-BRD-TON-070  ",
+    "product_name": "Red Tongs",
+    "category": "kitchen-accessories",
+    "brand": "",
+    "list_price": 6.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_71",
+    "sku": "DJ-KIT-BRD-SIL-071",
+    "product_name": "Silver Pot With Glass Cap",
+    "category": "kitchen-accessories",
+    "brand": "",
+    "list_price": 39.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_72",
+    "sku": "DJ-KIT-BRD-SLO-072",
+    "product_name": "   Slotted Turner  ",
+    "category": "kitchen-accessories",
+    "brand": "",
+    "list_price": 8.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_73",
+    "sku": "DJ-KIT-BRD-SPI-073",
+    "product_name": "Spice Rack",
+    "category": "kitchen-accessories",
+    "brand": "",
+    "list_price": 19.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_74",
+    "sku": "DJ-KIT-BRD-SPO-074",
+    "product_name": "Spoon",
+    "category": "kitchen-accessories",
+    "brand": "",
+    "list_price": 4.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_75",
+    "sku": "DJ-KIT-BRD-TRA-075",
+    "product_name": "Tray",
+    "category": "kitchen-accessories",
+    "brand": "",
+    "list_price": 16.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_76",
+    "sku": "DJ-KIT-BRD-WOO-076",
+    "product_name": "Wooden Rolling Pin",
+    "category": "kitchen-accessories",
+    "brand": "",
+    "list_price": 11.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_77",
+    "sku": "DJ-KIT-BRD-YEL-077",
+    "product_name": "yellow peeler",
+    "category": "kitchen-accessories",
+    "brand": "",
+    "list_price": 5.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_78",
+    "sku": "DJ-LAP-APP-APP-078",
+    "product_name": "Apple MacBook Pro 14 Inch Space Grey",
+    "category": "LAPTOPS",
+    "brand": "Apple",
+    "list_price": 1999.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_79",
+    "sku": "DJ-LAP-ASU-ASU-079",
+    "product_name": "Asus Zenbook Pro Dual Screen Laptop",
+    "category": "laptops",
+    "brand": "Asus",
+    "list_price": 1799.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_80",
+    "sku": "DJ-LAP-HUA-HUA-080 ",
+    "product_name": "Huawei Matebook X Pro",
+    "category": "laptops",
+    "brand": "Hauwei",
+    "list_price": 1399.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_SKU_TRAILING_SPACE",
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "EXCEL_IMPORT",
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_81",
+    "sku": "DJ-LAP-LEN-LEN-081",
+    "product_name": "Lenovo Yoga 920",
+    "category": "laptops",
+    "brand": "Lenovo",
+    "list_price": 1099.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_82",
+    "sku": "DJ-LAP-DEL-DEL-082",
+    "product_name": "New DELL XPS 13 9300 Laptop",
+    "category": "laptops",
+    "brand": "dell",
+    "list_price": 1499.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_83",
+    "sku": "DJ-MEN-FAS-BLU-083",
+    "product_name": "Blue & Black Check Shirt",
+    "category": "mens-shirts",
+    "brand": "Fashion Trends",
+    "list_price": 29.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_84",
+    "sku": "DJ-MEN-GIG-GIG-084",
+    "product_name": "Gigabyte Aorus Men Tshirt",
+    "category": "mens-shirts",
+    "brand": "Gigabyte",
+    "list_price": 24.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_85",
+    "sku": "DJ-MEN-CLA-PLA-085",
+    "product_name": "Man Plaid Shirt",
+    "category": "mens-shirts",
+    "brand": "Classic Wear",
+    "list_price": 34.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_86",
+    "sku": "DJ-MEN-CAS-SHO-086",
+    "product_name": "Man Short Sleeve Shirt",
+    "category": "mens-shirts",
+    "brand": "casual comfort",
+    "list_price": 19.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_87",
+    "sku": "DJ-MEN-URB-CHE-087",
+    "product_name": "Men Check Shirt",
+    "category": "mens-shirts",
+    "brand": "Urban Chic",
+    "list_price": 27.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_88",
+    "sku": "DJ-MEN-NIK-NIK-088",
+    "product_name": "Nike Air Jordan 1 Red And Black",
+    "category": "mens-shoes",
+    "brand": "Nike",
+    "list_price": 149.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_89",
+    "sku": "DJ-MEN-NIK-NIK-089",
+    "product_name": "Nike Baseball Cleats",
+    "category": "mens-shoes",
+    "brand": "Nike",
+    "list_price": 79.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_90",
+    "sku": "DJ-MEN-PUM-PUM-090",
+    "product_name": "Puma Future Rider Trainers",
+    "category": "mens-shoes",
+    "brand": "Puma",
+    "list_price": 89.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_91",
+    "sku": "DJ-MEN-OFF-SPO-091",
+    "product_name": "   Sports Sneakers Off White & Red  ",
+    "category": "mens-shoes",
+    "brand": "Off White",
+    "list_price": 119.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_92",
+    "sku": "DJ-MEN-OFF-SPO-092 ",
+    "product_name": "Sports Sneakers Off White Red",
+    "category": "mens-shoes",
+    "brand": "Off White",
+    "list_price": 109.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_SKU_TRAILING_SPACE"
+    ],
+    "dq_issue_root_cause": [
+      "EXCEL_IMPORT"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_93",
+    "sku": "DJ-MEN-FAS-BRO-093",
+    "product_name": "Brown Leather Belt Watch",
+    "category": "mens-watches",
+    "brand": "Fashion Timepieces",
+    "list_price": 89.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_94",
+    "sku": "DJ-MEN-LON-LON-094",
+    "product_name": "Longines Master Collection",
+    "category": "mens-watches",
+    "brand": "Longines",
+    "list_price": 1499.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_95",
+    "sku": "DJ-MEN-ROL-ROL-095",
+    "product_name": "Rolex Cellini Date Black Dial",
+    "category": "mens-watches",
+    "brand": "ROLEX",
+    "list_price": 8999.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_96",
+    "sku": "Dj-Men-Rol-Rol-096",
+    "product_name": "Rolex Cellini Moonphase",
+    "category": "mens-watches",
+    "brand": "Rolex",
+    "list_price": 12999.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_97",
+    "sku": "DJ-MEN-ROL-ROL-097",
+    "product_name": "Rolex Datejust",
+    "category": "mens-watches",
+    "brand": "Rolex",
+    "list_price": 10999.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_98",
+    "sku": "DJ-MEN-ROL-ROL-098",
+    "product_name": "Rolex Submariner Watch",
+    "category": "mens-watches",
+    "brand": "Rolex",
+    "list_price": 13999.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_99",
+    "sku": "DJ-MOB-AMA-AMA-099",
+    "product_name": "AMAZON ECHO PLUS",
+    "category": "mobile-accessories",
+    "brand": "Amazon",
+    "list_price": 99.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_100",
+    "sku": "DJ-MOB-APP-APP-100",
+    "product_name": "Apple Airpods",
+    "category": "mobile-accessories",
+    "brand": "APPLE",
+    "list_price": 129.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_101",
+    "sku": "DJ-MOB-APP-APP-101",
+    "product_name": "Apple AirPods Max Silver",
+    "category": "mobile-accessories",
+    "brand": "Apple",
+    "list_price": 549.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_102",
+    "sku": "DJ-MOB-APP-APP-102",
+    "product_name": "Apple Airpower Wireless Charger",
+    "category": "mobile-accessories",
+    "brand": "apple",
+    "list_price": 79.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_103",
+    "sku": "DJ-MOB-APP-APP-103",
+    "product_name": "Apple HomePod Mini Cosmic Grey",
+    "category": "mobile-accessories",
+    "brand": "Apple",
+    "list_price": 99.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_104",
+    "sku": "DJ-MOB-APP-APP-104",
+    "product_name": "Apple iPhone Charger",
+    "category": "mobile-accessories",
+    "brand": "APPLE",
+    "list_price": 19.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_105",
+    "sku": "dj-mob-app-app-105",
+    "product_name": "Apple MagSafe Battery Pack",
+    "category": "mobile-accessories",
+    "brand": "Apple",
+    "list_price": 99.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_106",
+    "sku": "DJ-MOB-APP-APP-106",
+    "product_name": "Apple Watch Series 4 Gold",
+    "category": "mobile-accessories",
+    "brand": "Apple",
+    "list_price": 349.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_107",
+    "sku": "DJ-MOB-BEA-BEA-107 ",
+    "product_name": "Beats Flex Wireless Earphones",
+    "category": "mobile-accessoreis",
+    "brand": "Beats",
+    "list_price": 49.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_SKU_TRAILING_SPACE",
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "EXCEL_IMPORT",
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_108",
+    "sku": "DJ-MOB-APP-IPH-108",
+    "product_name": "Iphone 12 Silicone Case With Magsafe Plum",
+    "category": "mobile-accessories",
+    "brand": "Apple",
+    "list_price": 29.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_109",
+    "sku": "DJ-MOB-TEC-MON-109",
+    "product_name": "Monopod",
+    "category": "mobile-accessories",
+    "brand": "TechGear",
+    "list_price": 19.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_110",
+    "sku": "dj-mob-gad-sel-110",
+    "product_name": "Selfie Lamp with iPhone",
+    "category": "mobile-accessories",
+    "brand": "GadgetMaster",
+    "list_price": 14.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_111",
+    "sku": "DJ-MOB-SNA-SEL-111",
+    "product_name": "Selfie Stick Monopod",
+    "category": "mobile-accessories",
+    "brand": "SnapTech",
+    "list_price": 12.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_112",
+    "sku": "DJ-MOB-PRO-STU-112",
+    "product_name": "   TV Studio Camera Pedestal  ",
+    "category": "mobile-accessories",
+    "brand": "ProVision",
+    "list_price": 499.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_113",
+    "sku": "DJ-MOT-GEN-GEN-113",
+    "product_name": "Generic Motorcycle",
+    "category": "motorcycle",
+    "brand": "Generic Motors",
+    "list_price": 3999.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_114",
+    "sku": "DJ-MOT-KAW-KAW-114",
+    "product_name": "Kawasaki Z800",
+    "category": "motorcycle",
+    "brand": "Kawasaki",
+    "list_price": 8999.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_115",
+    "sku": "DJ-MOT-MOT-MOT-115",
+    "product_name": "MotoGP CI.H1",
+    "category": "motorcycle",
+    "brand": "MotoGP",
+    "list_price": "14.999,99",
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_FINANCIAL_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "EXCEL_IMPORT"
+    ],
+    "dq_issue_severity": "med"
+  },
+  {
+    "source_product_id": "dj_prod_116",
+    "sku": "DJ-MOT-SCO-SCO-116",
+    "product_name": "Scooter Motorcycle",
+    "category": "motorcycle",
+    "brand": "ScootMaster",
+    "list_price": 2999.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_117",
+    "sku": "DJ-MOT-SPE-SPO-117",
+    "product_name": "Sportbike Motorcycle",
+    "category": "motorcycle",
+    "brand": "SpeedMaster",
+    "list_price": 7499.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_118",
+    "sku": "DJ-SKI-ATT-ATT-118",
+    "product_name": "Attitude Super Leaves Hand Soap",
+    "category": "skin-care",
+    "brand": "Attitude",
+    "list_price": 8.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_119",
+    "sku": "DJ-SKI-OLA-OLA-119",
+    "product_name": "Olay Ultra Moisture Shea Butter Body Wash",
+    "category": "skin-care",
+    "brand": "Olay",
+    "list_price": 12.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_120",
+    "sku": "DJ-SKI-VAS-VAS-120",
+    "product_name": "Vaseline Men Body and Face Lotion",
+    "category": "skin-care",
+    "brand": "Vaseline",
+    "list_price": 9.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_121",
+    "sku": "DJ-SMA-APP-IPH-121",
+    "product_name": "iPhone 5s",
+    "category": "smartphones",
+    "brand": "Apple",
+    "list_price": 199.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_122",
+    "sku": "DJ-SMA-APP-IPH-122",
+    "product_name": "iPhone 6",
+    "category": "smartphones",
+    "brand": "Apple",
+    "list_price": 299.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_123",
+    "sku": "DJ-SMA-APP-IPH-123",
+    "product_name": "IPHONE 13 PRO",
+    "category": "smartphones",
+    "brand": "Apple",
+    "list_price": 1099.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_124",
+    "sku": "DJ-SMA-APP-IPH-124",
+    "product_name": "iPhone X",
+    "category": "smartphones",
+    "brand": "Apple",
+    "list_price": 899.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_125",
+    "sku": "DJ-SMA-OPP-OPP-125",
+    "product_name": "Oppo A57",
+    "category": "smartphones",
+    "brand": "Oppo",
+    "list_price": 249.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_126",
+    "sku": "Dj-Sma-Opp-Opp-126",
+    "product_name": "Oppo F19 Pro Plus",
+    "category": "smartphones",
+    "brand": "Oppo",
+    "list_price": 399.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_127",
+    "sku": "DJ-SMA-OPP-OPP-127",
+    "product_name": "Oppo K1",
+    "category": "smartphones",
+    "brand": "Oppo",
+    "list_price": 299.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_128",
+    "sku": "DJ-SMA-REA-REA-128",
+    "product_name": "Realme C35",
+    "category": "smartphones",
+    "brand": "Realme",
+    "list_price": 149.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_129",
+    "sku": "DJ-SMA-REA-REA-129",
+    "product_name": "Realme X",
+    "category": "smartphones",
+    "brand": "Reamle",
+    "list_price": "EGP 299.99",
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_FINANCIAL_FORMAT",
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "EXCEL_IMPORT",
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "med"
+  },
+  {
+    "source_product_id": "dj_prod_130",
+    "sku": "DJ-SMA-REA-REA-130",
+    "product_name": "Realme XT",
+    "category": "smartphones",
+    "brand": "Realme",
+    "list_price": 349.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_131",
+    "sku": "DJ-SMA-SAM-SAM-131",
+    "product_name": "Samsung Galaxy S7",
+    "category": "smartphones",
+    "brand": "Samsugn",
+    "list_price": 299.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_132",
+    "sku": "DJ-SMA-SAM-SAM-132",
+    "product_name": "Samsung Galaxy S8",
+    "category": "smartphones",
+    "brand": "Samsung",
+    "list_price": 499.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_133",
+    "sku": "DJ-SMA-SAM-SAM-133",
+    "product_name": "Samsung Galaxy S10",
+    "category": "smartphones",
+    "brand": "Samsung",
+    "list_price": 699.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_134",
+    "sku": "DJ-SMA-VIV-VIV-134",
+    "product_name": "Vivo S1",
+    "category": "smartpohnes",
+    "brand": "Vivo",
+    "list_price": 249.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_135",
+    "sku": "DJ-SMA-VIV-VIV-135 ",
+    "product_name": "Vivo V9",
+    "category": "smartphones",
+    "brand": "Vivo",
+    "list_price": 299.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_SKU_TRAILING_SPACE"
+    ],
+    "dq_issue_root_cause": [
+      "EXCEL_IMPORT"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_136",
+    "sku": "DJ-SMA-VIV-VIV-136",
+    "product_name": "Vivo X21",
+    "category": "smartphones",
+    "brand": "Vivo",
+    "list_price": 499.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_137",
+    "sku": "Dj-Spo-Brd-Ame-137",
+    "product_name": "American Football",
+    "category": "sports-accessories",
+    "brand": "",
+    "list_price": 19.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_138",
+    "sku": "DJ-SPO-BRD-BAS-138",
+    "product_name": "Baseball Ball",
+    "category": "sports-accessories",
+    "brand": "",
+    "list_price": 8.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_139",
+    "sku": "DJ-SPO-BRD-BAS-139",
+    "product_name": "Baesball Glove",
+    "category": "sports-accessories",
+    "brand": "",
+    "list_price": 24.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_140",
+    "sku": "DJ-SPO-BRD-BAS-140",
+    "product_name": "basketball",
+    "category": "sports-accessories",
+    "brand": "",
+    "list_price": 14.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_141",
+    "sku": "DJ-SPO-BRD-BAS-141",
+    "product_name": "Basketball Rim",
+    "category": "sports-accessories",
+    "brand": "",
+    "list_price": 39.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_142",
+    "sku": "dj-spo-brd-cri-142",
+    "product_name": "Cricket Ball",
+    "category": "sports-accessories",
+    "brand": "",
+    "list_price": 12.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_143",
+    "sku": "DJ-SPO-BRD-CRI-143",
+    "product_name": "Cricket Bat",
+    "category": "SPORTS-ACCESSORIES",
+    "brand": "",
+    "list_price": 29.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_144",
+    "sku": "DJ-SPO-BRD-CRI-144",
+    "product_name": "Cricket Helmet",
+    "category": "sports-accessories",
+    "brand": "",
+    "list_price": 44.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_145",
+    "sku": "DJ-SPO-BRD-CRI-145",
+    "product_name": "Cricket Wicket",
+    "category": "sports-accessories",
+    "brand": "",
+    "list_price": 29.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_146",
+    "sku": "DJ-SPO-BRD-FEA-146",
+    "product_name": "Feather Shuttlecock",
+    "category": "sports-accessories",
+    "brand": "",
+    "list_price": "EGP 5.99",
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_FINANCIAL_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "EXCEL_IMPORT"
+    ],
+    "dq_issue_severity": "med"
+  },
+  {
+    "source_product_id": "dj_prod_147",
+    "sku": "DJ-SPO-BRD-FOO-147",
+    "product_name": "Football",
+    "category": "sports-accessorise",
+    "brand": "",
+    "list_price": 17.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_148",
+    "sku": "DJ-SPO-BRD-GLO-148",
+    "product_name": "Golf Ball",
+    "category": "sports-accessories",
+    "brand": "",
+    "list_price": 9.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_149",
+    "sku": "DJ-SPO-BRD-IRO-149",
+    "product_name": "Iron Golf",
+    "category": "sport-saccessories",
+    "brand": "",
+    "list_price": 49.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_150",
+    "sku": "Dj-Spo-Brd-Met-150",
+    "product_name": "Metal Baseball Bat",
+    "category": "sports-accessories",
+    "brand": "",
+    "list_price": 29.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_151",
+    "sku": "DJ-SPO-BRD-TEN-115",
+    "product_name": "Tennis Ball",
+    "category": "sports-accessories",
+    "brand": "",
+    "list_price": 6.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_152",
+    "sku": "DJ-SPO-BRD-TEN-152",
+    "product_name": "Tennis Racket",
+    "category": "sports-accessories",
+    "brand": "",
+    "list_price": 49.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_153",
+    "sku": "DJ-SPO-BRD-VOL-153",
+    "product_name": "Volleyball",
+    "category": "Sports-Accessories",
+    "brand": "",
+    "list_price": 11.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_154",
+    "sku": "DJ-SUN-FAS-BLA-154",
+    "product_name": "Black Sun Glasses",
+    "category": "sunglasses",
+    "brand": "FASHION SHADES",
+    "list_price": 29.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_155",
+    "sku": "DJ-SUN-FAS-CLA-155",
+    "product_name": "CLASSIC SUN GLASSES",
+    "category": "sunglasses",
+    "brand": "Fashion Shades",
+    "list_price": 24.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_156",
+    "sku": "dj-sun-fas-gre-156",
+    "product_name": "Green and Black Glasses",
+    "category": "sunglasses",
+    "brand": "Fashion Shades",
+    "list_price": 34.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_157",
+    "sku": "DJ-SUN-FAS-PAR-157",
+    "product_name": "Party Glasses",
+    "category": "sunglasses",
+    "brand": "Fashion Fun",
+    "list_price": 19.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_158",
+    "sku": "dj-sun-fas-sun-158",
+    "product_name": "Sunglasses",
+    "category": "sunglasses",
+    "brand": "Fashion Shades",
+    "list_price": 22.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_159",
+    "sku": "DJ-TAB-APP-IPA-159",
+    "product_name": "iPad Mini 2021 Starlight",
+    "category": "tablets",
+    "brand": "Apple",
+    "list_price": 499.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_160",
+    "sku": "DJ-TAB-SAM-SAM-160",
+    "product_name": "Samsung Galaxy Tab S8 Plus Grey",
+    "category": "tablets",
+    "brand": "Samsung",
+    "list_price": 599.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_161",
+    "sku": "DJ-TAB-SAM-SAM-161",
+    "product_name": "Samsung Galaxy Tab White",
+    "category": "tablets",
+    "brand": "Samsung",
+    "list_price": 349.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_162",
+    "sku": "DJ-TOP-BRD-BLU-162",
+    "product_name": "Blue Frock",
+    "category": "tops",
+    "brand": "",
+    "list_price": 29.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_163",
+    "sku": "dj-top-brd-gir-163",
+    "product_name": "Girl Summer Dress",
+    "category": "tops",
+    "brand": "",
+    "list_price": 19.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_164",
+    "sku": "DJ-TOP-BRD-GRA-164",
+    "product_name": "Gray Dress",
+    "category": "   tops  ",
+    "brand": "",
+    "list_price": 34.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_165",
+    "sku": "dj-top-brd-sho-165",
+    "product_name": "Short Frock",
+    "category": "tops",
+    "brand": "",
+    "list_price": 24.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_166",
+    "sku": "DJT-OP-BRD-TAR-166",
+    "product_name": "Tartan Dress",
+    "category": "tops",
+    "brand": "",
+    "list_price": 39.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_167",
+    "sku": "   DJ-VEH-CHR-TOU-167  ",
+    "product_name": "300 Touring",
+    "category": "vehicle",
+    "brand": "Chrysler",
+    "list_price": 28999.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_168",
+    "sku": "DJ-VEH-DOD-CHA-168",
+    "product_name": "Charger SXT RWD",
+    "category": "vehicle",
+    "brand": "Dodge",
+    "list_price": 32999.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_169",
+    "sku": "dj-veh-dod-dod-169",
+    "product_name": "Dodge Hornet GT Plus",
+    "category": "vehicle",
+    "brand": "Dodge",
+    "list_price": "24,999.99",
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_FINANCIAL_FORMAT",
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "EXCEL_IMPORT",
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "med"
+  },
+  {
+    "source_product_id": "dj_prod_170",
+    "sku": "DJ-VEH-DOD-DUR-170",
+    "product_name": "Durango SXT RWD",
+    "category": "vehicle",
+    "brand": "dodge",
+    "list_price": 36999.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_171",
+    "sku": "DJ-VEH-CHR-PAC-171",
+    "product_name": "Pacifica Touring",
+    "category": "vehicle",
+    "brand": "CHRYSLER",
+    "list_price": 31999.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_172",
+    "sku": "DJ-WOM-FAS-BLU-172",
+    "product_name": "Blue Women's Handbag",
+    "category": "womens-bags",
+    "brand": "Fashionista",
+    "list_price": 49.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_173",
+    "sku": "DJ-WOM-HES-HES-173",
+    "product_name": "Heshe Women's Leather Bag",
+    "category": "womens-bags",
+    "brand": "Heshe",
+    "list_price": "129٫99",
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_FINANCIAL_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "EXCEL_IMPORT"
+    ],
+    "dq_issue_severity": "med"
+  },
+  {
+    "source_product_id": "dj_prod_174",
+    "sku": "DJ-WOM-PRA-PRA-174",
+    "product_name": "Prada Women Bag",
+    "category": "womens-bags",
+    "brand": "Prada",
+    "list_price": 599.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_175",
+    "sku": "DJ-WOM-URB-WHI-175",
+    "product_name": "White Faux Leather Backpack",
+    "category": "womens-bags",
+    "brand": "Urban Chic",
+    "list_price": 39.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_176",
+    "sku": "Dj-Wom-Ele-Wom-176",
+    "product_name": "Women Handbag Black",
+    "category": "womens-bags",
+    "brand": "Elegance Collection",
+    "list_price": 59.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_177",
+    "sku": "DJ-WOM-BRD-BLA-177",
+    "product_name": "Black Women's Gown",
+    "category": "womens-dresses",
+    "brand": "",
+    "list_price": 129.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_178",
+    "sku": "   DJ-WOM-BRD-COR-178  ",
+    "product_name": "Corset Leather With Skirt",
+    "category": "womens-dresses",
+    "brand": "",
+    "list_price": 89.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_179",
+    "sku": "DJ-WOM-BRD-COR-179",
+    "product_name": "Corset With Black Skirt",
+    "category": "womens-dresses",
+    "brand": "",
+    "list_price": 79.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_180",
+    "sku": "DJ-WOM-BRD-DRE-180",
+    "product_name": "Dress Pea",
+    "category": "womens-dresses",
+    "brand": "",
+    "list_price": 49.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_181",
+    "sku": "DJ-WOM-BRD-MAR-181",
+    "product_name": "Marni Red & Black Suit",
+    "category": "womens-dresses",
+    "brand": "",
+    "list_price": 179.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_182",
+    "sku": "DJ-WOM-BRD-GRE-182",
+    "product_name": "   Green Crystal Earring  ",
+    "category": "womens-jewellery",
+    "brand": "",
+    "list_price": 29.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_183",
+    "sku": "DJ-WOM-BRD-GRE-183",
+    "product_name": "Green Oval Earring",
+    "category": "WOMENS-JEWELLERY",
+    "brand": "",
+    "list_price": 24.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_184",
+    "sku": "DJ-WOM-BRD-TRO-184",
+    "product_name": "Tropical Earring",
+    "category": "womens-jewellery",
+    "brand": "",
+    "list_price": 19.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_185",
+    "sku": "DJ-WOM-COM-BLA-185",
+    "product_name": "Black & Brown Slipper",
+    "category": "womens-shoes",
+    "brand": "Comfort Trends",
+    "list_price": 19.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_186",
+    "sku": "DJ-WOM-CAL-CAL-186",
+    "product_name": "Calvin Klein Heel Shoes",
+    "category": "womens-shoes",
+    "brand": "Calvin Klein",
+    "list_price": 79.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_187",
+    "sku": "DJ-WOM-FAS-GOL-187",
+    "product_name": "Golden Shoes Woman",
+    "category": "womens-shoes",
+    "brand": "Fashion Diva",
+    "list_price": 49.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_188",
+    "sku": "DJ-WOM-PAM-PAM-188",
+    "product_name": "Pampi Shoes",
+    "category": "womens-shoes",
+    "brand": "Pampi",
+    "list_price": 29.99,
+    "is_active": true
+  },
+  {
+    "source_product_id": "dj_prod_189",
+    "sku": "   DJ-WOM-FAS-SHO-189  ",
+    "product_name": "Red Shoes",
+    "category": "womens-shoes",
+    "brand": "Fashion Express",
+    "list_price": 34.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_190",
+    "sku": "DJ-WOM-IWC-ING-190",
+    "product_name": "IWC Ingenieur Automatic Steel",
+    "category": "womens-watches",
+    "brand": "IWC",
+    "list_price": "EGP 4999.99",
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_FINANCIAL_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "EXCEL_IMPORT"
+    ],
+    "dq_issue_severity": "med"
+  },
+  {
+    "source_product_id": "dj_prod_191",
+    "sku": "DJ-WOM-ROL-ROL-191",
+    "product_name": "Rolex Cellini Moonphase",
+    "category": "womens-watches",
+    "brand": "ROLEX",
+    "list_price": 15999.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_192",
+    "sku": "DJ-WOM-ROL-ROL-192",
+    "product_name": "Rolex Datejust Women",
+    "category": "womens-watches",
+    "brand": "Rolex",
+    "list_price": 10999.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_193",
+    "sku": "DJ-WOM-FAS-WAT-193",
+    "product_name": "Watch Gold for Women",
+    "category": "womens-watches",
+    "brand": "   Fashion Gold  ",
+    "list_price": 799.99,
+    "is_active": true,
+    "dq_issue_code": [
+      "ERR_CASING_CHAOS"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_product_id": "dj_prod_194",
+    "sku": "DJ-WOM-FAS-WOM-194",
+    "product_name": "Women's Wrist Watch",
+    "category": "womens-watches",
+    "brand": "Fashion Co.",
+    "list_price": 129.99,
+    "is_active": true
+  }
+]

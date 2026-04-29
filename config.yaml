@@ -1,0 +1,12 @@
+extract:
+  MAX_NW_CUSTOMERS: 0
+  MAX_NW_ORDERS: 0
+  MAX_NW_ORDER_DETAILS: 0
+  MAX_NW_PRODUCTS: 0
+  MAX_DJ_USERS: 0
+  MAX_DJ_PRODUCTS: 0
+  MAX_DJ_CARTS: 0
+  page_size_northwind: 200
+  page_size_dummyjson: 100
+  timeout_seconds: 30
+  max_retries: 3

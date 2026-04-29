@@ -1,0 +1,13 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+data/raw/*.json
+# Simulation folder (hidden demo scripts)
+.simulation/
+
+# Virtual Environments
+venv/
+env/
+.env

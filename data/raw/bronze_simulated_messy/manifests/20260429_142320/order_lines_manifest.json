@@ -1,0 +1,24 @@
+{
+  "run_id": "3e26edf2-dd2e-454d-b400-a4491ca3fd8b",
+  "run_utc_date": "20260429_142320",
+  "source_system": "eg_crm",
+  "entity": "order_lines",
+  "started_at_utc": "2026-04-29T14:23:20.333605+00:00",
+  "success": true,
+  "records_generated": 2955,
+  "files": [
+    {
+      "path": "raw\\bronze_simulated_messy\\eg_crm\\order_lines\\20260429_142320\\part-00000.json",
+      "bytes": 589986,
+      "sha256": "114a61e83da28ab2706b809007375ec3d2a2557a88b5d48429fd71962e1ca17d",
+      "record_count": 2955
+    }
+  ],
+  "config_snapshot": {
+    "seed": 20260427,
+    "snapshot_date": "20260429",
+    "noise_pack_version": "v2.0-egyptian-crm"
+  },
+  "errors": [],
+  "ended_at_utc": "2026-04-29T14:23:20.343812+00:00"
+}

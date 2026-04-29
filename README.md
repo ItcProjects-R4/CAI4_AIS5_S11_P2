@@ -97,6 +97,31 @@ Both sources are joined on `CustomerID`. Place files in `data/raw/` before each 
 
 ---
 
+## Data Provenance and Simulated Messy Feed
+
+The pipeline consumes data via a two-stage deterministic ingestion process:
+1. **Bronze Clean**: Raw extraction from public demo APIs. Stored exactly as received in `raw/bronze_clean/<entity>/`.
+2. **Bronze Simulated Messy**: A deterministic "noise injection" zone (Noise Pack v2) that applies multi-dimensional Egyptian CRM data inconsistencies (Identity clusters, financial corruption, address drift, etc.). Output is structured into the `eg_crm` stable schema.
+
+**Architecture Note**: The downstream Silver layer (ADF Data Flow) consumes *only* the **Bronze Simulated Messy** data (`raw/bronze_simulated_messy/eg_crm/...`).
+
+### Example Commands for Data Generation
+
+You can generate the required data feeds using the provided Python scripts:
+
+```bash
+# 1. Full clean extraction from all sources
+python extract.py --full
+
+# 2. Capped clean extraction (for dev/testing)
+python extract.py --caps MAX_NW_CUSTOMERS=50 MAX_DJ_USERS=100
+
+# 3. Generate deterministic simulated messy feed
+python make_messy.py --run-date YYYY-MM-DD --seed 20260427 --export-csv --export-xlsx
+```
+
+---
+
 ## Tech Stack
 
 | Tool | Role |

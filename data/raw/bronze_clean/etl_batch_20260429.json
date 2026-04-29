@@ -1,0 +1,71 @@
+{
+  "run_date_utc": "20260429",
+  "started_at_utc": "2026-04-29T13:41:45.161521+00:00",
+  "ended_at_utc": "2026-04-29T13:41:51.819774+00:00",
+  "status": "success",
+  "entities": [
+    {
+      "source": "dummyjson",
+      "entity": "users",
+      "url": "https://dummyjson.com/users?limit=0",
+      "record_count": 208,
+      "request_count": 1,
+      "errors": [],
+      "output_file": "data\\raw\\dummyjson_users_20260429.json"
+    },
+    {
+      "source": "dummyjson",
+      "entity": "products",
+      "url": "https://dummyjson.com/products?limit=0",
+      "record_count": 194,
+      "request_count": 1,
+      "errors": [],
+      "output_file": "data\\raw\\dummyjson_products_20260429.json"
+    },
+    {
+      "source": "dummyjson",
+      "entity": "carts",
+      "url": "https://dummyjson.com/carts?limit=0",
+      "record_count": 208,
+      "request_count": 1,
+      "errors": [],
+      "output_file": "data\\raw\\dummyjson_carts_20260429.json"
+    },
+    {
+      "source": "northwind",
+      "entity": "customers",
+      "url": "https://services.odata.org/V4/Northwind/Northwind.svc/Customers?$format=json",
+      "record_count": 91,
+      "request_count": 5,
+      "errors": [],
+      "output_file": "data\\raw\\northwind_customers_20260429.json"
+    },
+    {
+      "source": "northwind",
+      "entity": "products",
+      "url": "https://services.odata.org/V4/Northwind/Northwind.svc/Products?$format=json",
+      "record_count": 77,
+      "request_count": 4,
+      "errors": [],
+      "output_file": "data\\raw\\northwind_products_20260429.json"
+    },
+    {
+      "source": "northwind",
+      "entity": "orders",
+      "url": "https://services.odata.org/V4/Northwind/Northwind.svc/Orders?$format=json",
+      "record_count": 830,
+      "request_count": 5,
+      "errors": [],
+      "output_file": "data\\raw\\northwind_orders_20260429.json"
+    },
+    {
+      "source": "northwind",
+      "entity": "order_details",
+      "url": "https://services.odata.org/V4/Northwind/Northwind.svc/Order_Details?$format=json",
+      "record_count": 2155,
+      "request_count": 5,
+      "errors": [],
+      "output_file": "data\\raw\\northwind_order_details_20260429.json"
+    }
+  ]
+}

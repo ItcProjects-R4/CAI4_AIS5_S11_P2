@@ -1,0 +1,2662 @@
+[
+  {
+    "source_customer_id": "nw_cust_ALFKI",
+    "source_contact_id": "nw_cust_ALFKI",
+    "customer_since": "1997-08-25",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_ANATR",
+    "source_contact_id": "nw_cust_ANATR",
+    "customer_since": "1996-09-18",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_ANTON",
+    "source_contact_id": "nw_cust_ANTON",
+    "customer_since": "27/11/1996",
+    "status": "Active",
+    "segment": "B2B",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "nw_cust_AROUT",
+    "source_contact_id": "nw_cust_AROUT",
+    "customer_since": "1996-11-15",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_BERGS",
+    "source_contact_id": "nw_cust_BERGS",
+    "customer_since": "08/12/1996",
+    "status": "Active",
+    "segment": "B2B",
+    "dq_issue_code": [
+      "ERR_DATE_SWAP_DDMM"
+    ],
+    "dq_issue_root_cause": [
+      "EXCEL_IMPORT"
+    ],
+    "dq_issue_severity": "med"
+  },
+  {
+    "source_customer_id": "nw_cust_BLAUS",
+    "source_contact_id": "nw_cust_BLAUS",
+    "customer_since": "1997-04-09",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_BLONP",
+    "source_contact_id": "nw_cust_BLONP",
+    "customer_since": "1996-07-25",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_BOLID",
+    "source_contact_id": "nw_cust_BOLID",
+    "customer_since": "1996-10-10",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_BONAP",
+    "source_contact_id": "nw_cust_BONAP",
+    "customer_since": "1996-10-16",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_BOTTM",
+    "source_contact_id": "nw_cust_BOTTM",
+    "customer_since": "20/12/1996",
+    "status": "Active",
+    "segment": "B2B",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "nw_cust_BSBEV",
+    "source_contact_id": "nw_cust_BSBEV",
+    "customer_since": "1996-08-26",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_CACTU",
+    "source_contact_id": "nw_cust_CACTU",
+    "customer_since": "1997-04-29",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_CENTC",
+    "source_contact_id": "nw_cust_CENTC",
+    "customer_since": "1996-07-18",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_CHOPS",
+    "source_contact_id": "nw_cust_CHOPS",
+    "customer_since": "1996-07-11",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_COMMI",
+    "source_contact_id": "nw_cust_COMMI",
+    "customer_since": "27/08/1996",
+    "status": "Active",
+    "segment": "B2B",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "nw_cust_CONSH",
+    "source_contact_id": "nw_cust_CONSH",
+    "customer_since": "1997-02-04",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_DRACD",
+    "source_contact_id": "nw_cust_DRACD",
+    "customer_since": "1996-11-26",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_DUMON",
+    "source_contact_id": "nw_cust_DUMON",
+    "customer_since": "1996-09-20",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_EASTC",
+    "source_contact_id": "nw_cust_EASTC",
+    "customer_since": "26/11/1996",
+    "status": "Active",
+    "segment": "B2B",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "nw_cust_ERNSH",
+    "source_contact_id": "nw_cust_ERNSH",
+    "customer_since": "1996-07-17",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_FAMIA",
+    "source_contact_id": "nw_cust_FAMIA",
+    "customer_since": "1996-11-06",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_FISSA",
+    "source_contact_id": "nw_cust_FISSA",
+    "customer_since": "2015-05-26",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_FOLIG",
+    "source_contact_id": "nw_cust_FOLIG",
+    "customer_since": "1997-01-08",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_FOLKO",
+    "source_contact_id": "nw_cust_FOLKO",
+    "customer_since": "1996-07-24",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_FRANK",
+    "source_contact_id": "nw_cust_FRANK",
+    "customer_since": "1996-07-29",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_FRANR",
+    "source_contact_id": "nw_cust_FRANR",
+    "customer_since": "1997-09-17",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_FRANS",
+    "source_contact_id": "nw_cust_FRANS",
+    "customer_since": "1997-01-22",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_FURIB",
+    "source_contact_id": "nw_cust_FURIB",
+    "customer_since": "1996-10-14",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_GALED",
+    "source_contact_id": "nw_cust_GALED",
+    "customer_since": "1996-11-28",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_GODOS",
+    "source_contact_id": "nw_cust_GODOS",
+    "customer_since": "35319",
+    "status": "Active",
+    "segment": "B2B",
+    "dq_issue_code": [
+      "ERR_EXCEL_SERIAL_DATE"
+    ],
+    "dq_issue_root_cause": [
+      "EXCEL_IMPORT"
+    ],
+    "dq_issue_severity": "high"
+  },
+  {
+    "source_customer_id": "nw_cust_GOURL",
+    "source_contact_id": "nw_cust_GOURL",
+    "customer_since": "1997-01-23",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_GREAL",
+    "source_contact_id": "nw_cust_GREAL",
+    "customer_since": "1997-05-06",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_GROSR",
+    "source_contact_id": "nw_cust_GROSR",
+    "customer_since": "1996-07-30",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_HANAR",
+    "source_contact_id": "nw_cust_HANAR",
+    "customer_since": "07/08/1996",
+    "status": "Active",
+    "segment": "B2B",
+    "dq_issue_code": [
+      "ERR_DATE_SWAP_DDMM"
+    ],
+    "dq_issue_root_cause": [
+      "EXCEL_IMPORT"
+    ],
+    "dq_issue_severity": "med"
+  },
+  {
+    "source_customer_id": "nw_cust_HILAA",
+    "source_contact_id": "nw_cust_HILAA",
+    "customer_since": "16/07/1996",
+    "status": "Active",
+    "segment": "B2B",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "nw_cust_HUNGC",
+    "source_contact_id": "nw_cust_HUNGC",
+    "customer_since": "12/06/1996",
+    "status": "Active",
+    "segment": "B2B",
+    "dq_issue_code": [
+      "ERR_DATE_SWAP_DDMM"
+    ],
+    "dq_issue_root_cause": [
+      "EXCEL_IMPORT"
+    ],
+    "dq_issue_severity": "med"
+  },
+  {
+    "source_customer_id": "nw_cust_HUNGO",
+    "source_contact_id": "nw_cust_HUNGO",
+    "customer_since": "1996-09-05",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_ISLAT",
+    "source_contact_id": "nw_cust_ISLAT",
+    "customer_since": "1996-09-26",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_KOENE",
+    "source_contact_id": "nw_cust_KOENE",
+    "customer_since": "1996-10-07",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_LACOR",
+    "source_contact_id": "nw_cust_LACOR",
+    "customer_since": "1998-1-29",
+    "status": "Active",
+    "segment": "B2B",
+    "dq_issue_code": [
+      "ERR_DATE_NO_LEADING_ZERO"
+    ],
+    "dq_issue_root_cause": [
+      "EXCEL_IMPORT"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "nw_cust_LAMAI",
+    "source_contact_id": "nw_cust_LAMAI",
+    "customer_since": "1996-11-11",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_LAUGB",
+    "source_contact_id": "nw_cust_LAUGB",
+    "customer_since": "1997-04-03",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_LAZYK",
+    "source_contact_id": "nw_cust_LAZYK",
+    "customer_since": "1997-03-21",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_LEHMS",
+    "source_contact_id": "nw_cust_LEHMS",
+    "customer_since": "1996-08-13",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_LETSS",
+    "source_contact_id": "nw_cust_LETSS",
+    "customer_since": "25/06/1997",
+    "status": "Active",
+    "segment": "B2B",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "nw_cust_LILAS",
+    "source_contact_id": "nw_cust_LILAS",
+    "customer_since": "1996-08-16",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_LINOD",
+    "source_contact_id": "nw_cust_LINOD",
+    "customer_since": "1997-01-06 00:00:00",
+    "status": "Active",
+    "segment": "B2B",
+    "dq_issue_code": [
+      "ERR_DATE_PARTIAL_TS"
+    ],
+    "dq_issue_root_cause": [
+      "MIGRATION"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "nw_cust_LONEP",
+    "source_contact_id": "nw_cust_LONEP",
+    "customer_since": "1996-09-17",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_MAGAA",
+    "source_contact_id": "nw_cust_MAGAA",
+    "customer_since": "1996-08-07",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_MAISD",
+    "source_contact_id": "nw_cust_MAISD",
+    "customer_since": "1997-05-07",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_MEREP",
+    "source_contact_id": "nw_cust_MEREP",
+    "customer_since": "1996-10-17",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_MORGK",
+    "source_contact_id": "nw_cust_MORGK",
+    "customer_since": "1996-08-09",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_NORTS",
+    "source_contact_id": "nw_cust_NORTS",
+    "customer_since": "1997-04-24",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_OCEAN",
+    "source_contact_id": "nw_cust_OCEAN",
+    "customer_since": "35439",
+    "status": "Active",
+    "segment": "B2B",
+    "dq_issue_code": [
+      "ERR_EXCEL_SERIAL_DATE"
+    ],
+    "dq_issue_root_cause": [
+      "EXCEL_IMPORT"
+    ],
+    "dq_issue_severity": "high"
+  },
+  {
+    "source_customer_id": "nw_cust_OLDWO",
+    "source_contact_id": "nw_cust_OLDWO",
+    "customer_since": "1996-09-13",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_OTTIK",
+    "source_contact_id": "nw_cust_OTTIK",
+    "customer_since": "1996-07-19",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_PARIS",
+    "source_contact_id": "nw_cust_PARIS",
+    "customer_since": "2016-11-13T00:00",
+    "status": "Active",
+    "segment": "B2B",
+    "dq_issue_code": [
+      "ERR_DATE_PARTIAL_TS"
+    ],
+    "dq_issue_root_cause": [
+      "MIGRATION"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "nw_cust_PERIC",
+    "source_contact_id": "nw_cust_PERIC",
+    "customer_since": "1996-10-04",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_PICCO",
+    "source_contact_id": "nw_cust_PICCO",
+    "customer_since": "1996-11-13",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_PRINI",
+    "source_contact_id": "nw_cust_PRINI",
+    "customer_since": "1996-10-23",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_QUEDE",
+    "source_contact_id": "nw_cust_QUEDE",
+    "customer_since": "1996-07-19",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_QUEEN",
+    "source_contact_id": "nw_cust_QUEEN",
+    "customer_since": "1996-12-04",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_QUICK",
+    "source_contact_id": "nw_cust_QUICK",
+    "customer_since": "1996-08-05",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_RANCH",
+    "source_contact_id": "nw_cust_RANCH",
+    "customer_since": "1997-02-17",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_RATTC",
+    "source_contact_id": "nw_cust_RATTC",
+    "customer_since": "1996-07-22",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_REGGC",
+    "source_contact_id": "nw_cust_REGGC",
+    "customer_since": "1996-08-23",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_RICAR",
+    "source_contact_id": "nw_cust_RICAR",
+    "customer_since": "1996-08-22",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_RICSU",
+    "source_contact_id": "nw_cust_RICSU",
+    "customer_since": "1996-07-12",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_ROMEY",
+    "source_contact_id": "nw_cust_ROMEY",
+    "customer_since": "1996-08-14",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_SANTG",
+    "source_contact_id": "nw_cust_SANTG",
+    "customer_since": "1996-12-18",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_SAVEA",
+    "source_contact_id": "nw_cust_SAVEA",
+    "customer_since": "1996-10-08",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_SEVES",
+    "source_contact_id": "nw_cust_SEVES",
+    "customer_since": "1996-11-21",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_SIMOB",
+    "source_contact_id": "nw_cust_SIMOB",
+    "customer_since": "1996-10-29",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_SPECD",
+    "source_contact_id": "nw_cust_SPECD",
+    "customer_since": "1997-11-12",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_SPLIR",
+    "source_contact_id": "nw_cust_SPLIR",
+    "customer_since": "1996-08-01",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_SUPRD",
+    "source_contact_id": "nw_cust_SUPRD",
+    "customer_since": "1996-7-9",
+    "status": "Active",
+    "segment": "B2B",
+    "dq_issue_code": [
+      "ERR_DATE_NO_LEADING_ZERO"
+    ],
+    "dq_issue_root_cause": [
+      "EXCEL_IMPORT"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "nw_cust_THEBI",
+    "source_contact_id": "nw_cust_THEBI",
+    "customer_since": "1996-09-20 00:00:00",
+    "status": "Active",
+    "segment": "B2B",
+    "dq_issue_code": [
+      "ERR_DATE_PARTIAL_TS"
+    ],
+    "dq_issue_root_cause": [
+      "MIGRATION"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "nw_cust_THECR",
+    "source_contact_id": "nw_cust_THECR",
+    "customer_since": "08/07/1997",
+    "status": "Active",
+    "segment": "B2B",
+    "dq_issue_code": [
+      "ERR_DATE_SWAP_DDMM"
+    ],
+    "dq_issue_root_cause": [
+      "EXCEL_IMPORT"
+    ],
+    "dq_issue_severity": "med"
+  },
+  {
+    "source_customer_id": "nw_cust_TOMSP",
+    "source_contact_id": "nw_cust_TOMSP",
+    "customer_since": "1996-07-05",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_TORTU",
+    "source_contact_id": "nw_cust_TORTU",
+    "customer_since": "1996-08-08",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_TRADH",
+    "source_contact_id": "nw_cust_TRADH",
+    "customer_since": "1996-08-28",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_TRAIH",
+    "source_contact_id": "nw_cust_TRAIH",
+    "customer_since": "19/06/1997",
+    "status": "Active",
+    "segment": "B2B",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "nw_cust_VAFFE",
+    "source_contact_id": "nw_cust_VAFFE",
+    "customer_since": "28/11/1996",
+    "status": "Active",
+    "segment": "B2B",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "nw_cust_VICTE",
+    "source_contact_id": "nw_cust_VICTE",
+    "customer_since": "1996-07-08",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_VINET",
+    "source_contact_id": "nw_cust_VINET",
+    "customer_since": "1996-07-04",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_WANDK",
+    "source_contact_id": "nw_cust_WANDK",
+    "customer_since": "1996-09-09",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_WARTH",
+    "source_contact_id": "nw_cust_WARTH",
+    "customer_since": "1996-07-26",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_WELLI",
+    "source_contact_id": "nw_cust_WELLI",
+    "customer_since": "1996-07-15",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_WHITC",
+    "source_contact_id": "nw_cust_WHITC",
+    "customer_since": "31/07/1996",
+    "status": "Active",
+    "segment": "B2B",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "nw_cust_WILMK",
+    "source_contact_id": "nw_cust_WILMK",
+    "customer_since": "1997-07-30",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "nw_cust_WOLZA",
+    "source_contact_id": "nw_cust_WOLZA",
+    "customer_since": "1996-12-05",
+    "status": "Active",
+    "segment": "B2B"
+  },
+  {
+    "source_customer_id": "dj_user_1",
+    "source_contact_id": "dj_user_1",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_2",
+    "source_contact_id": "dj_user_2",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_3",
+    "source_contact_id": "dj_user_3",
+    "customer_since": "2026-04-29 00:00:00",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_PARTIAL_TS"
+    ],
+    "dq_issue_root_cause": [
+      "MIGRATION"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_4",
+    "source_contact_id": "dj_user_4",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_5",
+    "source_contact_id": "dj_user_5",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_6",
+    "source_contact_id": "dj_user_6",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_7",
+    "source_contact_id": "dj_user_7",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_8",
+    "source_contact_id": "dj_user_8",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_9",
+    "source_contact_id": "dj_user_9",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_10",
+    "source_contact_id": "dj_user_10",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_11",
+    "source_contact_id": "dj_user_11",
+    "customer_since": "29/04/2026",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_12",
+    "source_contact_id": "dj_user_12",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_13",
+    "source_contact_id": "dj_user_13",
+    "customer_since": "29/04/2026",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_14",
+    "source_contact_id": "dj_user_14",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_15",
+    "source_contact_id": "dj_user_15",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_16",
+    "source_contact_id": "dj_user_16",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_17",
+    "source_contact_id": "dj_user_17",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_18",
+    "source_contact_id": "dj_user_18",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_19",
+    "source_contact_id": "dj_user_19",
+    "customer_since": "2026-04-29T00:00",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_PARTIAL_TS"
+    ],
+    "dq_issue_root_cause": [
+      "MIGRATION"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_20",
+    "source_contact_id": "dj_user_20",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_21",
+    "source_contact_id": "dj_user_21",
+    "customer_since": "29/04/2026",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_22",
+    "source_contact_id": "dj_user_22",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_23",
+    "source_contact_id": "dj_user_23",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_24",
+    "source_contact_id": "dj_user_24",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_25",
+    "source_contact_id": "dj_user_25",
+    "customer_since": "2026/04/29",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_26",
+    "source_contact_id": "dj_user_26",
+    "customer_since": "29-Apr-26",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_27",
+    "source_contact_id": "dj_user_27",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_28",
+    "source_contact_id": "dj_user_28",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_29",
+    "source_contact_id": "dj_user_29",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_30",
+    "source_contact_id": "dj_user_30",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_31",
+    "source_contact_id": "dj_user_31",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_32",
+    "source_contact_id": "dj_user_32",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_33",
+    "source_contact_id": "dj_user_33",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_34",
+    "source_contact_id": "dj_user_34",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_35",
+    "source_contact_id": "dj_user_35",
+    "customer_since": "29/04/2026",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_36",
+    "source_contact_id": "dj_user_36",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_37",
+    "source_contact_id": "dj_user_37",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_38",
+    "source_contact_id": "dj_user_38",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_39",
+    "source_contact_id": "dj_user_39",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_40",
+    "source_contact_id": "dj_user_40",
+    "customer_since": "29/04/2026",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_41",
+    "source_contact_id": "dj_user_41",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_42",
+    "source_contact_id": "dj_user_42",
+    "customer_since": "2026-04-29T00:00",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_PARTIAL_TS"
+    ],
+    "dq_issue_root_cause": [
+      "MIGRATION"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_43",
+    "source_contact_id": "dj_user_43",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_44",
+    "source_contact_id": "dj_user_44",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_45",
+    "source_contact_id": "dj_user_45",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_46",
+    "source_contact_id": "dj_user_46",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_47",
+    "source_contact_id": "dj_user_47",
+    "customer_since": "2026-4-29",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_NO_LEADING_ZERO"
+    ],
+    "dq_issue_root_cause": [
+      "EXCEL_IMPORT"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_48",
+    "source_contact_id": "dj_user_48",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_49",
+    "source_contact_id": "dj_user_49",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_50",
+    "source_contact_id": "dj_user_50",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_51",
+    "source_contact_id": "dj_user_51",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_52",
+    "source_contact_id": "dj_user_52",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_53",
+    "source_contact_id": "dj_user_53",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_54",
+    "source_contact_id": "dj_user_54",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_55",
+    "source_contact_id": "dj_user_55",
+    "customer_since": "29-Apr-26",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_56",
+    "source_contact_id": "dj_user_56",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_57",
+    "source_contact_id": "dj_user_57",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_58",
+    "source_contact_id": "dj_user_58",
+    "customer_since": "29/04/2026",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_59",
+    "source_contact_id": "dj_user_59",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_60",
+    "source_contact_id": "dj_user_60",
+    "customer_since": "2026-4-29",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_NO_LEADING_ZERO"
+    ],
+    "dq_issue_root_cause": [
+      "EXCEL_IMPORT"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_61",
+    "source_contact_id": "dj_user_61",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_62",
+    "source_contact_id": "dj_user_62",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_63",
+    "source_contact_id": "dj_user_63",
+    "customer_since": "2026-4-29",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_NO_LEADING_ZERO"
+    ],
+    "dq_issue_root_cause": [
+      "EXCEL_IMPORT"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_64",
+    "source_contact_id": "dj_user_64",
+    "customer_since": "46141",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_EXCEL_SERIAL_DATE"
+    ],
+    "dq_issue_root_cause": [
+      "EXCEL_IMPORT"
+    ],
+    "dq_issue_severity": "high"
+  },
+  {
+    "source_customer_id": "dj_user_65",
+    "source_contact_id": "dj_user_65",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_66",
+    "source_contact_id": "dj_user_66",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_67",
+    "source_contact_id": "dj_user_67",
+    "customer_since": "46141",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_EXCEL_SERIAL_DATE"
+    ],
+    "dq_issue_root_cause": [
+      "EXCEL_IMPORT"
+    ],
+    "dq_issue_severity": "high"
+  },
+  {
+    "source_customer_id": "dj_user_68",
+    "source_contact_id": "dj_user_68",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_69",
+    "source_contact_id": "dj_user_69",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_70",
+    "source_contact_id": "dj_user_70",
+    "customer_since": "29-Apr-26",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_71",
+    "source_contact_id": "dj_user_71",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_72",
+    "source_contact_id": "dj_user_72",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_73",
+    "source_contact_id": "dj_user_73",
+    "customer_since": "46141",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_EXCEL_SERIAL_DATE"
+    ],
+    "dq_issue_root_cause": [
+      "EXCEL_IMPORT"
+    ],
+    "dq_issue_severity": "high"
+  },
+  {
+    "source_customer_id": "dj_user_74",
+    "source_contact_id": "dj_user_74",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_75",
+    "source_contact_id": "dj_user_75",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_76",
+    "source_contact_id": "dj_user_76",
+    "customer_since": "29/04/2026",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_77",
+    "source_contact_id": "dj_user_77",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_78",
+    "source_contact_id": "dj_user_78",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_79",
+    "source_contact_id": "dj_user_79",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_80",
+    "source_contact_id": "dj_user_80",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_81",
+    "source_contact_id": "dj_user_81",
+    "customer_since": "29/04/2026",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_82",
+    "source_contact_id": "dj_user_82",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_83",
+    "source_contact_id": "dj_user_83",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_84",
+    "source_contact_id": "dj_user_84",
+    "customer_since": "2026-04-29 00:00:00",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_PARTIAL_TS"
+    ],
+    "dq_issue_root_cause": [
+      "MIGRATION"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_85",
+    "source_contact_id": "dj_user_85",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_86",
+    "source_contact_id": "dj_user_86",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_87",
+    "source_contact_id": "dj_user_87",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_88",
+    "source_contact_id": "dj_user_88",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_89",
+    "source_contact_id": "dj_user_89",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_90",
+    "source_contact_id": "dj_user_90",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_91",
+    "source_contact_id": "dj_user_91",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_92",
+    "source_contact_id": "dj_user_92",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_93",
+    "source_contact_id": "dj_user_93",
+    "customer_since": "29/04/2026",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_94",
+    "source_contact_id": "dj_user_94",
+    "customer_since": "2026-04-29 00:00:00",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_PARTIAL_TS"
+    ],
+    "dq_issue_root_cause": [
+      "MIGRATION"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_95",
+    "source_contact_id": "dj_user_95",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_96",
+    "source_contact_id": "dj_user_96",
+    "customer_since": "29-Apr-26",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_97",
+    "source_contact_id": "dj_user_97",
+    "customer_since": "29/04/2026",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_98",
+    "source_contact_id": "dj_user_98",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_99",
+    "source_contact_id": "dj_user_99",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_100",
+    "source_contact_id": "dj_user_100",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_101",
+    "source_contact_id": "dj_user_101",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_102",
+    "source_contact_id": "dj_user_102",
+    "customer_since": "29/04/2026",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_103",
+    "source_contact_id": "dj_user_103",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_104",
+    "source_contact_id": "dj_user_104",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_105",
+    "source_contact_id": "dj_user_105",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_106",
+    "source_contact_id": "dj_user_106",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_107",
+    "source_contact_id": "dj_user_107",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_108",
+    "source_contact_id": "dj_user_108",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_109",
+    "source_contact_id": "dj_user_109",
+    "customer_since": "29/04/2026",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_110",
+    "source_contact_id": "dj_user_110",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_111",
+    "source_contact_id": "dj_user_111",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_112",
+    "source_contact_id": "dj_user_112",
+    "customer_since": "46141",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_EXCEL_SERIAL_DATE"
+    ],
+    "dq_issue_root_cause": [
+      "EXCEL_IMPORT"
+    ],
+    "dq_issue_severity": "high"
+  },
+  {
+    "source_customer_id": "dj_user_113",
+    "source_contact_id": "dj_user_113",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_114",
+    "source_contact_id": "dj_user_114",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_115",
+    "source_contact_id": "dj_user_115",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_116",
+    "source_contact_id": "dj_user_116",
+    "customer_since": "29/04/2026",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_117",
+    "source_contact_id": "dj_user_117",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_118",
+    "source_contact_id": "dj_user_118",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_119",
+    "source_contact_id": "dj_user_119",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_120",
+    "source_contact_id": "dj_user_120",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_121",
+    "source_contact_id": "dj_user_121",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_122",
+    "source_contact_id": "dj_user_122",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_123",
+    "source_contact_id": "dj_user_123",
+    "customer_since": "29/04/2026",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_124",
+    "source_contact_id": "dj_user_124",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_125",
+    "source_contact_id": "dj_user_125",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_126",
+    "source_contact_id": "dj_user_126",
+    "customer_since": "29-Apr-26",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_127",
+    "source_contact_id": "dj_user_127",
+    "customer_since": "29/04/2026",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_128",
+    "source_contact_id": "dj_user_128",
+    "customer_since": "2026-4-29",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_NO_LEADING_ZERO"
+    ],
+    "dq_issue_root_cause": [
+      "EXCEL_IMPORT"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_129",
+    "source_contact_id": "dj_user_129",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_130",
+    "source_contact_id": "dj_user_130",
+    "customer_since": "2026-04-29T00:00:00+02:00",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_PARTIAL_TS"
+    ],
+    "dq_issue_root_cause": [
+      "MIGRATION"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_131",
+    "source_contact_id": "dj_user_131",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_132",
+    "source_contact_id": "dj_user_132",
+    "customer_since": "46141",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_EXCEL_SERIAL_DATE"
+    ],
+    "dq_issue_root_cause": [
+      "EXCEL_IMPORT"
+    ],
+    "dq_issue_severity": "high"
+  },
+  {
+    "source_customer_id": "dj_user_133",
+    "source_contact_id": "dj_user_133",
+    "customer_since": "29/04/2026",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_134",
+    "source_contact_id": "dj_user_134",
+    "customer_since": "29-Apr-26",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_135",
+    "source_contact_id": "dj_user_135",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_136",
+    "source_contact_id": "dj_user_136",
+    "customer_since": "29/04/2026",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_137",
+    "source_contact_id": "dj_user_137",
+    "customer_since": "46141",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_EXCEL_SERIAL_DATE"
+    ],
+    "dq_issue_root_cause": [
+      "EXCEL_IMPORT"
+    ],
+    "dq_issue_severity": "high"
+  },
+  {
+    "source_customer_id": "dj_user_138",
+    "source_contact_id": "dj_user_138",
+    "customer_since": "29/04/2026",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_139",
+    "source_contact_id": "dj_user_139",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_140",
+    "source_contact_id": "dj_user_140",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_141",
+    "source_contact_id": "dj_user_141",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_142",
+    "source_contact_id": "dj_user_142",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_143",
+    "source_contact_id": "dj_user_143",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_144",
+    "source_contact_id": "dj_user_144",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_145",
+    "source_contact_id": "dj_user_145",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_146",
+    "source_contact_id": "dj_user_146",
+    "customer_since": "2026-04-29 00:00:00",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_PARTIAL_TS"
+    ],
+    "dq_issue_root_cause": [
+      "MIGRATION"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_147",
+    "source_contact_id": "dj_user_147",
+    "customer_since": "29-Apr-26",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_148",
+    "source_contact_id": "dj_user_148",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_149",
+    "source_contact_id": "dj_user_149",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_150",
+    "source_contact_id": "dj_user_150",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_151",
+    "source_contact_id": "dj_user_151",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_152",
+    "source_contact_id": "dj_user_152",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_153",
+    "source_contact_id": "dj_user_153",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_154",
+    "source_contact_id": "dj_user_154",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_155",
+    "source_contact_id": "dj_user_155",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_156",
+    "source_contact_id": "dj_user_156",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_157",
+    "source_contact_id": "dj_user_157",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_158",
+    "source_contact_id": "dj_user_158",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_159",
+    "source_contact_id": "dj_user_159",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_160",
+    "source_contact_id": "dj_user_160",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_161",
+    "source_contact_id": "dj_user_161",
+    "customer_since": "29/04/2026",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_162",
+    "source_contact_id": "dj_user_162",
+    "customer_since": "29/04/2026",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_163",
+    "source_contact_id": "dj_user_163",
+    "customer_since": "29/04/2026",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_164",
+    "source_contact_id": "dj_user_164",
+    "customer_since": "2026-04-29T00:00",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_PARTIAL_TS"
+    ],
+    "dq_issue_root_cause": [
+      "MIGRATION"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_165",
+    "source_contact_id": "dj_user_165",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_166",
+    "source_contact_id": "dj_user_166",
+    "customer_since": "29-Apr-26",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_167",
+    "source_contact_id": "dj_user_167",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_168",
+    "source_contact_id": "dj_user_168",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_169",
+    "source_contact_id": "dj_user_169",
+    "customer_since": "29-Apr-26",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_170",
+    "source_contact_id": "dj_user_170",
+    "customer_since": "29/04/2026",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_171",
+    "source_contact_id": "dj_user_171",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_172",
+    "source_contact_id": "dj_user_172",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_173",
+    "source_contact_id": "dj_user_173",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_174",
+    "source_contact_id": "dj_user_174",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_175",
+    "source_contact_id": "dj_user_175",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_176",
+    "source_contact_id": "dj_user_176",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_177",
+    "source_contact_id": "dj_user_177",
+    "customer_since": "46141",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_EXCEL_SERIAL_DATE"
+    ],
+    "dq_issue_root_cause": [
+      "EXCEL_IMPORT"
+    ],
+    "dq_issue_severity": "high"
+  },
+  {
+    "source_customer_id": "dj_user_178",
+    "source_contact_id": "dj_user_178",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_179",
+    "source_contact_id": "dj_user_179",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_180",
+    "source_contact_id": "dj_user_180",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_181",
+    "source_contact_id": "dj_user_181",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_182",
+    "source_contact_id": "dj_user_182",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_183",
+    "source_contact_id": "dj_user_183",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_184",
+    "source_contact_id": "dj_user_184",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_185",
+    "source_contact_id": "dj_user_185",
+    "customer_since": "2026-4-29",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_NO_LEADING_ZERO"
+    ],
+    "dq_issue_root_cause": [
+      "EXCEL_IMPORT"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_186",
+    "source_contact_id": "dj_user_186",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_187",
+    "source_contact_id": "dj_user_187",
+    "customer_since": "29/04/2026",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_188",
+    "source_contact_id": "dj_user_188",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_189",
+    "source_contact_id": "dj_user_189",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_190",
+    "source_contact_id": "dj_user_190",
+    "customer_since": "29/04/2026",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_191",
+    "source_contact_id": "dj_user_191",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_192",
+    "source_contact_id": "dj_user_192",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_193",
+    "source_contact_id": "dj_user_193",
+    "customer_since": "29/04/2026",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_194",
+    "source_contact_id": "dj_user_194",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_195",
+    "source_contact_id": "dj_user_195",
+    "customer_since": "2026/04/29",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_196",
+    "source_contact_id": "dj_user_196",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_197",
+    "source_contact_id": "dj_user_197",
+    "customer_since": "29/04/2026",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_198",
+    "source_contact_id": "dj_user_198",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_199",
+    "source_contact_id": "dj_user_199",
+    "customer_since": "29/04/2026",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_200",
+    "source_contact_id": "dj_user_200",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_201",
+    "source_contact_id": "dj_user_201",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_202",
+    "source_contact_id": "dj_user_202",
+    "customer_since": "2026-4-29",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_NO_LEADING_ZERO"
+    ],
+    "dq_issue_root_cause": [
+      "EXCEL_IMPORT"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_203",
+    "source_contact_id": "dj_user_203",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_204",
+    "source_contact_id": "dj_user_204",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_205",
+    "source_contact_id": "dj_user_205",
+    "customer_since": "29/04/2026",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_206",
+    "source_contact_id": "dj_user_206",
+    "customer_since": "29-Apr-26",
+    "status": "Active",
+    "segment": "B2C",
+    "dq_issue_code": [
+      "ERR_DATE_FORMAT"
+    ],
+    "dq_issue_root_cause": [
+      "MANUAL_ENTRY"
+    ],
+    "dq_issue_severity": "low"
+  },
+  {
+    "source_customer_id": "dj_user_207",
+    "source_contact_id": "dj_user_207",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  },
+  {
+    "source_customer_id": "dj_user_208",
+    "source_contact_id": "dj_user_208",
+    "customer_since": "2026-04-29",
+    "status": "Active",
+    "segment": "B2C"
+  }
+]
