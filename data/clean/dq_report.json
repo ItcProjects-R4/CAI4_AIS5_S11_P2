@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-05-20 18:37:23",
+  "entities": {
+    "contacts": {
+      "total_rows_processed": 1675,
+      "valid_rows": 1612,
+      "quarantined_rows": 62,
+      "rejected_rows": 1,
+      "format_issues_in_clean": 2,
+      "issue_details": [
+        {
+          "row": 87,
+          "field": "phone",
+          "code": "INVALID_PHONE_FORMAT",
+          "value": "'+201518532857"
+        },
+        {
+          "row": 123,
+          "field": "phone",
+          "code": "INVALID_PHONE_FORMAT",
+          "value": "'01043268478"
+        }
+      ]
+    },
+    "customers": {
+      "total_rows_processed": 1702,
+      "valid_rows": 1602,
+      "quarantined_rows": 100,
+      "rejected_rows": 0,
+      "format_issues_in_clean": 0,
+      "issue_details": []
+    },
+    "products": {
+      "total_rows_processed": 770,
+      "valid_rows": 757,
+      "quarantined_rows": 13,
+      "rejected_rows": 0,
+      "format_issues_in_clean": 0,
+      "issue_details": []
+    },
+    "sales_orders": {
+      "total_rows_processed": 4038,
+      "valid_rows": 2743,
+      "quarantined_rows": 1269,
+      "rejected_rows": 26,
+      "format_issues_in_clean": 0,
+      "issue_details": []
+    },
+    "order_lines": {
+      "total_rows_processed": 5955,
+      "valid_rows": 3592,
+      "quarantined_rows": 2363,
+      "rejected_rows": 0,
+      "format_issues_in_clean": 0,
+      "issue_details": []
+    }
+  },
+  "uniqueness_issues": [],
+  "top_error_codes": [
+    {
+      "code": "INVALID_PHONE_FORMAT",
+      "count": 2
+    }
+  ]
+}

@@ -214,9 +214,11 @@ az login
 | Layer | Contents | Rule |
 |---|---|---|
 | `data/raw/` | Original, unmodified source files | Never edit — source of truth |
-| `data/clean/` | Validated, transformed, analysis-ready records | Written by pipeline after each run |
-| `data/rejected/` | Rows that failed validation (null `CustomerID`, blank name) | Saved with a `RejectionReason` column |
-| `data/quarantine/` | Files or records with unresolved issues pending review | Held until manually reviewed |
+| `data/clean/` | Validated, schema-compliant records ready for SQL load | Written by pipeline after each run |
+| `data/rejected/` | Unrecoverable rows (missing primary keys, unparseable dates) | Permanently excluded from load |
+| `data/quarantine/` | Recoverable rows held for review (FK orphans, DQ flags) | Available for manual correction |
+
+> **Rejected vs Quarantine:** See [Data Quality Definitions](wiki/Data-Quality-Definitions.md) for full definitions of each data tier.
 
 **Post-run validation checklist** (from [`05_validation_queries.sql`](sql/scripts/05_validation_queries.sql)):
 - Row count is non-zero and within expected range
@@ -262,8 +264,10 @@ All pipeline, dataset, and linked service definitions are stored as JSON — **n
 | [Project Flow](wiki/project_flow.md) | Team planning flow, roles, and timeline |
 | [Project Architecture](wiki/Project-Architecture.md) | Medallion layers, full architecture diagram, data flow |
 | [ETL Pipeline](wiki/ETL-Pipeline.md) | ADF pipeline end-to-end, Data Flow steps, running instructions |
+| [Transformation Rules](wiki/Transformation-Rules.md) | Null handling, type conversions, dedup logic, FK cascade rules |
 | [Data Sources](wiki/Data-Sources.md) | CRM and Excel schemas, known quality issues, file checklist |
 | [SQL Schema](wiki/SQL-Schema.md) | Table definitions, views, stored procedures, ad-hoc queries |
+| [Data Quality Definitions](wiki/Data-Quality-Definitions.md) | Rejected vs Quarantine vs Clean — what each means and when |
 | [Data Validation](wiki/Data-Validation.md) | Post-run validation queries and failure investigation guide |
 | [Setup Guide](wiki/Setup-Guide.md) | Full environment setup from zero to first pipeline run |
 | [Contributing](wiki/Contributing.md) | Branching, commits, pull requests, labels, code style |

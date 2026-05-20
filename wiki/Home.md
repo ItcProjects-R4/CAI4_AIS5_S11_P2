@@ -153,8 +153,10 @@ CAI4_AIS5_S11_P2/
 | [Project Architecture](./Project-Architecture.md) | Deep dive into each layer of the pipeline |
 | [Setup Guide](./Setup-Guide.md) | Clone the repo and configure your environment step by step |
 | [ETL Pipeline](./ETL-Pipeline.md) | How the ADF pipeline works end to end |
+| [Transformation Rules](./Transformation-Rules.md) | Null handling, type conversions, dedup logic, FK cascade rules |
 | [Data Sources](./Data-Sources.md) | CRM and Excel source schemas, formats, and quality issues |
 | [SQL Schema](./SQL-Schema.md) | Warehouse table design, views, and stored procedures |
+| [Data Quality Definitions](./Data-Quality-Definitions.md) | Rejected vs Quarantine vs Clean — what each tier means |
 | [Data Validation](./Data-Validation.md) | Quality checks and validation queries to run after each load |
 | [Contributing](./Contributing.md) | How to branch, commit, open pull requests, and use issue templates |
 | [Glossary](./Glossary.md) | Plain-English definitions of every technical term used here |

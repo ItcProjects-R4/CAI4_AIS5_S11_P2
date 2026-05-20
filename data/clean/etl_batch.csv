@@ -1,0 +1,3 @@
+etl_batch_id,pipeline_run_id,started_at,ended_at,status,notes
+a0d582d9-6872-4072-b358-11fcba91cc66,transform_a0d582d9,2026-05-20 18:37:21,2026-05-20 18:37:21,completed,Silver transformation run
+3c107a03-79cb-411e-860a-1ae2b2c87040,itc_transform_3c107a03,2026-05-20 18:37:21,2026-05-20 18:37:22,completed,ITC CRM transformation run
