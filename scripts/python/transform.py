@@ -49,6 +49,80 @@ def strip_or_none(val):
     return s if s else None
 
 
+# ---------------------------------------------------------------------------
+# Geographic normalisation (Egypt-aware)
+# ---------------------------------------------------------------------------
+
+EGYPT_GOVERNORATES = {
+    "Alexandria", "Aswan", "Asyut", "Beheira", "Beni Suef", "Cairo",
+    "Dakahlia", "Damietta", "Faiyum", "Gharbia", "Giza", "Ismailia",
+    "Kafr El Sheikh", "Luxor", "Matrouh", "Minya", "Monufia",
+    "New Valley", "North Sinai", "Port Said", "Qalyubiya", "Qena",
+    "Red Sea", "Sharqia", "Sohag", "South Sinai", "Suez",
+}
+
+COUNTRY_NORMALIZE = {
+    "usa": "United States", "united states": "United States",
+    "unitde states": "United States", "uk": "United Kingdom",
+}
+
+_EGYPT_PHONE_RE = re.compile(r'^(\+20|002|01[0-9])')
+
+
+def _is_egyptian_phone(phone):
+    """Detect Egyptian phone patterns: +20x, 002x, 01xxxxxxxxx."""
+    if pd.isna(phone):
+        return False
+    p = str(phone).strip().replace(" ", "").replace("'", "")
+    return bool(_EGYPT_PHONE_RE.match(p))
+
+
+def _is_egyptian_email(email):
+    """Detect Egyptian email domains: .eg, .com.eg, .gov.eg, etc."""
+    if pd.isna(email):
+        return False
+    return ".eg" in str(email).lower().split("@")[-1]
+
+
+def normalize_geography(df: pd.DataFrame) -> pd.DataFrame:
+    """Fix geographic inconsistencies for Egyptian contacts.
+
+    Rules:
+    1. Normalize country name variants (USA -> United States, etc.)
+    2. Detect Egyptian contacts via phone or email domain
+    3. If Egyptian: country -> 'Egypt', clear non-governorate state/city/postal
+    4. If state is not a valid Egyptian governorate -> NULL
+    """
+    df = df.copy()
+
+    # 1. Normalize country name variants
+    df["country"] = df["country"].apply(
+        lambda v: COUNTRY_NORMALIZE.get(str(v).strip().lower(), v) if pd.notna(v) else v
+    )
+
+    # 2. Detect Egyptian contacts
+    egypt_phone = df["phone"].apply(_is_egyptian_phone)
+    egypt_email = df["email"].apply(_is_egyptian_email)
+    is_egyptian = egypt_phone | egypt_email
+
+    # 3. Correct country for Egyptian contacts
+    wrong_country = is_egyptian & (
+        df["country"].apply(lambda v: str(v).strip().lower() if pd.notna(v) else "") != "egypt"
+    )
+    df.loc[wrong_country, "country"] = "Egypt"
+
+    # 4. For Egyptian contacts: validate state against governorates
+    is_egypt_now = df["country"].apply(
+        lambda v: str(v).strip().lower() == "egypt" if pd.notna(v) else False
+    )
+    has_state = is_egypt_now & df["state"].notna()
+    if has_state.any():
+        invalid_state = has_state & ~df["state"].isin(EGYPT_GOVERNORATES)
+        df.loc[invalid_state, "state"] = None
+
+    return df
+
+
 def parse_date_safe(raw) -> str | None:
     """
     Parse many date formats -> 'YYYY-MM-DD HH:MM:SS' or None.
@@ -143,6 +217,9 @@ def transform_contacts(df: pd.DataFrame, batch_id: str, now: str):
     out["etl_batch_id"]     = batch_id
     out["source_system"]    = df["source_contact_id"].apply(derive_source_system)
     out["source_record_id"] = df["source_contact_id"].apply(strip_or_none)
+
+    # --- geographic normalisation ---
+    out = normalize_geography(out)
 
     # keep DQ columns for routing
     out["_dq_severity"] = df.get("dq_issue_severity", pd.Series(dtype=str))
