@@ -9,7 +9,7 @@ Reads Bronze Simulated Messy JSON  ->  cleans / validates  ->  writes:
 Column names in every output CSV match the MySQL schema exactly.
 """
 
-import os, sys, glob, json, uuid, re, datetime, argparse
+import os, sys, glob, json, uuid, re, datetime, argparse, hashlib
 import pandas as pd
 from dateutil import parser as dateparser
 
@@ -112,6 +112,60 @@ def normalize_order_status(val):
     return ORDER_STATUS_MAP.get(key, s)
 
 
+def _stable_int(seed, mod):
+    raw = "" if seed is None else str(seed)
+    h = hashlib.sha256(raw.encode("utf-8")).hexdigest()
+    return int(h[:8], 16) % mod
+
+
+def _pick_egypt_governorate(seed):
+    govs = sorted(EGYPT_GOVERNORATES)
+    return govs[_stable_int(f"{seed}|gov", len(govs))]
+
+
+def _fake_egypt_address(seed, governorate):
+    house_no = 1 + _stable_int(f"{seed}|house", 200)
+    street = EGYPT_STREETS[_stable_int(f"{seed}|street", len(EGYPT_STREETS))]
+    district = EGYPT_DISTRICTS[_stable_int(f"{seed}|district", len(EGYPT_DISTRICTS))]
+    city = EGYPT_GOVERNORATE_CAPITALS.get(governorate, governorate)
+    return f"{house_no} {street}, {district}", city
+
+
+def _fake_egypt_phone(seed):
+    prefix = ["010", "011", "012", "015"][_stable_int(f"{seed}|prefix", 4)]
+    num = _stable_int(f"{seed}|phone", 100000000)
+    return f"{prefix}{num:08d}"
+
+
+def _fake_egypt_name(seed):
+    first = EGYPT_FIRST_NAMES[_stable_int(f"{seed}|fname", len(EGYPT_FIRST_NAMES))]
+    last = EGYPT_LAST_NAMES[_stable_int(f"{seed}|lname", len(EGYPT_LAST_NAMES))]
+    return f"{first} {last}"
+
+
+def enrich_egypt_contacts(df: pd.DataFrame) -> pd.DataFrame:
+    """Replace Egypt contact fields with deterministic fake Egypt data."""
+    df = df.copy()
+    is_egypt = df["country"].apply(
+        lambda v: str(v).strip().lower() == "egypt" if pd.notna(v) else False
+    )
+
+    for idx, row in df[is_egypt].iterrows():
+        seed = row.get("contact_id") or row.get("email") or row.get("source_record_id")
+
+        state = _pick_egypt_governorate(seed)
+        addr, city = _fake_egypt_address(seed, state)
+
+        df.at[idx, "state"] = state
+        df.at[idx, "city"] = city
+        df.at[idx, "address_line1"] = addr
+        df.at[idx, "postal_code"] = f"{_stable_int(f'{seed}|postal', 100000):05d}"
+        df.at[idx, "phone"] = _fake_egypt_phone(seed)
+        df.at[idx, "full_name"] = _fake_egypt_name(seed)
+
+    return df
+
+
 # ---------------------------------------------------------------------------
 # Geographic normalisation (Egypt-aware)
 # ---------------------------------------------------------------------------
@@ -123,6 +177,62 @@ EGYPT_GOVERNORATES = {
     "New Valley", "North Sinai", "Port Said", "Qalyubiya", "Qena",
     "Red Sea", "Sharqia", "Sohag", "South Sinai", "Suez",
 }
+
+EGYPT_GOVERNORATE_CAPITALS = {
+    "Alexandria": "Alexandria",
+    "Aswan": "Aswan",
+    "Asyut": "Asyut",
+    "Beheira": "Damanhur",
+    "Beni Suef": "Beni Suef",
+    "Cairo": "Cairo",
+    "Dakahlia": "Mansoura",
+    "Damietta": "Damietta",
+    "Faiyum": "Faiyum",
+    "Gharbia": "Tanta",
+    "Giza": "Giza",
+    "Ismailia": "Ismailia",
+    "Kafr El Sheikh": "Kafr El Sheikh",
+    "Luxor": "Luxor",
+    "Matrouh": "Marsa Matruh",
+    "Minya": "Minya",
+    "Monufia": "Shibin El Kom",
+    "New Valley": "Kharga Oasis",
+    "North Sinai": "Arish",
+    "Port Said": "Port Said",
+    "Qalyubiya": "Banha",
+    "Qena": "Qena",
+    "Red Sea": "Hurghada",
+    "Sharqia": "Zagazig",
+    "Sohag": "Sohag",
+    "South Sinai": "El Tor",
+    "Suez": "Suez",
+}
+
+EGYPT_STREETS = [
+    "Tahrir St", "Ramses St", "Corniche Rd", "Salah Salem St",
+    "26 July St", "El Hegaz St", "El Nasr St", "El Teseen St",
+    "Port Said St", "Pyramids Rd", "Ring Rd", "Alexandria Rd",
+]
+
+EGYPT_DISTRICTS = [
+    "Nasr City", "Maadi", "Heliopolis", "Dokki", "Mohandessin",
+    "Zamalek", "Smouha", "Sidi Gaber", "Gleem", "Haram",
+    "Agouza", "Shubra", "Imbaba", "Helwan",
+]
+
+EGYPT_FIRST_NAMES = [
+    "Ahmed", "Mohamed", "Mahmoud", "Omar", "Youssef", "Khaled",
+    "Mostafa", "Hassan", "Hussein", "Amr", "Tarek", "Karim",
+    "Alaa", "Ehab", "Sami", "Nader", "Wael", "Hany",
+    "Mona", "Sara", "Aya", "Nour", "Mariam", "Salma",
+    "Hala", "Doaa", "Nadia", "Rania", "Eman", "Hoda",
+]
+
+EGYPT_LAST_NAMES = [
+    "El-Sayed", "Abdelrahman", "Hassan", "Ibrahim", "Mahmoud", "Kamel",
+    "Mansour", "Farouk", "Saad", "Fathy", "Gamal", "Nassar",
+    "Mostafa", "Ali", "Yassin", "Sherif", "Tawfik", "Rashad",
+]
 
 COUNTRY_NORMALIZE = {
     "usa": "United States", "united states": "United States",
@@ -289,6 +399,7 @@ def transform_contacts(df: pd.DataFrame, batch_id: str, now: str):
 
     # --- geographic normalisation ---
     out = normalize_geography(out)
+    out = enrich_egypt_contacts(out)
 
     # Egypt requires a valid governorate (state)
     is_egypt = out["country"].apply(

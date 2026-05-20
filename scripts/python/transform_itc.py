@@ -17,7 +17,7 @@ import pandas as pd
 from transform import (
     deterministic_uuid, derive_source_system, strip_or_none,
     parse_date_safe, parse_date_to_date, clean_numeric,
-    normalize_phone, normalize_order_status, normalize_geography,
+    normalize_phone, normalize_order_status, normalize_geography, enrich_egypt_contacts,
     write_splits, cascade_fk_integrity,
 )
 
@@ -171,6 +171,7 @@ def transform_itc(input_path: str, output_dir: str):
 
     # Geographic normalization (Egypt-aware)
     contacts = normalize_geography(contacts)
+    contacts = enrich_egypt_contacts(contacts)
 
     is_egypt = contacts["country"].apply(
         lambda v: str(v).strip().lower() == "egypt" if pd.notna(v) else False
