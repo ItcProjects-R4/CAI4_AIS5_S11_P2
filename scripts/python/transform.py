@@ -49,6 +49,69 @@ def strip_or_none(val):
     return s if s else None
 
 
+PHONE_SCI_RE = re.compile(r"^[\+\-]?\d+(\.\d+)?[eE][\+\-]?\d+$")
+PHONE_ALLOWED_RE = re.compile(r"^[\d\s\+\-\(\)\.x#]+$")
+
+
+def normalize_phone(val):
+    """Normalize phone values to a safe, DQ-friendly string."""
+    if pd.isna(val):
+        return None
+    s = str(val).strip()
+    if not s:
+        return None
+
+    # Strip common stray quotes/apostrophes from Excel exports
+    s = s.strip("\"'`")
+    s = s.replace("'", "").replace('"', "")
+    s = re.sub(r"\s+", " ", s).strip()
+    if not s:
+        return None
+
+    # Convert scientific notation or trailing .0 into digits
+    if PHONE_SCI_RE.match(s):
+        try:
+            num = float(s)
+            if pd.isna(num):
+                return None
+            s = str(int(round(num)))
+        except Exception:
+            pass
+    elif re.match(r"^\d+\.0$", s):
+        s = s[:-2]
+
+    if not s:
+        return None
+    if not PHONE_ALLOWED_RE.match(s):
+        return None
+    if len(s) < 7 or len(s) > 30:
+        return None
+    return s
+
+
+ORDER_STATUS_MAP = {
+    "completed": "Completed",
+    "compelted": "Completed",
+    "complete": "Completed",
+    "cancelled": "Cancelled",
+    "canceled": "Cancelled",
+    "pending": "Pending",
+    "processing": "Processing",
+    "shipped": "Shipped",
+    "returned": "Returned",
+    "refunded": "Refunded",
+}
+
+
+def normalize_order_status(val):
+    """Normalize order_status casing and common typos."""
+    s = strip_or_none(val)
+    if s is None:
+        return None
+    key = re.sub(r"\s+", " ", s).strip().lower()
+    return ORDER_STATUS_MAP.get(key, s)
+
+
 # ---------------------------------------------------------------------------
 # Geographic normalisation (Egypt-aware)
 # ---------------------------------------------------------------------------
@@ -202,7 +265,7 @@ def transform_contacts(df: pd.DataFrame, batch_id: str, now: str):
     out["contact_id"]       = df["source_contact_id"].apply(deterministic_uuid)
     out["email"]            = df.get("email", pd.Series(dtype=str)).apply(strip_or_none)
     out["full_name"]        = df.get("full_name", pd.Series(dtype=str)).apply(strip_or_none)
-    out["phone"]            = df.get("phone", pd.Series(dtype=str)).apply(strip_or_none)
+    out["phone"]            = df.get("phone", pd.Series(dtype=str)).apply(normalize_phone)
     out["country"]          = df.get("country", pd.Series(dtype=str)).apply(strip_or_none)
     out["address_line1"]    = df.get("address_line1", pd.Series(dtype=str)).apply(strip_or_none)
     out["city"]             = df.get("city", pd.Series(dtype=str)).apply(strip_or_none)
@@ -359,7 +422,7 @@ def transform_sales_orders(df: pd.DataFrame, batch_id: str, now: str):
     out["order_id"]         = df["source_order_id"].apply(deterministic_uuid)
     out["customer_id"]      = df["source_customer_id"].apply(deterministic_uuid)
     out["order_date"]       = df.get("order_date", pd.Series(dtype=str)).apply(parse_date_safe)
-    out["order_status"]     = df.get("order_status", pd.Series(dtype=str)).apply(strip_or_none)
+    out["order_status"]     = df.get("order_status", pd.Series(dtype=str)).apply(normalize_order_status)
     out["currency"]         = df.get("currency", pd.Series(dtype=str)).apply(
         lambda v: str(v).strip().upper()[:3] if pd.notna(v) and str(v).strip() else None
     )

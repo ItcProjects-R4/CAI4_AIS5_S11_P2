@@ -17,6 +17,7 @@ import pandas as pd
 from transform import (
     deterministic_uuid, derive_source_system, strip_or_none,
     parse_date_safe, parse_date_to_date, clean_numeric,
+    normalize_phone, normalize_order_status,
     write_splits, cascade_fk_integrity,
 )
 
@@ -152,7 +153,7 @@ def transform_itc(input_path: str, output_dir: str):
     contacts["contact_id"]       = contacts_raw["contact_contact_id"].apply(itc_uuid)
     contacts["email"]            = contacts_raw["contact_email"].apply(strip_or_none)
     contacts["full_name"]        = contacts_raw["contact_full_name"].apply(strip_or_none)
-    contacts["phone"]            = contacts_raw["contact_phone"].apply(strip_or_none)
+    contacts["phone"]            = contacts_raw["contact_phone"].apply(normalize_phone)
     contacts["country"]          = contacts_raw["contact_country"].apply(strip_or_none)
     contacts["address_line1"]    = contacts_raw["contact_address_line1"].apply(strip_or_none)
     contacts["city"]             = contacts_raw["contact_city"].apply(strip_or_none)
@@ -251,7 +252,7 @@ def transform_itc(input_path: str, output_dir: str):
     orders["order_id"]         = raw["order_order_id"].apply(itc_uuid)
     orders["customer_id"]      = raw["order_customer_id"].apply(itc_uuid)
     orders["order_date"]       = raw["order_order_date"].apply(parse_date_safe)
-    orders["order_status"]     = raw["order_order_status"].apply(strip_or_none)
+    orders["order_status"]     = raw["order_order_status"].apply(normalize_order_status)
     orders["currency"]         = "EGP"  # ITC CRM is Egypt-based
     orders["order_total"]      = raw["order_order_total"].apply(clean_numeric)
     orders["created_at"]       = now

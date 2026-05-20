@@ -110,11 +110,11 @@ python scripts/python/main.py
 
 | Entity | Clean | Quarantine | Rejected |
 |---|---|---|---|
-| contacts | 210 | 62 | 1 |
-| customers | 200 | 99 | 0 |
-| products | 257 | 13 | 0 |
-| sales_orders | 531 | 481 | 26 |
-| order_lines | 1380 | 1575 | 0 |
+| contacts | 1612 | 62 | 1 |
+| customers | 1602 | 100 | 0 |
+| products | 757 | 13 | 0 |
+| sales_orders | 2743 | 1269 | 26 |
+| order_lines | 3592 | 2363 | 0 |
 
 ### Data Quality Audit (All Pass)
 

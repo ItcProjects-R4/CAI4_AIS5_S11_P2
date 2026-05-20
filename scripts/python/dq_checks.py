@@ -58,6 +58,8 @@ def validate_contacts(df: pd.DataFrame) -> list[dict]:
         # Required: contact_id, email
         if pd.isna(row.get("contact_id")) or not str(row.get("contact_id", "")).strip():
             issues.append({"row": idx, "field": "contact_id", "code": "MISSING_REQUIRED_ID", "value": ""})
+        if pd.isna(row.get("etl_batch_id")) or not str(row.get("etl_batch_id", "")).strip():
+            issues.append({"row": idx, "field": "etl_batch_id", "code": "MISSING_REQUIRED_FIELD", "value": ""})
         if pd.isna(row.get("email")) or not str(row.get("email", "")).strip():
             issues.append({"row": idx, "field": "email", "code": "MISSING_REQUIRED_FIELD", "value": ""})
         elif not check_email(row["email"]):
@@ -75,6 +77,8 @@ def validate_customers(df: pd.DataFrame) -> list[dict]:
             issues.append({"row": idx, "field": "customer_id", "code": "MISSING_REQUIRED_ID", "value": ""})
         if pd.isna(row.get("contact_id")) or not str(row.get("contact_id", "")).strip():
             issues.append({"row": idx, "field": "contact_id", "code": "MISSING_REQUIRED_FK", "value": ""})
+        if pd.isna(row.get("etl_batch_id")) or not str(row.get("etl_batch_id", "")).strip():
+            issues.append({"row": idx, "field": "etl_batch_id", "code": "MISSING_REQUIRED_FIELD", "value": ""})
     return issues
 
 
@@ -87,6 +91,8 @@ def validate_products(df: pd.DataFrame) -> list[dict]:
             issues.append({"row": idx, "field": "sku", "code": "MISSING_REQUIRED_FIELD", "value": ""})
         if pd.isna(row.get("product_name")) or not str(row.get("product_name", "")).strip():
             issues.append({"row": idx, "field": "product_name", "code": "MISSING_REQUIRED_FIELD", "value": ""})
+        if pd.isna(row.get("etl_batch_id")) or not str(row.get("etl_batch_id", "")).strip():
+            issues.append({"row": idx, "field": "etl_batch_id", "code": "MISSING_REQUIRED_FIELD", "value": ""})
     return issues
 
 
@@ -99,6 +105,8 @@ def validate_sales_orders(df: pd.DataFrame) -> list[dict]:
             issues.append({"row": idx, "field": "customer_id", "code": "MISSING_REQUIRED_FK", "value": ""})
         if pd.isna(row.get("order_date")) or not str(row.get("order_date", "")).strip():
             issues.append({"row": idx, "field": "order_date", "code": "MISSING_REQUIRED_FIELD", "value": ""})
+        if pd.isna(row.get("etl_batch_id")) or not str(row.get("etl_batch_id", "")).strip():
+            issues.append({"row": idx, "field": "etl_batch_id", "code": "MISSING_REQUIRED_FIELD", "value": ""})
     return issues
 
 
@@ -108,6 +116,8 @@ def validate_order_lines(df: pd.DataFrame) -> list[dict]:
         for fld in ["order_line_id", "order_id", "product_id"]:
             if pd.isna(row.get(fld)) or not str(row.get(fld, "")).strip():
                 issues.append({"row": idx, "field": fld, "code": "MISSING_REQUIRED_ID", "value": ""})
+        if pd.isna(row.get("line_number")) or not str(row.get("line_number", "")).strip():
+            issues.append({"row": idx, "field": "line_number", "code": "MISSING_REQUIRED_FIELD", "value": ""})
         if pd.isna(row.get("quantity")) or row.get("quantity", 0) <= 0:
             issues.append({"row": idx, "field": "quantity", "code": "INVALID_QUANTITY", "value": str(row.get("quantity", ""))})
         if pd.isna(row.get("unit_price")) or row.get("unit_price", -1) < 0:

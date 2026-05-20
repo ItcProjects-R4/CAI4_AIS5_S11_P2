@@ -1,26 +1,13 @@
 {
-  "generated_at": "2026-05-20 18:37:23",
+  "generated_at": "2026-05-20 19:03:52",
   "entities": {
     "contacts": {
       "total_rows_processed": 1675,
       "valid_rows": 1612,
       "quarantined_rows": 62,
       "rejected_rows": 1,
-      "format_issues_in_clean": 2,
-      "issue_details": [
-        {
-          "row": 87,
-          "field": "phone",
-          "code": "INVALID_PHONE_FORMAT",
-          "value": "'+201518532857"
-        },
-        {
-          "row": 123,
-          "field": "phone",
-          "code": "INVALID_PHONE_FORMAT",
-          "value": "'01043268478"
-        }
-      ]
+      "format_issues_in_clean": 0,
+      "issue_details": []
     },
     "customers": {
       "total_rows_processed": 1702,
@@ -56,10 +43,5 @@
     }
   },
   "uniqueness_issues": [],
-  "top_error_codes": [
-    {
-      "code": "INVALID_PHONE_FORMAT",
-      "count": 2
-    }
-  ]
+  "top_error_codes": []
 }
