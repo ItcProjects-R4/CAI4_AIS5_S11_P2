@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-05-20 19:03:52",
+  "generated_at": "2026-05-20 19:08:11",
   "entities": {
     "contacts": {
       "total_rows_processed": 1675,
-      "valid_rows": 1612,
-      "quarantined_rows": 62,
+      "valid_rows": 9,
+      "quarantined_rows": 1665,
       "rejected_rows": 1,
       "format_issues_in_clean": 0,
       "issue_details": []
     },
     "customers": {
       "total_rows_processed": 1702,
-      "valid_rows": 1602,
-      "quarantined_rows": 100,
+      "valid_rows": 9,
+      "quarantined_rows": 1693,
       "rejected_rows": 0,
       "format_issues_in_clean": 0,
       "issue_details": []
@@ -27,16 +27,16 @@
     },
     "sales_orders": {
       "total_rows_processed": 4038,
-      "valid_rows": 2743,
-      "quarantined_rows": 1269,
+      "valid_rows": 30,
+      "quarantined_rows": 3982,
       "rejected_rows": 26,
       "format_issues_in_clean": 0,
       "issue_details": []
     },
     "order_lines": {
       "total_rows_processed": 5955,
-      "valid_rows": 3592,
-      "quarantined_rows": 2363,
+      "valid_rows": 79,
+      "quarantined_rows": 5876,
       "rejected_rows": 0,
       "format_issues_in_clean": 0,
       "issue_details": []

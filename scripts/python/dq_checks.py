@@ -37,6 +37,14 @@ def check_email(email: str) -> bool:
 
 PHONE_PATTERN = re.compile(r'^[\d\s\+\-\(\)\.x#]+$')
 
+EGYPT_GOVERNORATES = {
+    "Alexandria", "Aswan", "Asyut", "Beheira", "Beni Suef", "Cairo",
+    "Dakahlia", "Damietta", "Faiyum", "Gharbia", "Giza", "Ismailia",
+    "Kafr El Sheikh", "Luxor", "Matrouh", "Minya", "Monufia",
+    "New Valley", "North Sinai", "Port Said", "Qalyubiya", "Qena",
+    "Red Sea", "Sharqia", "Sohag", "South Sinai", "Suez",
+}
+
 def check_phone(phone: str) -> bool:
     """Basic phone check: 7-30 chars, only digits/spaces/+-().x#."""
     if pd.isna(phone):
@@ -67,6 +75,14 @@ def validate_contacts(df: pd.DataFrame) -> list[dict]:
         # Phone format
         if not check_phone(row.get("phone")):
             issues.append({"row": idx, "field": "phone", "code": "INVALID_PHONE_FORMAT", "value": str(row.get("phone", ""))})
+        # Egypt governorate requirement
+        country = row.get("country")
+        if pd.notna(country) and str(country).strip().lower() == "egypt":
+            state = row.get("state")
+            if pd.isna(state) or not str(state).strip():
+                issues.append({"row": idx, "field": "state", "code": "MISSING_EGYPT_GOVERNORATE", "value": ""})
+            elif str(state).strip() not in EGYPT_GOVERNORATES:
+                issues.append({"row": idx, "field": "state", "code": "INVALID_EGYPT_GOVERNORATE", "value": str(state)})
     return issues
 
 

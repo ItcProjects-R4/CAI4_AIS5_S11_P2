@@ -17,7 +17,7 @@ import pandas as pd
 from transform import (
     deterministic_uuid, derive_source_system, strip_or_none,
     parse_date_safe, parse_date_to_date, clean_numeric,
-    normalize_phone, normalize_order_status,
+    normalize_phone, normalize_order_status, normalize_geography,
     write_splits, cascade_fk_integrity,
 )
 
@@ -169,16 +169,34 @@ def transform_itc(input_path: str, output_dir: str):
     contacts["source_system"]    = "itc_crm"
     contacts["source_record_id"] = contacts_raw["contact_contact_id"].apply(strip_or_none)
 
+    # Geographic normalization (Egypt-aware)
+    contacts = normalize_geography(contacts)
+
+    is_egypt = contacts["country"].apply(
+        lambda v: str(v).strip().lower() == "egypt" if pd.notna(v) else False
+    )
+    contacts["_dq_geo_issue"] = is_egypt & (
+        contacts["state"].isna() | (contacts["state"].astype(str).str.strip() == "")
+    )
+
     # Rejection: missing contact_id or email
     is_rejected = contacts["contact_id"].isna() | contacts["email"].isna()
+    is_quarantine = (~is_rejected) & contacts["_dq_geo_issue"]
     # Dedup by email (keep first)
     contacts["_nulls"] = contacts.isnull().sum(axis=1)
     contacts = contacts.sort_values(["email", "_nulls"])
     contacts = contacts.drop_duplicates(subset=["email"], keep="first")
+    is_egypt = contacts["country"].apply(
+        lambda v: str(v).strip().lower() == "egypt" if pd.notna(v) else False
+    )
+    contacts["_dq_geo_issue"] = is_egypt & (
+        contacts["state"].isna() | (contacts["state"].astype(str).str.strip() == "")
+    )
     is_rejected = contacts["contact_id"].isna() | contacts["email"].isna()
+    is_quarantine = (~is_rejected) & contacts["_dq_geo_issue"]
 
     schema = [c for c in contacts.columns if not c.startswith("_")]
-    _write_entity(contacts, is_rejected, schema, output_dir, "contacts")
+    _write_entity(contacts, is_rejected, schema, output_dir, "contacts", is_quarantine=is_quarantine)
 
     # =====================================================================
     # 2. CUSTOMERS
@@ -351,12 +369,14 @@ def transform_itc(input_path: str, output_dir: str):
     print("[OK] ITC CRM Transformation complete.")
 
 
-def _write_entity(df, is_rejected, schema_cols, output_dir, entity):
+def _write_entity(df, is_rejected, schema_cols, output_dir, entity, is_quarantine=None):
     """Append ITC data to existing CSVs (merge with eg_crm data)."""
-    clean  = df.loc[~is_rejected, schema_cols]
+    if is_quarantine is None:
+        is_quarantine = pd.Series(False, index=df.index)
+
+    clean  = df.loc[~is_rejected & ~is_quarantine, schema_cols]
+    quar   = df.loc[is_quarantine, schema_cols]
     reject = df.loc[is_rejected, schema_cols]
-    # No DQ severity in ITC, so no quarantine from this source
-    quar   = pd.DataFrame(columns=schema_cols)
 
     # Dedup key sets per entity to prevent cross-source collisions.
     # Each item in the list is one UNIQUE constraint to enforce.

@@ -1,14 +1,14 @@
 product_id,sku,product_name,category,brand,list_price,is_active,attributes_json,created_at,updated_at,etl_batch_id,source_system,source_record_id
-5565bb84-22f9-523c-8960-2ccae375dd14,NW-17,Alice Mutton,NorthwindCategory,Northwind,39.0,0,,2026-05-20 19:03:50,,ba1818b2-02cf-4966-b85a-f0a22e9dba49,northwind,nw_prod_17
-531be3ac-e11a-56a0-9bf1-67d3cd4b1f79,NW-47,Zaanse koeken,NorthwindCategory,Northwind,9.5,1,,2026-05-20 19:03:50,,ba1818b2-02cf-4966-b85a-f0a22e9dba49,northwind,nw_prod_47
-ba04abcf-4209-5fc8-800e-545d8eeff1b3,nw-50,Valkoinen suklaa,NorthwindCategory,Northwind,16.25,1,,2026-05-20 19:03:50,,ba1818b2-02cf-4966-b85a-f0a22e9dba49,northwind,nw_prod_50
-c9c3e2ce-0dd2-56ad-9cf1-c6c2bdb4124b,NW-62,Tarte au sucre,NorthwindCategory,Northwind,49.3,1,,2026-05-20 19:03:50,,ba1818b2-02cf-4966-b85a-f0a22e9dba49,northwind,nw_prod_62
-4801b7c4-0550-5bd8-adb4-1d986e6277e2,NW-71,flotemysost,NorthwindCategory,Northwind,21.5,1,,2026-05-20 19:03:50,,ba1818b2-02cf-4966-b85a-f0a22e9dba49,northwind,nw_prod_71
-58b34fb6-f06f-575f-8384-f755f7f50651,DJ-GRO-BRD-PRO-036,Protein Powder,groceries,,19.99,1,,2026-05-20 19:03:50,,ba1818b2-02cf-4966-b85a-f0a22e9dba49,dummyjson,dj_prod_36
-3dd8f323-0f1f-521e-adcd-01212288ed0b,DJ-KIT-BRD-SLI-055,Egg Slicer,kitchen-accessories,,6.99,1,,2026-05-20 19:03:50,,ba1818b2-02cf-4966-b85a-f0a22e9dba49,dummyjson,dj_prod_55
-692f5b1f-c28d-59bf-a006-104ce3bcc60a,DJ-MOT-MOT-MOT-115,MotoGP CI.H1,motorcycle,MotoGP,,1,,2026-05-20 19:03:50,,ba1818b2-02cf-4966-b85a-f0a22e9dba49,dummyjson,dj_prod_115
-9dd3cb0c-9e8b-5ab5-8075-e5bd8b90d2e5,DJ-SMA-REA-REA-129,Realme X,smartphones,Reamle,299.99,1,,2026-05-20 19:03:50,,ba1818b2-02cf-4966-b85a-f0a22e9dba49,dummyjson,dj_prod_129
-776865be-bf83-5fb8-88db-fc25112cb892,DJ-SPO-BRD-FEA-146,Feather Shuttlecock,sports-accessories,,5.99,1,,2026-05-20 19:03:50,,ba1818b2-02cf-4966-b85a-f0a22e9dba49,dummyjson,dj_prod_146
-df94facb-9d95-55da-ad6d-51bd0840194d,dj-veh-dod-dod-169,Dodge Hornet GT Plus,vehicle,Dodge,,1,,2026-05-20 19:03:50,,ba1818b2-02cf-4966-b85a-f0a22e9dba49,dummyjson,dj_prod_169
-b5d831a5-f2de-58d1-91db-abaf82e50d41,DJ-WOM-HES-HES-173,Heshe Women's Leather Bag,womens-bags,Heshe,129.99,1,,2026-05-20 19:03:50,,ba1818b2-02cf-4966-b85a-f0a22e9dba49,dummyjson,dj_prod_173
-d48fe663-5a5e-59f3-a86a-33ad8c9ec51f,DJ-WOM-IWC-ING-190,IWC Ingenieur Automatic Steel,womens-watches,IWC,4999.99,1,,2026-05-20 19:03:50,,ba1818b2-02cf-4966-b85a-f0a22e9dba49,dummyjson,dj_prod_190
+5565bb84-22f9-523c-8960-2ccae375dd14,NW-17,Alice Mutton,NorthwindCategory,Northwind,39.0,0,,2026-05-20 19:08:09,,78d220e3-ce5b-4c5a-bb1b-1464975eda2e,northwind,nw_prod_17
+531be3ac-e11a-56a0-9bf1-67d3cd4b1f79,NW-47,Zaanse koeken,NorthwindCategory,Northwind,9.5,1,,2026-05-20 19:08:09,,78d220e3-ce5b-4c5a-bb1b-1464975eda2e,northwind,nw_prod_47
+ba04abcf-4209-5fc8-800e-545d8eeff1b3,nw-50,Valkoinen suklaa,NorthwindCategory,Northwind,16.25,1,,2026-05-20 19:08:09,,78d220e3-ce5b-4c5a-bb1b-1464975eda2e,northwind,nw_prod_50
+c9c3e2ce-0dd2-56ad-9cf1-c6c2bdb4124b,NW-62,Tarte au sucre,NorthwindCategory,Northwind,49.3,1,,2026-05-20 19:08:09,,78d220e3-ce5b-4c5a-bb1b-1464975eda2e,northwind,nw_prod_62
+4801b7c4-0550-5bd8-adb4-1d986e6277e2,NW-71,flotemysost,NorthwindCategory,Northwind,21.5,1,,2026-05-20 19:08:09,,78d220e3-ce5b-4c5a-bb1b-1464975eda2e,northwind,nw_prod_71
+58b34fb6-f06f-575f-8384-f755f7f50651,DJ-GRO-BRD-PRO-036,Protein Powder,groceries,,19.99,1,,2026-05-20 19:08:09,,78d220e3-ce5b-4c5a-bb1b-1464975eda2e,dummyjson,dj_prod_36
+3dd8f323-0f1f-521e-adcd-01212288ed0b,DJ-KIT-BRD-SLI-055,Egg Slicer,kitchen-accessories,,6.99,1,,2026-05-20 19:08:09,,78d220e3-ce5b-4c5a-bb1b-1464975eda2e,dummyjson,dj_prod_55
+692f5b1f-c28d-59bf-a006-104ce3bcc60a,DJ-MOT-MOT-MOT-115,MotoGP CI.H1,motorcycle,MotoGP,,1,,2026-05-20 19:08:09,,78d220e3-ce5b-4c5a-bb1b-1464975eda2e,dummyjson,dj_prod_115
+9dd3cb0c-9e8b-5ab5-8075-e5bd8b90d2e5,DJ-SMA-REA-REA-129,Realme X,smartphones,Reamle,299.99,1,,2026-05-20 19:08:09,,78d220e3-ce5b-4c5a-bb1b-1464975eda2e,dummyjson,dj_prod_129
+776865be-bf83-5fb8-88db-fc25112cb892,DJ-SPO-BRD-FEA-146,Feather Shuttlecock,sports-accessories,,5.99,1,,2026-05-20 19:08:09,,78d220e3-ce5b-4c5a-bb1b-1464975eda2e,dummyjson,dj_prod_146
+df94facb-9d95-55da-ad6d-51bd0840194d,dj-veh-dod-dod-169,Dodge Hornet GT Plus,vehicle,Dodge,,1,,2026-05-20 19:08:09,,78d220e3-ce5b-4c5a-bb1b-1464975eda2e,dummyjson,dj_prod_169
+b5d831a5-f2de-58d1-91db-abaf82e50d41,DJ-WOM-HES-HES-173,Heshe Women's Leather Bag,womens-bags,Heshe,129.99,1,,2026-05-20 19:08:09,,78d220e3-ce5b-4c5a-bb1b-1464975eda2e,dummyjson,dj_prod_173
+d48fe663-5a5e-59f3-a86a-33ad8c9ec51f,DJ-WOM-IWC-ING-190,IWC Ingenieur Automatic Steel,womens-watches,IWC,4999.99,1,,2026-05-20 19:08:09,,78d220e3-ce5b-4c5a-bb1b-1464975eda2e,dummyjson,dj_prod_190

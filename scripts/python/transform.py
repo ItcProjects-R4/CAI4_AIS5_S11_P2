@@ -183,6 +183,12 @@ def normalize_geography(df: pd.DataFrame) -> pd.DataFrame:
         invalid_state = has_state & ~df["state"].isin(EGYPT_GOVERNORATES)
         df.loc[invalid_state, "state"] = None
 
+    # 5. If Egypt and state missing, try to promote city when it matches a governorate
+    missing_state = is_egypt_now & (df["state"].isna() | (df["state"].astype(str).str.strip() == ""))
+    if missing_state.any():
+        city_is_gov = missing_state & df["city"].isin(EGYPT_GOVERNORATES)
+        df.loc[city_is_gov, "state"] = df.loc[city_is_gov, "city"]
+
     return df
 
 
@@ -284,6 +290,14 @@ def transform_contacts(df: pd.DataFrame, batch_id: str, now: str):
     # --- geographic normalisation ---
     out = normalize_geography(out)
 
+    # Egypt requires a valid governorate (state)
+    is_egypt = out["country"].apply(
+        lambda v: str(v).strip().lower() == "egypt" if pd.notna(v) else False
+    )
+    out["_dq_geo_issue"] = is_egypt & (
+        out["state"].isna() | (out["state"].astype(str).str.strip() == "")
+    )
+
     # keep DQ columns for routing
     out["_dq_severity"] = df.get("dq_issue_severity", pd.Series(dtype=str))
 
@@ -291,15 +305,25 @@ def transform_contacts(df: pd.DataFrame, batch_id: str, now: str):
     is_rejected = out["contact_id"].isna() | out["email"].isna()
 
     # --- quarantine: has identity but medium / high severity ---
-    is_quarantine = (~is_rejected) & out["_dq_severity"].isin(["high", "med"])
+    is_quarantine = (~is_rejected) & (
+        out["_dq_severity"].isin(["high", "med"]) | out["_dq_geo_issue"]
+    )
 
     # --- dedup: keep first occurrence per email (fewest nulls first) ---
     out["_nulls"] = out.isnull().sum(axis=1)
     out = out.sort_values(["email", "_nulls"])
     out = out.drop_duplicates(subset=["email"], keep="first")
     # recalculate masks after dedup
+    is_egypt = out["country"].apply(
+        lambda v: str(v).strip().lower() == "egypt" if pd.notna(v) else False
+    )
+    out["_dq_geo_issue"] = is_egypt & (
+        out["state"].isna() | (out["state"].astype(str).str.strip() == "")
+    )
     is_rejected   = out["contact_id"].isna() | out["email"].isna()
-    is_quarantine = (~is_rejected) & out["_dq_severity"].isin(["high", "med"])
+    is_quarantine = (~is_rejected) & (
+        out["_dq_severity"].isin(["high", "med"]) | out["_dq_geo_issue"]
+    )
 
     schema_cols = [
         "contact_id", "email", "full_name", "phone", "country",
