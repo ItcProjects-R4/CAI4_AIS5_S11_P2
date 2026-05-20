@@ -118,17 +118,159 @@ def _stable_int(seed, mod):
     return int(h[:8], 16) % mod
 
 
-def _pick_egypt_governorate(seed):
-    govs = sorted(EGYPT_GOVERNORATES)
-    return govs[_stable_int(f"{seed}|gov", len(govs))]
+def _clean_postal_code(val):
+    if pd.isna(val) or not str(val).strip():
+        return None
+    digits = re.sub(r"\D", "", str(val))
+    if len(digits) >= 5:
+        return digits[:5]
+    return None
 
 
-def _fake_egypt_address(seed, governorate):
-    house_no = 1 + _stable_int(f"{seed}|house", 200)
-    street = EGYPT_STREETS[_stable_int(f"{seed}|street", len(EGYPT_STREETS))]
-    district = EGYPT_DISTRICTS[_stable_int(f"{seed}|district", len(EGYPT_DISTRICTS))]
-    city = EGYPT_GOVERNORATE_CAPITALS.get(governorate, governorate)
-    return f"{house_no} {street}, {district}", city
+def _arabic_to_latin(text):
+    if pd.isna(text):
+        return None
+    s = str(text)
+    if not s.strip():
+        return None
+    s = s.translate(ARABIC_DIGIT_MAP)
+    s = s.replace("ـ", "")
+    out = []
+    for ch in s:
+        if ch in ARABIC_CHAR_MAP:
+            out.append(ARABIC_CHAR_MAP[ch])
+        elif ord(ch) < 128:
+            out.append(ch)
+        else:
+            out.append(" ")
+    s = "".join(out)
+    s = re.sub(r"\s+", " ", s).strip()
+    return s if s else None
+
+
+def _gov_key(val):
+    s = strip_or_none(val)
+    if s is None:
+        return ""
+    s = re.sub(r"[-_/]", " ", str(s))
+    s = re.sub(r"\s+", " ", s).strip().lower()
+    return s
+
+
+def _normalize_state_name(val):
+    s = strip_or_none(val)
+    if s is None:
+        return None
+    if s in ARABIC_STATE_MAP:
+        return ARABIC_STATE_MAP[s]
+    latin = _arabic_to_latin(s) or s
+    key = _gov_key(latin)
+    alias = STATE_ALIAS_LOOKUP.get(key)
+    if alias:
+        return alias
+    return EGYPT_GOVERNORATE_LOOKUP.get(key, latin)
+
+
+def _normalize_city_name(val):
+    s = strip_or_none(val)
+    if s is None:
+        return None
+    latin = _arabic_to_latin(s) or s
+    latin = re.sub(r"\s+", " ", latin).strip()
+    return latin if latin else None
+
+
+def _normalize_street_name(val):
+    s = strip_or_none(val)
+    if s is None:
+        return None
+    s = s.translate(ARABIC_DIGIT_MAP)
+    if s.strip().lower() in {"(not checked)", "not checked"}:
+        return None
+    replacements = [
+        ("امتداد شارع", "Extension of Street"),
+        ("شارع", "Street"),
+        ("حارة", "Alley"),
+        ("زقاق", "Lane"),
+        ("طريق", "Road"),
+        ("ميدان", "Square"),
+        ("كورنيش", "Corniche"),
+        ("جادة", "Avenue"),
+    ]
+    for ar, en in replacements:
+        s = s.replace(ar, en)
+    latin = _arabic_to_latin(s) or s
+    latin = re.sub(r"\s+", " ", latin).strip()
+    return latin if latin else None
+
+
+_EGYPT_ADDRESS_POOL = None
+
+
+def _load_egypt_address_pool():
+    global _EGYPT_ADDRESS_POOL
+    if _EGYPT_ADDRESS_POOL is not None:
+        return _EGYPT_ADDRESS_POOL
+
+    root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+    raw_path = os.path.join(root, "data", "raw", "output.csv")
+    eng_path = os.path.join(root, "data", "raw", "output_en.csv")
+
+    if not os.path.exists(raw_path) and not os.path.exists(eng_path):
+        _EGYPT_ADDRESS_POOL = []
+        return _EGYPT_ADDRESS_POOL
+
+    def _read_csv(path):
+        return pd.read_csv(path, dtype=str)
+
+    if os.path.exists(raw_path):
+        df = _read_csv(raw_path)
+    elif os.path.exists(eng_path):
+        df = _read_csv(eng_path)
+        raw_path = None
+    else:
+        _EGYPT_ADDRESS_POOL = []
+        return _EGYPT_ADDRESS_POOL
+
+    df = df.rename(columns=lambda c: str(c).strip())
+    if "country" in df.columns:
+        df["country"] = df["country"].apply(strip_or_none)
+        df = df[df["country"].str.upper() == "EG"].copy()
+    else:
+        df = df.copy()
+
+    if "state" in df.columns:
+        df["state"] = df["state"].apply(_normalize_state_name)
+    else:
+        df["state"] = None
+
+    if "city" in df.columns:
+        df["city"] = df["city"].apply(_normalize_city_name)
+    else:
+        df["city"] = None
+
+    if "postal_code" in df.columns:
+        df["postal_code"] = df["postal_code"].apply(_clean_postal_code)
+    else:
+        df["postal_code"] = None
+
+    if "street_name" in df.columns:
+        df["street_name"] = df["street_name"].apply(_normalize_street_name)
+    else:
+        df["street_name"] = None
+
+    df["country"] = "Egypt"
+    if raw_path is not None:
+        df.to_csv(eng_path, index=False)
+
+    for col in ["state", "city", "postal_code", "street_name"]:
+        if col not in df.columns:
+            df[col] = None
+
+    df = df[df["state"].notna() & df["street_name"].notna()].copy()
+    df = df[df["state"].isin(EGYPT_GOVERNORATES)].copy()
+    _EGYPT_ADDRESS_POOL = df.to_dict("records")
+    return _EGYPT_ADDRESS_POOL
 
 
 def _fake_egypt_phone(seed):
@@ -144,22 +286,30 @@ def _fake_egypt_name(seed):
 
 
 def enrich_egypt_contacts(df: pd.DataFrame) -> pd.DataFrame:
-    """Replace Egypt contact fields with deterministic fake Egypt data."""
+    """Replace Egypt contact fields with deterministic Egypt data from output.csv."""
     df = df.copy()
     is_egypt = df["country"].apply(
         lambda v: str(v).strip().lower() == "egypt" if pd.notna(v) else False
     )
+    pool = _load_egypt_address_pool()
+    if not pool:
+        return df
 
     for idx, row in df[is_egypt].iterrows():
         seed = row.get("contact_id") or row.get("email") or row.get("source_record_id")
+        addr_row = pool[_stable_int(f"{seed}|addr", len(pool))]
+        state = addr_row.get("state")
+        city = addr_row.get("city") or EGYPT_GOVERNORATE_CAPITALS.get(state, state)
+        street = addr_row.get("street_name")
+        postal = _clean_postal_code(addr_row.get("postal_code"))
+        house_no = 1 + _stable_int(f"{seed}|house", 200)
 
-        state = _pick_egypt_governorate(seed)
-        addr, city = _fake_egypt_address(seed, state)
-
+        if street:
+            df.at[idx, "address_line1"] = f"{house_no} {street}"
         df.at[idx, "state"] = state
         df.at[idx, "city"] = city
-        df.at[idx, "address_line1"] = addr
-        df.at[idx, "postal_code"] = f"{_stable_int(f'{seed}|postal', 100000):05d}"
+        df.at[idx, "postal_code"] = postal or f"{_stable_int(f'{seed}|postal', 100000):05d}"
+        df.at[idx, "country"] = "Egypt"
         df.at[idx, "phone"] = _fake_egypt_phone(seed)
         df.at[idx, "full_name"] = _fake_egypt_name(seed)
 
@@ -208,17 +358,72 @@ EGYPT_GOVERNORATE_CAPITALS = {
     "Suez": "Suez",
 }
 
-EGYPT_STREETS = [
-    "Tahrir St", "Ramses St", "Corniche Rd", "Salah Salem St",
-    "26 July St", "El Hegaz St", "El Nasr St", "El Teseen St",
-    "Port Said St", "Pyramids Rd", "Ring Rd", "Alexandria Rd",
-]
+ARABIC_DIGIT_MAP = str.maketrans({
+    "٠": "0", "١": "1", "٢": "2", "٣": "3", "٤": "4",
+    "٥": "5", "٦": "6", "٧": "7", "٨": "8", "٩": "9",
+    "۰": "0", "۱": "1", "۲": "2", "۳": "3", "۴": "4",
+    "۵": "5", "۶": "6", "۷": "7", "۸": "8", "۹": "9",
+})
 
-EGYPT_DISTRICTS = [
-    "Nasr City", "Maadi", "Heliopolis", "Dokki", "Mohandessin",
-    "Zamalek", "Smouha", "Sidi Gaber", "Gleem", "Haram",
-    "Agouza", "Shubra", "Imbaba", "Helwan",
-]
+ARABIC_CHAR_MAP = {
+    "ا": "a", "أ": "a", "إ": "i", "آ": "a",
+    "ب": "b", "ت": "t", "ث": "th", "ج": "j", "ح": "h",
+    "خ": "kh", "د": "d", "ذ": "dh", "ر": "r", "ز": "z",
+    "س": "s", "ش": "sh", "ص": "s", "ض": "d", "ط": "t",
+    "ظ": "z", "ع": "a", "غ": "gh", "ف": "f", "ق": "q",
+    "ك": "k", "ل": "l", "م": "m", "ن": "n", "ه": "h",
+    "و": "w", "ي": "y", "ى": "a", "ئ": "y", "ؤ": "w",
+    "ة": "a", "ء": "",
+}
+
+ARABIC_STATE_MAP = {
+    "القاهرة": "Cairo",
+    "الإسكندرية": "Alexandria",
+    "الاسكندرية": "Alexandria",
+    "الإسماعيلية": "Ismailia",
+    "الاسماعيلية": "Ismailia",
+    "أسوان": "Aswan",
+    "اسوان": "Aswan",
+    "أسيوط": "Asyut",
+    "اسيوط": "Asyut",
+    "البحيرة": "Beheira",
+    "بني سويف": "Beni Suef",
+    "بورسعيد": "Port Said",
+    "جنوب سيناء": "South Sinai",
+    "الجيزة": "Giza",
+    "الدقهلية": "Dakahlia",
+    "دمياط": "Damietta",
+    "سوهاج": "Sohag",
+    "السويس": "Suez",
+    "الشرقية": "Sharqia",
+    "الغربية": "Gharbia",
+    "الفيوم": "Faiyum",
+    "القليوبية": "Qalyubiya",
+    "قنا": "Qena",
+    "كفر الشيخ": "Kafr El Sheikh",
+    "مطروح": "Matrouh",
+    "المنوفية": "Monufia",
+    "المنيا": "Minya",
+    "الوادي الجديد": "New Valley",
+    "الأقصر": "Luxor",
+    "الاقصر": "Luxor",
+    "البحر الأحمر": "Red Sea",
+    "البحر الاحمر": "Red Sea",
+    "شمال سيناء": "North Sinai",
+}
+
+EGYPT_GOVERNORATE_LOOKUP = {
+    _gov_key(gov): gov for gov in EGYPT_GOVERNORATES
+}
+
+STATE_ALIAS_LOOKUP = {
+    "bna swyf": "Beni Suef",
+    "bny swyf": "Beni Suef",
+    "mohafza alfywm": "Faiyum",
+    "mhafza alfywm": "Faiyum",
+    "mohafzat alfywm": "Faiyum",
+    "alfywm": "Faiyum",
+}
 
 EGYPT_FIRST_NAMES = [
     "Ahmed", "Mohamed", "Mahmoud", "Omar", "Youssef", "Khaled",
@@ -290,8 +495,13 @@ def normalize_geography(df: pd.DataFrame) -> pd.DataFrame:
     )
     has_state = is_egypt_now & df["state"].notna()
     if has_state.any():
+        df.loc[has_state, "state"] = df.loc[has_state, "state"].apply(_normalize_state_name)
         invalid_state = has_state & ~df["state"].isin(EGYPT_GOVERNORATES)
         df.loc[invalid_state, "state"] = None
+
+    has_city = is_egypt_now & df["city"].notna()
+    if has_city.any():
+        df.loc[has_city, "city"] = df.loc[has_city, "city"].apply(_normalize_city_name)
 
     # 5. If Egypt and state missing, try to promote city when it matches a governorate
     missing_state = is_egypt_now & (df["state"].isna() | (df["state"].astype(str).str.strip() == ""))

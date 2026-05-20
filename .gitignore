@@ -4,6 +4,9 @@ __pycache__/
 *$py.class
 
 data/raw/*.json
+# Address dataset (local only)
+data/raw/output.csv
+data/raw/output_en.csv
 # Simulation folder (hidden demo scripts)
 .simulation/
 
