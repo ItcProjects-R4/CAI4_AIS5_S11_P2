@@ -234,6 +234,80 @@ psql -U postgres -d crm_db -f sql/scripts/04_load_procedures.sql
 
 ---
 
+## Project Goals
+
+- Consolidate customer records from CRM exports and Excel spreadsheets into a single trusted dataset
+- Apply consistent business rules for emails, names, phone numbers, countries, and dates
+- Detect and remove duplicate or incomplete customer records before they reach the database
+- Load clean, query-ready data into PostgreSQL (`crm_db`) for downstream analytics
+- Keep every pipeline run traceable through staging tables and the `etl_batch` audit log
+- Document the pipeline clearly enough for a new teammate to run it independently
+
+---
+
+## Key Features
+
+- Multi-source ingestion from CRM exports and Excel spreadsheets
+- Automated cleaning: email/name normalization, phone formatting, date parsing
+- Deduplication logic with a defined precedence rule between sources
+- Rejected/quarantine handling for rows that fail validation
+- PostgreSQL schema (`crm_db`) with staging tables and run-level audit logging
+- Modular, numbered SQL scripts for repeatable environment setup
+- Documented post-run validation checklist for data quality checks
+
+---
+
+## Team Members
+
+| Name | Role |
+|---|---|
+| Ali | Project Lead, Architecture, ETL Coordination |
+| Amin | Data Collection, Cloud Storage, ETL Support |
+| Mennat Allah | Data Modeling, SQL Architecture, BI Direction |
+| Aseel | Data Quality, Validation, Testing |
+| Habiba | Documentation, BI Reporting, Quality Support |
+
+---
+
+## Challenges
+
+- Reconciling inconsistent column names and formats between the CRM and Excel sources
+- Deciding which record should win when CRM and Excel data conflict for the same customer
+- Designing a staging and audit structure (`etl_batch`, `stg_*`) that keeps every run traceable
+- Re-aligning the original SQL Server-style schema design to PostgreSQL conventions
+
+---
+
+## Future Improvements
+
+- Add scheduled, recurring pipeline runs (e.g. via `cron`)
+- Build out the Power BI / Excel reporting layer on top of `crm_db`
+- Expand validation into a configurable, rule-based data quality engine
+- Add a lightweight dashboard for monitoring `etl_batch` run history
+
+---
+
+## Screenshots
+
+> _Placeholder — replace with actual screenshots before submission._
+
+| View | Preview |
+|---|---|
+| Pipeline run output | `![Pipeline run](docs/screenshots/pipeline-run.png)` |
+| Clean data sample | `![Clean data sample](docs/screenshots/clean-data-sample.png)` |
+| crm_db tables | `![crm_db tables](docs/screenshots/crm_db-tables.png)` |
+| Validation results | `![Validation results](docs/screenshots/validation-results.png)` |
+
+---
+
+## Demo Video
+
+> _Placeholder — replace with the real video link before submission._
+
+🎥 [Watch the project walkthrough](https://your-video-link-here.example.com)
+
+---
+
 ## Contributing
 
 1. Pick an open [issue](https://github.com/Ali-Hegazy-Ai/CAI4_AIS5_S11_P2/issues) and comment to claim it
