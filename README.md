@@ -35,7 +35,7 @@ flowchart LR
         M3["CreatedDate -> created_at"]
   end
  subgraph ETL["ETL Transform Step"]
-        T["ADF Data Flow\ndf_merge_transform"]
+        T["Local ETL Transform\ndf_merge_transform.py"]
         Rules
   end
  subgraph Output["Clean Data"]
@@ -43,7 +43,7 @@ flowchart LR
         X["data/rejected/\nQuarantine"]
   end
  subgraph Analytics["Downstream"]
-        DB["SQL Server\ndbo.CRM_Master"]
+        DB["PostgreSQL\ncrm_db"]
         BI["Power BI / Excel\nAnalytics"]
   end
     Sources --> R
@@ -56,7 +56,7 @@ flowchart LR
     L_C_DB_0@{ curve: linear }
 ```
 
-**Architecture pattern:** Medallion — `Bronze (raw/)` → `Silver (ADF transform)` → `Gold (clean/ + SQL)`
+**Architecture pattern:** Medallion — `Bronze (raw/)` → `Silver (local transform)` → `Gold (clean/ + PostgreSQL)`
 
 ---
 
@@ -70,7 +70,7 @@ flowchart LR
 | **Filter** | Drops rows with null `CustomerID` or blank `CustomerName` → `data/rejected/` |
 | **Merge** | Unions CRM and Excel streams into one combined dataset |
 | **Deduplicate** | Aggregates on `CustomerID` — CRM record is preferred when both sources overlap |
-| **Load** | Writes clean CSV to `data/clean/` and upserts rows into `dbo.Customers` via MERGE |
+| **Load** | Writes clean CSV to `data/clean/` and upserts rows into `customer` via PostgreSQL `INSERT ... ON CONFLICT` |
 
 ### Business Rules Applied
 
@@ -86,39 +86,19 @@ flowchart LR
 
 ## Data Sources
 
-| Source | Format | File Pattern | Key Column Names |
-|---|---|---|---|
-| CRM Export | CSV (UTF-8) | `crm_customers_YYYYMMDD.csv` | `customer_id`, `full_name`, `email`, `phone`, `signup_date`, `country`, `segment` |
-| Excel Spreadsheet | `.xlsx` (sheet: `Customers`) | `excel_customers_YYYYMMDD.xlsx` | `CustomerID`, `Name`, `EmailAddress`, `PhoneNumber`, `JoinDate`, `Country`, `CustomerSegment` |
+Source data lives under `eg_crm/`, organized by entity, with each extraction run written to its own dated folder:
 
-Both sources are joined on `CustomerID`. Place files in `data/raw/` before each pipeline run — **never edit files in `data/raw/`**.
+| Entity | Path | Key Columns |
+|---|---|---|
+| Contacts | `eg_crm/contacts/<run_date>/` | `email`, `full_name`, `phone`, `country`, `address_line1`, `city`, `state`, `postal_code`, `company_name`, `department`, `job_title` |
+| Customers | `eg_crm/customers/<run_date>/` | `customer_since`, `status`, `segment` |
+| Products | `eg_crm/products/<run_date>/` | `sku`, `product_name`, `category`, `brand`, `list_price` |
+| Sales Orders | `eg_crm/sales_orders/<run_date>/` | `order_date`, `order_status`, `currency`, `order_total` |
+| Order Lines | `eg_crm/order_lines/<run_date>/` | `line_number`, `quantity`, `unit_price` |
+
+A combined export of the same data is also available as `ITC_CRM_dataset_combined.csv`. Each run also writes a corresponding `manifests/<run_date>/` and `run_log/<run_date>/` entry for tracking. Place files under `eg_crm/` before each pipeline run — **never edit files in this folder directly**.
 
 → Full schema details: [`wiki/Data-Sources.md`](wiki/Data-Sources.md)
-
----
-
-## Data Provenance and Simulated Messy Feed
-
-The pipeline consumes data via a two-stage deterministic ingestion process:
-1. **Bronze Clean**: Raw extraction from public demo APIs. Stored exactly as received in `raw/bronze_clean/<entity>/`.
-2. **Bronze Simulated Messy**: A deterministic "noise injection" zone (Noise Pack v2) that applies multi-dimensional Egyptian CRM data inconsistencies (Identity clusters, financial corruption, address drift, etc.). Output is structured into the `eg_crm` stable schema.
-
-**Architecture Note**: The downstream Silver layer (ADF Data Flow) consumes *only* the **Bronze Simulated Messy** data (`raw/bronze_simulated_messy/eg_crm/...`).
-
-### Example Commands for Data Generation
-
-You can generate the required data feeds using the provided Python scripts:
-
-```bash
-# 1. Full clean extraction from all sources
-python extract.py --full
-
-# 2. Capped clean extraction (for dev/testing)
-python extract.py --caps MAX_NW_CUSTOMERS=50 MAX_DJ_USERS=100
-
-# 3. Generate deterministic simulated messy feed
-python make_messy.py --run-date YYYY-MM-DD --seed 20260427 --export-csv --export-xlsx
-```
 
 ---
 
@@ -126,11 +106,8 @@ python make_messy.py --run-date YYYY-MM-DD --seed 20260427 --export-csv --export
 
 | Tool | Role |
 |---|---|
-| **Azure Data Factory** | Pipeline orchestration (`pl_customer_etl`) |
-| **ADF Data Flow** | Visual transformations — merge, clean, deduplicate (`df_merge_transform`) |
-| **Azure Blob Storage** | Hosts `data/raw/` and `data/clean/` |
-| **SQL Server / Azure SQL** | Target database (`CustomerDW`) |
-| **Apache Airflow** | Scheduling and workflow monitoring |
+| **PostgreSQL** | Target database (`crm_db`) |
+| **Python** | ETL scripts — extract, transform, merge, load |
 | **Excel / CSV** | Source data formats |
 | **Git / GitHub** | Version control, PR templates, issue templates |
 
@@ -138,20 +115,20 @@ python make_messy.py --run-date YYYY-MM-DD --seed 20260427 --export-csv --export
 
 ## SQL Schema
 
-The target database is `CustomerDW`. Scripts live in [`sql/scripts/`](sql/scripts/) and must be run in order on first setup.
+The target database is `crm_db`. Scripts live in [`sql/scripts/`](sql/scripts/) and must be run in order on first setup.
 
 | Script | Purpose |
 |---|---|
-| [`01_create_database.sql`](sql/scripts/01_create_database.sql) | Create `CustomerDW` |
-| [`02_create_tables.sql`](sql/scripts/02_create_tables.sql) | Create `dbo.Customers`, `dbo.CustomerStaging`, `dbo.ETLRunLog` |
-| [`03_create_views.sql`](sql/scripts/03_create_views.sql) | Create `dbo.vw_CustomerSummary` |
-| [`04_load_procedures.sql`](sql/scripts/04_load_procedures.sql) | Create `dbo.usp_UpsertCustomers` (MERGE logic) |
+| [`01_create_database.sql`](sql/scripts/01_create_database.sql) | Create `crm_db` |
+| [`02_create_tables.sql`](sql/scripts/02_create_tables.sql) | Create `customer`, `contact`, `product`, `sales_order`, `order_line`, `etl_batch`, and the `stg_*` staging tables |
+| [`03_create_views.sql`](sql/scripts/03_create_views.sql) | Create summary views |
+| [`04_load_procedures.sql`](sql/scripts/04_load_procedures.sql) | Create PostgreSQL upsert logic (`INSERT ... ON CONFLICT`) |
 | [`05_validation_queries.sql`](sql/scripts/05_validation_queries.sql) | Post-run quality checks |
 
 **Key tables:**
-- `dbo.Customers` — final clean records (PK: `CustomerID`)
-- `dbo.CustomerStaging` — temporary buffer, cleared after each run
-- `dbo.ETLRunLog` — audit log of every pipeline run (rows loaded, status, timestamps)
+- `customer` — final clean records (PK: `customer_id`)
+- `stg_*` — staging tables, cleared after each run
+- `etl_batch` — audit log of every pipeline run (rows loaded, status, timestamps)
 
 → Full schema: [`wiki/SQL-Schema.md`](wiki/SQL-Schema.md)
 
@@ -168,10 +145,6 @@ CAI4_AIS5_S11_P2/
 │   └── quarantine/       ← Problem files awaiting review
 ├── sql/
 │   └── scripts/          ← Numbered SQL scripts: tables, views, procedures, validation
-├── adf/
-│   ├── pipelines/        ← pl_customer_etl.json, df_merge_transform.json
-│   ├── datasets/         ← ds_crm_source.json, ds_excel_source.json, etc.
-│   └── linked_services/  ← ls_blob_storage.json, ls_sql_server.json
 ├── docs/                 ← Optional supporting notes/assets (see docs/README.md)
 ├── wiki/                 ← Full documentation (see navigation below)
 ├── presentation/         ← Demo slides and screenshots
@@ -182,27 +155,26 @@ CAI4_AIS5_S11_P2/
 
 ## How to Run
 
-**Prerequisites:** Git, Azure CLI, ADF Studio (browser), SSMS, Azure Subscription
+**Prerequisites:** Git, PostgreSQL, `psql` (or pgAdmin), Python
 
 ```bash
 # 1. Clone the repository
 git clone https://github.com/Ali-Hegazy-Ai/CAI4_AIS5_S11_P2.git
 cd CAI4_AIS5_S11_P2
 
-# 2. Log in to Azure
-az login
+# 2. Place source files in data/raw/ (follow naming convention above)
 
-# 3. Place source files in data/raw/ (follow naming convention above)
+# 3. Run the SQL setup scripts against PostgreSQL (first time only, in order: 01 → 04)
+psql -U postgres -f sql/scripts/01_create_database.sql
+psql -U postgres -d crm_db -f sql/scripts/02_create_tables.sql
+psql -U postgres -d crm_db -f sql/scripts/03_create_views.sql
+psql -U postgres -d crm_db -f sql/scripts/04_load_procedures.sql
 
-# 4. Run SQL setup scripts in SSMS (first time only, in order: 01 → 04)
+# 4. Run the ETL pipeline (extract, transform, merge, load into crm_db)
 
-# 5. Import ADF JSON assets into ADF Studio (adf/pipelines/, adf/datasets/, adf/linked_services/)
-
-# 6. In ADF Studio: open pl_customer_etl → Debug (test) or Trigger Now (full run)
-
-# 7. After the run, verify output and run validation queries
-#    SELECT COUNT(*) FROM dbo.Customers;
-#    -- or open sql/scripts/05_validation_queries.sql in SSMS
+# 5. After the run, verify output and run validation queries
+#    SELECT COUNT(*) FROM customer;
+#    -- or run sql/scripts/05_validation_queries.sql against crm_db
 ```
 
 → Step-by-step setup: [`wiki/Setup-Guide.md`](wiki/Setup-Guide.md)
@@ -234,25 +206,11 @@ az login
 
 ## Orchestration
 
-- **Azure Data Factory** — runs `pl_customer_etl`: Copy CRM → Copy Excel → Data Flow → Write CSV → Load SQL
-- **Apache Airflow** — schedules pipeline runs and monitors task-level success/failure
-- **Triggers:** Manual (`Trigger Now`), Schedule (weekly), or Storage Event (new file in `data/raw/`)
-- **Monitoring:** ADF Studio → Monitor → Pipeline Runs; audit history in `dbo.ETLRunLog`
+- **Local ETL scripts** — run the pipeline: Extract CRM → Extract Excel → Transform/Merge → Write CSV → Load into PostgreSQL
+- **Triggers:** Manual run from the command line, or scheduled with `cron` for repeated runs
+- **Monitoring:** Console/log output during each run; audit history in `etl_batch`
 
 → Orchestration details: [`wiki/ETL-Pipeline.md`](wiki/ETL-Pipeline.md)
-
----
-
-## ADF Assets
-
-All pipeline, dataset, and linked service definitions are stored as JSON — **never edit these by hand**. Always modify in ADF Studio, then export and commit the updated JSON.
-
-| Asset | Location |
-|---|---|
-| Pipeline | [`adf/pipelines/pl_customer_etl.json`](adf/pipelines/) |
-| Data Flow | [`adf/pipelines/df_merge_transform.json`](adf/pipelines/) |
-| Datasets | [`adf/datasets/`](adf/datasets/) |
-| Linked Services | [`adf/linked_services/`](adf/linked_services/) |
 
 ---
 
@@ -263,10 +221,10 @@ All pipeline, dataset, and linked service definitions are stored as JSON — **n
 | [Home](wiki/Home.md) | Project overview and wiki navigation |
 | [Project Flow](wiki/project_flow.md) | Team planning flow, roles, and timeline |
 | [Project Architecture](wiki/Project-Architecture.md) | Medallion layers, full architecture diagram, data flow |
-| [ETL Pipeline](wiki/ETL-Pipeline.md) | ADF pipeline end-to-end, Data Flow steps, running instructions |
+| [ETL Pipeline](wiki/ETL-Pipeline.md) | ETL pipeline end-to-end, transform steps, running instructions |
 | [Transformation Rules](wiki/Transformation-Rules.md) | Null handling, type conversions, dedup logic, FK cascade rules |
 | [Data Sources](wiki/Data-Sources.md) | CRM and Excel schemas, known quality issues, file checklist |
-| [SQL Schema](wiki/SQL-Schema.md) | Table definitions, views, stored procedures, ad-hoc queries |
+| [SQL Schema](wiki/SQL-Schema.md) | Table definitions, views, functions, ad-hoc queries |
 | [Data Quality Definitions](wiki/Data-Quality-Definitions.md) | Rejected vs Quarantine vs Clean — what each means and when |
 | [Data Validation](wiki/Data-Validation.md) | Post-run validation queries and failure investigation guide |
 | [Setup Guide](wiki/Setup-Guide.md) | Full environment setup from zero to first pipeline run |
