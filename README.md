@@ -157,27 +157,22 @@ CAI4_AIS5_S11_P2/
 
 **Prerequisites:** Git, PostgreSQL, `psql` (or pgAdmin), Python
 
+→ Full step-by-step setup: [`wiki/Run-Guide.md`](wiki/Run-Guide.md)
+
+### Quick Start
+
 ```bash
-# 1. Clone the repository
-git clone https://github.com/Ali-Hegazy-Ai/CAI4_AIS5_S11_P2.git
-cd CAI4_AIS5_S11_P2
+python3 -m venv venv && source venv/bin/activate
+pip install -r requirements.txt
 
-# 2. Place source files in data/raw/ (follow naming convention above)
+# DB setup (one-time)
+sudo -u postgres psql -c "CREATE ROLE $(whoami) LOGIN SUPERUSER;"
+createdb crm_db
+for f in scripts/sql/scripts/0*.sql; do psql -U $(whoami) -d crm_db -f "$f"; done
 
-# 3. Run the SQL setup scripts against PostgreSQL (first time only, in order: 01 → 04)
-psql -U postgres -f sql/scripts/01_create_database.sql
-psql -U postgres -d crm_db -f sql/scripts/02_create_tables.sql
-psql -U postgres -d crm_db -f sql/scripts/03_create_views.sql
-psql -U postgres -d crm_db -f sql/scripts/04_load_procedures.sql
-
-# 4. Run the ETL pipeline (extract, transform, merge, load into crm_db)
-
-# 5. After the run, verify output and run validation queries
-#    SELECT COUNT(*) FROM customer;
-#    -- or run sql/scripts/05_validation_queries.sql against crm_db
+# Run the pipeline
+python -m etl
 ```
-
-→ Step-by-step setup: [`wiki/Setup-Guide.md`](wiki/Setup-Guide.md)
 
 ---
 
