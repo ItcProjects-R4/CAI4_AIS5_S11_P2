@@ -1,0 +1,765 @@
+product_id,sku,product_name,category,brand,list_price,is_active,attributes_json,created_at,updated_at,etl_batch_id,source_system,source_record_id
+cb367f9d-cc0f-46cb-8044-ad4365b6cb14,DJ-MOB-SNA-SEL-111,Selfie Stick Monopod,mobile-accessories,SnapTech,12.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_111
+4b049825-f61a-46f2-bb30-51c1013a6148,ITC-32,quos,Clothing,Meza-Harper,1801.15,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P32
+45166ba7-b7f7-4a46-b98b-aa6f56030246,DJ-SPO-BRD-CRI-143,Cricket Bat,SPORTS-ACCESSORIES,,29.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_143
+5413822b-dd25-4799-add9-089882f49265,ITC-43,excepturi,Food,Blankenship-Gallagher,2923.46,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P43
+96245a04-a83e-458f-9a09-20253a229b5f,ITC-412,quod,Clothing,"Anderson, Ayala and Simon",4902.62,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P412
+b67ff333-d587-4d2b-971b-c566a746def4,ITC-459,nesciunt,Food,Williams Group,1006.08,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P459
+09526526-361b-4283-ae02-4ddca45ecff6,ITC-332,ullam,Clothing,White-Brown,275.24,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P332
+70cdadc6-7823-48ab-a303-75e11d82bddd,NW-3,Aniseed Syrup,NorthwindCategory,Northwind,10.0,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_3
+67929d97-be20-4315-8e4a-9b3e5f79ffd0,DJ-LAP-ASU-ASU-079,Asus Zenbook Pro Dual Screen Laptop,,Asus,1799.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_79
+71101bb7-f19c-4430-a08c-805088bf1afa,ITC-329,labore,Electronics,Martin Inc,2440.14,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P329
+bf111159-d479-4593-baf1-93e8357bc2b0,NW-36,Inlagd Sill,NorthwindCategory,Northwind,19.0,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_36
+a9e02b13-de67-4209-baa4-f75459a9f741,Dj-Gro-Brd-Fis-024,Fish Steak,groceries,,14.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_24
+bb953e8f-f570-42d3-b903-49f6fe8a564a,DJ-GRO-BRD-NES-034,Nescafe Coffee,groceries,,7.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_34
+3c268fa7-1ce7-4a1e-ac24-fdc1445b9040,NW-64,Wimmers gute Semmelknödel,NorthwindCategory,Northwind,33.25,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_64
+12c8477a-9b5b-4f9f-a91a-2a7dae992cfc,ITC-1,repellat,Electronics,Hamilton LLC,822.58,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P1
+3a18cccf-33e3-49cb-ab88-080979b128f1,DJ-KIT-BRD-CIT-054,Citrus Squeezer Yellow,kitchen-accessories,,8.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_54
+c35537fd-24d7-4fba-b4ea-6dd81a342e74,ITC-404,incidunt,Electronics,Burke PLC,3281.18,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P404
+2b901420-f015-4b10-a989-651aae2e2d66,ITC-452,magnam,Food,"Smith, Lopez and Serrano",1818.85,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P452
+0be20dc6-896e-43ea-b3bf-88d76f16ea9e,ITC-39,voluptatem,Food,Davis-Woods,4244.31,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P39
+c2224569-8e20-4f22-b64e-367219011ada,ITC-212,architecto,Electronics,Patton-Michael,2769.94,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P212
+2a14564d-e8f8-42a1-892e-44e32155f79f,ITC-54,laudantium,Electronics,"Castro, Henderson and Robinson",325.63,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P54
+eb7f6dac-2b6d-44b4-8836-513e7e18f549,DJ-KIT-BRD-TRE-067,Mug Tree Stand,kitchen-accessories,,15.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_67
+ac27f47d-112b-4b08-beb3-ee49f74a5dcd,ITC-447,excepturi,Electronics,Erickson LLC,1742.86,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P447
+9f806644-12af-42e4-8545-e9cf2e28335d,ITC-61,cupiditate,Clothing,"Porter, Perry and Ramos",797.58,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P61
+6e5012be-f7ab-4bf6-8ad9-88892aedbd93,ITC-178,odit,Electronics,Tran-Martin,3905.05,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P178
+1c654eb3-d1f2-4c94-a42b-c8d176de8699,ITC-400,recusandae,Electronics,Jones-Shelton,1995.86,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P400
+83730a52-ef47-4ec1-9098-4ab4b23ac9d8,DJ-KIT-BRD-BLA-050,Black Whisk,kitchen-accessories,,9.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_50
+85522119-7ea0-45a0-961b-67ec8d021e67,NW-54,Tourtière,NorthwindCategory,Northwind,7.45,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_54
+deb5f355-2860-418f-ae6f-f17084d98da4,ITC-319,illum,Food,"Owen, Moore and Armstrong",18174.04217542916,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P319
+aac61deb-c8d5-4634-b0e3-e0f2e1909867,DJ-WOM-BRD-BLA-177,Black Women's Gown,womens-dresses,,129.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_177
+021c48e9-05a4-4828-b573-1f6a1332d356,NW-10,Ikura,NorthwindCategory,,31.0,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_10
+082bacac-c327-428c-b7f1-958033ad96e0,ITC-159,animi,Food,Garcia-Webb,4939.91,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P159
+936209c4-4eed-4ae0-a899-5ba456cad505,ITC-423,amet,Clothing,"Myers, Scott and Madden",3180.34,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P423
+287cbb6b-c893-427c-b4f8-ae651bb77a5b,ITC-267,quo,Clothing,Kramer and Sons,3580.71,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P267
+75d4907a-844b-4084-8dd3-ac0959459cf7,DJ-KIT-BRD-SIL-071,Silver Pot With Glass Cap,kitchen-accessories,,39.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_71
+3fbb7f15-6237-42f5-b18a-1120fa9cb98f,ITC-196,odit,Electronics,Morrow-Ramos,4659.63,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P196
+90d7cbd0-e1dd-4ec5-aa5f-5a6462a66c94,DJ-FUR-ANN-ANN-012,Annibale Colombo Sofa,furniture,Annibale Colombo,2499.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_12
+d5a12a02-1ce9-41a7-85bc-04f3a5eebfd1,DJ-SUN-FAS-CLA-155,CLASSIC SUN GLASSES,sunglasses,Fashion Shades,24.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_155
+9e558222-8fde-4c4c-97e4-3458fa5cf130,NW-70,Outback Lager,NorthwindCategory,Northwind,15.0,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_70
+7515f809-ef0b-44f0-9a0a-56e720f80510,ITC-257,nemo,Food,Hansen-Thompson,2610.8,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P257
+7646f393-cf04-4afd-99df-391f1f9f1b2e,ITC-5,tempore,Food,Carter Inc,1941.09,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P5
+7bb07f2e-caf7-4d2d-920f-7f39496f19b6,ITC-121,ut,,"Scott, King and Donaldson",3213.27,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P121
+ab931bef-45df-4b30-8db1-ce5154b0964e,ITC-247,earum,Electronics,Smith Ltd,2575.35,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P247
+006002b1-87a1-4ce8-896b-d32b1f2e90c2,NW-39,Chartreuse verte,NorthwindCategory,Northwind,18.0,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_39
+4d99df59-15b3-4b50-9cf6-d476a882d80f,ITC-191,reprehenderit,Clothing,Rodriguez-Davenport,604.44,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P191
+71a0e44c-34bd-4759-8130-7027f5e8e8f7,DJ-MOT-KAW-KAW-114,Kawasaki Z800,motorcycle,Kawasaki,8999.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_114
+a5a4bc1e-0e4e-4fa0-817f-dcb07546d37f,DJ-MOB-APP-APP-100,Apple Airpods,mobile-accessories,APPLE,87250.97786095203,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_100
+6e7d5239-da39-4a1b-947d-2c540db77ef5,ITC-464,libero,Clothing,Myers-Deleon,4793.65,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P464
+19d3d63f-53d7-4fc0-9804-3234b06c8d47,ITC-124,ipsam,Clothing,Anderson Inc,3953.69,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P124
+e7d9681e-2dca-42da-b32a-76d42d340156,ITC-311,sapiente,Electronics,Watkins-Swanson,3716.18,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P311
+d92c0172-1d48-4d8a-b995-f3f92c28659b,ITC-143,commodi,Electronics,"Smith, Burton and Wood",1562.67,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P143
+cbee9684-17ae-4cab-9b64-a801f5ee2b50,ITC-244,nulla,Electronics,Mcconnell-Chapman,1240.9,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P244
+79bde0a6-7f57-4a31-8141-64624a2acc89,ITC-422,ab,Electronics,Contreras-Lloyd,59925.8591008098,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P422
+88fd394a-5a2a-4343-bc66-3531b61ea6c2,DJ-WOM-COM-BLA-185,Black & Brown Slipper,womens-shoes,Comfort Trends  ,19.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_185
+e9ab542f-31ee-4362-a25c-bfa29bc81438,ITC-128,eius,Clothing,Williams Group,3970.75,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P128
+0bb7313b-dbbd-4914-b6f9-f94cb40bef06,DJ-MOB-APP-APP-101,Apple AirPods Max Silver,mobile-accessories,Apple,549.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_101
+340e39d0-9b3a-41c2-abe7-95703cb6d97a,DJ-BEA-CHI-LIP-004,Red  Lipstick,beauty,Chic Cosmetics,12.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_4
+d7752581-6cbb-4f8e-aa15-e4adfec8919a,	ITC-246	,ipsam,Food,Long-Oconnell,3351.69,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P246
+b86e472d-8ac5-4f90-9694-01db93f1510e,ITC-294,eaque,Electronics,"Washington, Watson and Ward",1312.36,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P294
+a9d16ec6-2344-42ae-a714-4c67573524fd,ITC-133,officiis,Electronics,"Hernandez, Hill and Hansen",3206.02,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P133
+65368b50-0828-4feb-8898-00c35ba48e1f,DJ-MOT-GEN-GEN-113,Generic Motorcycle,motorcycle,Generic Motors,3999.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_113
+a40e1b7a-5dde-4166-ab3f-a0076a26432d,ITC-158,quas,Clothing,Evans-Acevedo,538.56,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P158
+55d3e7c6-6f26-4a5d-8058-f3bc51f563f4,ITC-77,eum,Electronics,Hamilton LLC,2805.17,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P77
+55b92371-3eae-4020-9281-f0a550444ac5,ITC-309,necessitatibus,Electronics,"Cooper, Watkins and Hernandez",3841.46,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P309
+c4fba157-3986-4777-9e92-542073b89539,ITC-208,quisquam,Food,Lee-Austin  ,3991.55,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P208
+9823ac64-7b80-4135-9843-e31cec827ac6,ITC-106,modi,Clothing,Knight-Lucas,1324.99,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P106
+ab2c2384-9509-4880-8533-de31ee856e85,ITC-89,hic,Food,"Brown, Webb and Boone",1475.18,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P89
+32a2b780-1f18-4a17-a95b-e1bd7cd57079,ITC-442,alias,Food,"Martinez, Smith and Brown",4890.17,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P442
+c21db469-7802-456f-abb3-e4738e21c615,DJ-HOM-BRD-DEC-043,Decoration Swing,home-decoration,,59.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_43
+18644f21-ad17-4401-a250-df974238d492,Dj-Spo-Brd-Met-150,Metal Baseball Bat,sports-accessories,,29.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_150
+585da1a9-c895-46d2-a996-71851cc94a77,ITC-435,amet,Electronics,"Rodriguez, Leon and Clayton",2939.01,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P435
+e1a8b8c7-8e88-43ac-802e-8b855a4de692,ITC-204,porro,Food,"	Hill, Rivera and Adams	",108.19,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P204
+72742f52-44b5-4518-a170-9429c032a66b,ITC-479,voluptas,Food,"Stewart, Moore and Patrick",3324.47,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P479
+4a41a3cf-a964-4920-bc98-df5209a24ea2,ITC-99,aliquam,Clothing,"King, Simon and Foley",3553.3,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P99
+dd5cefe9-fe99-44e8-9e6f-e31fd2fa84d0,ITC-82,magnam,Clothing,"Navarro, Lewis and Watson",1519.72,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P82
+74bda846-93f0-4890-b625-20df93506eea,DJ-TAB-SAM-SAM-161,Samsung Galaxy Tab White,tablets,Samsung,349.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_161
+ec8eee8e-55c2-41b1-8f21-092a1b4bd662,DJ-MOB-PRO-STU-112,TV Studio Camera Pedestal,mobile-accessories,ProVision,499.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_112
+0f5142a1-c2b4-4c84-af6f-f176fcce0262,ITC-219,vitae,Food,Dean PLC,2588.33,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P219
+6cb596f9-cede-40d2-9584-956e5261660b,ITC-315,ut,Clothing,Vasquez PLC,1180.15,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P315
+aa574f1d-ba80-4575-8cfd-0c9b7192a5c8,DJ-LAP-HUA-HUA-080,Huawei Matebook X Pro,laptops,Hauwei,1399.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_80
+989aa076-a21c-4b51-a3eb-afde012644fa,ITC-169,quaerat,Electronics,Knapp-Walker,3273.28,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P169
+28a3381e-73a8-4d80-9a87-2659124f59de,ITC-378,est,Electronics,"Torres, Lynch and Foster",1136.87,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P378
+bee55d36-6e3b-4ffe-8739-0e9f2983bb13,ITC-18,modi,Clothing,Rios-Turner,4049.42,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P18
+d55035f1-3911-4414-b4f8-16572fb5af47,ITC-352,voluptatum,Electronics,"Simmons, Brown and Dudley",2991.74,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P352
+2b2e8577-577e-4280-af27-b3ff405e531d,ITC-64,expedita,Food,"Barron, Edwards and Sandoval",2912.93,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P64
+06fd1afe-7921-4b58-b051-a13936402959,ITC-345,ex,Food,"Bates, Best and Jones",573.56,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P345
+11517633-c878-4689-b174-ed973d7d5dfd,ITC-278,deserunt,Electronics,"Welch, Brown and Anderson",4070.57,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P278
+94d282b2-0b35-4f15-83f7-0cd3d6b3b098,	ITC-482	,dolor,Electronics,"Green, Anderson and Navarro",1776.42,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P482
+b5449240-b762-43a1-ba23-4dbc32f2b758,ITC-494,autem,Food,"Lee, Moore and Martinez",4515.9,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P494
+2431d34e-fc7c-4150-ac77-7286a7821b65,ITC-366,officiis,Food,Evans-Marshall,2906.15,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P366
+628f9d53-60c6-469a-9ff8-e06ab0317239,ITC-47,ea,ELECTRONICS,Lee-Oconnor,1027.58,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P47
+479dcf41-8539-4a17-bf02-b141516aaea0,dj-sun-fas-gre-156,Green and Black Glasses,sunglasses,Fashion Shades,34.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_156
+68a2e211-6a95-44e9-b7ec-85b92876274e,ITC-129,vero,Clothing,Smith-Gibson,3028.35,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P129
+649283f5-6bf2-4dcc-9a00-6c360e9cfc96,ITC-473,aut,Food,Rojas-Collins,456.26,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P473
+be04d1bc-70f2-4ae7-b060-ca5ca398aa1e,ITC-362,laboriosam,Electronics,Wilkins-Grant,1073.56,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P362
+434ea7e3-30bc-4b3e-8fc0-d13606a520dc,ITC-498,quos,Clothing,,3545.01,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P498
+17be26c9-0ea4-49b7-b038-58f1cd568e8a,DJ-MEN-GIG-GIG-084,Gigabyte Aorus Men Tshirt,mens-shirts,Gigabyte,24.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_84
+2c68c5f1-d790-4b37-95af-80c8db43fb57,ITC-232,ex,Electronics,"Morris, Hunt and Aguilar",2730.69,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P232
+555da73d-92d8-4ef1-8a0f-1f9c1453b185,DJ-SMA-VIV-VIV-135,Vivo V9,smartphones,Vivo,299.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_135
+e6814d24-a15a-4be8-8f15-87c4b0d24f96,ITC-342,maxime,Clothing,Landry-Ramos,3298.04,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P342
+6b1ce38e-af98-4285-96a9-ebf83ace9c86,ITC-367,illum,Food,"Rodriguez, Martinez and Bass",1106.07,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P367
+2048ab66-e29b-48d1-ad5e-c8185cbb7570,ITC-497,consectetur,Electronics,Lowe-Graham,2867.07,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P497
+7ca09b22-06b9-42b6-8203-f98cb0a050f2,NW-15,Genen Shouyu,NorthwindCategory,Northwind,15.5,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_15
+5e3fcca2-6d47-4ce1-a30b-c9baf9d60f66,	ITC-425	,ut,Clothing,Young Inc,2714.68,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P425
+321d16e0-e6f6-49b3-b0f4-7fcee133a320,DJ-WOM-ROL-ROL-192,Rolex Datejust Women,womens-watches,Rolex  ,10999.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_192
+4afbec24-c445-47f1-b033-12928b3f5483,ITC-108,amet,Electronics,Lam LLC,4163.53,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P108
+4374ee63-6c4d-46d4-89b9-02c406d13c7e,DJ-TOP-BRD-BLU-162,Blue Frock,tops,,29.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_162
+5cf40682-2a92-4b12-831a-54bac383a78a,DJ-SMA-REA-REA-130,Realme XT,smartphones,Realme,349.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_130
+c9e1ba05-7c29-4348-ac97-41a9748991a9,ITC-386,illo,Electronics,Herrera-Proctor,1350.37,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P386
+ce279e6f-828c-48df-82b7-b73b29383cb8,ITC-75,quasi,Clothing,Neal LLC,4910.77,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P75
+88a6e13d-311d-4a8c-b7b8-b9c80d390a4d,ITC-365,fugit,Electronics,Taylor LLC,3205.88,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P365
+b7bfb6af-85f9-446e-ac05-4739af3d6250,DJ-HOM-BRD-FAM-044,family tree photo frame,home-decoration,,29.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_44
+8daa7dcc-5a87-440f-8da1-9fa923e0b006,DJ-KIT-BRD-BAM-048,Bamboo Spatula,KITCHEN-ACCESSORIES,,7.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_48
+dd0f478e-5aa6-4508-9486-e12dc35ce9aa,DJ-KIT-BRD-SPI-073,Spice Rack,kitchen-accessories,,19.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_73
+bed7074a-79dd-45bf-97c1-83136fa9105b,ITC-252,voluptatem,Food,"Lopez, Martin and Brown",4579.31,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P252
+d4439e75-80b1-4af2-a049-f98e6e550d94,ITC-390,quos,Food,Nash Group,3846.65,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P390
+79775424-d3fe-4894-a8c9-d856f262b065,ITC-21,praesentium,Clothing,Bryant Ltd,3325.11,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P21
+d5564ce9-3b2d-48c2-8037-1c5947f8ebf7,ITC-411,cupiditate,Clothing,Rosales-Brown,4714.3,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P411
+75ef4561-4345-40ee-a3ae-cf4f5213b823,ITC-260,earum,	Food	,"Moss, Garcia and Vargas",805.43,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P260
+6977b36d-26bc-4cbe-997d-bd769093e4d7,ITC-385,minus,Food,Skinner-Wright,1835.58,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P385
+54213a45-99e7-4d7e-ab65-0042f4e4d8d5,DJ-GOR-BRD-COO-020,Cooking Oil,groceries  ,,4.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_20
+9bca734b-d4d2-409e-bfe8-c907d085394b,ITC-293,magnam,Food,Jones-Bennett,211.75,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P293
+d7981184-36f1-49ef-b555-32647ad27b45,ITC-134,corporis,Food,Perry Inc,1689.12,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P134
+7a77b416-78de-49c4-9dae-ddf55c6d85bd,Dj-Men-Rol-Rol-096,Rolex Cellini Moonphase,mens-watches,Rolex,12999.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_96
+ff90f57f-2eb8-4b07-8f50-dd9eaef471d9,DJ-SMA-REA-REA-128,Realme C35,smartphones,Realme,149.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_128
+62dac0a3-1cdc-4799-a175-7dedf7f034a6,ITC-478,aperiam,Clothing,Walker Group,1436.05,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P478
+20bf076d-a3b7-4fc4-aa5d-e60d34541694,ITC-313,repudiandae,Food,Gentry and Sons  ,2757.04,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P313
+82dd68a2-0b52-420a-a3a2-6ce7ca418ed1,ITC-168,debitis,Electronics,"	Young, Wright and Medina	",1819.06,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P168
+4d73048f-d128-41b5-8ab8-9e6056a29686,NW-33,Geitost,NorthwindCategory,Northwind,2.5,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_33
+99387254-c3c1-41e7-8eb3-f83c5e8fccfe,ITC-172,eligendi,Electronics,Lamb-Conley,2698.97,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P172
+8e06c9dc-c596-4267-a04a-8f9d99341199,ITC-190,iste,Clothing,Thomas and Sons,1928.59,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P190
+6d81954e-f6db-422b-a983-685a2f96155c,DJ-MEN-URB-CHE-087,Men Check Shirt,mens-shirts,Urban Chic,27.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_87
+7b63fbe4-8c55-4958-a96f-0dd87df8b457,ITC-49,aliquam,Clothing,"	Lee, Martinez and Wilson	",2339.55,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P49
+fdac892c-ad3a-4cfd-be9e-14c795176805,ITC-145,iure,Clothing,Lewis-Barnes,2455.09,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P145
+a4289187-5679-4380-bc91-17bcf82f5aca,ITC-396,maiores,Clothing,Kelley-Michael,617.28,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P396
+c00ef0a6-0bf5-4659-a0cf-96b8dca7af70,ITC-379,molestiae,Electronics,Williams-May,947.49,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P379
+87cc51ea-9ce2-4661-8f71-342803fbe4e9,DJ-SPO-BRD-VOL-153,Volleyball,Sports-Accessories,,11.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_153
+000ddd44-9a07-4055-a24e-d59ea185d25a,NW-68,Scottish Longbreads,NorthwindCategory,Northwind,12.5,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_68
+665cc01b-d41d-4393-8a26-a4f703fecd56,ITC-410,aliquid,Food,"Mendez, Boyd and Boyd",3560.45,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P410
+630d7ba2-da27-46a9-a88e-35f8fd179773,NW-67,Laughing Lumberjack Lager,NORTHWINDCATEGORY  ,Northwind,14.0,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_67
+817d8647-75bd-478b-957a-f8d79e25fa46,ITC-427,ad,Food,Cruz LLC,574.87,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P427
+460b9245-a2bc-431e-8cd8-95697ecce375,  ITC-122,voluptatem,,,4284.07,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P122
+3e51cd97-5d2f-47c7-8e5e-4d21261698cf,ITC-372,commodi,Electronics,Rivers-Williams,3859.84,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P372
+03f0c844-da01-4ffd-b949-b27bb7f9cbc6,ITC-51,consectetur,Food,"Arnold, Olsen and Campbell",2362.21,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P51
+b4cb1af8-1b11-41d9-8749-94e35f9f91b8,ITC-292,incidunt,Food,Duncan-Horton,3775.93,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P292
+149885d8-4c90-475f-8c06-0ca3d5d71bd6,DJ-SKI-ATT-ATT-118,Attitude Super Leaves Hand Soap,skin-care,Attitude,8.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_118
+f80e07a4-0a7f-4ef4-8027-a206361fbf5a,ITC-141,esse,Electronics,Oneill-Brown,2245.16,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P141
+a7eb91e2-1c08-4c10-bf9a-c4869a62790d,ITC-25,eius,Food,Lawrence-Keller,3052.3,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P25
+fb1b74fb-fdc7-4893-96c9-bc2096b81228,DJ-KIT-BRD-TRA-075,Tray,kitchen-accessories,,16.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_75
+01272dbe-0ad0-4dff-88b1-fd85d31b4f2a,DJ-SKI-VAS-VAS-120,Vaseline Men Body and Face Lotion,skin-care,Vaseline,9.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_120
+14cf6982-2719-41e1-872d-d82ffc6c4425,ITC-286,maiores,,Velasquez LLC,1338.19,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P286
+960cfeec-ea11-4781-b062-bce5b3d0045f,ITC-166,doloribus,Clothing,Cunningham-Brock,2287.6,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P166
+fc4919d5-2c4e-493b-a935-b2afb0b406ab,ITC-484,ipsam,Food,Rivas-Rose,3528.35,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P484
+658972c2-21e2-471d-8056-fa8ca50dbab3,ITC-408,nisi,Electronics,"Mccoy, George and Johnston",1298.95,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P408
+6fe1142c-0d6c-4b3c-9802-4d1dc8460997,DJ-BEA-ESS-ESS-001,Essence Mascara Lash Princess,beauty,Essence,9.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_1
+82a120f7-0388-4158-9319-efad71f18355,ITC-339,aperiam,Electronics,"Vega, Briggs and Ramirez",1378.16,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P339
+405ec7ec-68cb-45c4-be9f-ce66833c71ff,ITC-406,numquam,Clothing,Lloyd-Henderson,2074.95,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P406
+e1d9aa2e-ae60-47d4-8528-57865c6f46f4,ITC-85,error,Electronics,Schultz-Holland,4734.31,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P85
+8e51dd9e-feb2-490d-a528-d5adc0bdcd8e,ITC-78,sequi,Food,"Moore, White and Morris",971.2,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P78
+9abde850-b7c2-4bb6-9f52-0e3c6cbd971a,ITC-320,magnam,Electronics  ,Hansen LLC,4809.97,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P320
+474ec297-421c-4f70-9f6f-05626d3d4c1c,ITC-453,cupiditate,Food,"Price, Parker and Price",1493.97,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P453
+e43e80d2-b9d3-43dd-81f0-a447d5669eae,ITC-115,veritatis,Food,Jefferson PLC,2756.15,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P115
+16a28f12-225e-4780-ada0-ae7bae63ba24,ITC-146,iure,Electronics,Benson LLC,1079.71,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P146
+58e65c9d-b00b-4415-a39e-614a4b37efde,NW-23,Tunnbröd,NorthwindCategory,Northwind,9.0,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_23
+7ccc12e4-ac52-4d47-aee8-3b80ad854433,DJ-HOM-BRD-TAB-047,  Table Lamp,home-decoration,,49.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_47
+98a2b2fa-9f4d-431a-a51e-3e7d102914d1,NW-40,Boston Crab Meat,NorthwindCategory,Northwind,18.4,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_40
+97625d70-1618-4eb3-971f-4c352aa5cdaa,NW-57,Ravioli Angelo,NorthwindCategory,Northwind,19.5,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_57
+ec4df87b-922b-4d66-8d23-4f687fbc454d,DJ-VEH-DOD-DUR-170,Durango SXT RWD,vehicle,dodge,36999.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_170
+99ae1e3e-5665-403f-a1ae-67804e475459,ITC-136,perspiciatis,Electronics,,2810.01,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P136
+53dcb322-7380-4a73-95ef-89c7daa01000,ITC-419,mollitia,Food,Shaffer Ltd,214.52,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P419
+3190627f-d8ac-4899-ac20-7448ce009bda,DJ-MEN-ROL-ROL-095,Rolex Cellini Date Black Dial,mens-watches,ROLEX,8999.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_95
+96768d79-d12a-4b17-8ef7-3cdeae972247,ITC-381,officiis,Clothing,Thompson-Williams,3453.02,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P381
+a71c8d72-b458-4c91-96ca-c5956b0dc913,ITC-171,temporibus,Electronics,"Perry, Thompson and Taylor",195.86,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P171
+61fc1785-b16f-434f-895b-25c346916b47,ITC-429,minima,Clothing,Ray PLC,1192.38,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P429
+2334cc78-8650-4fc5-8289-f6536c933cde,ITC-334,nobis,Clothing,Thomas LLC,4981.13,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P334
+cbdabb68-36e9-4811-956e-6bb5950572f5,DJ-SPO-BRD-BAS-138,Baseball Ball,sports-accessories,,8.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_138
+33e7150a-9547-47f0-a548-4b7e782896c5,ITC-314,dolorem,Food,"Ellis, Preston and Weber",627.21,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P314
+d151a354-1769-4873-ad49-d65d2d471cc5,ITC-205,itaque,Food,Schultz Inc,4770.26,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P205
+b6e9776a-25e7-48e4-8d25-b0ac10b37039,ITC-123,dolor  ,Clothing,Esparza PLC,2532.74,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P123
+a2f5bb90-17b0-4f52-9327-7401ab3ccadb,ITC-24,dolorum,Food,Rowe-Wright,3292.31,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P24
+385db518-63fa-4aad-9836-3e75c7dec1b9,NW-21,Sir Rodney's Scones,NorthwindCategory,Northwind,10.0,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_21
+e33f78eb-6de6-4c31-aad8-f26d2e9552cd,ITC-325,laudantium,Clothing,Nelson Inc,3922.16,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P325
+daae3289-be41-4c33-9805-8f2e57f25bce,NW-55,Pât échinois,NorthwindCategory,Northwind,24.0,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_55
+1fead61f-2e97-4ce7-8c19-8bcea91ae3a4,ITC-203,labore,Clothing,Sanchez Group,1798.57,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P203
+923ce986-7cee-4bef-9bb4-9013560db0fd,DJ-MOB-APP-APP-103,Apple HomePod Mini Cosmic Grey,mobile-accessories  ,Apple  ,99.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_103
+7e875f1a-51e4-44c8-aa2b-e83a8fce3db1,ITC-202,nisi,Electronics,Gordon Inc,4690.9,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P202
+20358bb8-e53c-43ea-8604-64265c1aec1b,ITC-394,natus,Food,Mathews Ltd,1932.92,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P394
+dc449921-76ae-4a4d-9a61-c980dc216ce6,ITC-343,aliquid,  Food,Smith-Brown,3199.07,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P343
+35bc16ee-76f6-421b-bb0a-f65ceb84407f,ITC-492,beatae,Clothing,Weber Group,2689.47,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P492
+b8d9a16a-fdb9-4823-ac64-e48b8c9a339c,ITC-277,assumenda,Food,Cruz-Garcia,3768.51,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P277
+04752eaf-0854-4c3b-8e52-c76c9f333a33,ITC-449,excepturi,,Nguyen Inc,2769.84,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P449
+19aa6f2f-93e7-4976-a452-b499af785006,DJ-MOB-BEA-BEA-107,Beats Flex Wireless Earphones,mobile-accessoreis,Beats,49.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_107
+b2bc46b1-0c86-4a7e-a126-66b2c78d052d,ITC-65,numquam,Electronics,"Mccann, Sweeney and Clark",4269.99,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P65
+18ec2482-78fd-4ddd-a69c-f13640b2b8e0,DJ-LAP-LEN-LEN-081,Lenovo Yoga 920,laptops,Lenovo,1099.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_81
+046a99c6-706c-4204-a831-609457db2b6d,ITC-174,nobis,,Martinez PLC,1586.48,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P174
+6158767e-9c81-4a47-946c-acdb48e33351,ITC-153,eum,clothing,"Green, Dodson and Barnes",3937.46,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P153
+c0e77e8d-5f8a-49bd-aae9-ad6dda01b0cf,ITC-282,doloribus,Electronics,Lee-Adkins,2002.13,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P282
+fd580609-1b1f-44ac-9ef3-3214df4e11d2,DJ-SMA-SAM-SAM-132,Samsung Galaxy S8,smartphones,Samsung,499.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_132
+a4201ee7-9c2d-4375-bb07-da7d9397d824,NW-77,Original Frankfurter grüne Soße,NorthwindCategory,Northwind,13.0,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_77
+eeefd2cc-ee13-4708-8896-ddcebfee05b6,ITC-10,tempora,Electronics,Holland LLC,2604.1,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P10
+dcfba768-03ac-46e7-8827-263de536f546,ITC-139,consequuntur,Clothing,Ingram-Evans,2029.15,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P139
+0e722f3f-682c-44da-8779-716e9fa95a9f,ITC-243,libero,Clothing,"Harris, Mcdonald and Drake",4413.03,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P243
+caaec1df-4157-4ca3-a3dc-df4ac87bb859,ITC-351,quas,Food,  Henderson Ltd,3902.22,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P351
+25051812-913a-4744-b7d6-49562e97e8b1,DJ-WOM-BRD-COR-178,Corset Leather With Skirt,womens-dresses,,89.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_178
+b7aec0e6-c27a-4cb0-b72b-5d3d9f1be666,ITC-338,aut,Clothing  ,Hayes-Peterson,20143.33930217058,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P338
+c4574898-d226-45fd-b707-209c7d08b79e,NW-27  ,Schoggi Schokolade,NorthwindCategory,Northwind,43.9,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_27
+90fe42e0-55ab-49e1-a643-290664cc537c,ITC-491,at,Electronics,"Bryant, Mcclain and Hays",4012.18,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P491
+f2bc8878-746f-437b-a73a-c323e4182093,DJ-KIT-BRD-HAN-061,Hand Blender,kitchen-accessories,,34.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_61
+621f585e-20ca-4902-bdbf-2a47774018b3,ITC-336,unde,Clothing,Martin PLC,2608.6,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P336
+378693f3-3b00-4a0f-8c4b-7dd7cd8b9279,ITC-489,delectus,Electronics,Perez-Juarez,572.86,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P489
+7dda2bfe-3beb-4e4f-bfaf-b0078c8a4e80,ITC-34,excepturi,Clothing,Robinson-Padilla,2157.26,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P34
+141b24d2-c8e0-4f05-97e7-1a8794b55062,DJ-SMA-SAM-SAM-133,Samsung Galaxy S10,smartphones,Samsung,699.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_133
+6a7f25d4-1d4d-485f-9d13-92598b59bbf3,ITC-340,corrupti,Clothing,"Sanders, Garcia and Garcia",1062.02,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P340
+6d2cd5a6-0a98-4cbf-8832-b4b5e7ff8088,ITC-107,unde,Food,Hess-Snow,996.68,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P107
+cba86c9a-4637-4a15-968a-181f1e227a28,DJ-GRO-BRD-STR-040,Strawberry,groceries,,3.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_40
+31f018c9-ea65-4fac-af1a-952f45935697,DJ-MEN-NIK-NIK-089,Nike Baseball Cleats,mens-shoes,Nike,79.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_89
+e81f3eff-8ef3-4bc5-855b-0a09490b7b6f,ITC-445,ex,Electronics,Krause PLC,4003.2,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P445
+881c6f98-68f2-48ea-a2c8-5c9d1d6fc2e0,ITC-170,fuga,Electronics,Mercer-Cook,2669.44,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P170
+adefc211-05b5-41da-a87f-5b44b1672d81,ITC-250,ea,Electronics,"Jones, Martinez and Crane",3376.43,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P250
+51409f74-83d5-4db0-aac9-ec5209063d94,ITC-125,temporibus,Electronics,Bowen Inc,3236.39,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P125
+b57bfc12-3718-4132-a125-d964c4f6b4a6,ITC-434,quidem,Clothing,Lee-Jones,2954.94,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P434
+29c3504e-04b3-426b-aa90-408d2c0a2402,ITC-132,quia,Food,Gibson-Mcclain,2734.13,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P132
+3029cf3d-ac52-4ea3-ace2-c905c84adcd1,NW-73,Röd Kaviar,northwindcategory,Northwind,15.0,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_73
+e27a29d3-4276-452c-a0e7-a0b42e7fce02,ITC-409,ex,Electronics,"Adams, Ochoa and Thomas",1890.66,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P409
+3811a334-1801-4b84-b91d-82b58049eb3d,ITC-228,amet,CLOTHING,Jones Group,2690.38,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P228
+1a28a72a-5eea-40e8-8f15-af6565794132,ITC-209,laudantium,Food,Edwards-Bush,1771.75,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P209
+777d3c09-05a0-4bca-9e0f-10421e29434d,DJ-WOM-FAS-GOL-187,Golden Shoes Woman,,Fashion Diva,49.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_187
+89451a4a-7ba7-4f64-b43a-f62b434f51d9,ITC-227,earum,Food,Smith Group,3424.01,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P227
+87fc4e8b-3744-433c-9ea2-d6fed820810c,DJ-KIT-BRD-YEL-077,yellow peeler,kitchen-accessories,,5.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_77
+ffa76eef-d80a-4c30-be7b-d2653cd550d8,ITC-487,quod,Electronics,Grant-Lopez,2276.69,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P487
+69c92d50-6662-4329-90a7-6bd0302768c4,NW-1,Chai,NorthwindCategory,Northwind,18.0,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_1
+661b2758-7604-49a2-babc-1bf3ce8c7ceb,DJ-MEN-ROL-ROL-098,Rolex Submariner Watch,mens-watches,Rolex,13999.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_98
+915c17e4-3328-4700-a9af-a3c435636827,ITC-58,beatae,Food,Anthony Ltd,462.7,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P58
+70e02ed4-2f9f-47c9-9506-eb3c4de875f2,ITC-161,nostrum,Clothing,"Fox, Miller and Sanchez",2872.92,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P161
+21ca2c57-6291-4fb1-9d77-232c94621b62,DJ-SPO-BRD-BAS-139,Baesball Glove,sports-accessories,,24.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_139
+550a7867-fe3a-4051-a192-a9cf7bdf8865,dj-top-brd-sho-165,Short Frock,tops,,24.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_165
+0efa0a43-1d34-4ba9-a510-74d6a893e869,ITC-279,reiciendis,Clothing,Gomez-Gonzalez,3603.71,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P279
+d7b2504b-6c75-4e35-9d79-37e2af7d9317,ITC-156,modi,Clothing,,3001.83,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P156
+8ed21f6b-4bc8-45f8-981c-8e414bc1f125,ITC-323,quae,Food,"Joyce, Vargas and Dunn",1206.46,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P323
+6f964357-63c8-4e17-a34b-51facf00a263,ITC-431,quisquam,Clothing,"Harris, Moore and Strong",1092.73,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P431
+88240836-fd34-4c41-a2e1-e2fc1dee9c3e,DJ-BEA-NAI-NA-I005,Red Nail Polish,beauty,Nail Couture,8.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_5
+5914ca74-2060-456d-bf10-f6e43db50127,ITC-466,omnis,Electronics,Martinez-Galloway,771.45,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P466
+7889ca34-07ed-4fbc-90b5-64061b2fdf58,ITC-142,corrupti,Electronics,Carroll-Martinez,2425.5,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P142
+6b3082d6-88cd-4396-8126-dbf3868c9c1a,NW-14,Tofu,NorthwindCategory,Northwind,23.25,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_14
+63b6b222-e027-4596-bff6-568aa525e94d,NW-5,Chef Anton's Gumbo iMx,NorthwindCategory,Northwind,21.35,0,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_5
+0060d925-ee0d-4b8e-8981-564776c53240,ITC-180,assumenda,Clothing,Lopez-Lowe,109.02,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P180
+d91b1e17-2a25-48b9-b413-c7f85ea6a383,ITC-120,pariatur,Clothing,"Hill, Davies and Baker",3181.93,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P120
+3a878919-f003-4e1e-8907-e9610a548e89,DJ-KIT-BRD-CUB-062,Ice Cube Tray,kitchen-accessories,,5.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_62
+80f8f2c1-7c1d-4cd5-9eb1-dd761abfeef4,DJ-FRA-DIO-DIO-008,Dior J'adore,fargrances,Dior,89.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_8
+215ee128-633b-410b-b064-ec79b9bdd69f,DJ-MOT-SCO-SCO-116,Scooter Motorcycle,,ScootMaster,2999.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_116
+a8144cb8-14b2-4479-a59f-298aa0b1117c,ITC-98,ratione,Electronics,Bennett and Sons,3044.71,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P98
+ffac334c-a53a-4dec-847c-d5fadb260c65,ITC-17,unde,,Harding-Bond,567.48,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P17
+eba62f46-eb05-4d93-9c98-10e078e4dee2,	NW-65	,Louisiana Fiery Hot Pepper Sauce,NorthwindCategory,Northwind,21.05,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_65
+0c1f7269-486c-48da-827e-630999933679,ITC-326,at,Electronics,Mcmahon-Duarte,4359.64,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P326
+0701437f-e0bd-4e09-a736-6e0bc7cea9f1,ITC-72,commodi,Electronics,Harrison Ltd,4945.6,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P72
+03d3087f-538c-451c-9f47-e4823a41fa39,Dj-Gro-Brd-Kiw-030,Kiwi,groceries,,2.49,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_30
+939c075e-54d5-4b0f-85ad-901c99d05306,NW-31,Konbu,NorthwindCategory,Northwind,6.0,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_13
+8c112cfd-25b8-45e1-bbf8-afd9705a814b,ITC-38,inventore,Electronics,Martin-Butler,585.31,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P38
+1572e0b0-9f9b-4845-86d3-b9b98ba783ef,ITC-53,quo,Electronics,Garrett-Roberts,2751.6,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P53
+b4d8480b-3431-46a6-9e70-d82cde8683c6,ITC-283,illo,Electronics,"Gross, Cisneros and Day",4923.41,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P283
+2350ee66-6a26-4c62-bd61-50d264a2c555,ITC-368,dolores,CLOTHING,Williams-Lee,3927.61,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P368
+a7120a26-ae13-4ec9-931f-9a390503fc9e,ITC-299,eligendi,Clothing,Mills-Hanson,2316.15,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P299
+c9feb88b-22fd-4f59-a397-f071d7201899,DJ-MEN-CAS-SHO-086,Man Short Sleeve Shirt,mens-shirts,casual comfort,19.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_86
+68f80004-2a08-42b8-b968-3c57d0bd7f48,	DJ-SPO-BRD-FOO-147	,Football,sports-accessorise,,17.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_147
+ebb918a6-8b30-443e-bb57-62456a8084a6,NW-41,Jack's New England Clam Chowder,NorthwindCategory,Northwind,9.65,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_41
+4f772466-09c2-4e44-8e4c-87845cc8725a,	ITC-439	,in,Electronics,"Hall, Fields and Stanley",1754.4,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P439
+6c12b905-937e-455b-a933-b9eab341a0f0,DJ-MOB-APP-APP-106,Apple Watch Series 4 Gold,mobile-accessories,Apple,349.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_106
+4b96d6aa-8019-4731-aea5-2a7ed15757ce,DJ-GRO-BRD-POT-035,Potatoes,groceries,,2.29,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_35
+84a8e792-2a58-4cab-b4c7-845a49d8e9b8,ITC-321,pariatur,Clothing,Davis PLC,3104.66,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P321
+2a077ff9-edfa-4dfc-9c3b-246ff94ac85a,DJ-GRO-BRD-EGG-023,Eggs,groceries,,2.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_23
+cdb70d54-7e3d-40ef-af6e-2b1e9c6fdc1c,NW-46,Spegesild,NorthwindCategory,  Northwind,12.0,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_46
+51afb17b-3795-4de8-b192-152ce6da1f62,ITC-448,libero,Food,Watson and Sons,3117.99,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P448
+cbf9044a-4366-4a6c-b719-d24e54146957,ITC-140,veritatis,Electronics,"Yates, Hernandez and Glover",77.76,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P140
+61256a79-c3e0-4966-8c88-756f109721a6,DJ-SKI-OLA-OLA-119,Olay Ultra Moisture Shea Butter Body Wash,skin-care,Olay,12.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_119
+68284c6e-cefd-4e9e-97de-b918da456c4a,ITC-150,quae,Clothing,"Kim, Butler and Harris",3853.38,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P150
+5ccb475c-d0f6-42e0-a99b-8489fc399416,dj-spo-brd-cri-142,Cricket Ball,sports-accessories,,12.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_142
+6d1b08e9-b484-4fcb-b0f6-78051d0752ef,ITC-81,iste,Electronics,"Obrien, Grant and Burton",83.39,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P81
+46cf74fd-7067-4af3-b222-760fd0c1172a,ITC-337,quas,Clothing,"Turner, Turner and Doyle",3288.54,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P337
+e0903f7f-1169-4385-8d75-9c4a063b9e84,ITC-374,quae,Food,"Smith, Gray and Baker",825.92,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P374
+76eba194-1a4a-499c-9fa0-eade6c99d1eb,DJ-WOM-BRD-TRO-184,Tropical Earring,womens-jewellery,,19.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_184
+9fcbd38e-c0fd-4474-87c0-1637f44183e6,ITC-312,culpa,Clothing,Sims PLC,4314.78,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P312
+34a1a556-2f7c-4255-b925-5a2bdfe374e2,DJ-MEN-FAS-BLU-083,Blue & Black Check Shirt,mens-shirts,Fashion Trends,29.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_83
+b7b380fd-519d-42d8-8cf4-301110f2084c,ITC-420,quos,Clothing,"Miller, Peterson and Baird",4922.77,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P420
+7da3760a-7cf0-4021-851b-97947423a8dd,DJ-WOM-BRD-COR-179,Corset With Black Skirt,womens-dresses,,79.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_179
+d43e9859-c020-47fb-a3f2-47a87a244d3d,NW-51,Manjimup Dried Apples,NorthwindCategory,Northwind,53.0,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_51
+e41d7fee-41d1-4701-bef8-04bb194e8827,ITC-138,ullam,Food,Nguyen Ltd,735.82,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P138
+fa768e98-d4f4-4762-9e50-8db428950275,DJ-SMA-SAM-SAM-131,Samsung Galaxy S7,smartphones,Samsugn,299.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_131
+52054877-c04f-46cb-8b7f-42b6fc3e7de2,DJ-MEN-OFF-SPO-091,Sports Sneakers Off White & Red,mens-shoes,Off White,119.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_91
+ac19e2ad-f98a-4f19-b878-9dade635d28f,DJ-GRO-BRD-HON-027,Honey Jar,groceries,,39078.34051836895,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_27
+354cddf5-f2f7-47ab-9760-fbe5fcaa9799,ITC-471,tempore,Food,"Turner, Morris and Wagner",4419.76,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P471
+1d3f8a10-688a-422d-9ef3-67f5736cf78c,DJ-MEN-OFF-SPO-092,Sports Sneakers Off White Red,mens-shoes,Off White,109.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_92
+926d242b-6624-4670-ad63-1c757b600161,ITC-298,quidem,Food,Mitchell-Wilson,474.37,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P298
+f42d740b-9ac6-4cac-858c-644ca70fba8d,ITC-389,molestias,Electronics,"Hardy, Bruce and Williams",1541.98,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P389
+27ac396d-c2d0-452f-b79e-ff908cbcecef,ITC-175,deserunt,	Clothing	,Patrick-Miller,3639.47,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P175
+b1cd5a2e-d25b-4f4e-8e91-805f4a891b6d,ITC-201,recusandae,Clothing,Brown PLC,1039.69,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P201
+e51ada32-00ea-4b98-8a8c-e133aa829ce3,ITC-37,magnam,Food,Solis-Armstrong,4161.02,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P37
+6a4b596d-47f5-4a57-82ea-1ee3601f03ef,ITC-215,excepturi,Electronics,"Williams, Barr and Fox",4766.42,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P215
+e3470fd3-36ea-43ed-89c9-5d395044f681,ITC-438,eligendi,Electronics,"Hernandez, Miller and Foster",2351.93,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P438
+5962b491-297d-41ac-8a4a-c8d877dd54b3,DJ-FRA-CAL-CAL-006,Calvin Klein CK One,fragrances,Calvin Klein,49.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_6
+fa19f1f9-5071-4a25-8359-1fff962a9737,ITC-67,numquam,Food,Dominguez Inc,210.78,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P67
+f81e8973-4b03-4220-a661-b143639772e2,ITC-472,consequatur,Electronics,Olsen PLC,4789.53,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P472
+377cf21b-aefd-4711-8c60-a0a67ac8b13b,ITC-272,enim,Electronics,Koch-Ramirez,2792.03,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P272
+6840e07a-242d-45bf-9170-1ff2efde0a37,ITC-88,officiis,Food,"Woods, Wilson and Wade",199.81,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P88
+3eeaefe9-37af-4afa-8968-70ee873fcc4c,ITC-104,nemo,Clothing,York Ltd,2714.23,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P104
+7cdca014-ddd8-44b5-8109-d9318f5a0e26,NW-25,NuNuCa Nuß-NougatC-reme,NorthwindCategory,Northwind,14.0,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_25
+610a3336-bc4e-459b-af26-5e490b7f3abb,ITC-217,aut,Clothing,Snyder-Montes,3144.62,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P217
+cd6cd34e-a284-4b37-b05a-0e8b3a40ed43,ITC-417,tempora,Food,Taylor LLC,4555.95,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P417
+8d9f6202-c8d2-486c-a3b6-e81aa13dd3a3,ITC-69,officiis,Food,Henry LLC,86.74,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P69
+f24a3c8e-09e8-49c4-b5fa-5b92b43cb711,ITC-27,vel,Electronics,"Proctor, Kerr and Burns",4731.36,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P27
+e57937ff-9de9-4bd2-8808-d1924f8632d7,ITC-426,inventore,,Clark-Mills,1120.16,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P426
+7431e4ea-f44c-4642-be52-9b63042ba958,NW-4,Chef Anton's Cajun Seasoning,NorthwindCategory,Northwidn,22.0,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_4
+603d058f-01f3-4761-a229-6c3a9e546525,NW-61,Sirop d'érable,NorthwindCategory,Northwind,28.5,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_61
+42a4b7d9-a79b-496a-a894-df6fbaa48907,DJ-WOM-PRA-PRA-174,Prada Women Bag,womens-bags,  Prada,599.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_174
+3725f8f7-3cb5-48b6-ab84-9cf322b26c8d,ITC-206,eius,Electronics,Conner-Garcia,4203.73,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P206
+ff904375-a26c-40b8-81ed-96cbe5fa56b0,ITC-149,excepturi,Clothing,Brewer-Mills,1801.51,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P149
+757e0fd8-82c6-4ade-bf77-14d74c811b35,ITC-454,voluptatem,Electronics,,1628.46,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P454
+9ea40eb6-6c52-499d-8bb7-0422cb9a8ffb,NW-42,Singaporean Hokkien Fried Mee,Northwindcategory,Northwind,14.0,0,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_42
+caf7d461-fe00-4c1d-8696-8db282f55ab9,	ITC-318	,eos,Clothing,"Sims, Patterson and Petty",436.43,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P318
+ab53f7b3-5879-42c6-93ff-97221ddbd4bb,NW-35,Steeleye Stout,NorthwindCategory ,Northwind,18.0,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_35
+8f835e09-2954-4848-aa13-d140f455d9e3,	NW-34	,Sasquatch Ale,NorthwindCategory,Northwind,14.0,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_34
+e6a115cd-7079-49e9-b631-259d47451215,ITC-112,officiis,Electronics,Buckley-Mitchell,184.92,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P112
+d08663a9-dbc1-4713-b295-c9610e2a9c86,DJ-SPO-BRD-TEN-152,Tennis Racket,sports-accessories,,49.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_152
+08d68c7a-7049-4177-a73e-ed65e06531cd,ITC-241,consectetur,Food,Adams-Turner,2232.34,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P241
+b501414f-c1bd-4a63-bd57-fa0e56b216fb,ITC-354,consequuntur,Food,"Flores, Cross and Johnson",1656.26,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P354
+3e26a8af-4962-4867-8154-bf94c79ac1d3,Nw-56,Gnocchi di nonna Alice,northwindcategory,Northwind,38.0,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_56
+f1325b57-94d8-4700-af5e-345f1d0c2a72,DJ-BEA-VEL-POW-003,Powder Canister,beauty,Velvet Touch,14.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_3
+e813803b-d005-4908-b7d4-a017afb500eb,DJ-KIT-BRD-FOR-058,Fork,kitchen-accessories,,3.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_58
+69373ac2-5205-4d1e-a809-0d008f898334,ITC-476,odit,Food,Hernandez-Roberts,4421.42,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P476
+36a3df5b-a647-4cac-988d-edc4f29a3b30,ITC-288,temporibus,Electronics,"Taylor, Marsh and Scott",3944.41,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P288
+5f99139a-9cd9-4f25-84bd-68d085f37067,DJ-WOM-FAS-SHO-189,Red Shoes,womens-shoes,Fashion Express,34.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_189
+ba731859-1aa7-40ac-96b3-9eedea87243f,ITC-333,accusamus  ,Electronics,Rivera Ltd,3328.76,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P333
+c3a97dbc-f71f-4eb0-ad2c-451a119ba58e,DJ-UFR-FUR-BED-013,Bedside Table African Cherry,furniture,Furniture Co.,299.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_13
+4ef545ee-b384-4669-a1fe-2b091e457c53,DJ-SMA-OPP-OPP-127,Oppo K1,smartphones,Oppo,299.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_127
+37c4dc2a-dc02-4c8c-8afb-84a08b3e8104,ITC-144,eius,Clothing,Meadows-Richardson,4672.21,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P144
+d49c75c3-3a15-47cd-bcd7-1ef58faa27d3,ITC-222,nisi,Food,Wilson-Hernandez,3034.52,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P222
+c01527e7-276f-4ad6-8acb-3391a3f765eb,ITC-114,asperiores,Clothing,Hale PLC,1915.54,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P114
+4cd5ac7c-21ec-41a9-a246-8d158bd020e9,DJ-KIT-BRD-PRD-068,Pan,kitchen-accessories,,24.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_68
+715c1e92-6b71-44ca-a855-84a4bf037866,ITC-475,quia,Clothing,"Booth, Williamson and Moore",3085.93,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P475
+c3469076-8e16-4b4c-b21e-926bd8ce982f,ITC-62,delectus,Clothing,"Clarke, Moore and Lynn",4476.47,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P62
+07a69f14-a85b-4592-97a5-e3d2100f58fe,ITC-363,ducimus,Food,Mays LLC,2162.55,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P363
+b42ce2c1-5b83-4248-aecd-16384ef9e6d6,ITC-335,reprehenderit,Clothing  ,Adams-Mitchell,590.0,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P335
+2b536022-583b-4a1d-8679-53f3c768d557,ITC-118,doloribus,Clothing,Jones and Sons,156.15,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P118
+c24132fa-6976-4e6d-b0bf-45e6f428d97b,ITC-391,temporibus,Food,Norris Inc,1466.8,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P391
+6028a053-9b1d-4538-be5e-fd8ebecd2ced,NW-58,  Escargots de Bourgogne,NorthwindCategory,Northwind,13.25,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_58
+3b67c278-8b50-4b52-baea-331d995f1d04,DJ-KIT-BRD-GRA-060,Grater Black,kitchen-accessories,,10.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_60
+e74310cd-1983-4ad4-aa09-ad27d9950f8c,ITC-289,provident,Clothing,Coleman-Bates,4638.45,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P289
+413c6431-5ddb-4e7c-8897-1a0bb8c8cd61,NW-26,Gumbär Gummibärchen,NorthwindCategory,Northwind,31.23,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_26
+60cd5902-81a9-4df9-a407-318590d7710d,ITC-91,iure,Electronics,Hardy Group,4918.95,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P91
+13376267-1dea-4f46-baf7-299b5f945117,DJ-SPO-BRD-TEN-115,Tennis Ball,sports-accessories,,6.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_151
+f3e686b6-1779-4889-a5a6-67a15f957448,DJ-GRO-BRD-MUL-033,Mulberry,groceries,,4.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_33
+b6f0da73-dc3d-4336-b2f6-7f6d6ac1980d,DJ-KIT-BRD-KIT-063,Kitchen Sieve,kitchen-accessories,,7.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_63
+710fe91c-7750-414d-8328-6c9554f24ff4,ITC-41,perferendis,Electronics,Smith-Stephens,3755.71,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P41
+9ad732a6-d195-41c9-89c3-3c52c2a22e4e,Dj-Sma-Opp-Opp-126,Oppo F19 Pro Plus,smartphones,Oppo,399.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_126
+583162e9-7c36-4758-b51b-b704845d04b1,ITC-433,quisquam,Electronics,Graham-Boyd,4744.48,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P433
+4de7a4a5-4119-4178-ae27-179b9cc83abf,ITC-79,recusandae,Clothing,"Morrow, Robertson and Garcia",3775.58,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P79
+b9cade9e-ff2f-462e-834f-e8f7f91738ba,ITC-231,voluptate,Food,"Jones, Clay and Keller",4695.96,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P231
+2bd1fa3b-81fe-42bc-8510-c97ab71768ad,ITC-60,nobis,Electronics,"Cole, Strickland and Garcia",1087.94,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P60
+3f1f60b0-4cf3-4e10-9242-8222f2522a5b,ITC-405,nisi,Food,Shields and Sons,3888.5,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P405
+f13d09d3-3978-48c6-a8b8-94348f85a516,ITC-216,enim,Clothing,Fisher LLC,3007.05,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P216
+8a2abd0d-3011-4250-960b-cf9dc3474300,ITC-179,occaecati,Electronics,Lowery-Harrison,4802.36,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P179
+6fe89701-4706-4537-9c24-a0371544e9ad,DJ-TAB-SAM-SAM-160,Samsung Galaxy Tab S8 Plus Grey,tablets,Samsung,599.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_160
+ba23585d-2f98-44de-b046-0cad0db009a9,ITC-305,odit,Electronics,"Martin, Wilson and Gonzalez",2922.51,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P305
+e0ade091-5577-4479-9a44-ef72af100ea8,NW-63,Vegie-spread,NORTHWINDCATEGORY,Northwind,43.9,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_63
+49da8e1c-8803-4e67-8349-51e1404f403a,ITC-213,quasi,Electronics,Ramsey-Garcia,81612.82833581549,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P213
+2f5d0d14-23ab-4091-bb00-caaff2aa9e5c,DJ-WOM-CAL-CAL-186,Calvin Klein Heel Shoes,womens-shoes,Calvin Klein,79.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_186
+77ba22e8-6aca-471d-8f44-76d2c875715a,ITC-83,odit,Food,Woods Group,2054.04,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P83
+dda7f8e3-ce63-4551-8a8f-fd81d8d9d097,ITC-193,explicabo,Clothing,Lewis-Walker,1590.69,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P193
+ece86838-34b9-4eb8-ba1d-7549509c1273,DJ-LAP-APP-APP-078,Apple MacBook Pro 14 Inch Space Grey,LAPTOPS,Apple,1999.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_78
+7cb68a40-018d-4e28-8142-8b3f492b9ea3,ITC-465,commodi,Electronics,Trevino LLC,1501.88,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P465
+1fb188f6-a058-42f2-b125-f3f6ae68d348,ITC-239,reprehenderit,Food,"Anderson, Nguyen and Randolph",1247.82,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P239
+72c27bec-f604-45e4-beee-f370ceff7b56,ITC-245,cumque,Clothing,"Carlson, Robinson and Bryant",4324.49,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P245
+fa2be871-c553-4fc7-ad3b-e13b36ba069f,DJ-VEH-CHR-TOU-167,300 Touring,vehicle,Chrysler,28999.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_167
+d8b938d8-8d6a-41d0-8d0a-b9161f414371,DJ-MEN-PUM-PUM-090,Puma Future Rider Trainers,mens-shoes,Puma,89.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_90
+103e1384-84ee-4d31-8df6-0a1700bc9e71,ITC-287,similique,Clothing,"Wilson, Cantrell and Blackwell",177.95,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P287
+6d8740d9-7ef3-473a-baf3-968d39ef29f9,ITC-20,non,Electronics,Perez and Sons,4111.17,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P20
+56b5ca37-60ce-47e5-863b-844b2b004d2c,ITC-371,perferendis,Electronics,Ruiz-Jones,4772.18,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P371
+24fd409f-814c-473f-85a9-c0d5a6cf1c0f,ITC-109,expedita,Clothing,Curtis and Sons,1635.45,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P109
+b90aab89-dfec-4b46-b7aa-2d210c45dc5e,ITC-324,in,Electronics,Juarez PLC,1496.28,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P324
+e80a5c2a-50f8-4d90-b7d9-1760885cb1dc,ITC-117,est,Electronics,Cochran PLC,1540.08,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P117
+bba914ac-b83f-424a-a627-d3716efc9b0a,ITC-4,aliquam,Clothing,Wright Ltd,1165.94,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P4
+60d4d802-0a4b-4f42-8827-4d69630aa681,ITC-119,unde,Electronics,"Miller, Carroll and Rodriguez",1540.7,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P119
+c7422e42-0bea-42e8-ab0f-f54b4c5481a6,ITC-414,totam,Electronics,"Morgan, Taylor and Henry",3639.75,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P414
+af198f0d-cd98-42fb-83df-ce564e750ea8,ITC-36,recusandae,Clothing,"Morales, Yang and Mason",4897.52,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P36
+52a9adb8-26fe-4b9c-851f-daa5fc50b365,Nw-45,Rogede sild,NorthwindCategory,Northwind,9.5,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_45
+8959ae4c-64d8-4d33-8759-8b5b7bf578e9,ITC-265,quibusdam,Clothing,Mills-Brown,2579.62,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P265
+65e482ad-252a-48b6-8d02-31f18366d413,ITC-330,debitis,Food,"Simmons, Pineda and Glass",88.36,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P330
+0aa00603-5f75-4121-8992-934064ad1414,ITC-7,odio,Clothing,Cordova and Sons,548.62,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P7
+4049359a-740f-40bd-b364-17d96f61ed28,	ITC-353	,delectus,Food,"  Mills, Jimenez and Martinez",1522.51,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P353
+917c3b97-dc07-4b79-a2cf-0ce6f428b5fa,NW-72,Mozzarelal di Giovanni,NorthwindCategory,Northwind,34.8,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_72
+01a2eb7d-492c-488b-a08b-4362faf374c5,DJ-SPO-BRD-GLO-148,Golf Ball,sports-accessories,,9.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_148
+18814120-2377-43fa-a654-d2a46dabbd92,ITC-187,similique,Clothing,Griffin LLC,4457.38,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P187
+b5f9a9ac-4bb5-4ac6-8e29-a6c790281935,ITC-310,consectetur,clothing,Daniels-Hogan,1158.95,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P310
+64b875b0-83cc-49ac-b909-75a68286d65e,ITC-343,aliquid,Food,Smith-Brown,3199.07,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P343
+408e7c06-985f-4d91-8d57-66a4904f13b7,ITC-348,minus,Food,Levine-Rojas,322.92,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P348
+9bc70a02-9945-4046-9bd5-f65006eb8320,ITC-255,provident,Food,Irwin LLC,1356.64,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P255
+7c823500-375b-4244-b8ee-547b4cea58fa,NW-38,Côte de Blaye,NorthwindCategory,northwind,263.5,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_38
+9ce84490-689e-46eb-a356-8dcc54c0c7ec,ITC-432,molestiae,Food,"Schultz, Steele and Stein",2997.98,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P432
+25bce9db-a1e5-40f3-b395-34c7f2a76420,	ITC-13	,repudiandae,,Thompson-Mcdaniel,3070.63,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P13
+0356b307-c959-4c39-8aa7-b263d5e45403,ITC-485,dolorem,Food,"Smith, Cole and Hooper",1801.04,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P485
+8b2bde74-9287-4cd7-b72e-268435aa8437,ITC-57,itaque,Food,Johnson-Miller,682.21,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P57
+8498afb9-c6d3-4aab-8fb0-72b7cd917b5a,ITC-376,animi,Clothing,Matthews-Hall,1557.06,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P376
+956993b8-b401-4f53-b78c-823eed8de1cf,NW-18,Carnarvon Tigers,NorthwindCategory,Northwind,62.5,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_18
+3595d9fe-ce9a-4d82-8c4e-d06cf74a2e13,ITC-258,natus,Food,Hansen PLC,2650.03,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P258
+3188fe5a-1817-4570-b4ce-ac28a3095630,ITC-306,commodi,Electronics,Miller Inc,76627.44685408358,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P306
+f19f9083-0829-45f9-abf4-46a97051c086,DJ-GRO-BRD-TIS-041,TISSUE PAPER BOX,groceries,,2.49,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_41
+30df6262-a85a-4ee9-a30c-3b8f493b20ae,ITC-261,sunt,Food,Howell-Werner,2910.46,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P261
+52517124-8057-4e3d-a76a-5242313eabe8,ITC-357,consectetur,Electronics,Mathews and Sons,4650.76,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P357
+4d8b3a35-3dbf-423d-bb9b-e7cbef5f8aba,ITC-42,earum,Clothing,Robinson-Hayden,1804.88,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P42
+796b4b4e-efcd-4cf1-a630-20d7a4e90e0b,ITC-101,magnam,Food,Johnson-Kemp,3816.22,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P101
+69d090f6-097f-488a-80d1-c610e2dff70f,ITC-214,incidunt,Electronics,"Lowery, Willis and Garza",1025.91,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P214
+c3788f16-4bcb-40c6-a3ab-9eba222dde8c,ITC-162,natus,Food,"Blair, Hall and Holland",2078.69,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P162
+abc1ee79-a988-415d-852e-5ade65919c8d,ITC-73,accusantium,Clothing,Gray-Bailey,317.72,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P73
+f97a523d-aeba-43a5-9c6e-d2382adc577d,Dj-Spo-Brd-Ame-137,American Football,SPORTS-ACCESSORIES,,19.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_137
+0a436c93-b0a7-41e0-ba0f-361ab6b235a4,ITC-173,itaque,Clothing,Scott PLC,1086.83,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P173
+46e852a5-aae4-4b00-9e5a-e9ed915331fd,ITC-93,quas,Food,Ruiz Inc,1440.61,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P93
+166dc6c5-5327-4f7f-8d8f-5ea0f6510b38,ITC-210,dicta,Food,"Jackson, Medina and Campbell",1409.78,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P210
+e6bb5190-d1bc-41eb-879f-aa75819f457e,ITC-415,mollitia,Electronics,Davidson Group,1430.47,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P415
+4907000e-46de-4902-aafb-adf1569a12b5,DJ-MOB-TEC-MON-109,Monopod,mobile-accessories,TechGear,19.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_109
+18486741-e624-464c-b389-076515d14ea9,ITC-30,quo,Food,Gallegos-Carroll,1617.04,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P30
+01d689c1-7ee1-453e-b9dc-9f5663d0d4e1,  ITC-444,aperiam,Food,Estes-Rodriguez,477.66,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P444
+75d91eac-b77b-44aa-8c53-ed8f4df53188,ITC-393,quae,Clothing,,2262.0,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P393
+02dd10a8-8724-4abc-b441-cc7f9b993456,ITC-375,molestiae,Electronics,"Rogers, Jacobson and Thompson",3093.41,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P375
+d5188e83-c1c8-4b70-81c7-f994a498888e,ITC-467,temporibus,Electronics,Bates-Warren,870.53,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P467
+c4459748-0b37-484f-90d6-49281df6b3e0,ITC-302,nobis,Clothing,Garrison Group,2564.55,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P302
+fb550695-e2eb-4a64-af1c-80f64aecc485,ITC-147,odit,Clothing,Barnes Group,3150.64,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P147
+690699b9-902b-4b25-a472-290e6967bb94,DJ-FUR-KNO-KNO-014  ,Knoll Saarinen Exceutive Conference Chair,furniture,Knoll,499.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_14
+059c606f-bcd7-4e8e-80e1-fbe15735f820,NW-8,Northwoods Cranberry Sauce,NorthwindCategory,Northwind,40.0,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_8
+31db27a2-1e65-447e-ac40-390eb98f3848,ITC-221,assumenda,Food,Scott-Perez,3778.4,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P221
+0661df9f-2814-44b0-a38d-c276e88aa5a2,ITC-297,magnam,Food,"  Flores, Mullen and Oliver",2469.44,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P297
+eae28608-bb5c-4725-afd0-91c5eb39e0f6,ITC-110,	architecto	,Clothing,Clark PLC,2649.96,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P110
+5e7691a9-2286-4c3c-8743-c52ca059af14,ITC-274,iure,Clothing,Pruitt LLC,318.61,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P274
+a8cccec6-4b2d-4e4a-94fb-20ca35db0d8b,DJ-FUR-BAT-WOO-015,Wooden Bathroom Sink With Mirror,furniture,Bath Trends,799.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_15
+b837efe2-46ef-4996-a22b-ae39d77df5b6,ITC-377,maiores,Clothing,Johnson-Ross,671.63,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P377
+a0116727-ecd8-4631-983e-da4d0cd01760,ITC-33,soluta,Electronics,Brown LLC,3145.29,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P33
+d1d50eaf-1ff1-4443-98e9-ae3f46877095,ITC-100,ex,Clothing,"Fernandez, Henderson and Whitaker",4845.88,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P100
+0f2f16ee-6c3e-405a-a9b5-348f4ce41bad,ITC-11,sapiente,Electronics,Cox Group,847.68,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P11
+50d41814-1fcd-413c-8d01-f649cf0ec0ac,ITC-59,nesciunt,Food,Saunders LLC,4759.51,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P59
+726d7898-70b8-419f-ae6e-6d868456219c,ITC-87,tempore,Food,Smith-Wright,352.43,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P87
+b88e849d-9469-45cc-8d21-6055f21380f7,	DJ-MOB-APP-APP-102	,Apple Airpower Wireless Charger,mobile-accessories,apple,79.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_102
+fca8f5ae-7de7-45c9-a9e9-a424448c1711,ITC-373,tempora,Clothing,"Diaz, Davenport and White",1757.49,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P373
+92a0d271-0647-4aad-a917-90043cecb453,ITC-256,nemo,Electronics,Walton and Sons,2620.15,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P256
+9da208a9-7e06-4473-ab79-a0d2e828591d,ITC-364,soluta,Electronics,Sherman LLC,183.75,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P364
+b78eab47-87dc-4642-a94b-b4c64e60c642,ITC-151,rem,Clothing,Deleon-Cervantes,2015.23,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P151
+218c431d-e352-4a21-aeee-2df61a8de9e7,NW-37,Gravad lax,	NorthwindCategory	,Northwind,26.0,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_37
+b77b48c7-742e-4dad-ab12-d28cb3946535,NW-76,Lakkalikööri,northwindcategory,Northwind,18.0,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_76
+7aa5c2e8-6156-42d7-9264-b2363b69778a,DJ-GRO-BRD-RIC-038,Rice,grcoeries,,5.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_38
+774b556e-1a16-4cd8-998c-86c49589a41a,DJ-VEH-CHR-PAC-171,Pacifica Touring,vehicle,CHRYSLER,25483.201773690223,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_171
+f5da4bfb-59c6-4fdc-9d3f-bd6b4fe35ffe,NW4-4,Gula Malacca,NorthwindCategory,Northwind,19.45,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_44
+4d59d719-fcf3-454b-9172-da34ced8270d,ITC-291,pariatur,Clothing,Miller-Wright  ,1867.63,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P291
+64f532fb-2d8f-4ba0-b1f1-4dbf5ce9c208,DJ-MOT-SPE-SPO-117,Sportbike Motorcycle,motorcycle,SpeedMaster,7499.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_117
+8164a5c8-58a3-4735-9724-ac67583233f9,ITC-218,voluptatum  ,,Lang Group,2306.49,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P218
+2fe420d3-0c24-4206-a488-f7853ede1f54,ITC-99,aliquam,Clothing,"King, Simon and Foley",3553.3,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P99
+6dc2cb93-1835-44ae-be73-db9d1accd850,ITC-111,odit,Clothing,Hardin-Davis,2241.25,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P111
+d2073bb8-425b-4653-b795-8cabb6a3b4e6,NW-2,Chang,NORTHWINDCATEGORY,Northwind,19.0,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_2
+f91075e8-6b1e-4081-9229-9cd94a339419,DJ-SPO-BRD-BAS-140,basketball,Sports-Accessories,,14.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_140
+ebc3a584-9a36-45cd-81af-0bf56defb96b,ITC-480,amet,Food,Young-Thornton,1905.04,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P480
+5435fe1b-c208-41cf-83bc-4124dac4eda4,DJ-KIT-BRD-LUN-065,Lunch Box,kitchen-accessories,,12.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_65
+fbed1f0d-8ace-43bb-aa57-3ebeb525e6e7,DJ-SMA-APP-IPH-121,iPhone 5s,smartphones,Apple,199.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_121
+79648e8c-5031-40a9-9bbe-6391148ef36f,ITC-152,magnam,Clothing,"White, Todd and Erickson",321.85,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P152
+f267e10e-0e82-4aa3-ad9c-aef3a622b661,ITC-226,veniam,Clothing  ,Henry-Hall,4632.36,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P226
+b2bdd652-d6b3-4977-a68e-148e3ba15d3c,ITC-74,alias,Electronics,,1682.92,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P74
+5863d3ba-71f3-40c0-8d3e-71176850f9a0,DJ-KIT-BRD-FIN-057,Fine Mesh Strainer,kitchen-accessories,,9.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_57
+83b86e6d-ba04-412d-800e-9027e46813cb,ITC-290,blanditiis,Electronics,"Martinez, Foster and Howard",4461.56,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P290
+37be4bcd-07fa-4d4a-8a93-25fb2642d2bf,NW-28,RÖSSLE SAUERKRAUT,NorthwindCategory,Northwind,45.6,0,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_28
+8317ebd9-45f8-42d3-b79e-53895a88d7fb,ITC-443,repellendus,Clothing,Rivera Group,934.05,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P443
+f9802567-8884-48ac-9744-0409ae170390,ITC-481,quisquam,Food,Sweeney-Smith,450.31,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P481
+b923b70e-0c4e-4d7b-a054-f273f72abaae,ITC-105,reiciendis,Food,Williams-Beck,1867.23,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P105
+65241cab-5792-474e-9476-613ff2617a8d,DJ-SPO-BRD-BAS-141,Basketball Rim,sports-accessories,,39.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_141
+58c49da7-ff2c-4122-ba87-5b57c2f454f8,ITC-303,voluptatibus,Electronics,Williamson-Barnes,3219.4,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P303
+ed83de06-8f8e-4d9e-8543-05269fceba14,ITC-249,ab,Clothing,Hebert-Ramirez,4873.74,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P249
+077bc2d6-1a92-4780-aec8-a72b4d69d1bf,ITC-234,quisquam,Food,"Odom, Rivera and Carroll",3441.58,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P234
+d899d52c-0e62-4dfa-9d72-85826d870e66,DJ-SUN-FAS-PAR-157,Party Glasses,sunglasses,Fashion Fun,19.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_157
+e0c4e87a-d995-4861-959e-3ba1b937dd7a,ITC-458,fuga,Clothing,Hobbs-Johnson,2405.56,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P458
+cc720665-30c0-4827-a98b-1b405bbfbc1e,ITC-341,esse,Food,"Holden, Lawson and Davis",1241.67,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P341
+72f3464a-2cc7-4963-9796-49ec428d5648,ITC-35,suscipit,Clothing,"Williams, Peters and Anderson",1005.38,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P35
+66782c0b-3227-4500-96c0-8cf1c49ae2a7,ITC-468,tempora,Electronics,Smith-Gross,1079.74,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P468
+91b94b55-742c-44e7-b19d-6398a2bb87fb,NW-52,Filo Mix,northwindcategory,Northwind,7.0,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_52
+ed67e5bb-8cb2-401f-800c-7636004957ee,ITC-155,quos,Electronics,"Jackson, Lopez and Walker",4308.06,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P155
+bb78ac1f-46ce-418a-aaf1-4121b4203e30,DJ-KIT-BRD-WOO-076,Wooden Rolling Pin,kitchen-accessories,,11.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_76
+0e82558f-e493-48a8-a0e6-502afb11b783,ITC-349,voluptate,Food,Pennington-Butler,3558.24,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P349
+50b9cdb5-99c9-4763-9f9f-f31f8d0a970e,Dj-Wom-Ele-Wom-176,Women Handbag Black,womens-bags,Elegance Collection,59.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_176
+eaa31101-05ff-4459-97ce-fe6d7da1021e,DJ-KIT-BRD-SPO-074,Spoon,kitchen-accessories,,4.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_74
+88a53e03-f166-4882-88ff-a7fbc924040f,ITC-281,ad,Food,Campbell LLC,2331.63,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P281
+3594441f-46c4-404e-a70f-7e583e0863a3,ITC-360,veniam,Food,"Barnes, Hamilton and Smith",4102.78,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P360
+254e1ec4-c8b8-4ed2-8d89-585c77b795d4,DJ-HOM-BRD-HOU-045,House Showpiece Plant,home-decoration,,39.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_45
+d1bc88ab-c3d5-4ce6-8804-f39b986c4986,ITC-248,quo,Food,Bowers-Phillips,2204.38,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P248
+6a1851c9-dc81-4cb6-8840-0dedd522c1e2,ITC-233,at,Clothing,"Stanton, Allen and Waller",2372.23,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P233
+e719ba82-b888-43cf-b47b-6fbda8d6d368,ITC-280,sit,Electronics,Levine-Williams,988.95,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P280
+3c16af0e-eeb3-47e0-8cd2-62638a0ecfa1,ITC-23,maiores,Food,"Taylor, Carlson and Shaw",969.64,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P23
+b0556d55-b2f6-4454-bf33-bc525e420749,ITC-12,labore,Electronics,"Smith, Williams and Edwards",1098.92,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P12
+f4919c37-e658-4b11-b75c-389ad42cee2c,DJ-KIT-BRD-GLA-059,Glass,,,4.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_59
+c7ecfc3c-769a-43fe-89e7-f8c39137b28d,ITC-52,at,Electronics,Farley LLC,2812.27,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P52
+d0a38400-c3b9-45d3-874e-f4b4f51cad25,ITC-200,quasi,Food,"Friedman, Turner and Johnson",3128.15,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P200
+d3639678-748f-4dd5-a97f-1e93b42c1862,DJ-GRO-BRD-CRE-028,Ice Cream,groceries,,5.49,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_28
+4f5c4101-2d5f-4245-bc79-2a8cf7054905,NW-75,Rhönbräu Klosterbier,NORTHWINDCATEGORY,Northwind,7.75,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_75
+7396d6a9-9d85-4ef8-851d-8d56c7dceb79,ITC-229,atque,Food,Leon LLC,91.88,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P229
+93cf8c62-f641-4bb8-948c-0a1e48cfc7b1,DJ-SPO-BRD-CRI-144,Cricket Helmet,sports-accessories,,44.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_144
+2a439e18-b20b-4040-a14b-07ea937afe48,ITC-361,quos,Clothing,Roberts-Mcmahon,3808.13,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P361
+a574c4e1-96da-465a-8788-f077f19e0518,ITC-182,expedita,Electronics,Franklin PLC,2455.42,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P182
+70c78209-abc0-4e89-95b2-06dff1a3964c,ITC-462,eos,  Food,"Hardy, Hughes and Levine",1927.65,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P462
+6e9f7349-8bd3-42a5-aabc-6d3b9ac738ba,DJ-MEN-LON-LON-094,Longines Master Collection,mens-watches,Longines,1499.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_94
+c94e4e27-6638-4a6e-863a-53347f8f7096,DJ-WOM-FAS-BLU-172,Blue Women's Handbag,womens-bags,Fashionista,49.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_172
+47df3934-70da-4859-a62f-0698a6aac939,ITC-456,deserunt,Clothing,"Hunt, Brown and Anderson",708.33,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P456
+9e431ce5-0983-40c9-9f0a-fe01315a6dfe,NW-22,Gustaf's Knäckebröd,NorthwindCategory,Northwind,21.0,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_22
+4e46c834-9c73-4222-a2ca-755d18b17acd,ITC-6,ad,Electronics,Johnston-Hill,3717.28,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P6
+5d1cc6a8-156f-4d16-a6c3-d0834c90f1ab,ITC-440,nobis,Food,Robinson-Fleming,2875.05,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P440
+9752b36f-41c5-4acb-bafb-31f58dc81671,ITC-184,unde,Clothing,"Taylor, Thomas and Mason",2391.89,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P184
+990cfe55-b3df-456b-accc-31217d94f473,ITC-50  ,	corporis	,Food,"Williams, Williams and Kennedy",1122.97,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P50
+081465ec-b028-41fd-a548-9e3646a7995a,ITC-48,dolore,Electronics,"Mejia, Long and Paul",3069.18,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P48
+519f36ad-bc4c-4225-8eca-236e4b863dff,ITC-103,dolore,Food,Stafford-Lowe,462.61,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P103
+2b74636e-1c59-4037-868f-b7ed2a8b2b70,ITC-370,fugit,Clothing,Cole Group,1850.17,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P370
+2b0d8479-bfe3-479c-bf20-16c60b2b48c3,DJ-SUN-FAS-BLA-154,Black Sun Glasses,sunglasses,FASHION SHADES,29.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_154
+f5859bdc-6566-4bd8-b41b-56cae8956bbd,ITC-488,magni,Electronics,Duffy-Greene,2699.36,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P488
+cfdba255-74a8-4662-a3b7-c1cd691c0be0,ITC-172,eligendi,Electronics,Lamb-Conley,2698.97,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P172
+3ef3d07f-f2cf-4cff-9d9d-ce6d096744b6,ITC-167,voluptas,Clothing,Carpenter Ltd,3831.15,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P167
+1cdf32c3-e75a-4dcd-aa72-cb79cc157379,ITC-395,laborum,Clothing,Bautista-Sampson,2810.07,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P395
+91c124af-37ce-47f8-be7d-a6109dcaff58,ITC-437,quam,Electronics,Hall-Hardin,2704.97,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P437
+26603f24-88d5-42f0-bcb9-fe843d33f7fa,ITC-102,  recusandae,Food,"Arnold, Guerrero and Wilson",4565.28,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P102
+87619cb0-77b6-4c51-878e-30c6df7e65a4,ITC-188,sit,Clothing,Smith-Williams,3824.48,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P188
+f5418cc0-9ba1-49ca-814f-2a204ef55a43,ITC-295,qui,Electronics,Dunlap-Mendoza,4540.75,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P295
+c30c1e44-0f00-4f22-bc89-622e3e1f91b9,ITC-304,error,Food,"Hodge, Myers and Miller",3628.91,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P304
+4849009c-6f5a-477a-90b9-70aee81a519b,ITC-461,natus,Clothing,"Reeves, Young and Walker",3264.78,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P461
+41a68a7d-27e6-4136-8cf2-06d5c1220c37,ITC-236,animi,Electronics,Chapman-Waters,2686.01,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P236
+8db43494-6bda-43c8-9f5c-fb74cd7e56fc,ITC-181,quaerat,Clothing,"Henson, Frank and Barnes",3570.24,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P181
+c3153e9e-fbd4-4323-b31b-ff9cb62a6a84,ITC-31,quia,Food,"King, Lowe and Hall",1110.48,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P31
+b6a5a501-caf6-41d6-8e60-fd09b65c6a73,ITC-177,eum,Electronics,Phillips-Griffin,2591.81,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P177
+ded3f951-30bc-4525-bb19-6a5b57fbf80e,ITC-327,aperiam,Food,Shaffer-Smith,1406.83,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P327
+c0a7f9b2-883c-4bb6-b15e-753e384c5252,NW-29,Thüringer Rostbratwurst,NorthwindCategory,Northwind,123.79,0,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_29
+60485521-2e72-48e6-95c7-e284c22a61ad,ITC-268,sed,Food,"Anderson, Williams and Chen",83400.03485364317,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P268
+ef1cbffc-1a4e-41fe-bb5d-154d5a8a5e09,ITC-189,saepe,Electronics,"Spence, Hughes and Gutierrez",923.29,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P189
+0cec6b1a-e298-43c4-b5e2-c56ebdcbbe52,DJ-MEN-FAS-BRO-093,Brown Leather Belt Watch,mens-watches,Fashion Timepieces,89.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_93
+4fb76844-c88f-4976-8e25-acfea837a2ca,ITC-113,deserunt,Electronics,"White, Jones and Fernandez",3422.0,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P113
+35e7df7e-1eaa-4fe4-a223-f9b6f79107d6,ITC-269,ipsam,Clothing,Lucas and Sons,3431.23,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P269
+594be627-bd1c-4abe-bb4c-d8f75cb56c9b,ITC-275,vero,,Lee Ltd,1185.86,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P275
+1e377bcd-40f7-40ce-9e8b-03ad84d59a37,ITC-157,in,Food,Hawkins-Huber,2407.58,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P157
+a5637206-51de-469b-ad47-c9b6f21bd0c3,ITC-55,maiores,Electronics,Wilson LLC,3278.64,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P55
+3b3d2cd7-8a27-411a-81d1-2b7938181ef7,DJ-KIT-BRD-TON-070,Red Tongs,kitchen-accessories,,6.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_70
+8e138ab1-96e6-448e-87b3-1d6120b7b231,DJ-BEA-GLA-EYE-002,Eyeshadow Palette with Mirror,beauty,Glamour Beauty,19.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_2
+add81664-2e68-4dcf-81d4-d57da122fd47,ITC-154,nobis,Food,Brewer-Rivera,3354.78,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P154
+adce12b4-e6b4-4320-ac6c-9f4ced1c98ca,ITC-97,iusto,Food,Anderson and Sons,1827.61,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P97
+85c9adbf-a58f-477f-af45-936db055d84a,DJ-KIT-BRD-ELE-056  ,Electric Stove,kitchen-accessories,,49.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_56
+a3e128f0-0af4-4dc1-a54f-3ed1cc7a18ef,ITC-495,illo,Clothing,Jackson PLC,3754.01,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P495
+18d0dbc1-b8f2-490e-9e95-81c76fa693dc,ITC-16,	voluptatibus	,Food,Howard Ltd,247.93,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P16
+2b52a0cf-b675-4e79-bf6a-34e7249ef568,ITC-254,neque,Electronics,Miller-Powell  ,2428.46,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P254
+973a5db6-1fed-43cb-8a9c-05e528bdb717,DJ-KIT-BRD-MIC-066,Microwave Oven,kitchen-accessories,,89.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_66
+b9b0fb34-2c1e-4146-88c5-eb9c87e08bf0,ITC-359,dicta,Food,"Figueroa, Johns and Jones",4520.48,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P359
+6006a5e4-41a6-4ad9-bc25-d6314dd5291a,ITC-28,doloremque,Electronics,Smith LLC,3599.33,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P28
+5c08a42e-b929-4742-8197-c6468b552119,DJ-TOP-BRD-GRA-164,Gray Dress,tops,,34.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_164
+fbb46510-5570-48ec-a015-e71a881f1c58,ITC-251,omnis,Food,"Gonzalez, Nelson and Harris",3628.45,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P251
+03fcfb70-e731-4c31-b0ed-3a2a7dc42b8b,ITC-40,voluptates,Electronics,King-French,2139.28,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P40
+85947a8f-c47a-4e22-b394-6396e97d2a04,DJ-SMA-APP-IPH-122,iPhone 6,smartphones,Apple,299.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_122
+3727bf6d-e792-4f6e-b218-58498d1a3050,D-JKIT-BRD-CAR-052  ,Carbon Steel Wok,kitchen-accessories,,29.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_52
+076faf55-7534-4fa2-8112-175dd55099a8,ITC-270,ad,Food,Moran PLC,1313.74,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P270
+fc2d9f0c-8dd8-4a8e-b454-6d79b6c7e76f,ITC-164,rerum,Food,Long and Sons,2122.49,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P164
+cdd3ee42-4a08-473d-aff7-c30d3cfa11bc,ITC-413,ipsa,Electronics,Mills Ltd,962.81,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P413
+7de490fa-0796-4991-bd14-b052f3340f98,DJ-GRO-BRD-ONI-037,Red Onions,groceries,,1.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_37
+86e6b2b3-51f0-48c2-a67a-82dc0e9ff95d,NW-49,Maxilaku,NorthwindCategory,Northwind,20.0,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_49
+1eb0db43-1a4e-4775-8807-423d84ff3e8f,ITC-387,soluta,Food,Lewis-Murphy,2691.54,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P387
+d0aa2702-7b9b-4a09-a4bb-3c48d145b471,ITC-238,labore,Food,"Turner, Murphy and Anderson",4303.78,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P238
+65510770-a1a1-4340-a50c-bd4b6851e6a4,ITC-344,dolorum,Food,Wilkerson Ltd,3821.02,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P344
+41d5ee7e-3ec2-4975-9b85-a23aa3a946a2,ITC-185,labore,Food,Browning PLC,4972.41,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P185
+c77a3645-d911-42a7-8d3b-89ac1724ba82,ITC-46,earum,Clothing,"Davis, Webb and Norris",4624.37,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P46
+e3a84f9c-8758-4edf-8bf3-866f55da1199,DJ-SPO-BRD-CRI-145,Cricket Wicket,sports-accessories,,29.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_145
+fa0e3690-c5f3-4abe-bcb5-eadc02a93c86,DJ-SMA-VIV-VIV-134,Vivo S1,smartpohnes,Vivo,249.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_134
+3d8a5406-baf3-4bbd-b0e0-a6dfcd8534a8,ITC-430,nesciunt,Clothing,Mayo Group,3210.07,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P430
+a642f254-a37f-4250-a40f-136281765255,ITC-197,dolore,Clothing,"Ferguson, Scott and Johnson",1577.83,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P197
+f36340ec-9146-4791-903a-7eddbd463760,DJ-GRO-BRD-LEM-031,Lemon,groceries,,0.79,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_31
+146424c3-942b-4669-b82d-714d07db102c,ITC-266,sequi,Food,Schaefer-Cross,504.02,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P266
+6e8b0b70-6934-458c-9a32-73b70ca0d39e,ITC-296,placeat,Food,Brown Group,2002.22,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P296
+ba4338ba-a223-41af-8bac-4e7ff7f244c0,ITC-388,aliquid,Clothing,Ramirez Inc,1678.89,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P388
+7ea3609a-2408-4534-b439-24ff90b910c6,DJ-FRA-CHA-CHA-007,CHANEL COCO NOIR EAU DE,fragrances,Chanel,129.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_7
+383b981b-9450-4120-8f0f-4b8ea6566695,ITC-474,  rerum,Food,Powell LLC,197.88,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P474
+a7f921ee-f694-40ce-9747-c58c5f327128,ITC-15,error,Clothing,Diaz PLC,804.17,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P15
+7682da06-3696-47d9-9535-8ce258a502f4,ITC-148,distinctio,Electronics,"Elliott, Smith and Carrillo",1988.58,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P148
+b11ab0c1-1dde-41f8-8f23-be0e8bfaa432,ITC-285,qui,Electronics,"Johnson, Holmes and Garcia",1778.37,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P285
+1ddd1620-bda6-4517-87b2-44a49a038f50,ITC-382,eaque,Food,White-Walton,416.65,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P382
+fd6fd7cc-d49e-4442-8e2d-3ed641297721,DJ-WOM-FAS-WAT-193,  Watch Gold for Women,womens-watches,Fashion Gold,799.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_193
+543ea212-ce19-4a21-ac99-1f46d3a266b0,ITC-165,recusandae,Clothing,Grant-Moran,3976.87,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P165
+1593d885-43e8-49c5-81ab-5d330297e566,ITC-199,veritatis,Electronics,"Mejia, Lowe and Butler",1206.57,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P199
+d1add628-2391-46ff-8782-eddc5eb2896e,DJ-LAP-DEL-DEL-082,New DELL XPS 13 9300 Laptop,laptops,dell,1499.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_82
+7cdb4c23-d6d0-4fb1-8059-05f8d8f498b0,ITC-19,consequatur,Electronics,Mcdaniel-Lopez,1774.3,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P19
+76241d38-c278-4066-888d-d4e88d1ecc7e,ITC-271,eaque,Food,Robinson-Hess,856.92,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P271
+a69e26be-2429-4cbb-b940-9e878f8a1e3f,DJ-MEN-CLA-PLA-085,Man  Plaid  Shirt,mens-shirts,Classic Wear,34.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_85
+a986efbd-d61d-466f-b797-1de6dc1f6480,DJ-FRA-DOL-DOL-009,Dolce Shine Eau de,,Dolce  &  Gabbana,69.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_9
+c7ed2cee-b11e-43ee-b34d-84d09fcb733b,ITC-496,ratione,Food,Santos Inc,1216.46,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P496
+3051151d-8b16-498d-bfcb-ab889a5d3a93,ITC-76,voluptate,Food,"Mitchell, Hendricks and Bailey",956.09,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P76
+c5efc563-a521-4df6-9a9a-291734871509,DJ-GRO-BRD-WAT-042,Water,groceries,,0.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_42
+5938bc1c-434a-41aa-a36f-623e896ec695,DJ-MEN-ROL-ROL-097,Rolex Datejust,mens-watches,Rolex,10999.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_97
+4360f76e-cf1d-4d7e-870f-5d11a3a17c28,ITC-176,est,Food,Lindsey-Kerr,2755.37,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P176
+e98bdb1c-32b0-4cb2-92af-0c446e8b620d,DJ-WOM-ROL-ROL-191,Rolex Cellini Moonphase,womens-watches,ROLEX,15999.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_191
+266afbbd-0689-4b64-9f0e-99c675633e0b,DJ-GRO-BRD-GRE-025,Green Bell Pepper,groceries,,1.29,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_25
+8aec49bd-d552-4639-aee7-338e4b9247c6,DJ-FUR-ANN-ANN-011,Annibale Colombo Bed,furniture,annibale colombo,1899.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_11
+9acfbaec-9c77-4366-bba9-3740c69c35e9,NW-9,Mish iKobe Niku,NorthwindCategory,Northwind,97.0,0,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_9
+6be5c3ab-98fa-493d-af31-b699ab49e557,ITC-308,alias,Clothing,Ortiz LLC,3587.16,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P308
+9af8c84c-07c8-4f26-bd5a-1fb2d9849192,ITC-116,eum,Food,Jones-Hampton,481.72,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P116
+40570813-4215-49ee-b807-05943b4437d5,ITC-223,quam,Clothing,Lee Ltd,3807.64,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P223
+0d12c626-79cc-4963-aa7c-75ad2801f2cf,ITC-358,modi,Food,Alexander LLC,2302.74,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P358
+e1b17c1b-e9f6-4c08-836d-d51e4f134ec5,DJ-KIT-BRD-BOX-051,Boxed Blender,kitchen-accessories,,39.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_51
+e27e9cca-1320-4e5b-8885-deb8c1e5495e,DJ-MOB-APP-APP-104,Apple  iPhone  Charger,mobile-accessories,APPLE,19.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_104
+6bde3366-acd9-4fc3-af96-a315c1da1a1a,ITC-418,odit,Clothing,Ochoa-Ryan,1504.8,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P418
+d228883f-22e8-4923-847e-d2be4d533f62,DJ-WOM-BRD-MAR-181,Marni Red & Black Suit,womens-dresses,,179.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_181
+12af0d2b-0852-4a27-83ca-2b1555b0d8ec,DJ-VEH-DOD-CHA-168,Charger SXT RWD,vehicle,Dodge,32999.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_168
+6fdcb14f-2abb-4b77-8403-9567cbec78bf,DJ-GRO-BRD-FOO-022,DOG FOOD,grcoeries,,10.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_22
+e0175029-938e-4996-b659-fffb959bc1e6,NW-16,Pavlova,NorthwindCategory,Northwind,17.45,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_16
+8189a925-1e71-43c7-8ac8-d63ec73d21c7,NW-30,Nord-Ost Matjeshering,NorthwindCategory,Northwind,25.89,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_30
+1f46ec54-06d8-4d3f-adae-c051e7232e91,NW-69,Gudbrandsdalsost,NorthwindCategory,Northwind,36.0,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_69
+6f2c51e8-2195-4403-a15b-4cf8966cda2e,NW-20,Sir Rodney's Marmalade,  NorthwindCategory,Northwind,81.0,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_20
+20291725-60ae-4d87-afb9-a668bc9d55f9,NW-6,Grandma's Boysenberry Spread,NorthwindCategory,Northwind,25.0,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_6
+b4c71b37-2691-4386-a6fa-81ad43661714,ITC-45,voluptatibus,Clothing,Miller and Sons,3492.15,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P45
+e300c5f8-3f51-4d2f-90dc-22e56d2f4223,ITC-195,nobis,Clothing,Lee Group,1226.63,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P195
+2c9dd24d-3745-465a-ac54-f3c3ad99f4ef,ITC-70,totam,Food,"James, Collins and Lopez",3321.6,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P70
+c03230a0-b4f8-4a9f-b8a5-5c9862c14a0c,ITC-92,minima,Food,"Thompson, Bender and Collins",738.71,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P92
+f7d2c086-350f-4307-8766-95dc5bea032c,ITC-380,maiores,Clothing,"Smith, Thomas and Huynh",4904.63,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P380
+aebc766c-9dc5-4280-9212-c85ffa7a1acb,DJ-GRO-BRD-SOF-039,Soft Drinks,groceries,,1.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_39
+bb91c52b-d1c5-455b-a126-c7c3f4ab70ca,ITC-463,vel,Clothing,Carlson-Giles,3869.24,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P463
+11456bc1-04a1-4cb9-a05d-e95dd00b5ab4,ITC-347,sit,Clothing,"Cochran, Fitzgerald and Gates",2245.2,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P347
+e25d4023-e08c-4b30-b89b-46b5f28abd1f,ITC-493,aperiam,Electronics,"Baker, Roberts and Novak",2629.84,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P493
+0ccc88f9-f5d5-4c81-a5de-8fb7a316de9b,ITC-26,dolor,Food,Quinn-Frost,1252.18,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P26
+656d6ef5-8ff5-42b3-a99a-42a190b249df,ITC-486,quaerat,Food,Miller-Miller,2139.42,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P486
+fea691a3-bb4f-48d6-a168-7f03aab5405f,NW-74,Longlife Tofu,NorthwindCategory,Northwind,10.0,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_74
+20d28af7-5bee-45a6-b5ea-ee31244a8ebd,ITC-183,dolores,Clothing,Clark-Walton,3489.69,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P183
+735527f1-9c24-434c-bb23-f8e0315a3d52,ITC-403,nobis,Electronics,Vang PLC,2537.9,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P403
+20c4c7d2-0671-415e-aa17-4b3ac166d586,ITC-253,sunt,Food,"Howell, Perry and Kennedy",2072.63,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P253
+14114769-1f53-4cb6-9e0a-1a69c0a3704c,NW-59,Raclette Courdavault,Northwindcategory,Northwind,55.0,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_59
+c64c09be-b322-4792-936b-e93064d12336,  dj-mob-gad-sel-110,Selfie Lamp with iPhone,mobile-accessories,GadgetMaster,14.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_110
+de9a5761-fd3b-463e-b828-82e3bb263326,nw-48,Chocolade,NorthwindCategory,Northwind,12.75,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_48
+fcbeca7e-8bd0-4db8-98e6-82089c3cc5e1,ITC-399,hic,Clothing,"Ward, Perez and Clark",788.95,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P399
+d1e8c946-7b94-4b28-a370-7bd585433bdb,DJT-OP-BRD-TAR-166,Tartan Dress,tops,,39.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_166
+c94ff3a6-46d9-49ae-b4c4-8e1205fc4f70,NW-7,Uncle Bob's Organic Dried Pears,NorthwindCategory,Northwind,30.0,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_7
+30a505a8-f4cc-41c2-9fba-9121cfcaca36,ITC-421,amet,Food,Rodriguez Group,1599.16,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P421
+0f97b28b-91ed-4e93-ab7f-80a01f100cea,ITC-307,aperiam,Food,"Brown, Perez and Williams",4365.69,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P307
+783c6813-10e0-4530-83e5-50716afca7ce,ITC-198,omnis,Clothing,,3317.08,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P198
+ed3ed0b4-6f4e-4187-b226-44fa4d61ad09,ITC-424,laborum,Electronics,Walls-Caldwell,4771.31,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P424
+319fdb68-f0c9-4823-83d0-89593b9dd45a,DJ-GRO-BRD-FOO-018,Cat Food,Groceries,,8.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_18
+1760ff74-bbb3-4ab1-8b40-b29625372cc5,ITC-235,iusto,Clothing,Bishop-Hamilton,538.32,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P235
+473a70a4-8eab-40b1-9c83-ffe1cefafff3,ITC-428,aliquid,Clothing,"Sweeney, King and Smith",2334.96,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P428
+a220da4e-4598-4db1-b051-c34c97acba58,Dj-Gro-Brd-Cuc-021,Cucumber,groceries,,1.49,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_21
+48d69890-c042-47a8-80e3-3deb62dd9227,  ITC-398,odio,Electronics,"Valentine, Moreno and Vincent",2821.51,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P398
+41783834-7c8f-4199-9137-9c97042300ee,DJ-FRA-GUC-GUC-010,Gucci Bloom Eau de,fragrances,Gucci,79.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_10
+35f3db41-745e-43a5-a6b7-706553baa787,ITC-346,beatae,Clothing,,3427.87,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P346
+a83f6ff4-3f20-4c6e-a082-91100ec2f4c7,DJ-KIT-BRD-SLO-072,Slotted Turner,kitchen-accessories,,8.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_72
+bfe9de6e-2fe8-4ea8-ad59-381e0aa3a07e,DJ-SMA-OPP-OPP-125,Oppo A57,,Oppo,249.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_125
+74ef92dd-815d-43b9-a11f-54b83c71d152,ITC-8,temporibus,FOOD,Phillips-Cooper,1800.96,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P8
+2ef9f20b-24f5-4e4b-b730-26581c0537dd,ITC-328,tempora,Food,"Jones, Lyons and Thompson",867.93,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P328
+670f51f8-9a09-4fa7-b4f1-64e37fc7ad21,ITC-355,laboriosam,Clothing,Lopez Inc,2236.97,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P355
+9ad0007e-c963-41a7-beb5-495e4b891923,NW-53,Perth Pasties,NorthwindCategory,Northwind,32.8,0,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_53
+978d5caf-9273-4e93-aa7e-bef834949701,ITC-392,ipsa,Food,Quinn Inc,4381.39,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P392
+9892da7a-2398-4e51-ba9a-858ac1b8eaad,DJ-SPO-BRD-IRO-149,Iron Golf,sport-saccessories,,49.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_149
+83228591-281f-4eb8-ad4c-2f911470b9d4,ITC-301,labore,Food,Hansen-Cruz,3966.75,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P301
+abe85138-484f-4cf7-9273-11d4206ccaf4,ITC-460,unde,Electronics,George-Summers,4345.14,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P460
+b35ee0be-7e32-4ad1-9608-24a7433529ba,ITC-451,minus,Food,Luna-Buchanan,3527.19,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P451
+bb03fd77-5f33-4d10-8399-797934988063,DJ-MOB-AMA-AMA-099,AMAZON ECHO PLUS,mobile-accessories,Amazon,99.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_99
+75f65b75-541f-4d3f-83e1-42acc90fe730,ITC-66,laudantium,	Food	,Allen-Bridges,2718.55,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P66
+66ffda34-d811-4a53-a105-95a1fce7f126,DJ-SMA-APP-IPH-123,IPHONE 13 PRO,smartphones,Apple,1099.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_123
+ad8c863d-76f9-494b-88c3-9309b3f779ca,ITC-163,sequi,Food,Perez-Porter,3528.01,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P163
+49ab2886-049a-4898-8101-7b57cb71fa4d,DJ-GRO-BRD-BEE-017,Beef Steak,groceries,,12.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_17
+a6213910-4b6c-420a-b00d-143f7b71b6ca,DJ-WOM-BRD-GRE-182,Green Crystal Earring,	womens-jewellery	,,29.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_182
+9220f1c1-f012-4306-9193-31ade364845c,ITC-262,quasi,Food,Shaw Group,4226.05,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P262
+030e5ca9-3932-4894-b329-75eeae5cd631,ITC-477,dolorum,Clothing,"Smith, Harrison and Atkins",4627.89,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P477
+338545e0-5db2-4c49-84d1-e0c43b80ca0b,ITC-242,dolorem,Electronics,Salinas PLC,737.15,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P242
+38320fc4-5ba0-4d13-b3ec-8d1021e18ad9,DJ-WOM-URB-WHI-175,White Faux Leather Backpack,womens-bags,Urban Chic,39.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_175
+7453e5a7-aee4-449a-b99f-f76ea6ce6333,ITC-356,ad,Electronics,	Williams-Ford	,2284.7,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P356
+aaaaa249-987d-481e-a2ac-1048374f240e,ITC-137,ex,Clothing,"Curtis, Stevens and Rogers",225.73,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P137
+8864bdb3-5616-4379-bb87-aaec4fc24788,ITC-317,fugit,	Electronics	,"Alexander, Morris and Cowan",1071.07,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P317
+b60159b0-ed10-4bed-8da3-455ac3d3d598,NW-43,Ipoh Coffee,NorthwindCategory,Northwind,46.0,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_43
+86bf57f2-d8f6-4aca-9eba-69b4a4590b25,DJ-GRO-BRD-JUI-029,Juice,groceries,,3.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_29
+8c5b6869-8f11-4e75-b7f6-1445e14f8a47,ITC-484,ipsam,Food,Rivas-Rose,3528.35,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P484
+817c105c-2e58-48eb-b6ed-c4d8410a30f3,ITC-401,officia,Electronics,Ruiz-Ellis,820.56,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P401
+9b93b63b-1b92-4873-bd36-f24c8e0ff44d,ITC-14,optio,Clothing,"Gutierrez, Frederick and Moore",2109.94,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P14
+431c0848-318e-4618-a7b8-1c4d522f1cb5,DJ-WOM-PAM-PAM-188,Pampi Shoes,womens-shoes,Pampi,29.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_188
+fd9cc836-ba17-44fc-b61b-0268fa327669,ITC-276,cumque,Electronics,Smith-Bennett,1921.8,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P276
+535878b2-7045-42e5-adf1-a6786082bd79,ITC-446,aliquam,Electronics,"Robinson, Wilkins and Tucker",808.17,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P446
+a38e1aa1-93bc-4cc1-ab6b-a727eb1b0cdb,ITC-490,fugit,Clothing,"Lin, Wilkinson and Bullock",53.49,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P490
+78d8c5aa-bef1-4c0b-89d1-37578b64dbba,ITC-192,consectetur,,Cook Group,4538.14,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P192
+3b6c6a9d-0aae-4803-ab6b-82739501f563,ITC-237,totam,Electronics,"Wells, Fuller and Moore",3039.37,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P237
+e731364e-1ccc-403b-aa6f-1b5ed31f89de,NW-66,Louisiana Hot Spiced Okra,NorthwindCategory,Northwind,17.0,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_66
+983ce168-5101-476d-926e-68b1bc858ec5,ITC-259,et,Clothing,"Callahan, Mathews and Roberts",1884.46,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P259
+adfaef0a-6ee1-4bfc-8347-5e4f0cfe937a,ITC-225,ipsam,Food,Roberts-Watson,1661.54,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P225
+38671db2-63f3-48f2-9c44-22b02cc4f0b7,ITC-273,ex,Food,	Osborne and Sons	,373.16,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P273
+31ee593e-f64c-45ae-b4d7-7171a25a6687,NW-12,Queso Manchego La Pastora,NorthwindCategory,Northwind,38.0,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_12
+9fb0f976-8955-48fe-9de6-be9b4e9db8ae,NW-60,Camembert Pierrot  ,NorthwindCategory,,34.0,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_60
+ecdef85c-084f-4269-bc04-869166417f88,DJ-WOM-BRD-GRE-183,Green Oval Earring,WOMENS-JEWELLERY,,24.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_183
+a4c8e121-eaa7-4fe5-bc9d-f125b556682e,ITC-130,mollitia,Electronics,Cameron-Gamble,3397.94,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P130
+4ba69b5b-8c27-4f82-82ac-26dc4146c543,ITC-96,impedit,Food,"Alvarez, Allen and Berry",4206.98,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P96
+aa2b4af9-33da-4772-9580-7710c9f04d4f,ITC-95,ad,Electronics,"Maldonado, Gross and Baker",406.11,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P95
+16c4d550-268f-4605-93cd-2b8c15b7b6b4,DJ-MEN-NIK-NIK-088,Nike Air Jordan 1 Red And Black,,Nike,149.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_88
+9714c5e1-e967-4730-9bbb-543347188150,ITC-22,reiciendis,Electronics,	Coleman-Anderson	,1669.25,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P22
+a8ebcb31-fc03-4913-850f-a5c4555895c2,ITC-68,eos,Electronics,Trujillo-Young,78783.03357003629,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P68
+12568efa-1783-456b-9f74-bc4f328a33f8,ITC-331,	aliquid	,Food,"Clark, Woods and Cook",1108.53,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P331
+f70c1fe7-b9cd-4645-924a-ee3fea82149f,ITC-263,maxime,Electronics,Chase Inc,3239.64,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P263
+efd1ab12-323d-4c41-8167-e149787963cd,NW-32,Mascarpone Fabioli,NorthwindCategory,Northwind,32.0,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_32
+66029540-c337-4026-b18e-3c519e3c8666,DJ-MOB-APP-IPH-108,Iphone 12 Silicone Case With Magsafe Plum,mobile-accessories,Apple,29.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_108
+a2d24a7b-f92f-4f75-a8d1-481339769ce1,dj-mob-app-app-105,Apple MagSafe Battery Pack,mobile-accessories,Apple,99.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_105
+f0f2fb8f-32da-4a64-8caf-2d6792d3487c,ITC-9,dolorum,Food,Foster-Mason,1107.99,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P9
+750325c4-21ad-4a95-99da-9130d47d2d04,ITC-416,quasi,Clothing,Young-Thomas,4063.79,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P416
+33ebf641-ea67-46e9-9a19-42c1ffbe78a2,ITC-90,aliquid,Clothing,"Evans, Bass and Cook",2227.27,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P90
+151fcc29-fb52-41a4-b981-4184185b935b,ITC-284,non,Food,"White, Shepard and Porter",1390.52,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P284
+221b6960-6f4f-41fd-8df6-f79e4c31ed06,  ITC-71,voluptatum,Electronics,Pope LLC,3938.21,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P71
+812caf54-edba-4f66-b1a9-56c06bf074ef,ITC-455,temporibus,Food,"Hernandez, Jones and Lindsey",218.94,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P455
+4e27d80f-edd4-4067-bf8d-f2e7374e8736,ITC-127,quae,Clothing,Cruz Inc,4215.59,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P127
+2a044d71-6682-4cd0-b486-597be28a8318,DJ-WOM-FAS-WOM-194,Women's Wrist Watch,womens-watches,Fashion Co.,129.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_194
+b6885b5d-d99e-4833-98e7-768ddd49e874,dj-sun-fas-sun-158,Sunglasses,sunglasses,Fashion Shades,22.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_158
+08d87b45-4e46-4389-b703-11e0d2f633df,ITC-407,ratione,Electronics  ,Webb Ltd,4993.63,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P407
+773ce370-8080-44ea-b547-e6c646c564b3,ITC-84,recusandae,Electronics,Fletcher Group,2648.22,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P84
+5cb64f19-f68d-46b1-bdc9-e399227af03d,ITC-316,dolorum,Clothing,"Montgomery, Martinez and Kirby",1066.52,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P316
+3c5c8278-5f0f-4a3e-97dc-f384d4da926e,ITC-383,officiis,Electronics,"Thompson, Jenkins and Carter",348.07,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P383
+f03365b4-f1bd-4bf5-9c4a-c6a4fca19699,ITC-194,rem,Clothing,"Morales, Wilson and Williams",1766.49,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P194
+28429a4d-2942-4ea6-a108-d76ecbbceca4,ITC-29,sapiente,Food,Thompson LLC,565.49,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P29
+6a399558-43b1-4011-820c-1051e785a4d7,ITC-369,modi,Electronics,Richmond PLC,749.03,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P369
+219e5dd9-e68a-449c-9061-f3efad6e5182,DJ-KIT-BRD-CHO-053,Chopping Board,kitchen-accessories,,12.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_53
+1e7680ab-bf0f-4855-8e2a-e3fd788e1c48,ITC-86,ab,Food,Price Ltd,2435.98,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P86
+da09bf39-56d3-40d0-8008-42279f2b153f,ITC-224,velit,Food,Williams-Griffin,3638.74,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P224
+1e29a364-16cb-4ff3-818d-c4da669cc49f,ITC-135,deleniti,Clothing,Estrada PLC,245.93,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P135
+5d04a8de-4bbc-49bd-8b00-8db5376d681a,DJ-GRO-BRD-GRE-026,Green Chili Pepper,  groceries,,0.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_26
+04b65bf4-a632-4e97-ba8b-6031bd10a05f,ITC-132,quia,Food,Gibson-Mcclain,2734.13,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P132
+62c7026e-3be0-4c17-8873-9ce8eedc5fca,ITC-240,asperiores,Clothing,"Vargas, Morris and Adams",4723.75,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P240
+7a57bf48-005f-4d38-ab10-1d5f4f0b5390,ITC-322,ea,Electronics,"Alvarado, Le and Sanchez",1125.58,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P322
+0884ae35-560f-436e-8833-56c3188ab19a,ITC-80,provident,Electronics,Roberts-Jones,1399.48,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P80
+3e30e3ec-065d-4439-9eae-7017f9d13709,ITC-230,excepturi,Clothing,Williams PLC,894.3,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P230
+e5305417-2944-4bb7-831c-2ba279337b57,DJ-KIT-BRD-PLA-069,Plate,kitchen-accessories,,3.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_69
+e9fbad01-36bc-4fd4-9ab8-f5082ab82ea9,ITC-44,molestias,Food,Dunn-Jenkins,2001.31,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P44
+f4718be6-208b-44ad-9cea-95c76f7a7ee1,ITC-211,vero,Clothing,"Webster, Hicks and Farley",2374.69,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P211
+964708cc-c116-4537-a16f-d7cef9c5f4a2,DJ-HOM-BRD-PLA-046,Plant Pot,home-decoration,,14.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_46
+669b4aca-1450-4e4e-945b-33751ea9b5d0,ITC-450,ipsa  ,Clothing,Guerrero LLC,2373.08,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P450
+b8e3717e-9ebc-49e4-be93-be0812b2cb76,	ITC-436	,soluta,Clothing,Wiley-Garrison,3627.55,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P436
+270c6abf-f10f-46d3-8745-0da8e4106ac1,ITC-2,aliquam,Clothing,"Mccoy, Perez and Dominguez",765.03,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P2
+b37bd271-5c8f-4b67-bbf5-ce2ddb6d5f9d,DJ-SMA-VIV-VIV-136,Vivo X21,smartphones,Vivo,499.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_136
+646d89be-d1b6-4bc4-9189-f5e1767220b8,dj-top-brd-gir-163,Girl Summer Dress,tops,,19.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_163
+a7a2a5c4-f55d-44bb-956f-d26e87f34264,ITC-126,fugiat,Food,Mckenzie-Reyes,1583.2,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P126
+a7d98814-0fc0-47d8-b635-7ac6c9e381a3,ITC-483,quaerat,Clothing,Moran PLC,3277.99,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P483
+d6650c3e-785c-4ca6-88be-22fc09303523,ITC-94,mollitia,Clothing,Sanchez and Sons,2103.99,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P94
+cf90d57d-fc44-47a9-b451-d4f50437d26c,NW-1,Chai,NorthwindCategory,Northwind,18.0,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_1
+37b8e620-a9d6-4535-bdfb-edb7e2f2bb6e,DJ-WOM-BRD-DRE-180,Dress Pea,womens-dresses,,49.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_180
+bd349ff1-d8c5-4503-b8cd-a522908d04f0,ITC-397,quidem,  Food,"Martin, Schneider and Stephenson",2543.95,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P397
+f3f0603e-a876-4043-bbcd-840733218321,ITC-469,doloribus,Clothing,Fletcher LLC,4399.98,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P469
+3c6495bc-5a7c-4fa1-8c51-c759e081f74b,DJ-TAB-APP-IPA-159,iPad Mini 2021 Starlight,tablets,Apple,499.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_159
+3ce82cee-b90e-403c-942f-239bdeb93945,ITC-300,adipisci,Food,"Williams, Clark and Peck",962.0,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P300
+8b66af0b-cea9-4599-a276-8993136e87e7,ITC-441,necessitatibus,Food,"Mason, Jordan and Harris",2046.69,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P441
+ecf77e5a-4b4c-4b1d-b951-2cfba3bf6aea,ITC-384,doloremque,Clothing,"Anderson, Schmidt and Estrada",3697.72,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P384
+32ec4192-478f-46d9-ae11-b3e9b91dd41a,ITC-160,ea,Clothing,Roth-Warren,2678.67,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P160
+076759f2-6d0e-4c7c-bb6a-f01d0573b5e3,ITC-220,quae,Electronics,"Bentley, Lester and Ellison",1919.14,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P220
+bb5fea5f-bccb-4dae-8049-6cc7652df018,NW-19,Teatime Chocolate Biscuits,NorthwindCategory,,9.2,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_19
+c23d92f2-346c-4837-9990-7fe7b3eb0d5c,ITC-499,repellendus,Food,Norris Ltd,240.24,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P499
+e8a12add-1a44-432c-863d-3f2b5d838b57,DJ-GRO-BRD-CHI-019,Chicken Meat,groceries,,9.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_19
+5c7e2a00-0fa8-4139-bf64-99ea50ae87a7,DJ-KIT-BRD-KNI-064,Knife,kitchen-accessories,,14.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_64
+e4cfdf0b-2cbc-4d59-ab51-13bc422a4bd4,ITC-264,minus,Food,Cook PLC,2570.93,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P264
+af62ee20-ebc0-454b-97a8-606e9a71136d,ITC-63,eligendi,Electronics,Smith  PLC,3669.6,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P63
+50f167b5-2671-4279-a245-2f2711e1c1e4,DJ-SMA-APP-IPH-124,iPhone X,,Apple,899.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_124
+04b0f6a1-8f00-42af-ad37-27d71b57aa85,ITC-131,ducimus,Electronics,Parsons-Garcia,3640.78,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P131
+ba7324a9-771a-49e4-bcae-3c3b0102b64b,DJ-GRO-BRD-APP-016,Apple,Groceries,,1.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_16
+6ff7f1c9-7be8-4ba1-be03-aca08dff503b,DJ-GRO-BRD-MIL-032,Milk,groceries,,3.49,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_32
+2745595c-043b-41e9-88f0-9045c62406ff,ITC-207,earum,Clothing,Ford-Russell,3516.29,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P207
+4a6343ca-08c8-4ff2-80b3-3127488eab03,ITC-470,rem,Food,,2253.84,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P470
+6648ac41-98a6-4210-b46b-7498147f354c,ITC-3,voluptatibus,Food,Bauer PLC,4706.84,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P3
+f0db1106-00c7-4e7f-877d-c0ff916ae009,ITC-402,quibusdam,Clothing,Cruz-Harris,3581.27,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P402
+58e09156-ef52-42fd-a346-c1c6276d57d3,NW-11,Queso Cabrales,NorthwindCategory,Northwind,21.0,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_11
+7edefe47-6c15-4b1a-852b-e2b8cc275b3c,ITC-500,occaecati,Electronics,Odom-Jones,3561.26,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P500
+e06dbb93-61a0-4f3d-beb6-48b68653ffac,ITC-350,occaecati,Electronics,Hendricks LLC,4993.38,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P350
+c7ad739b-a7f2-4f8d-9308-98f843139668,ITC-257,nemo,Food,Hansen-Thompson,2610.8,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P257
+048c2822-0eaf-4c6f-845f-263164f76a99,ITC-457,fuga,Food,Peterson-Matthews,93.73,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P457
+c4a122ab-a565-4cd7-82e6-309893e56018,DJ-KIT-BRD-BLA-049,Black Aluminium Cup,Kitchen accessories,,5.99,1,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,dummyjson,dj_prod_49
+e1377faf-c56c-4e44-9446-6cf1fd7d030f,ITC-186,odit,Electronics,"Mcclure, Taylor and Hopkins",4922.95,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P186
+0795474a-93e3-4db5-9946-70a104b229ab,NW-24,guaraná fantástica,NorthwindCategory,Northwind,4.5,0,,2026-05-20 19:35:54,,108b37a8-c0f9-4c3f-86a8-a349f4842569,northwind,nw_prod_24
+0396b3ba-8297-4f20-ae0c-123fdd68af1d,ITC-56,distinctio,Electronics,Valencia-Guzman,2947.3,1,,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,P56

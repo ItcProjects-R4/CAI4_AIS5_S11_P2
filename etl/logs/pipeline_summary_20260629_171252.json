@@ -1,0 +1,240 @@
+{
+  "run_timestamp": "20260629_171252",
+  "started_at": "2026-06-29T17:12:52.506782",
+  "stages": {
+    "extract": {
+      "duration_s": 0.02,
+      "row_counts": {
+        "etl_batch": 2,
+        "contacts": 1661,
+        "customers": 1618,
+        "products": 764,
+        "sales_orders": 2770,
+        "order_lines": 3663
+      }
+    },
+    "transform": {
+      "duration_s": 0.07,
+      "counts": {
+        "etl_batch": {
+          "clean": 2,
+          "quarantine": 0,
+          "rejected": 0
+        },
+        "contacts": {
+          "clean": 1633,
+          "quarantine": 28,
+          "rejected": 0
+        },
+        "customers": {
+          "clean": 1566,
+          "quarantine": 52,
+          "rejected": 0
+        },
+        "products": {
+          "clean": 764,
+          "quarantine": 0,
+          "rejected": 0
+        },
+        "sales_orders": {
+          "clean": 2673,
+          "quarantine": 91,
+          "rejected": 6
+        },
+        "order_lines": {
+          "clean": 3314,
+          "quarantine": 349,
+          "rejected": 0
+        }
+      }
+    },
+    "validate": {
+      "duration_s": 0.03,
+      "passed": false,
+      "checks": [
+        {
+          "check": "contacts.PK uniqueness (contact_id)",
+          "passed": true,
+          "detail": "all 1633 unique"
+        },
+        {
+          "check": "customers.PK uniqueness (customer_id)",
+          "passed": true,
+          "detail": "all 1566 unique"
+        },
+        {
+          "check": "products.PK uniqueness (product_id)",
+          "passed": true,
+          "detail": "all 764 unique"
+        },
+        {
+          "check": "sales_orders.PK uniqueness (order_id)",
+          "passed": true,
+          "detail": "all 2673 unique"
+        },
+        {
+          "check": "order_lines.PK uniqueness (order_line_id)",
+          "passed": true,
+          "detail": "all 3314 unique"
+        },
+        {
+          "check": "contacts.required fields",
+          "passed": true,
+          "detail": "all 1633 pass"
+        },
+        {
+          "check": "customers.required fields",
+          "passed": true,
+          "detail": "all 1566 pass"
+        },
+        {
+          "check": "products.required fields",
+          "passed": true,
+          "detail": "all 764 pass"
+        },
+        {
+          "check": "sales_orders.required fields",
+          "passed": true,
+          "detail": "all 2673 pass"
+        },
+        {
+          "check": "order_lines.required fields",
+          "passed": true,
+          "detail": "all 3314 pass"
+        },
+        {
+          "check": "contacts.email uniqueness",
+          "passed": false,
+          "detail": "47 duplicate emails, 47 rows quarantined"
+        },
+        {
+          "check": "products.sku uniqueness",
+          "passed": false,
+          "detail": "7 duplicate skus, 7 rows quarantined"
+        },
+        {
+          "check": "contacts.email format",
+          "passed": true,
+          "detail": "0 invalid"
+        },
+        {
+          "check": "customers \u2192 contacts FK (contact_id)",
+          "passed": true,
+          "detail": "0 orphans"
+        },
+        {
+          "check": "sales_orders \u2192 customers FK (customer_id)",
+          "passed": true,
+          "detail": "0 orphans"
+        },
+        {
+          "check": "order_lines \u2192 sales_orders FK (order_id)",
+          "passed": true,
+          "detail": "0 orphans"
+        },
+        {
+          "check": "order_lines \u2192 products FK (product_id)",
+          "passed": true,
+          "detail": "0 orphans"
+        }
+      ]
+    },
+    "load": {
+      "duration_s": 0.67,
+      "loaded_counts": {
+        "etl_batch": 2,
+        "contacts": 1586,
+        "customers": 1539,
+        "products": 757,
+        "sales_orders": 2630,
+        "order_lines": 3257
+      }
+    },
+    "reconcile": {
+      "duration_s": 0.01,
+      "checks": [
+        {
+          "check": "products: no rows lost (clean+q+r == raw)",
+          "passed": true,
+          "expected": 764,
+          "actual": 764,
+          "detail": "clean=757 q=7 r=0"
+        },
+        {
+          "check": "customers: no rows lost (clean+q+r == raw)",
+          "passed": true,
+          "expected": 1618,
+          "actual": 1618,
+          "detail": "clean=1539 q=79 r=0"
+        },
+        {
+          "check": "contacts: no rows lost (clean+q+r == raw)",
+          "passed": true,
+          "expected": 1661,
+          "actual": 1661,
+          "detail": "clean=1586 q=75 r=0"
+        },
+        {
+          "check": "order_lines: no rows lost (clean+q+r == raw)",
+          "passed": true,
+          "expected": 3663,
+          "actual": 3663,
+          "detail": "clean=3257 q=406 r=0"
+        },
+        {
+          "check": "sales_orders: no rows lost (clean+q+r == raw)",
+          "passed": true,
+          "expected": 2770,
+          "actual": 2770,
+          "detail": "clean=2630 q=134 r=6"
+        },
+        {
+          "check": "DB etl_batch == staging stg_etl_batch",
+          "passed": true,
+          "expected": 2,
+          "actual": 2,
+          "detail": ""
+        },
+        {
+          "check": "DB contact == staging stg_contact",
+          "passed": true,
+          "expected": 1586,
+          "actual": 1586,
+          "detail": ""
+        },
+        {
+          "check": "DB customer == staging stg_customer",
+          "passed": true,
+          "expected": 1539,
+          "actual": 1539,
+          "detail": ""
+        },
+        {
+          "check": "DB product == staging stg_product",
+          "passed": true,
+          "expected": 757,
+          "actual": 757,
+          "detail": ""
+        },
+        {
+          "check": "DB sales_order == staging stg_sales_order",
+          "passed": true,
+          "expected": 2630,
+          "actual": 2630,
+          "detail": ""
+        },
+        {
+          "check": "DB order_line == staging stg_order_line",
+          "passed": true,
+          "expected": 3257,
+          "actual": 3257,
+          "detail": ""
+        }
+      ],
+      "passed": true
+    }
+  },
+  "total_duration_s": 0.8,
+  "completed_at": "2026-06-29T17:12:53.308880",
+  "status": "completed"
+}

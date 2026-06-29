@@ -1,0 +1,24 @@
+2026-06-29 17:12:52 | INFO     | etl.validate.20260629_171252 | ── Validation Report ──
+  [PASS] contacts.PK uniqueness (contact_id): all 1633 unique
+  [PASS] customers.PK uniqueness (customer_id): all 1566 unique
+  [PASS] products.PK uniqueness (product_id): all 764 unique
+  [PASS] sales_orders.PK uniqueness (order_id): all 2673 unique
+  [PASS] order_lines.PK uniqueness (order_line_id): all 3314 unique
+  [PASS] contacts.required fields: all 1633 pass
+  [PASS] customers.required fields: all 1566 pass
+  [PASS] products.required fields: all 764 pass
+  [PASS] sales_orders.required fields: all 2673 pass
+  [PASS] order_lines.required fields: all 3314 pass
+  [FAIL] contacts.email uniqueness: 47 duplicate emails, 47 rows quarantined
+  [FAIL] products.sku uniqueness: 7 duplicate skus, 7 rows quarantined
+  [PASS] contacts.email format: 0 invalid
+  [PASS] customers → contacts FK (contact_id): 0 orphans
+  [PASS] sales_orders → customers FK (customer_id): 0 orphans
+  [PASS] order_lines → sales_orders FK (order_id): 0 orphans
+  [PASS] order_lines → products FK (product_id): 0 orphans
+2026-06-29 17:12:52 | INFO     | etl.validate.20260629_171252 | Final counts:
+2026-06-29 17:12:52 | INFO     | etl.validate.20260629_171252 |   contacts: quarantine=47 rejected=0
+2026-06-29 17:12:52 | INFO     | etl.validate.20260629_171252 |   customers: quarantine=27 rejected=0
+2026-06-29 17:12:52 | INFO     | etl.validate.20260629_171252 |   products: quarantine=7 rejected=0
+2026-06-29 17:12:52 | INFO     | etl.validate.20260629_171252 |   sales_orders: quarantine=43 rejected=0
+2026-06-29 17:12:52 | INFO     | etl.validate.20260629_171252 |   order_lines: quarantine=57 rejected=0

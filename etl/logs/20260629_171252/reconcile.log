@@ -1,0 +1,14 @@
+2026-06-29 17:12:53 | INFO     | etl.reconcile.20260629_171252 | Running reconciliation …
+2026-06-29 17:12:53 | INFO     | etl.reconcile.20260629_171252 | ══ Reconciliation Report ══
+  [PASS] products: no rows lost (clean+q+r == raw) (expected=764, actual=764) — clean=757 q=7 r=0
+  [PASS] customers: no rows lost (clean+q+r == raw) (expected=1618, actual=1618) — clean=1539 q=79 r=0
+  [PASS] contacts: no rows lost (clean+q+r == raw) (expected=1661, actual=1661) — clean=1586 q=75 r=0
+  [PASS] order_lines: no rows lost (clean+q+r == raw) (expected=3663, actual=3663) — clean=3257 q=406 r=0
+  [PASS] sales_orders: no rows lost (clean+q+r == raw) (expected=2770, actual=2770) — clean=2630 q=134 r=6
+  [PASS] DB etl_batch == staging stg_etl_batch (expected=2, actual=2) — 
+  [PASS] DB contact == staging stg_contact (expected=1586, actual=1586) — 
+  [PASS] DB customer == staging stg_customer (expected=1539, actual=1539) — 
+  [PASS] DB product == staging stg_product (expected=757, actual=757) — 
+  [PASS] DB sales_order == staging stg_sales_order (expected=2630, actual=2630) — 
+  [PASS] DB order_line == staging stg_order_line (expected=3257, actual=3257) — 
+  VERDICT: ALL CHECKS PASSED

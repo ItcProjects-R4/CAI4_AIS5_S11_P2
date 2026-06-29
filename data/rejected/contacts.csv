@@ -1,2 +1,0 @@
-contact_id,email,full_name,phone,country,address_line1,city,state,postal_code,company_name,department,job_title,attributes_json,created_at,updated_at,etl_batch_id,source_system,source_record_id
-768b5620-5467-514b-abff-71686ad0b01a,,Aya Farouk,1234848993,Egypt,66 Alley almrsy abw alabas,Minya,Minya,18510,Marvin Inc,Accounting,Quality Assurance Engineer,,2026-05-20 19:35:54,,747aa92b-0f35-40de-b8cf-7390f4acbf48,dummyjson,dj_user_84_dup_8674

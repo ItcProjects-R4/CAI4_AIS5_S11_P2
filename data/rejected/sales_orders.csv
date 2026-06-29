@@ -1,27 +1,7 @@
-order_id,customer_id,order_date,order_status,currency,order_total,created_at,updated_at,etl_batch_id,source_system,source_record_id
-ac57a0d2-7cdf-565d-8e77-b09d7a4abfbf,2927b5f5-5f92-5a0e-974a-49048e116a18,,Completed,USD,0.0,2026-05-20 19:35:54,,747aa92b-0f35-40de-b8cf-7390f4acbf48,northwind,nw_ord_10268
-7690efb4-9f8a-5f4f-aa0c-3be2e9e7a2dd,44181159-f937-5e88-b8ec-cf2ff1f1f138,,Completed,USD,0.0,2026-05-20 19:35:54,,747aa92b-0f35-40de-b8cf-7390f4acbf48,northwind,nw_ord_10285
-d680a0d1-4f69-5786-a482-3fe51fa79638,c824c345-d9bb-520f-ab13-c44c8c33e7a3,,Completed,USD,0.0,2026-05-20 19:35:54,,747aa92b-0f35-40de-b8cf-7390f4acbf48,northwind,nw_ord_10292
-3339e3bb-e9f2-520d-92ac-4785a8401f30,1d9402ee-bbd4-5f48-ad43-321d20d92c17,,Completed,USD,0.0,2026-05-20 19:35:54,,747aa92b-0f35-40de-b8cf-7390f4acbf48,northwind,nw_ord_10294
-1ad49cde-80a4-5b80-8c1f-086b0c569a5a,1d9fe1b9-6542-5147-821f-8bb8d25378cc,,Completed,USD,0.0,2026-05-20 19:35:54,,747aa92b-0f35-40de-b8cf-7390f4acbf48,northwind,nw_ord_10295
-73f7b148-81e8-5098-a009-b26ea594375f,1d9402ee-bbd4-5f48-ad43-321d20d92c17,,Completed,USD,0.0,2026-05-20 19:35:54,,747aa92b-0f35-40de-b8cf-7390f4acbf48,northwind,nw_ord_10316
-b770f8f6-7904-549a-8475-f9d9f160f3ef,9b8baa45-4677-5576-a592-19e9da5493bc,,Completed,USD,361.76,2026-05-20 19:35:54,,747aa92b-0f35-40de-b8cf-7390f4acbf48,northwind,nw_ord_10348
-b544783f-c111-54fc-beb9-df4c39338dff,ae934db0-0bd0-57d7-9aa0-cdc7b447a9d4,,Completed,USD,0.0,2026-05-20 19:35:54,,747aa92b-0f35-40de-b8cf-7390f4acbf48,northwind,nw_ord_10390
-5633ad45-3c12-5cae-ae10-75049cbc5b18,8040251a-9a3a-5320-bdbb-de8f908941ea,,Completed,USD,0.0,2026-05-20 19:35:54,,747aa92b-0f35-40de-b8cf-7390f4acbf48,northwind,nw_ord_10425
-b8bc4ca8-c737-596e-a129-342091657948,1f7cd2cc-ff2b-50ab-a227-11f43d25606c,,Completed,USD,0.0,2026-05-20 19:35:54,,747aa92b-0f35-40de-b8cf-7390f4acbf48,northwind,nw_ord_10575
-ee123348-67cf-5b9a-abb1-1d75f6b3ca73,8ad3359e-4503-5c60-9e38-4b2e45428cc4,,Completed,USD,0.0,2026-05-20 19:35:54,,747aa92b-0f35-40de-b8cf-7390f4acbf48,northwind,nw_ord_10637
-5b2bd82f-156e-52fb-a2fd-2970340463db,1d9fe1b9-6542-5147-821f-8bb8d25378cc,,Completed,USD,0.0,2026-05-20 19:35:54,,747aa92b-0f35-40de-b8cf-7390f4acbf48,northwind,nw_ord_10737
-a9ba1fe0-540b-5d8c-88ef-a833fb750c19,44181159-f937-5e88-b8ec-cf2ff1f1f138,,Completed,USD,0.0,2026-05-20 19:35:54,,747aa92b-0f35-40de-b8cf-7390f4acbf48,northwind,nw_ord_10745
-c9fa4851-9b0d-5f84-8d37-d35474af58f0,815e4f54-d64d-5ce0-8819-85218e5a17a5,,Completed,USD,0.0,2026-05-20 19:35:54,,747aa92b-0f35-40de-b8cf-7390f4acbf48,northwind,nw_ord_10755
-b7d34f58-a8b1-5d8d-a5be-944ae968bd0b,dc086d7e-3946-5b62-a212-2d2208c2061c,,Completed,USD,0.0,2026-05-20 19:35:54,,747aa92b-0f35-40de-b8cf-7390f4acbf48,northwind,nw_ord_10805
-bf062cba-c723-517c-8d9a-30619d860a79,1d9402ee-bbd4-5f48-ad43-321d20d92c17,,Completed,USD,0.0,2026-05-20 19:35:54,,747aa92b-0f35-40de-b8cf-7390f4acbf48,northwind,nw_ord_10820
-24fee245-b5f5-57e0-94d0-31daf4afd230,b6319552-7538-5ade-9e3d-d594b75ebb97,,Completed,USD,0.0,2026-05-20 19:35:54,,747aa92b-0f35-40de-b8cf-7390f4acbf48,northwind,nw_ord_10821
-8e8ec8ae-87ce-5706-8a8c-bbcaba680414,8040251a-9a3a-5320-bdbb-de8f908941ea,,Completed,USD,0.0,2026-05-20 19:35:54,,747aa92b-0f35-40de-b8cf-7390f4acbf48,northwind,nw_ord_10832
-9e6107f8-320d-563f-9c50-23ed8c872c05,1d9402ee-bbd4-5f48-ad43-321d20d92c17,,Completed,USD,0.0,2026-05-20 19:35:54,,747aa92b-0f35-40de-b8cf-7390f4acbf48,northwind,nw_ord_10852
-e4710501-fc74-573f-8acb-7cee0e8ee372,b3e62912-1710-5a6c-a8a0-1dd6b417687b,,Completed,USD,0.0,2026-05-20 19:35:54,,747aa92b-0f35-40de-b8cf-7390f4acbf48,northwind,nw_ord_10873
-6a6f196b-354d-532f-91ee-852a815dcc4a,654a9ac5-f537-5cfb-9c3a-f26fc5b15d9a,,Completed,USD,0.0,2026-05-20 19:35:54,,747aa92b-0f35-40de-b8cf-7390f4acbf48,northwind,nw_ord_10909
-73788cc4-fbcc-583a-87b0-b59340b957c2,dc086d7e-3946-5b62-a212-2d2208c2061c,,Completed,USD,0.0,2026-05-20 19:35:54,,747aa92b-0f35-40de-b8cf-7390f4acbf48,northwind,nw_ord_10992
-46f76ba0-c419-56ea-b948-8755491f7798,b00c328c-ff7c-54cf-abbe-b008ca0af1e0,,Completed,USD,0.0,2026-05-20 19:35:54,,747aa92b-0f35-40de-b8cf-7390f4acbf48,northwind,nw_ord_11003
-7be51073-27a5-57cc-9617-80dd8c8d238d,846f9ee7-effe-5683-b812-87a6aa0a20f5,,Completed,USD,50539.87,2026-05-20 19:35:54,,747aa92b-0f35-40de-b8cf-7390f4acbf48,dummyjson,dj_cart_47
-352bb6fb-b396-5002-a117-c745d1748166,b671a8ef-edd7-504b-b42f-d18bd9e9b62a,,Completed,USD,469.85,2026-05-20 19:35:54,,747aa92b-0f35-40de-b8cf-7390f4acbf48,dummyjson,dj_cart_124
-e2932997-3be4-5053-9a6c-ac9c8db21468,5af856ff-c7ce-5b46-a858-e8c3b675ee08,,Completed,USD,129.97,2026-05-20 19:35:54,,747aa92b-0f35-40de-b8cf-7390f4acbf48,dummyjson,dj_cart_166
+order_id,customer_id,order_date,order_status,currency,order_total,created_at,updated_at,etl_batch_id,source_system,source_record_id,_reject_reason,_quarantine_reason
+f59767ed-c884-4d6f-9d9b-5c8d5a3f8b1e,0eb1cd6e-93e0-4bc0-aa7a-2c5e20883ae8,,Pending,EGP,6234.28,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,O369,missing order_date,
+2dc59b6f-647f-487c-a924-87d34e0dccd4,831d9403-886e-48ea-a7eb-6fd7c28a60c4,,Pending,EGP,2790.63,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,O1497,missing order_date,
+c2706c5d-ee9f-402c-b7fa-9c111a776f87,d59eb700-e96f-4553-9c14-0220e27d3892,,Shipped,EGP,8128.08,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,O1959,missing order_date,
+5a372ea9-4b72-4385-9d52-012dfe174809,3c3e9ebd-61e5-4d3d-a724-305f682e1afb,,Cancelled,EGP,3386.67,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,O1914,missing order_date,
+4c6c203f-891d-4031-ad85-b1bbb1f2ee47,c467687e-abf9-4f62-ad21-35ebce86bf82,,Pending,EGP,2572.62,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,O2823,missing order_date,
+939edc5a-3904-4a00-92f6-4cb37a886142,07316641-1457-4f65-b76a-550e23100341,,Shipped,EGP,5134.64,2026-05-20 19:35:56,,76a67116-4c03-4f8f-8a3a-6637dcecb207,itc_crm,O283,missing order_date,
