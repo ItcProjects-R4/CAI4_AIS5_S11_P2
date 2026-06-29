@@ -48,7 +48,6 @@ WHERE
 -- ---------------------------------------------------
 -- contact
 -- ---------------------------------------------------
-DELETE FROM contact WHERE email IN (SELECT email FROM stg_contact);
 INSERT INTO contact (
     contact_id, email, full_name, phone, country,
     address_line1, city, state, postal_code,
@@ -123,7 +122,6 @@ WHERE
 -- ---------------------------------------------------
 -- product
 -- ---------------------------------------------------
-DELETE FROM product WHERE sku IN (SELECT sku FROM stg_product);
 INSERT INTO product (
     product_id, sku, product_name, category, brand,
     list_price, is_active, attributes_json,

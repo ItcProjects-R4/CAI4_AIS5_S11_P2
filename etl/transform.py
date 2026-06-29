@@ -19,7 +19,6 @@ from pathlib import Path
 
 from etl.config import (
     RAW_FILES,
-    CLEAN_FILES,
     QUARANTINE_FILES,
     REJECTED_FILES,
     VALID_ORDER_STATUSES,
@@ -291,44 +290,37 @@ def _t_order_lines(rows: list[dict], valid_orders: set[str], valid_products: set
 
 def transform_all(raw_data: dict[str, list[dict]]) -> dict[str, dict[str, list[dict]]]:
     """
-    Transform all tables. Writes clean → data/clean/.
-    Quarantine/rejected are handled by validate.py.
+    Transform all tables. Writes quarantine/rejected.
+    Clean CSVs are written by validate.py after all checks pass.
     """
     results: dict[str, dict[str, list[dict]]] = {}
 
     log.info("Transforming ETL batch …")
     c, q, rj = _t_etl_batch(raw_data.get("etl_batch", []))
     results["etl_batch"] = {"clean": c, "quarantine": q, "rejected": rj}
-    _write_csv(CLEAN_FILES["etl_batch"], c, FIELDS["etl_batch"])
-
     log.info("Transforming contacts …")
     c, q, rj = _t_contacts(raw_data.get("contacts", []))
     results["contacts"] = {"clean": c, "quarantine": q, "rejected": rj}
-    _write_csv(CLEAN_FILES["contacts"], c, FIELDS["contacts"])
     valid_contacts = {r["contact_id"] for r in c}
 
     log.info("Transforming customers …")
     c, q, rj = _t_customers(raw_data.get("customers", []), valid_contacts)
     results["customers"] = {"clean": c, "quarantine": q, "rejected": rj}
-    _write_csv(CLEAN_FILES["customers"], c, FIELDS["customers"])
     valid_customers = {r["customer_id"] for r in c}
 
     log.info("Transforming products …")
     c, q, rj = _t_products(raw_data.get("products", []))
     results["products"] = {"clean": c, "quarantine": q, "rejected": rj}
-    _write_csv(CLEAN_FILES["products"], c, FIELDS["products"])
     valid_products = {r["product_id"] for r in c}
 
     log.info("Transforming sales orders …")
     c, q, rj = _t_sales_orders(raw_data.get("sales_orders", []), valid_customers)
     results["sales_orders"] = {"clean": c, "quarantine": q, "rejected": rj}
-    _write_csv(CLEAN_FILES["sales_orders"], c, FIELDS["sales_orders"])
     valid_orders = {r["order_id"] for r in c}
 
     log.info("Transforming order lines …")
     c, q, rj = _t_order_lines(raw_data.get("order_lines", []), valid_orders, valid_products)
     results["order_lines"] = {"clean": c, "quarantine": q, "rejected": rj}
-    _write_csv(CLEAN_FILES["order_lines"], c, FIELDS["order_lines"])
 
     for t, d in results.items():
         log.info("  %s: clean=%d quarantine=%d rejected=%d",
