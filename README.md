@@ -1,59 +1,42 @@
 # CRM Customer Data ETL Pipeline
 
-> Consolidates fragmented customer records from CRM exports and Excel spreadsheets into a single clean, analysis-ready SQL table — eliminating duplicates, inconsistent formats, and data gaps.
+> Consolidates fragmented customer records from a CRM system into a single clean, analysis-ready PostgreSQL database — eliminating duplicates, inconsistent formats, and data gaps.
 
-[![GitHub stars](https://img.shields.io/github/stars/Ali-Hegazy-Ai/CAI4_AIS5_S11_P2?style=flat-square)](https://github.com/Ali-Hegazy-Ai/CAI4_AIS5_S11_P2/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/Ali-Hegazy-Ai/CAI4_AIS5_S11_P2?style=flat-square)](https://github.com/Ali-Hegazy-Ai/CAI4_AIS5_S11_P2/network)
-[![GitHub issues](https://img.shields.io/github/issues/Ali-Hegazy-Ai/CAI4_AIS5_S11_P2?style=flat-square)](https://github.com/Ali-Hegazy-Ai/CAI4_AIS5_S11_P2/issues)
-[![Last commit](https://img.shields.io/github/last-commit/Ali-Hegazy-Ai/CAI4_AIS5_S11_P2?style=flat-square)](https://github.com/Ali-Hegazy-Ai/CAI4_AIS5_S11_P2/commits)
-[![Repo size](https://img.shields.io/github/repo-size/Ali-Hegazy-Ai/CAI4_AIS5_S11_P2?style=flat-square)](https://github.com/Ali-Hegazy-Ai/CAI4_AIS5_S11_P2)
+[![GitHub stars](https://img.shields.io/github/stars/ItcProjects-R4/CAI4_AIS5_S11_P2?style=flat-square)](https://github.com/ItcProjects-R4/CAI4_AIS5_S11_P2/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/ItcProjects-R4/CAI4_AIS5_S11_P2?style=flat-square)](https://github.com/ItcProjects-R4/CAI4_AIS5_S11_P2/network)
+[![GitHub issues](https://img.shields.io/github/issues/ItcProjects-R4/CAI4_AIS5_S11_P2?style=flat-square)](https://github.com/ItcProjects-R4/CAI4_AIS5_S11_P2/issues)
+[![Last commit](https://img.shields.io/github/last-commit/ItcProjects-R4/CAI4_AIS5_S11_P2?style=flat-square)](https://github.com/ItcProjects-R4/CAI4_AIS5_S11_P2/commits)
+[![Repo size](https://img.shields.io/github/repo-size/ItcProjects-R4/CAI4_AIS5_S11_P2?style=flat-square)](https://github.com/ItcProjects-R4/CAI4_AIS5_S11_P2)
 
 ---
 
 ## Pipeline Workflow
 
 ```mermaid
----
-config:
-  layout: fixed
----
 flowchart LR
- subgraph Sources["Data Sources"]
+  subgraph Sources["Data Sources (CSV)"]
     direction TB
-        S1["SQL CRM Example Data\nTop Pick"]
-        S2["Brazilian E-Commerce - Olist\nTop Pick"]
-        S3["Lead Scoring Dataset\nTop Pick"]
-        S4["Customer Support Ticket Dataset\nTop Pick"]
-        S5["Mockaroo / Faker\nFallback / Tools"]
+    S1["contacts.csv"]
+    S2["customers.csv"]
+    S3["products.csv"]
+    S4["sales_orders.csv"]
+    S5["order_lines.csv"]
+    S6["etl_batch.csv"]
   end
- subgraph Storage["Ingestion Layer"]
-        R["data/raw/\nCSV & JSON"]
+  subgraph ETL["Python ETL Pipeline"]
+    T["python -m etl"]
   end
- subgraph Rules["Mapping Rules"]
-        M1["ContactID -> customer_id"]
-        M2["EmailAddress -> email"]
-        M3["CreatedDate -> created_at"]
+  subgraph Output["Output"]
+    C["data/clean/"]
+    Q["data/quarantine/"]
+    R["data/rejected/"]
   end
- subgraph ETL["ETL Transform Step"]
-        T["Local ETL Transform\ndf_merge_transform.py"]
-        Rules
+  subgraph Analytics["Downstream"]
+    DB["PostgreSQL\ncrm_db"]
   end
- subgraph Output["Clean Data"]
-        C["data/clean/\nUnified Schema"]
-        X["data/rejected/\nQuarantine"]
-  end
- subgraph Analytics["Downstream"]
-        DB["PostgreSQL\ncrm_db"]
-        BI["Power BI / Excel\nAnalytics"]
-  end
-    Sources --> R
-    R --> T
-    T --> C & X
-    DB --> BI
-    C L_C_DB_0@--> DB
-
-
-    L_C_DB_0@{ curve: linear }
+    Sources --> T
+    T --> C & Q & R
+    C --> DB
 ```
 
 **Architecture pattern:** Medallion — `Bronze (raw/)` → `Silver (local transform)` → `Gold (clean/ + PostgreSQL)`
@@ -63,42 +46,42 @@ flowchart LR
 ## What the Pipeline Does
 
 | Step | Action |
-|---|---|
-| **Extract** | Reads `crm_customers_*.csv` and `excel_customers_*.xlsx` from `data/raw/` |
-| **Rename** | Unifies column names across both sources to a single schema |
-| **Transform** | Lowercases emails, title-cases names, normalises phone numbers, parses dates |
-| **Filter** | Drops rows with null `CustomerID` or blank `CustomerName` → `data/rejected/` |
-| **Merge** | Unions CRM and Excel streams into one combined dataset |
-| **Deduplicate** | Aggregates on `CustomerID` — CRM record is preferred when both sources overlap |
-| **Load** | Writes clean CSV to `data/clean/` and upserts rows into `customer` via PostgreSQL `INSERT ... ON CONFLICT` |
+|---|---|---|
+| **Extract** | Reads all six CSV files from `data/raw/` |
+| **Transform** | Cleans, normalises, and validates each table independently |
+| **Validate** | Checks PK uniqueness, required fields, FK integrity, email/SKU uniqueness |
+| **Load** | Truncates staging tables, bulk-loads clean CSVs, upserts into PostgreSQL gold tables |
+| **Reconcile** | Verifies no rows were lost and DB counts match staging |
 
 ### Business Rules Applied
 
-- `Email` → lowercased and trimmed (`john@example.com`)
-- `CustomerName` → title-cased and trimmed (`John Doe`)
-- `Phone` → normalised to `+XX-XXX-XXXXXXX` format
-- `SignupDate` → parsed to ISO `YYYY-MM-DD` (supports `DD/MM/YYYY` and Excel serial numbers)
-- `Country` → mapped from ISO-3 codes to full English names (`EGY` → `Egypt`)
-- `Segment` → uppercased (`PREMIUM` / `STANDARD` / `BASIC`)
-- `SourceSystem` → added to track record origin (`CRM` or `Excel`)
+- `email` → lowercased and trimmed
+- `full_name` → title-cased and trimmed
+- `phone` → digits/dashes only
+- `department` → canonicalised via lookup table
+- `country` → title-cased
+- `segment` → canonicalised (`b2b`, `b2c`, `corporate`, `retail`)
+- `order_status` → canonicalised (`pending`, `completed`, `cancelled`, `shipped`)
+- `currency` → validated (`USD`, `EGP`)
 
 ---
 
 ## Data Sources
 
-Source data lives under `eg_crm/`, organized by entity, with each extraction run written to its own dated folder:
+The pipeline reads six CSV files from `data/raw/`, each representing one entity:
 
-| Entity | Path | Key Columns |
-|---|---|---|
-| Contacts | `eg_crm/contacts/<run_date>/` | `email`, `full_name`, `phone`, `country`, `address_line1`, `city`, `state`, `postal_code`, `company_name`, `department`, `job_title` |
-| Customers | `eg_crm/customers/<run_date>/` | `customer_since`, `status`, `segment` |
-| Products | `eg_crm/products/<run_date>/` | `sku`, `product_name`, `category`, `brand`, `list_price` |
-| Sales Orders | `eg_crm/sales_orders/<run_date>/` | `order_date`, `order_status`, `currency`, `order_total` |
-| Order Lines | `eg_crm/order_lines/<run_date>/` | `line_number`, `quantity`, `unit_price` |
+| File | Contents |
+|------|----------|
+| `contacts.csv` | Contact records with email, name, phone, address, company |
+| `customers.csv` | Customer accounts with segment, status, customer_since |
+| `products.csv` | Product catalog with SKU, category, brand, price |
+| `sales_orders.csv` | Order headers with dates, status, currency, totals |
+| `order_lines.csv` | Line items with quantity, unit price per product |
+| `etl_batch.csv` | Pipeline run metadata |
 
-A combined export of the same data is also available as `ITC_CRM_dataset_combined.csv`. Each run also writes a corresponding `manifests/<run_date>/` and `run_log/<run_date>/` entry for tracking. Place files under `eg_crm/` before each pipeline run — **never edit files in this folder directly**.
+All files share a consistent header row and UTF-8 encoding.
 
-→ Full schema details: [`wiki/Data-Sources.md`](wiki/Data-Sources.md)
+→ Full schema: [`wiki/Data-Sources.md`](wiki/Data-Sources.md)
 
 ---
 
@@ -107,23 +90,23 @@ A combined export of the same data is also available as `ITC_CRM_dataset_combine
 | Tool | Role |
 |---|---|
 | **PostgreSQL** | Target database (`crm_db`) |
-| **Python** | ETL scripts — extract, transform, merge, load |
-| **Excel / CSV** | Source data formats |
+| **Python** | ETL pipeline — extract, transform, validate, load, reconcile |
+| **CSV** | Source data format |
 | **Git / GitHub** | Version control, PR templates, issue templates |
 
 ---
 
 ## SQL Schema
 
-The target database is `crm_db`. Scripts live in [`sql/scripts/`](sql/scripts/) and must be run in order on first setup.
+The target database is `crm_db`. Scripts live in [`scripts/sql/scripts/`](scripts/sql/scripts/) and must be run in order on first setup.
 
 | Script | Purpose |
 |---|---|
-| [`01_create_database.sql`](sql/scripts/01_create_database.sql) | Create `crm_db` |
-| [`02_create_tables.sql`](sql/scripts/02_create_tables.sql) | Create `customer`, `contact`, `product`, `sales_order`, `order_line`, `etl_batch`, and the `stg_*` staging tables |
-| [`03_create_views.sql`](sql/scripts/03_create_views.sql) | Create summary views |
-| [`04_load_procedures.sql`](sql/scripts/04_load_procedures.sql) | Create PostgreSQL upsert logic (`INSERT ... ON CONFLICT`) |
-| [`05_validation_queries.sql`](sql/scripts/05_validation_queries.sql) | Post-run quality checks |
+| [`01_enterprise_data_model_mysql.sql`](scripts/sql/scripts/01_enterprise_data_model_mysql.sql) | Enterprise data model reference |
+| [`02_create_tables.sql`](scripts/sql/scripts/02_create_tables.sql) | Create gold + staging tables |
+| [`03_create_views.sql`](scripts/sql/scripts/03_create_views.sql) | Summary views |
+| [`04_load_procedures.sql`](scripts/sql/scripts/04_load_procedures.sql) | Staging → gold upsert logic |
+| [`05_validation_queries.sql`](scripts/sql/scripts/05_validation_queries.sql) | Post-run quality checks |
 
 **Key tables:**
 - `customer` — final clean records (PK: `customer_id`)
@@ -139,40 +122,31 @@ The target database is `crm_db`. Scripts live in [`sql/scripts/`](sql/scripts/) 
 ```
 CAI4_AIS5_S11_P2/
 ├── data/
-│   ├── raw/              ← Drop source files here (never edit)
+│   ├── raw/              ← Source CSV files (never edit)
 │   ├── clean/            ← Pipeline writes processed output here
-│   ├── rejected/         ← Rows that failed validation (null key, blank name)
-│   └── quarantine/       ← Problem files awaiting review
-├── sql/
-│   └── scripts/          ← Numbered SQL scripts: tables, views, procedures, validation
-├── docs/                 ← Optional supporting notes/assets (see docs/README.md)
-├── wiki/                 ← Full documentation (see navigation below)
+│   ├── rejected/         ← Rows that failed validation
+│   └── quarantine/       ← Recoverable but suspicious rows
+├── etl/                  ← Python ETL pipeline
+│   ├── main.py           ← Orchestrator
+│   ├── extract.py        ← Reads data/raw/
+│   ├── transform.py      ← Cleans and normalises
+│   ├── validate.py       ← Quality checks
+│   ├── load.py           ← Loads to PostgreSQL
+│   ├── reconcile.py      ← Verifies row counts
+│   ├── config.py         ← Configuration
+│   ├── utils/            ← DB and logging utilities
+│   └── logs/             ← Per-run log files
+├── scripts/sql/scripts/  ← Numbered SQL scripts
+├── wiki/                 ← Full documentation
 ├── presentation/         ← Demo slides and screenshots
-└── .github/              ← Issue templates, PR template, CI/CD workflows
+└── .github/              ← Issue templates, PR template, CI/CD
 ```
 
 ---
 
 ## How to Run
 
-**Prerequisites:** Git, PostgreSQL, `psql` (or pgAdmin), Python
-
-→ Full step-by-step setup: [`wiki/Run-Guide.md`](wiki/Run-Guide.md)
-
-### Quick Start
-
-```bash
-python3 -m venv venv && source venv/bin/activate
-pip install -r requirements.txt
-
-# DB setup (one-time)
-sudo -u postgres psql -c "CREATE ROLE $(whoami) LOGIN SUPERUSER;"
-createdb crm_db
-for f in scripts/sql/scripts/0*.sql; do psql -U $(whoami) -d crm_db -f "$f"; done
-
-# Run the pipeline
-python -m etl
-```
+→ Full step-by-step guide: [`wiki/Run-Guide.md`](wiki/Run-Guide.md)
 
 ---
 
@@ -187,12 +161,12 @@ python -m etl
 
 > **Rejected vs Quarantine:** See [Data Quality Definitions](wiki/Data-Quality-Definitions.md) for full definitions of each data tier.
 
-**Post-run validation checklist** (from [`05_validation_queries.sql`](sql/scripts/05_validation_queries.sql)):
+**Post-run validation checklist** (from [`05_validation_queries.sql`](scripts/sql/scripts/05_validation_queries.sql)):
 - Row count is non-zero and within expected range
-- No NULL `CustomerID` or blank `CustomerName`
-- No duplicate `CustomerID` values
-- All `Segment` values are `PREMIUM`, `STANDARD`, or `BASIC`
-- Both `CRM` and `Excel` records appear in `SourceSystem` column
+- No NULL primary keys or required fields
+- No duplicate primary key values
+- All `segment` values are valid (`b2b`, `b2c`, `corporate`, `retail`)
+- All FK references are valid
 - All non-null dates fall between `2000-01-01` and today
 
 → Full validation guide: [`wiki/Data-Validation.md`](wiki/Data-Validation.md)
@@ -201,11 +175,11 @@ python -m etl
 
 ## Orchestration
 
-- **Local ETL scripts** — run the pipeline: Extract CRM → Extract Excel → Transform/Merge → Write CSV → Load into PostgreSQL
-- **Triggers:** Manual run from the command line, or scheduled with `cron` for repeated runs
-- **Monitoring:** Console/log output during each run; audit history in `etl_batch`
+- **Local ETL pipeline** — run with `python -m etl` or `python -m etl --skip-db` for CSV-only
+- **Triggers:** Manual run from the command line
+- **Monitoring:** Console/log output during each run; audit history in `etl_batch` table
 
-→ Orchestration details: [`wiki/ETL-Pipeline.md`](wiki/ETL-Pipeline.md)
+→ Orchestration details: [`wiki/Run-Guide.md`](wiki/Run-Guide.md)
 
 ---
 

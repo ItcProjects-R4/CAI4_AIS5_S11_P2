@@ -1,239 +1,200 @@
 # ETL Pipeline
 
-This page explains how the Azure Data Factory pipeline works end-to-end -- from reading raw source files to writing clean data into SQL Server.
-
----
-
-## What Is a Pipeline?
-
-In Azure Data Factory, a **Pipeline** is a sequence of activities that run in a defined order. Think of it like a recipe: each activity is one cooking step, and the pipeline runs them all in the right order.
-
-Our pipeline is called `pl_customer_etl`.
+This page explains how the Python ETL pipeline works end-to-end -- from reading raw CSV source files to writing clean data into PostgreSQL.
 
 ---
 
 ## Pipeline Overview
 
+The pipeline is a Python module (`etl/`) run from the command line. It executes five sequential stages:
+
 ```
-[Source Files in data/raw/]
-        |
-        v
-+-------+-------+
-| Activity 1:   |  Copy CRM CSV from raw/ to staging
-| Copy CRM      |
-+-------+-------+
-        |
-        v
-+-------+-------+
-| Activity 2:   |  Copy Excel file from raw/ to staging
-| Copy Excel    |
-+-------+-------+
-        |
-        v
-+-------+-------+
-| Activity 3:   |  Merge, clean, deduplicate (see Data Flow section)
-| Data Flow     |
-+-------+-------+
-        |
-        +---------------------+
-        v                     v
-+-------+-------+   +---------+-------+
-| Activity 4:   |   | Activity 5:     |
-| Write CSV to  |   | Load rows into  |
-| data/clean/   |   | SQL Server      |
-+---------------+   +-----------------+
+python -m etl
+
+  1. EXTRACT    Reads data/raw/*.csv
+  2. TRANSFORM  Cleans and normalises all fields
+  3. VALIDATE   Quality checks, quarantine bad records
+  4. LOAD       Upserts into PostgreSQL (staging → gold)
+  5. RECONCILE  Verifies DB counts match clean CSVs
 ```
+
+Each stage prints a summary to the console. If any stage fails critically, the pipeline halts and logs the error.
 
 ---
 
-## ADF Assets Reference
+## Stage 1: Extract
 
-All ADF configuration is stored as JSON in the repository. Never edit these JSON files by hand -- always make changes in ADF Studio and then export the updated JSON.
+**Module:** `etl/extract.py`
 
-| Asset Type | Folder | Files |
-|---|---|---|
-| Pipelines | `adf/pipelines/` | `pl_customer_etl.json` |
-| Data Flows | `adf/pipelines/` | `df_merge_transform.json` |
-| Datasets | `adf/datasets/` | `ds_crm_source.json`, `ds_excel_source.json`, `ds_clean_output.json`, `ds_sql_customers.json` |
-| Linked Services | `adf/linked_services/` | `ls_blob_storage.json`, `ls_sql_server.json` |
+Reads each of the six CSV files from `data/raw/` into a pandas DataFrame. Validates that required columns exist and the file is not empty.
 
----
-
-## Linked Services
-
-A **Linked Service** is a connection definition -- it tells ADF how to connect to an external system.
-
-| Name | Connects To | Used By |
-|---|---|---|
-| `ls_blob_storage` | Azure Blob Storage | Reading `data/raw/` files and writing `data/clean/` files |
-| `ls_sql_server` | SQL Server database | Loading clean data into `dbo.Customers` |
-
----
-
-## Datasets
-
-A **Dataset** defines the structure and location of data that ADF reads or writes.
-
-| Dataset Name | Type | Linked Service | Location / Table |
-|---|---|---|---|
-| `ds_crm_source` | DelimitedText (CSV) | `ls_blob_storage` | `data/raw/crm_customers_*.csv` |
-| `ds_excel_source` | Excel | `ls_blob_storage` | `data/raw/excel_customers_*.xlsx` (sheet: `Customers`) |
-| `ds_clean_output` | DelimitedText (CSV) | `ls_blob_storage` | `data/clean/customers_clean_YYYYMMDD.csv` |
-| `ds_sql_customers` | SQL Server Table | `ls_sql_server` | `dbo.CustomerStaging` |
-
----
-
-## Data Flow: df_merge_transform
-
-The **Data Flow** is where all the actual data cleaning and merging happens. Data Flows run on a Spark cluster inside ADF -- you design them visually and ADF generates the Spark code.
-
-### Data Flow Diagram
-
-```
-+------------------+          +------------------+
-|  Source: CRM     |          |  Source: Excel   |
-|  ds_crm_source   |          |  ds_excel_source |
-+--------+---------+          +--------+---------+
-         |                             |
-         v                             v
-+--------+---------+          +--------+---------+
-|  Select          |          |  Select          |
-|  Rename columns  |          |  Rename columns  |
-|  to unified      |          |  to unified      |
-|  schema          |          |  schema          |
-+--------+---------+          +--------+---------+
-         |                             |
-         v                             v
-+--------+---------+          +--------+---------+
-|  Derived Column  |          |  Derived Column  |
-|  Fix data types, |          |  Fix data types, |
-|  formats,        |          |  formats,        |
-|  add SourceSystem|          |  add SourceSystem|
-+--------+---------+          +--------+---------+
-         |                             |
-         v                             v
-+--------+---------+          +--------+---------+
-|  Filter          |          |  Filter          |
-|  Drop rows with  |          |  Drop rows with  |
-|  null CustomerID |          |  null CustomerID |
-|  or Name         |          |  or Name         |
-+--------+---------+          +--------+---------+
-         |                             |
-         +-------------+---------------+
-                       |
-                       v
-             +---------+---------+
-             |  Union            |
-             |  Combine both     |
-             |  streams into one |
-             +---------+---------+
-                       |
-                       v
-             +---------+---------+
-             |  Aggregate        |
-             |  Deduplicate on   |
-             |  CustomerID       |
-             |  Keep most recent |
-             +---------+---------+
-                       |
-              +--------+--------+
-              v                 v
-    +---------+------+  +-------+---------+
-    |  Sink: CSV     |  |  Sink: SQL      |
-    |  data/clean/   |  |  CustomerStaging|
-    +----------------+  +-----------------+
-```
-
-### Transformation Rules
-
-#### Step 1 -- Select (Column Renaming)
-
-Both sources are unified to the same column names:
-
-| CRM Column | Excel Column | Unified Column |
-|---|---|---|
-| `customer_id` | `CustomerID` | `CustomerID` |
-| `full_name` | `Name` | `CustomerName` |
-| `email` | `EmailAddress` | `Email` |
-| `phone` | `PhoneNumber` | `Phone` |
-| `signup_date` | `JoinDate` | `SignupDate` |
-| `country` | `Country` | `Country` |
-| `segment` | `CustomerSegment` | `Segment` |
-
-#### Step 2 -- Derived Column (Business Rules)
-
-| Column | Rule Applied |
+| Input File | Output Variable |
 |---|---|
-| `CustomerID` | Cast to integer |
-| `CustomerName` | `trim(initCap(CustomerName))` -- remove spaces and title-case |
-| `Email` | `lower(trim(Email))` -- lowercase and trim |
-| `Phone` | Regex normalisation to `+XX-XXX-XXXXXXX` format |
-| `SignupDate` | Parse string to Date using `toDate(SignupDate, 'yyyy-MM-dd')` or `'dd/MM/yyyy'` |
-| `Country` | Map ISO codes to full names using lookup table |
-| `Segment` | `upper(Segment)` -- enforce uppercase |
-| `SourceSystem` | Hardcoded as `'CRM'` or `'Excel'` depending on the stream |
+| `data/raw/contacts.csv` | `df_contacts` |
+| `data/raw/customers.csv` | `df_customers` |
+| `data/raw/products.csv` | `df_products` |
+| `data/raw/sales_orders.csv` | `df_sales_orders` |
+| `data/raw/order_lines.csv` | `df_order_lines` |
+| `data/raw/etl_batch.csv` | `df_etl_batch` |
 
-#### Step 3 -- Filter (Drop Bad Rows)
+If a file is missing or unreadable, the pipeline logs an error and exits.
 
-Rows are dropped if:
-- `CustomerID` is null or zero
-- `CustomerName` is null or blank after trimming
+---
 
-Dropped rows are logged to `data/rejected/` for review.
+## Stage 2: Transform
 
-#### Step 4 -- Union
+**Module:** `etl/transform.py`
 
-The two cleaned streams (CRM and Excel) are appended into a single stream. At this point the combined stream may contain duplicate `CustomerID` values.
+Applies cleaning and normalisation rules to each entity independently.
 
-#### Step 5 -- Aggregate (Deduplicate)
+### Common Rules
 
-Group by `CustomerID` and use `last()` / `first()` aggregation to pick one record per customer. The CRM record is preferred -- if both sources have the same `CustomerID`, the CRM values are used for key fields.
+| Rule | Applies To |
+|---|---|
+| Strip whitespace, convert NaN → NULL | All string fields |
+| Lowercase and trim | `email` |
+| Title-case | `full_name` |
+| Digits/dashes only | `phone` |
+| Canonicalise via lookup | `department`, `segment`, `order_status` |
+| Parse dates to ISO | `created_at`, `updated_at`, `order_date`, `customer_since` |
+| Parse numeric strings to float | `list_price`, `order_total`, `quantity`, `unit_price` |
+
+### Per-Entity Transformations
+
+| Entity | Specific Logic |
+|---|---|
+| contacts | Clean email, title-case name, clean phone, canonicalise department |
+| customers | Parse `customer_since`, canonicalise segment |
+| products | Clean SKU, parse price, canonicalise category |
+| sales_orders | Parse order date, canonicalise status & currency |
+| order_lines | Clean numeric quantity & unit price |
+| etl_batch | Parse timestamps |
+
+Full rule details on the [Transformation Rules](./Transformation-Rules.md) page.
+
+---
+
+## Stage 3: Validate
+
+**Module:** `etl/validate.py`
+
+Validates data quality and routes records to clean, quarantine, or rejected output.
+
+### Validation Checks
+
+| Check | Implementation |
+|---|---|
+| PK uniqueness | Drop duplicates by primary key |
+| Required field nulls | Drop rows where PK is null |
+| Email uniqueness | `groupby("email")` → keep first, quarantine rest + cascade FK children |
+| SKU uniqueness | `groupby("sku")` → keep first, quarantine rest + cascade FK children |
+| Email format | `@` and domain presence check |
+| FK referential integrity | Verify child FK exists in parent clean set |
+| Date parseability | `pd.to_datetime(..., errors="coerce")` |
+| Numeric range | `quantity > 0`, `unit_price >= 0` |
+
+### Routing
+
+| Outcome | Directory | Description |
+|---|---|---|
+| Clean | `data/clean/` | Passes all checks |
+| Quarantine | `data/quarantine/` | Has issues but may be recoverable (email/SKU duplicates, FK orphans) |
+| Rejected | `data/rejected/` | Missing PKs or corrupt data |
+
+---
+
+## Stage 4: Load
+
+**Module:** `etl/load.py`
+
+Loads clean records into PostgreSQL using a staging → gold pattern.
+
+### Step 1: Truncate Staging
+
+```sql
+TRUNCATE TABLE stg_contact, stg_customer, stg_product, stg_sales_order, stg_order_line;
+```
+
+### Step 2: Bulk Copy into Staging
+
+Clean CSVs are loaded into staging tables using `COPY ... FROM STDIN WITH CSV`.
+
+### Step 3: Upsert Staging → Gold
+
+Stored procedures (defined in `04_load_procedures.sql`) move data from staging to gold tables:
+
+- **INSERT** new records where PK does not exist in gold
+- **UPDATE** existing records where PK matches
+- **DELETE** conflicting records before re-inserting (for email/SKU uniqueness constraints)
+
+### Load Order
+
+```
+contact → customer → product → sales_order → order_line (respecting FK dependencies)
+```
+
+---
+
+## Stage 5: Reconcile
+
+**Module:** `etl/reconcile.py`
+
+Verifies that the number of rows in each gold table matches the number of rows in the corresponding clean CSV.
+
+```python
+db_count = "SELECT COUNT(*) FROM contact"
+csv_count = len(clean_contacts_df)
+assert db_count == csv_count, "Row count mismatch"
+```
+
+If counts do not match, the pipeline logs a warning but does not fail (the mismatch is recorded in `etl_batch.notes`).
 
 ---
 
 ## Running the Pipeline
 
-### Debug Run (Test with Sample Data)
+### Prerequisites
 
-1. Open ADF Studio and go to **Author > Pipelines**.
-2. Open `pl_customer_etl`.
-3. Click **Debug** in the toolbar.
-4. ADF will sample the first 100 rows from each source and run through the entire pipeline.
-5. Check the activity output at the bottom of the screen.
+- Python 3.10+
+- PostgreSQL with `crm_db` created and tables loaded
+- Six CSV files in `data/raw/`
 
-### Full Run (Production)
+### Full Run
 
-1. Click **Add Trigger > Trigger Now** to start a full run immediately.
-2. Go to **Monitor > Pipeline Runs** to watch progress.
-3. Click on the pipeline run to see individual activity results and row counts.
+```bash
+source venv/bin/activate
+python -m etl
+```
 
-### Scheduled Run
+### CSV-Only Run (Skip DB)
 
-See the [Project Architecture](./Project-Architecture.md) page for instructions on setting up a scheduled or event-based trigger.
+```bash
+python -m etl --skip-db
+```
+
+Use `--skip-db` when you only want to test extraction, transformation, and validation without connecting to PostgreSQL.
+
+### Log Files
+
+Each run writes a timestamped log file to `etl/logs/`. Only the most recent log is retained.
 
 ---
 
 ## After the Pipeline Runs
 
-1. Check **Monitor > Pipeline Runs** -- status should be **Succeeded**.
-2. Verify output in `data/clean/` -- a new CSV file should appear.
-3. In SSMS, run: `SELECT COUNT(*) FROM dbo.Customers;` to verify rows were loaded.
-4. Run the validation queries from `sql/scripts/05_validation_queries.sql`.
-5. Record run results in the related GitHub issue or pull request notes.
+1. Check the console output or log for any warnings or errors
+2. Verify output files in `data/clean/` (six CSV files)
+3. Check `data/quarantine/` and `data/rejected/` for problem records
+4. Run validation queries from `scripts/sql/scripts/05_validation_queries.sql` in PostgreSQL
+5. Record run results in the related GitHub issue or pull request notes
 
 ---
 
-## Updating ADF Assets After Making Changes
+## Common Issues
 
-Whenever you change a pipeline, dataset, or linked service in ADF Studio:
-
-1. Click **Publish All** in ADF Studio to save changes to Azure.
-2. Export the changed item as JSON (right-click > Export).
-3. Replace the corresponding file in `adf/pipelines/`, `adf/datasets/`, or `adf/linked_services/`.
-4. Commit and push the updated JSON to GitHub:
-
-```bash
-git add adf/
-git commit -m "Update ADF pipeline: describe what you changed"
-git push
-```
+| Problem | Likely Cause | Solution |
+|---|---|---|
+| "File not found" | Missing CSV in `data/raw/` | Place the file there and re-run |
+| "Connection refused" | PostgreSQL not running or wrong port | Check `psql` connection and verify config |
+| "Table does not exist" | SQL scripts not run | Run `scripts/sql/scripts/0*.sql` in order |
+| "FK violation" | Orphan records in clean data | Quarantined automatically by validate stage |

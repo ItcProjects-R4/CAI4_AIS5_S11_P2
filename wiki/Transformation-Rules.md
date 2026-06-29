@@ -1,6 +1,6 @@
 # Transformation Rules
 
-> This page documents every transformation rule applied during the Silver layer processing (Phase 2). These rules are implemented in [`scripts/python/transform.py`](../scripts/python/transform.py) and [`scripts/python/transform_itc.py`](../scripts/python/transform_itc.py).
+> This page documents every transformation rule applied during the Silver layer processing (Phase 2). These rules are implemented in [`etl/transform.py`](../etl/transform.py).
 
 ---
 
@@ -131,7 +131,7 @@ All string fields pass through `strip_or_none()`:
 3. If result is empty string → return `NULL`
 4. Otherwise → return trimmed string
 
-**Note:** No case normalisation (uppercase/lowercase) is applied to preserve original data fidelity. The only exception is `source_system` which is derived programmatically (`northwind`, `dummyjson`, `itc_crm`).
+**Note:** No case normalisation (uppercase/lowercase) is applied to preserve original data fidelity. The only exception is `source_system` which is derived programmatically (`crm`).
 
 ---
 
@@ -172,31 +172,6 @@ out = out.drop_duplicates(subset=["email"], keep="first")  # keep fewest-nulls
 | **sales_orders** | `order_id` | Primary key |
 | **order_lines** | `(order_id, line_number)` | Composite UNIQUE |
 
-### Cross-Source Dedup (ITC CRM)
-
-When ITC CRM data is merged with eg_crm data, an additional dedup step runs during the merge to prevent cross-source collisions:
-
-- **Existing data wins:** If an ITC record has the same UNIQUE key as an existing eg_crm record, the eg_crm record is kept (`keep="first"` where existing data is first in the concatenation).
-- **Customers:** Both `customer_id` and `contact_id` are individually deduplicated (two separate UNIQUE constraints).
-
----
-
-## DQ Severity Routing
-
-The Bronze Simulated Messy data includes DQ metadata on each record: `dq_issue_severity` with values `low`, `med`, or `high`.
-
-| Severity | Route | Reason |
-|---|---|---|
-| `low` | **Clean** | Minor cosmetic issues (casing, extra whitespace) |
-| `med` | **Quarantine** | Moderate issues (field swaps, encoding problems) |
-| `high` | **Quarantine** | Serious issues (garbled data, possible corruption) |
-| _(missing)_ | **Clean** | No DQ flag = no known issues |
-| _(reject condition)_ | **Rejected** | Missing NOT NULL fields (overrides severity) |
-
-**Rejection always overrides severity.** A record flagged `low` severity but missing its `email` is still rejected.
-
----
-
 ## FK Cascade Rules
 
 After all entities are individually transformed, a cascading FK post-processing step ensures referential integrity across the clean CSVs:
@@ -210,4 +185,4 @@ products → order_lines    (line.product_id must exist in clean products)
 
 **Rule:** If a parent record is quarantined, rejected, or dedup-dropped, all its child records are moved from clean to quarantine. This prevents FK violations during the Gold/Load phase.
 
-**Scope:** Each transform script cascades only its own data. The eg_crm cascade runs in `transform.py`; the ITC cascade runs in `transform_itc.py` scoped to the ITC batch ID to avoid re-cascading existing eg_crm data.
+**Scope:** The cascade runs on all entities in a single pass via `etl/transform.py`.

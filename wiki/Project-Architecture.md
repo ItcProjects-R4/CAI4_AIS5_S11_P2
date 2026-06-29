@@ -1,6 +1,6 @@
 # Project Architecture
 
-This page explains every layer of the Customer Data ETL system in detail, so you can understand how data moves from raw source files to a clean, query-ready SQL table.
+This page explains every layer of the Customer Data ETL system in detail, so you can understand how data moves from raw source files to a clean, query-ready PostgreSQL database.
 
 ---
 
@@ -9,204 +9,180 @@ This page explains every layer of the Customer Data ETL system in detail, so you
 The system follows a classic **Medallion Architecture** pattern:
 
 ```
-[Raw Sources]  -->  [Bronze: raw/]  -->  [Silver: ADF Transform]  -->  [Gold: clean/ + SQL]
+[Raw Sources]  -->  [Bronze: raw/]  -->  [Silver: Python ETL]  -->  [Gold: clean/ + PostgreSQL]
 ```
 
 | Layer | Name | Description |
 |---|---|---|
 | Raw | Bronze | Unmodified source files land in `data/raw/` |
-| Transform | Silver | ADF Data Flow cleans, merges, and standardizes |
-| Load | Gold | Clean CSV in `data/clean/` and rows in SQL Server |
+| Transform | Silver | Python ETL pipeline cleans, validates, and normalizes |
+| Load | Gold | Clean CSV in `data/clean/` and rows in PostgreSQL tables |
 
 ---
 
 ## Full Architecture Diagram
 
 ```
-+=====================================================================+
-|                         EXTRACT LAYER                               |
-|                                                                     |
-|  +------------------------+    +---------------------------+        |
-|  |   CRM System           |    |   Excel Spreadsheet       |        |
-|  |   (exported CSV)       |    |   (.xlsx file)            |        |
-|  |                        |    |                           |        |
-|  |  - customer_id         |    |  - CustomerID             |        |
-|  |  - full_name           |    |  - Name                   |        |
-|  |  - email               |    |  - EmailAddress           |        |
-|  |  - phone               |    |  - PhoneNumber            |        |
-|  |  - signup_date         |    |  - JoinDate               |        |
-|  |  - country             |    |  - Country                |        |
-|  |  - segment             |    |  - CustomerSegment        |        |
-|  +----------+-------------+    +----------+----------------+        |
-|             |                             |                         |
-|             v                             v                         |
-|        data/raw/crm_*.csv          data/raw/excel_*.xlsx           |
-+=====================================================================+
-                          |
-                          v
-+=====================================================================+
-|                       TRANSFORM LAYER                               |
-|                   (Azure Data Factory)                              |
-|                                                                     |
-|   Pipeline: pl_customer_etl                                         |
-|   +---------------------------------------------------------------+ |
-|   |                                                               | |
-|   |  Activity 1: Copy CRM data to staging area                   | |
-|   |  Activity 2: Copy Excel data to staging area                 | |
-|   |  Activity 3: Data Flow -- df_merge_transform                 | |
-|   |                                                               | |
-|   |  DATA FLOW STEPS:                                             | |
-|   |  +-------------------+    +-------------------+              | |
-|   |  |  Source: CRM      |    |  Source: Excel    |              | |
-|   |  +--------+----------+    +--------+----------+              | |
-|   |           |                        |                         | |
-|   |           v                        v                         | |
-|   |  +--------+----------+    +--------+----------+              | |
-|   |  |  Select           |    |  Select           |              | |
-|   |  |  (rename cols)    |    |  (rename cols)    |              | |
-|   |  +--------+----------+    +--------+----------+              | |
-|   |           |                        |                         | |
-|   |           v                        v                         | |
-|   |  +--------+----------+    +--------+----------+              | |
-|   |  |  Derived Column   |    |  Derived Column   |              | |
-|   |  |  (fix types)      |    |  (fix types)      |              | |
-|   |  +--------+----------+    +--------+----------+              | |
-|   |           |                        |                         | |
-|   |           v                        v                         | |
-|   |  +--------+----------+    +--------+----------+              | |
-|   |  |  Filter           |    |  Filter           |              | |
-|   |  |  (drop bad rows)  |    |  (drop bad rows)  |              | |
-|   |  +--------+----------+    +--------+----------+              | |
-|   |           |                        |                         | |
-|   |           +----------+-------------+                         | |
-|   |                      v                                        | |
-|   |             +--------+----------+                             | |
-|   |             |  Union (merge)    |                             | |
-|   |             +--------+----------+                             | |
-|   |                      v                                        | |
-|   |             +--------+----------+                             | |
-|   |             |  Aggregate        |                             | |
-|   |             |  (deduplicate on  |                             | |
-|   |             |   CustomerID)     |                             | |
-|   |             +--------+----------+                             | |
-|   |                      |                                        | |
-|   |          +-----------+-----------+                            | |
-|   |          v                       v                            | |
-|   |  +-------+-------+    +----------+--------+                  | |
-|   |  |  Sink: CSV    |    |  Sink: SQL Server |                  | |
-|   |  +---------------+    +-------------------+                  | |
-|   |                                                               | |
-|   +---------------------------------------------------------------+ |
-+=====================================================================+
-                          |
-          +---------------+---------------+
-          v                               v
-+=====================================================================+
-|                         LOAD LAYER                                  |
-|                                                                     |
-|  +---------------------------+    +----------------------------+    |
-|  |  data/clean/              |    |  SQL Server                |    |
-|  |  customers_clean.csv      |    |  CustomerDW database       |    |
-|  |                           |    |                            |    |
-|  |  Ready for:               |    |  Tables:                   |    |
-|  |  - Power BI import        |    |  - dbo.Customers           |    |
-|  |  - Excel analysis         |    |  - dbo.CustomerStaging     |    |
-|  |  - Further processing     |    |  - dbo.ETLRunLog           |    |
-|  +---------------------------+    |                            |    |
-|                                   |  Views:                    |    |
-|                                   |  - dbo.vw_CustomerSummary  |    |
-|                                   +----------------------------+    |
-+=====================================================================+
+data/raw/                      Python ETL Pipeline               data/clean/
+contacts.csv            ┌─────────────────────────┐        contacts_clean.csv
+customers.csv           │ 1. Extract (read CSVs)  │        customers_clean.csv
+products.csv            │ 2. Transform (clean)    │        products_clean.csv
+sales_orders.csv        │ 3. Validate (quality)   │        sales_orders_clean.csv
+order_lines.csv         │ 4. Load (PostgreSQL)    │        order_lines_clean.csv
+etl_batch.csv           │ 5. Reconcile (verify)   │        etl_batch_clean.csv
+                        └───────────┬─────────────┘
+                                    │
+                                    v
+                              PostgreSQL crm_db
+                              ├── stg_contact (staging)
+                              ├── stg_customer
+                              ├── stg_product
+                              ├── stg_sales_order
+                              ├── stg_order_line
+                              ├── contact (gold)
+                              ├── customer
+                              ├── product
+                              ├── sales_order
+                              ├── order_line
+                              └── etl_batch
 ```
 
 ---
 
 ## Data Sources
 
-Two source systems feed this pipeline:
+The pipeline reads **six CSV files** from `data/raw/`, each representing one entity. These files are exported from the source CRM system.
 
-### Source 1 -- CRM Export (CSV)
+| File | Contents |
+|---|---|
+| `contacts.csv` | Contact records with email, name, phone, address |
+| `customers.csv` | Customer accounts with segment, status |
+| `products.csv` | Product catalog with SKU, category, price |
+| `sales_orders.csv` | Order headers with dates, status, totals |
+| `order_lines.csv` | Line items with quantity, unit price |
+| `etl_batch.csv` | Pipeline run metadata |
 
-The CRM system generates a periodic CSV dump of all customer records. This file is manually placed in `data/raw/` and named following the convention `crm_customers_YYYYMMDD.csv`.
-
-**Characteristics:**
-- UTF-8 encoded comma-delimited text
-- Columns use snake_case naming (`customer_id`, `full_name`)
-- Date format: `YYYY-MM-DD`
-- Contains older records with missing `signup_date` values
-- Phone numbers in various local formats (no country code)
-
-### Source 2 -- Excel Spreadsheet
-
-The sales team maintains customer records in an Excel file updated weekly. This file is placed in `data/raw/` and named `excel_customers_YYYYMMDD.xlsx`.
-
-**Characteristics:**
-- Sheet name: `Customers` (always first sheet)
-- Columns use PascalCase naming (`CustomerID`, `Name`)
-- Date format: `DD/MM/YYYY` or Excel serial numbers
-- Country values use 3-letter ISO codes instead of full names
-- Phone numbers include country code prefix (`+20-...`)
-
-Both sources share the `CustomerID` / `customer_id` field as the primary key for deduplication.
+All files share a consistent header row and UTF-8 encoding. Full schema details on the [Data Sources](./Data-Sources.md) page.
 
 ---
 
 ## Extraction Layer
 
-The extraction layer is handled by **two ADF Copy Activities** inside `pl_customer_etl`:
+The extraction layer reads each CSV file from `data/raw/` into a pandas DataFrame. No transformations happen here — data is read as-is.
 
-| Activity | Source | Destination | Notes |
-|---|---|---|---|
-| `CopyCRMData` | `ds_crm_source` (CSV) | Staging blob path | Reads file from `data/raw/` |
-| `CopyExcelData` | `ds_excel_source` (Excel) | Staging blob path | Reads first sheet |
+**Module:** `etl/extract.py`
 
-No transformations happen here. Data is copied as-is into a temporary staging location so the Data Flow can read both in parallel.
+| Source | Function | Description |
+|---|---|---|
+| `contacts.csv` | `extract_contacts()` | Reads CSV, validates headers |
+| `customers.csv` | `extract_customers()` | Reads CSV, validates headers |
+| `products.csv` | `extract_products()` | Reads CSV, validates headers |
+| `sales_orders.csv` | `extract_sales_orders()` | Reads CSV, validates headers |
+| `order_lines.csv` | `extract_order_lines()` | Reads CSV, validates headers |
+| `etl_batch.csv` | `extract_etl_batch()` | Reads CSV, validates headers |
 
 ---
 
 ## Transformation Layer
 
-The transformation is performed by an **ADF Data Flow** named `df_merge_transform`. A Data Flow is a visual, code-free transformation engine inside Azure Data Factory.
+The transformation layer cleans and normalises each entity independently. It applies a consistent set of rules across all fields.
 
-### Step-by-Step Transformations
+**Module:** `etl/transform.py`
 
-| Step | Transformation Type | What It Does |
-|---|---|---|
-| 1 | **Select** | Renames columns from both sources to a unified schema (`CustomerID`, `CustomerName`, `Email`, etc.) |
-| 2 | **Derived Column** | Applies business rules: trim whitespace, lowercase emails, parse dates, normalize phone format, uppercase `Segment` values |
-| 3 | **Filter** | Drops rows where `CustomerID IS NULL` or `CustomerName` is blank |
-| 4 | **Union** | Appends the two cleaned streams into one combined dataset |
-| 5 | **Aggregate** | Groups by `CustomerID` and keeps the most recent record, resolving duplicates between the two sources |
+### Per-Entity Transformations
+
+| Entity | Key Transform Functions |
+|---|---|
+| contacts | Clean email (lowercase, trim), title-case name, clean phone, canonicalise department |
+| customers | Parse dates, canonicalise segment values |
+| products | Validate SKU format, clean numeric prices |
+| sales_orders | Parse order dates, canonicalise status and currency |
+| order_lines | Clean numeric quantity and unit price |
+| etl_batch | Parse timestamps, validate status |
 
 ### Business Rules Applied
 
-- Emails are converted to lowercase
-- `CustomerName` has leading/trailing spaces removed and is title-cased
-- Phone numbers are normalized to `+XX-XXX-XXXXXXX` format where possible
-- `SignupDate` is parsed and stored as ISO `YYYY-MM-DD`
-- `Country` is standardized to full English country name (ISO 3166-1)
-- `Segment` is stored as uppercase (`PREMIUM`, `STANDARD`, `BASIC`)
-- `SourceSystem` column is added (`CRM` or `Excel`) to track record origin
+- `email` → lowercased and trimmed
+- `full_name` → title-cased and trimmed
+- `phone` → digits/dashes only
+- `department` → canonicalised via lookup table
+- `country` → title-cased
+- `segment` → canonicalised (`b2b`, `b2c`, `corporate`, `retail`)
+- `order_status` → canonicalised (`pending`, `completed`, `cancelled`, `shipped`)
+- `currency` → validated (`USD`, `EGP`)
+- `list_price`, `order_total`, `quantity`, `unit_price` → parsed to numeric
+
+---
+
+## Validation Layer
+
+After transformation, each entity is validated for data quality. Records that fail validation are quarantined rather than rejected outright.
+
+**Module:** `etl/validate.py`
+
+| Check | Scope | Action on Failure |
+|---|---|---|
+| Primary key uniqueness | All tables | Quarantine duplicates |
+| Required field nulls | All tables | Quarantine rows with missing PKs |
+| Email uniqueness | contacts | Quarantine duplicates (cascade FK children) |
+| SKU uniqueness | products | Quarantine duplicates (cascade FK children) |
+| Email format | contacts | Quarantine malformed emails |
+| FK referential integrity | customers, sales_orders, order_lines | Quarantine orphan records |
+| Date parseability | sales_orders, customers | Quarantine unparseable dates |
+| Numeric range | products, order_lines | Quarantine negative prices/quantities |
+
+### Output Files
+
+| Directory | Contents |
+|---|---|
+| `data/clean/` | Valid records, one CSV per entity |
+| `data/quarantine/` | Recoverable records with issues |
+| `data/rejected/` | Unrecoverable records |
 
 ---
 
 ## Loading Layer
 
-After transformation, data is written to two destinations simultaneously:
+The load layer upserts clean records into PostgreSQL using a staging → gold table pattern.
 
-### Destination 1 -- Clean CSV (`data/clean/`)
+**Module:** `etl/load.py`
 
-The clean output CSV is written to Azure Blob Storage at the `data/clean/` path. This file can be downloaded and imported into Excel, Power BI, or any other tool without further cleaning.
+### Staging Tables (`stg_*`)
 
-**Output file:** `data/clean/customers_clean_YYYYMMDD.csv`
+Each entity has a corresponding staging table. Before each load:
 
-### Destination 2 -- SQL Server (`dbo.Customers`)
+1. Staging tables are truncated
+2. Clean CSVs are bulk-copied into staging tables
+3. Stored procedures move data from staging to gold tables using upsert logic
 
-An **upsert (MERGE)** is performed against the SQL Server target table using the stored procedure `dbo.usp_UpsertCustomers`. This means:
-- New customers are **inserted**
-- Existing customers (matching `CustomerID`) are **updated**
+### Gold Tables
 
-The staging table `dbo.CustomerStaging` is used as an intermediate buffer and is truncated after each successful load.
+Gold tables hold the canonical, clean record set. The upsert procedure (`04_load_procedures.sql`) handles:
+
+- **INSERT** for new records
+- **UPDATE** for existing records (matched on PK)
+- **DELETE** for records with violating unique keys (email duplicates, SKU duplicates) before re-inserting the valid version
+
+### Execution Order
+
+1. `contact` (no FK dependencies)
+2. `product` (no FK dependencies)
+3. `customer` (FK → contact)
+4. `sales_order` (FK → customer)
+5. `order_line` (FK → sales_order + product)
+
+---
+
+## Reconcile Layer
+
+After loading, the reconcile layer verifies that the database row counts match the clean CSV output.
+
+**Module:** `etl/reconcile.py`
+
+| Check | Query |
+|---|---|
+| Row count match | `SELECT COUNT(*) FROM gold_table` vs `len(clean_df)` |
+| FK integrity | `SELECT * FROM child WHERE parent_id NOT IN (SELECT id FROM parent)` |
 
 ---
 
@@ -214,60 +190,64 @@ The staging table `dbo.CustomerStaging` is used as an intermediate buffer and is
 
 | Location | Type | Contents |
 |---|---|---|
-| `data/raw/` | Azure Blob Storage | Unmodified source files -- never changed by the pipeline |
-| `data/clean/` | Azure Blob Storage | Clean output CSV files from each pipeline run |
-| `dbo.Customers` | SQL Server table | Final customer records, upserted on each run |
-| `dbo.CustomerStaging` | SQL Server table | Temporary buffer, cleared after each run |
-| `dbo.ETLRunLog` | SQL Server table | Audit log of every pipeline run (rows loaded, status, timestamps) |
+| `data/raw/` | Local filesystem | Unmodified source files — never changed by the pipeline |
+| `data/clean/` | Local filesystem | Validated output CSV files |
+| `data/quarantine/` | Local filesystem | Records with recoverable issues |
+| `data/rejected/` | Local filesystem | Unrecoverable records |
+| `crm_db` | PostgreSQL | Gold tables with upserted records |
 
 ---
 
-## Orchestration and Scheduling
+## Orchestration
 
-The pipeline `pl_customer_etl` is managed entirely within **Azure Data Factory**.
+The pipeline is orchestrated by the Python script `etl/main.py`, which calls each module in sequence:
 
-### Manual Execution
-- Click **Trigger Now** in ADF Studio to run the pipeline immediately
-- Use **Debug** mode when testing changes (samples data instead of full files)
+```
+extract() → transform() → validate() → load() → reconcile()
+```
 
-### Scheduled Execution (Recommended)
-Create a **Schedule Trigger** in ADF Studio:
-1. Go to **Manage > Triggers > New**
-2. Set recurrence (e.g. weekly on Monday at 06:00 UTC)
-3. Attach the trigger to `pl_customer_etl`
-4. Publish changes
+### Running the Pipeline
 
-### Event-Based Trigger (Advanced)
-For an automated workflow, set up a **Storage Event Trigger** that fires whenever a new file arrives in `data/raw/`. This removes the need for manual or scheduled runs.
+```bash
+# Full run (CSV + PostgreSQL)
+python -m etl
+
+# CSV only (skip DB load)
+python -m etl --skip-db
+```
+
+### Monitoring
+
+- Console output during each run
+- Log files written to `etl/logs/`
+- Run metadata recorded in the `etl_batch` table
 
 ---
 
 ## Logging and Monitoring
 
-### ADF Monitor
-All pipeline runs are visible in **ADF Studio > Monitor > Pipeline Runs**. For each run you can see:
-- Status: Succeeded / Failed / In Progress
-- Start time and duration
-- Activity-level detail (which step failed and why)
+### Console Output
 
-### ETL Run Log Table
-Each pipeline run is recorded in `dbo.ETLRunLog`:
+Each pipeline step prints progress, row counts, and any warnings to stdout.
 
-```sql
-SELECT * FROM dbo.ETLRunLog ORDER BY RunStart DESC;
-```
+### Log Files
 
-This gives a history of every run with row counts and status.
+Logs are written to `etl/logs/` with a timestamped filename. Only the most recent log is retained.
 
-### Alerting (Recommended)
-Set up **Azure Monitor Alerts** on the ADF resource to send email notifications when:
-- A pipeline run fails
-- A pipeline takes longer than expected (duration threshold)
+### Audit Table
+
+Each pipeline run is recorded in the `etl_batch` table with:
+- `etl_batch_id` — unique run identifier
+- `pipeline_run_id` — run reference
+- `started_at` / `ended_at` — timestamps
+- `status` — success / failure
+- `notes` — summary of warnings and errors
 
 ### Data Quality Monitoring
-After each run, the validation queries in `sql/scripts/05_validation_queries.sql` should be executed to verify:
+
+After each run, the validation queries in `scripts/sql/scripts/05_validation_queries.sql` should be executed to verify:
 - Row counts match expectations
 - No null key fields exist
 - No duplicates were introduced
 
-See the [Data Validation](./Data-Validation.md) page for the full checklist.
+See the [Data Quality Definitions](./Data-Quality-Definitions.md) page for the full tier definitions.
